@@ -42,13 +42,13 @@ Semestre 2018-2
 
 #### Teoría
 
-+ Lunes y miércoles de 18:30 a 20:00 horas en el _salón P211_
-+ Martes y jueves de 19:00 a 20:00 horas en el _salón P211_
++ Lunes y miércoles de 18:30 a 20:00 horas en el [salón 302 de Yelizcalli][salon-Y302]
++ Martes y jueves de 19:00 a 20:00 horas en el [salón 302 de Yelizcalli][salon-Y302]
 
 #### Laboratorio
 
 + Lunes de 14:00 a 16:00 horas
-+ _Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información_
++ [Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información][Taller-Tlahuizcalpan]
 
 ### Contenido del curso
 
@@ -199,9 +199,11 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
     * El trabajo en equipo no implica la división de la tarea por partes iguales entre los integrantes del mismo
     * Se dará por sentado que estos trabajos se desarrollaron colectivamente por todos los integrantes, por lo que no se evaluará cada parte individualmente; cada uno de los miembros de un equipo deberá poder defender, en su totalidad, el trabajo entregado
 
+<!--
 + Las tareas y programas podrán ser enviados por correo a la siguiente dirección:
 
-    * <code><Redes@ciencias.unam.mx></code>
+    * <code><></code>
+-->
 
 + Para las tareas que se entreguen en papel, se sugiere hacer uso de hojas recicladas
 
@@ -225,16 +227,16 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
     Ross, Keith W.  
     Addison Wesley
 
-  * [Biblioteca Digital, UNAM](http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networking+%3a+a+top-down+approach)+AND+(AU+Kurose%2c+James+F.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "")
-  * [Catálogo LIBRUNAM](http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-63897?func=short-refine-exec&set_number=035774&request_op=AND&request=Kurose%2C+James+F.&find_code=WAT&x=73&y=17&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "")
-  * [Búsqueda LIBRUNAM](http://132.248.67.82:8991/F/-/?func=direct&doc_number=001200728current_base=MX001 "")
+  * [Biblioteca Digital, UNAM][kurose-bidiunam-busqueda]
+  * [Catálogo LIBRUNAM][kurose-librunam-catalogo]
+  * [Búsqueda LIBRUNAM][kurose-librunam-busqueda]
 
 + Redes de computadoras  
     Tanenbaum, Andrew S.  
     Pearson/Prentice Hall
 
-  * [Biblioteca Digital, UNAM](http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networks)+AND+(AU+Tanenbaum%2c+Andrew+S.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "")
-  * [Catálogo LIBRUNAM](http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-10009?func=short-refine-exec&set_number=036004&request_op=AND&request=Tanenbaum%2C+Andrew+S.&find_code=WAT&x=66&y=13&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "")
+  * [Biblioteca Digital, UNAM][tanenbaum-bidiunam-busqueda]
+  * [Catálogo LIBRUNAM][tanenbaum-librunam-catalogo]
 >>>
 
 ### Ligas de interés
@@ -246,4 +248,14 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20182/218/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20182/1556/714>
+
+[kurose-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networking+%3a+a+top-down+approach)+AND+(AU+Kurose%2c+James+F.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
+[kurose-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-63897?func=short-refine-exec&set_number=035774&request_op=AND&request=Kurose%2C+James+F.&find_code=WAT&x=73&y=17&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
+[kurose-librunam-busqueda]: http://132.248.67.82:8991/F/-/?func=direct&doc_number=001200728current_base=MX001 "Búsqueda LIBRUNAM"
+
+[tanenbaum-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networks)+AND+(AU+Tanenbaum%2c+Andrew+S.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
+[tanenbaum-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-10009?func=short-refine-exec&set_number=036004&request_op=AND&request=Tanenbaum%2C+Andrew+S.&find_code=WAT&x=66&y=13&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
+
+[salon-Y302]: http://www.fciencias.unam.mx/plantel/horariosalon/20182/448 "Salón 302 de Yelizcalli"
+[Taller-Tlahuizcalpan]: http://www.fciencias.unam.mx/plantel/horariosalon/20182/258 "Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información"
 
