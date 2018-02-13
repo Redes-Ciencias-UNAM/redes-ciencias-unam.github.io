@@ -6,12 +6,14 @@
 
 Semestre 2018-2
 
-+ [Presentación del curso](presentacion.md)
-+ [Prácticas](practicas.md)
++ [Presentación del curso](presentacion.md "Generalidades del curso")
++ [Prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
+  - [Archivos PDF de las prácticas](/public/practicas "Especificaciones de las prácticas en formato PDF")
 
 ### Ligas de interés
 
 + <http://redes-ciencias-unam.gitlab.io/>
++ <http://redes-ciencias-unam.gitlab.io/practicas/>
 + <http://tinyurl.com/ListaRedes-2018-2>
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 + <http://www.fciencias.unam.mx/docencia/horarios/detalles/290785>
