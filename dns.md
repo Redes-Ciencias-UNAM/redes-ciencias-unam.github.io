@@ -1,5 +1,11 @@
 # Domain Name System
 
+```sh
+$ getent services | grep domain
+domain			53/udp
+domain			53/tcp
+```
+
 ## Registros
 
 ### Registro A
@@ -8,7 +14,7 @@ Se utiliza para asociar algún nombre de dominio con una dirección IPv4
 
 | Nombre		| TTL	| Clase	| Tipo	| Valor |
 |:---------------------:|:-----:|:-----:|:-----:|:-----:|
-| www.example.com	| 3600	| IN	| A	| 192.0.2.1	|
+| `www.example.com.`	| 3600	| IN	| A	| `192.0.2.1`	|
 
 ### Registro AAAA
 
@@ -16,7 +22,7 @@ Se utiliza para asociar algún nombre de dominio con una dirección IPv6
 
 | Nombre		| TTL	| Clase	| Tipo	| Valor |
 |:---------------------:|:-----:|:-----:|:-----:|:-----:|
-| www.example.com	| 3600	| IN	| AAAA	| 2001:db8::1	|
+| `www.example.com.`	| 3600	| IN	| AAAA	| `2001:db8::1`	|
 
 ### Registro CNAME
 
@@ -24,7 +30,65 @@ Asocia un nombre de dominio con otro
 
 | Nombre		| TTL	| Clase	| Tipo	| Valor |
 |:---------------------:|:-----:|:-----:|:-----:|:-----:|
-| server.example.com	| 3600	| IN	| CNAME	| web.example.net	|
+| `server.example.com.`	| 3600	| IN	| CNAME	| `web.example.net.`	|
+
+### Registro PTR
+
+Asocia una dirección IP con un nombre de dominio
+
+#### Registro PTR para IPv4
+
+Utiliza la zona inversa `in-addr.arpa.` y asigna los octetos en orden inverso con notación decimal
+
+Se puede buscar la dirección IP en formato "normal" utilizando el parámetro `-x` de `dig`
+
+```
+$ dig +all -x 192.0.2.100
+```
+
+Se puede buscar la dirección IP convertida a nombre de dominio de la zona inversa `in-addr.arpa.`
+
+```
+$ dig +all 100.2.0.192.in-addr.arpa.
+```
+
+| Nombre		| TTL	| Clase	| Tipo	| Valor |
+|:---------------------:|:-----:|:-----:|:-----:|:-----:|
+| `100.2.0.192.in-addr.arpa.`	| 3600	| IN	| PTR	| `alpha.example.org.`	|
+
+#### Registro PTR para IPv6
+
+Utiliza la zona inversa `ip6.arpa.` y asigna los __nibbles__ en orden inverso con notación hexadecimal
+
+Se puede buscar la dirección IP en formato "normal" utilizando el parámetro `-x` de `dig`
+
+```
+$ dig +all -x 2001:db8::1
+```
+
+Se puede buscar la dirección IP convertida a nombre de dominio de la zona inversa `ip6.arpa.`
+
+```
+$ dig +all 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa.
+```
+
+| Nombre		| TTL	| Clase	| Tipo	| Valor |
+|:---------------------:|:-----:|:-----:|:-----:|:-----:|
+| `1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa.`	| 3600	| IN	| PTR	| `omega.example.net.`	|
+
+### Registro NS
+
++ También conocidos como __glue records__, son el elemento que liga a las zonas DNS entre sí
++ Lista a los servidores **autoritativos** para esa zona
++ Sirve para realizar __delegación__ de subzonas a otros servidores
++ El servidor "anterior" utiliza este registro guarda la referencia al siguiente
++ Es el concepto implícito mediante el cual funcionan las consultas DNS
+
+| Nombre		| TTL	| Clase	| Tipo	| Valor |
+|:---------------------:|:-----:|:-----:|:-----:|:-----:|
+| `example.com.`	| 3600	| IN	| NS	| `ns1.example.com.`	|
+| `example.com.`	| 3600	| IN	| NS	| `ns2.example.net.`	|
+| `example.com.`	| 3600	| IN	| NS	| `ns3.example.org.`	|
 
 ## Búsquedas
 
@@ -60,6 +124,8 @@ www.fciencias.unam.mx.	2345	IN	A	132.248.181.248
 
 ### Búsqueda iterativa
 
++ El cliente pregunta por cada parte del registro a los servidores autoritativos para esa zona
++ Requiere varias consultas a múltiples servidores
 + El cliente pregunta por la raíz del espacio de nombres de DNS
   * Esta zona raíz tiene el dominio `root-servers.net`
   * Normalmente no es necesario preguntar por la zona raíz, ya que viene precargada en los clientes de DNS
@@ -297,3 +363,4 @@ ns5.unam.mx.		7200	IN	A	132.248.243.37
 ;; WHEN: Tue Feb 13 16:44:22 CST 2018
 ;; MSG SIZE  rcvd: 292
 ```
+

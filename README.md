@@ -9,7 +9,9 @@ Semestre 2018-2
 + [Presentación del curso](presentacion.md "Generalidades del curso")
 + [Prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
   - [Archivos PDF de las prácticas](/public/practicas "Especificaciones de las prácticas en formato PDF")
-+ [Guía rápida de `git`](git.md "Guía rápida de git")
++ [Guía rápida de `git`](git.md "man git")
++ [DNS - Domain Name System](dns.md "dig")
++ [Who Is](dns.md "whois")
 
 ### Ligas de interés
 
