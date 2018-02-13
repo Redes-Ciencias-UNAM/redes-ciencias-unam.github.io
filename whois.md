@@ -93,6 +93,9 @@ DNSSEC DS Records:
 % de enviar su mensaje a abuse@nic.mx.
 ```
 
++ <https://linux.die.net/man/1/whois>
++ <http://networktools.he.net/>
+
 + <http://www.nicmexico.mx/>
 + <http://nic.mx>
 + <https://www.akky.mx/>

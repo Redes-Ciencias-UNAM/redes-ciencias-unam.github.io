@@ -364,3 +364,5 @@ ns5.unam.mx.		7200	IN	A	132.248.243.37
 ;; MSG SIZE  rcvd: 292
 ```
 
++ <https://linux.die.net/man/1/dig>
++ <http://networktools.he.net/>

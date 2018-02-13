@@ -11,7 +11,7 @@ Semestre 2018-2
   - [Archivos PDF de las prácticas](/public/practicas "Especificaciones de las prácticas en formato PDF")
 + [Guía rápida de `git`](git.md "man git")
 + [DNS - Domain Name System](dns.md "dig")
-+ [Who Is](dns.md "whois")
++ [Who is](whois.md "whois")
 
 ### Ligas de interés
 
