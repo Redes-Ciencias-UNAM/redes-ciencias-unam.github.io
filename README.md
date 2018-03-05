@@ -22,6 +22,10 @@ Semestre 2018-2
 + [WHOIS](whois.md "whois")
 + [HTTP - HyperText Transfer Protocol](http.md "http")
 
+### Tareas
+
++ [Tarea DNS y WHOIS](tareas/tarea-dns.md "Tarea sobre los protocolos DNS y WHOIS")
+
 ### Ligas de interés
 
 + <http://redes-ciencias-unam.gitlab.io/>
