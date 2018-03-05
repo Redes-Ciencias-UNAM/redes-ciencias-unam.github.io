@@ -1,4 +1,10 @@
+# WHOIS
+
 ```
+$ getent services | grep whois
+whois                 43/tcp nicname
+```
+
 $ whois unam.mx.
 
 Domain Name:       unam.mx

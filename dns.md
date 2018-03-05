@@ -1,5 +1,7 @@
 # Domain Name System
 
+## Puertos que utiliza en la _capa de transporte_
+
 ```sh
 $ getent services | grep domain
 domain			53/udp
@@ -90,6 +92,38 @@ $ dig +all 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.a
 | `example.com.`	| 3600	| IN	| NS	| `ns2.example.net.`	|
 | `example.com.`	| 3600	| IN	| NS	| `ns3.example.org.`	|
 
+## Archivo `/etc/resolv.conf`
+
++ <https://linux.die.net/man/5/resolv.conf>
++ <https://wiki.debian.org/resolv.conf>
++ <https://www.freebsd.org/cgi/man.cgi?query=resolv.conf>
++ <http://clfs.org/view/clfs-sysroot/arm/network/resolv.html>
+
+```sh
+# cat /etc/resolv.conf
+nameserver 208.67.222.222
+nameserver 208.67.220.220
+```
+
+## Archivo `/etc/hosts`
+
++ <https://linux.die.net/man/5/hosts>
++ <ftp://ftp.iitb.ac.in/LDP/en/solrhe/chap9sec95.html>
++ <https://support.rackspace.com/how-to/modify-your-hosts-file/>
++ <https://www.siteground.com/kb/how_to_use_the_hosts_file/>
++ <https://docs.acquia.com/article/using-etchosts-file-custom-domains-during-development>
+
+```sh
+# cat /etc/hosts
+127.0.0.1	localhost
+127.0.1.1	linux.local linux
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+```
+
 ## Búsquedas
 
 ### Búsqueda recursiva
@@ -100,26 +134,26 @@ $ dig +all 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.a
 + Respuesta no autoritativa
 
 ```
-$ dig +all www.fciencias.unam.mx. @8.8.8.8
+$ dig +all www.unam.mx.
 
-; <<>> DiG 9.9.5-9+deb8u15-Debian <<>> +all www.fciencias.unam.mx. @8.8.8.8
+; <<>> DiG 9.9.5-9+deb8u15-Debian <<>> +all www.unam.mx.
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 65239
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12777
 ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
 ;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
+; EDNS: version: 0, flags:; udp: 4096
 ;; QUESTION SECTION:
-;www.fciencias.unam.mx.		IN	A
+;www.unam.mx.			IN	A
 
 ;; ANSWER SECTION:
-www.fciencias.unam.mx.	2345	IN	A	132.248.181.248
+www.unam.mx.		3077	IN	A	132.247.70.37
 
-;; Query time: 36 msec
-;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; Query time: 44 msec
+;; SERVER: 208.67.222.222#53(208.67.222.222)
 ;; WHEN: Tue Feb 13 16:53:11 CST 2018
-;; MSG SIZE  rcvd: 66
+;; MSG SIZE  rcvd: 56
 ```
 
 ### Búsqueda iterativa
@@ -283,71 +317,32 @@ ns4.unam.mx.		86400	IN	AAAA	2001:1218:403:203:204::32
 ;; MSG SIZE  rcvd: 160
 ```
 
-+ El cliente pregunta por la __tercer__ parte del dominio a alguno de los servidores autoritativos para esa zona
-
-```
-$ dig +all NS fciencias.unam.mx. @ns3.unam.mx.
-
-; <<>> DiG 9.9.5-9+deb8u15-Debian <<>> +all NS fciencias.unam.mx. @ns3.unam.mx.
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57327
-;; flags: qr aa rd; QUERY: 1, ANSWER: 5, AUTHORITY: 0, ADDITIONAL: 8
-;; WARNING: recursion requested but not available
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 4096
-;; QUESTION SECTION:
-;fciencias.unam.mx.		IN	NS
-
-;; ANSWER SECTION:
-fciencias.unam.mx.	7200	IN	NS	ns1.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns2.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns3.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns4.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns5.unam.mx.
-
-;; ADDITIONAL SECTION:
-ns1.unam.mx.		7200	IN	A	132.248.108.221
-ns2.unam.mx.		7200	IN	A	132.248.204.25
-ns3.unam.mx.		7200	IN	A	132.248.108.215
-ns3.unam.mx.		7200	IN	AAAA	2001:1218:100:10a:108::215
-ns4.unam.mx.		7200	IN	A	132.248.204.32
-ns4.unam.mx.		7200	IN	AAAA	2001:1218:403:203:204::32
-ns5.unam.mx.		7200	IN	A	132.248.243.37
-
-;; Query time: 2 msec
-;; SERVER: 132.248.108.215#53(132.248.108.215)
-;; WHEN: Tue Feb 13 16:42:33 CST 2018
-;; MSG SIZE  rcvd: 272
-```
-
 + El cliente pregunta por la siguiente parte del nombre de dominio al servidor autoritativo
 
 ```
-$ dig +all A www.fciencias.unam.mx. @ns2.unam.mx.
+$ dig +all www.unam.mx. @ns3.unam.mx.
 
-; <<>> DiG 9.9.5-9+deb8u15-Debian <<>> +all A www.fciencias.unam.mx. @ns2.unam.mx.
+; <<>> DiG 9.9.5-9+deb8u15-Debian <<>> +all www.unam.mx. @ns3.unam.mx.
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 307
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48227
 ;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 5, ADDITIONAL: 8
 ;; WARNING: recursion requested but not available
 
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 4096
 ;; QUESTION SECTION:
-;www.fciencias.unam.mx.		IN	A
+;www.unam.mx.			IN	A
 
 ;; ANSWER SECTION:
-www.fciencias.unam.mx.	7200	IN	A	132.248.181.248
+www.unam.mx.		7200	IN	A	132.247.70.37
 
 ;; AUTHORITY SECTION:
-fciencias.unam.mx.	7200	IN	NS	ns1.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns2.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns3.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns4.unam.mx.
-fciencias.unam.mx.	7200	IN	NS	ns5.unam.mx.
+unam.mx.		7200	IN	NS	ns1.unam.mx.
+unam.mx.		7200	IN	NS	ns4.unam.mx.
+unam.mx.		7200	IN	NS	ns5.unam.mx.
+unam.mx.		7200	IN	NS	ns3.unam.mx.
+unam.mx.		7200	IN	NS	ns2.unam.mx.
 
 ;; ADDITIONAL SECTION:
 ns1.unam.mx.		7200	IN	A	132.248.108.221
@@ -358,11 +353,13 @@ ns4.unam.mx.		7200	IN	A	132.248.204.32
 ns4.unam.mx.		7200	IN	AAAA	2001:1218:403:203:204::32
 ns5.unam.mx.		7200	IN	A	132.248.243.37
 
-;; Query time: 1 msec
-;; SERVER: 132.248.204.25#53(132.248.204.25)
-;; WHEN: Tue Feb 13 16:44:22 CST 2018
-;; MSG SIZE  rcvd: 292
+;; Query time: 67 msec
+;; SERVER: 132.248.108.215#53(132.248.108.215)
+;; WHEN: Tue Feb 13 16:42:33 CST 2018
+;; MSG SIZE  rcvd: 282
 ```
 
-+ <https://linux.die.net/man/1/dig>
++ <https://howdns.works/>
 + <http://networktools.he.net/>
++ <https://linux.die.net/man/1/dig>
++ <https://linux.die.net/man/1/host>
