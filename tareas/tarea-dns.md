@@ -8,7 +8,7 @@ Esta tarea debe ser entregada de manera **personal**
 
 Crear una carpeta llamada `tareas` en el repositorio **personal** de GitLab y agregarla al control de versiones:
 
-```sh
+```
 $ cd /ruta/hacia/repositorio/local
 $ mkdir -vp tareas
 mkdir: created directory ‘tareas’
@@ -32,7 +32,7 @@ Elegir el nombre de dominio y anotarlo en la [lista del grupo][ListaRedes-2018-2
   + El dominio debe ser _completamente_ diferente, no se permite elegir `example.com` y que otra persona elija `example.com.mx`
   + No se permite elegir un _subdominio_ (ej. `fciencias.unam.mx`)
 
-```sh
+```
 $ echo "unam.mx" > dominio.txt
 $ cat dominio.txt
 unam.mx
@@ -44,7 +44,7 @@ $ git commit -m 'Dominio DNS seleccionado'
 
 Realizar en la terminal una consulta `whois` para el dominio seleccionado y guardar la salida en el archivo `tareas/whois.log`
 
-```sh
+```
 $ whois unam.mx | tee whois.log
 $ git add whois.log
 $ git commit -m 'Consulta WHOIS'
@@ -54,7 +54,7 @@ $ git commit -m 'Consulta WHOIS'
 
 Listar el contenido del archivo `/etc/resolv.conf` y hacer una copia en el directorio `tareas`
 
-```sh
+```
 $ cp -v /etc/resolv.conf ./
 ‘/etc/resolv.conf’ -> ‘./resolv.conf’
 $ git add resolv.conf
@@ -65,16 +65,26 @@ $ git commit -m 'Archivo /etc/resolv.conf'
 
 Hacer manualmente una **[búsqueda iterativa de DNS][Busqueda-iterativa-DNS]** para el registro `www` del dominio seleccionado. Guardar la salida de la terminal en el archivo `tareas/dns.log`
 
-```sh
+```
 $ dig +all NS .
+
+	...
+
+$ dig +all NS mx. @a.root-servers.net.
+
+	...
+
+$ dig +all unam.mx. @x.mx-ns.mx.
 
 	...
 
 $ dig +all www.unam.mx. @ns3.unam.mx.
 
+	...
+
 ```
 
-```sh
+```
 $ git add dns.log
 $ git commit -m 'Búsqueda iterativa de DNS' dns.log
 ```
@@ -97,7 +107,7 @@ Elaborar un [diagrama como este][Diagrama-busqueda-iterativa] y explicar lo que 
   + Subir el archivo fuente del diagrama y exportarlo al formato PDF y/o PNG
   + Se sugiere el uso del programa **DIA** disponible en [el sitio web][dia-installer], [en SourceForge][dia-sourceforge] y [en PortableApps][dia-portableapps]
 
-```sh
+```
 $ git add diagrama-dns.dia diagrama-dns.pdf diagrama-dns.png
 $ git commit -m 'Diagrama de la búsqueda iterativa de DNS'
 ```
@@ -106,7 +116,7 @@ $ git commit -m 'Diagrama de la búsqueda iterativa de DNS'
 
 Hacer `git push` para subir todos los cambios realizados al repositorio remoto
 
-```sh
+```
 $ git pull
 $ git push
 ```
