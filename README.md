@@ -25,8 +25,8 @@ Semestre 2018-2
 ### Tareas
 
 + [Tarea DNS y WHOIS](tareas/tarea-dns.md "Tarea sobre los protocolos DNS y WHOIS")
-+ [Tarea HTTP](taretareas/tarea-http.md "Tarea sobre el protocolo HTTP")
-+ [Tarea SSL](taretareas/tarea-ssl.md "Tarea sobre el protoclo SSL")
++ [Tarea HTTP](tareas/tarea-http.md "Tarea sobre el protocolo HTTP")
++ [Tarea SSL](tareas/tarea-ssl.md "Tarea sobre el protoclo SSL")
 
 
 ### Ligas de interés
