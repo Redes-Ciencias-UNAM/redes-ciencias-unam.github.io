@@ -17,10 +17,12 @@ Semestre 2018-2
 
 ### Temas
 
-+ [Guía rápida de `git`](git.md "git")
-+ [DNS - Domain Name System](dns.md "dig")
-+ [WHOIS](whois.md "whois")
-+ [HTTP - HyperText Transfer Protocol](http.md "http")
++ [Guía rápida de `git`](git.md "9418/tcp")
++ [DNS - Domain Name System](dns.md "53/udp , 53/tcp")
++ [WHOIS](whois.md "43/tcp")
++ [HTTP - HyperText Transfer Protocol](http.md "80/tcp , 443/tcp")
++ [SSL - Secure Sockets Layer](ssl.md "ssl")
++ [SMTP - Simple Mail Transfer Protocol](smtp.md "25/tcp , 465/tcp , 587/tcp")
 
 ### Tareas
 

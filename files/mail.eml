@@ -1,0 +1,41 @@
+Delivered-To: bob@example.net
+Received: by 10.192.145.44 with SMTP id aaaaaaaaaaaaaaa;
+        Tue, 20 Mar 2018 17:18:19 -0700 (PDT)
+X-Example-Smtp-Source: 012345678/9ABCDEFGHIJLKMNO/PQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz
+X-Received: by 10.202.207.200 with SMTP id abcdef0123456789.012.3456789abcdef;
+        Tue, 20 Mar 2018 17:18:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1521592265; cv=none;
+        d=google.com; s=arc-20160816;
+        b=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/ab
+         cdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdef
+         ghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghij
+         klmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghijklmn
+         opqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghijklmnopqr
+         azAZ09+/==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=example.net; s=arc-20160816;
+        h=subject:from:to:date:message-id:arc-authentication-results;
+        bh=abcdefghijklmnopqrstuvwxyzABCXYZ0123456789+/=;
+        b=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/ab
+         cdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdef
+         ghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghij
+         klmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghijklmn
+         opqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/abcdefghijklmnopqr
+         azAZ09+/==
+ARC-Authentication-Results: i=1; mx.example.net;
+       spf=neutral (example.net: 198.51.100.0 is neither permitted nor denied by best guess record for domain of username@hostname.example.local) smtp.mailfrom=username@hostname.example.local
+Return-Path: <username@hostname.example.local>
+Received: from hostname.example.local ([198.51.100.0])
+        by mx.example.net with ESMTP id 012-3456789abcdef.0f.2018.03.20.17.18.19
+        for <bob@example.net>;
+        Tue, 20 Mar 2018 17:18:19 -0700 (PDT)
+Received-SPF: neutral (google.com: 198.51.100.0 is neither permitted nor denied by best guess record for domain of username@hostname.example.local) client-ip=198.51.100.0;
+Authentication-Results: mx.example.net;
+       spf=neutral (google.com: 198.51.100.0 is neither permitted nor denied by best guess record for domain of username@hostname.example.local) smtp.mailfrom=username@hostname.example.local
+Message-Id: <5ab1a7c9.1c69fb81.99996.3682-SMTPIN_ADDED_MISSING@mx.example.net>
+Date: Tue, 20 Mar 2018 18:19:20 -0600
+To: bob@example.net
+From: username@hostname.example.local
+Subject: test Tue, 20 Mar 2018 18:19:20 -0600
+X-Mailer: swaks v20130209.0 jetmore.org/john/code/swaks/
+
+This is a test mailing
