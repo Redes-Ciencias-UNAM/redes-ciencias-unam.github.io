@@ -227,6 +227,32 @@ $ openssl verify -verbose -x509_strict -CApath /etc/ssl/certs/ -trusted chain.pe
 www_unam_mx.pem: OK
 ```
 
+#### Error al verificar
+
+Si aparece un error parecido al siguiente y la opción `-trusted` no sirve:
+
+```
+$ openssl verify -verbose -x509_strict -CApath /etc/ssl/certs/ -trusted chain.crt www_example_org.crt
+www_example_org.crt: DN="/O=Internet Corporation for Assigned Names and Numbers/OU=Technology/CN=www.example.org"
+error 2 at 1 depth lookup:unable to get issuer certificate
+```
+
+Intentar con la opción `-untrusted`:
+
+```
+$ openssl verify -verbose -x509_strict -CApath /etc/ssl/certs/ -untrusted chain.crt www_example_org.crt
+www_example_org.crt: OK
+```
+
+Leer la página de _man_ de verify(1) (`man 1 verify`) y justificar por que se cambió la opción de línea de comandos.
+
++ <https://manpages.debian.org/jessie/openssl/verify.1ssl.en.html>
++ <http://manpages.ubuntu.com/manpages/xenial/en/man1/verify.1ssl.html>
++ <https://linux.die.net/man/1/verify>
++ <http://man.he.net/?topic=verify&section=1>
+
+### Notas
+
 Mencionar cómo es que se realiza la validación de los certificados y qué función realizan la ruta `/etc/ssl/certs` y el archivo `chain.pem`
 
 [ListaRedes-2018-2]: http://tinyurl.com/ListaRedes-2018-2 "Lista Redes Semestre 2018-2"
