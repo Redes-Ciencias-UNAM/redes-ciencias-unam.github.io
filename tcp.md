@@ -1,5 +1,10 @@
 # TCP - Transmission Control Protocol
 
+## Captura de tráfico
+
++ [Captura en formato `pcap`  ](/files/captura.pcap   "Captura de tráfico en formato PCAP")
++ [Captura en formato `pcapng`](/files/captura.pcapng "Captura de tráfico en formato PCAP-NG")
+
 ## Referencias
 
 + <https://www.redbooks.ibm.com/pubs/pdfs/redbooks/gg243376.pdf>
