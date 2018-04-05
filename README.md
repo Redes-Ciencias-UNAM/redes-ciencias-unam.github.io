@@ -15,11 +15,11 @@ Semestre 2018-2
 + [Índice de prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
 + [Especificaciones de las prácticas en formato PDF](/public/practicas "Archivos PDF de las prácticas")
 
-  - [Práctica 1 - Repaso de programación y sistemas operativos - 12/02/2018](/public/practicas/practica1.pdf "Práctica 1 - Repaso de programación y sistemas operativos")
-  - [Práctica 2 - HTTP y DNS - 19/02/2018](/public/practicas/practica2.pdf "Práctica 2 - HTTP y DNS")
-  - [Práctica 3 - Criptografía, PKI y SSL - 27/02/2018](/public/practicas/practica3.pdf "Práctica 3 - Criptografía, PKI y SSL")
-  - [Práctica 4 - SSH: Secure Shell - 06/03/2018](/public/practicas/practica4.pdf "Práctica 4 - SSH: Secure Shell")
-  - [Práctica 5 - FTP, SFTP y SMTP - 12/03/2018](/public/practicas/practica5.pdf "Práctica 5 - FTP, SFTP y SMTP")
+  - [Práctica 1 - 12/02/2018 - Repaso de programación y sistemas operativos](/public/practicas/practica1.pdf "Práctica 1 - Repaso de programación y sistemas operativos")
+  - [Práctica 2 - 19/02/2018 - HTTP y DNS](/public/practicas/practica2.pdf "Práctica 2 - HTTP y DNS")
+  - [Práctica 3 - 27/02/2018 - Criptografía, PKI y SSL](/public/practicas/practica3.pdf "Práctica 3 - Criptografía, PKI y SSL")
+  - [Práctica 4 - 06/03/2018 - SSH: Secure Shell](/public/practicas/practica4.pdf "Práctica 4 - SSH: Secure Shell")
+  - [Práctica 5 - 12/03/2018 - FTP, SFTP y SMTP](/public/practicas/practica5.pdf "Práctica 5 - FTP, SFTP y SMTP")
 
 ### Temas
 
