@@ -4,7 +4,7 @@
 
 + [Captura en formato `pcap`  ](/files/captura.pcap   "Captura de tráfico en formato PCAP")
 + [Captura en formato `pcapng`](/files/captura.pcapng "Captura de tráfico en formato PCAP-NG")
-+ [Captura en formato `pcapng`](/files/tcpdump.log "Captura de tráfico en formato texto plano")
++ [Captura en formato `txt`](/files/tcpdump.log "Captura de tráfico en formato texto plano")
 
 
 ## Referencias
