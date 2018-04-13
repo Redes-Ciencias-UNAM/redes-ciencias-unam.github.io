@@ -2,17 +2,20 @@
 
 ## Captura de tráfico
 
-+ [Captura en formato `pcap`  ](/files/captura.pcap   "Captura de tráfico en formato PCAP")
-+ [Captura en formato `pcapng`](/files/captura.pcapng "Captura de tráfico en formato PCAP-NG")
-+ [Captura en formato `txt`](/files/tcpdump.log "Captura de tráfico en formato texto plano")
-
++ [Captura en formato `pcap`](/files/captura.pcap "Captura de tráfico en formato PCAP")
++ [Captura en formato `txt `](/files/captura.txt  "Captura de tráfico en formato txt")
 
 ## Referencias
+
+### Cabeceras de TCP e IP
 
 + <https://www.redbooks.ibm.com/pubs/pdfs/redbooks/gg243376.pdf>
 + <https://nmap.org/book/tcpip-ref.html>
 + <https://www.sans.org/security-resources/tcpip.pdf>
 + <https://www.cs.nmt.edu/~risk/TCP-UDP%20Pocket%20Guide.pdf>
+
+### Protocolo TCP
+
 + <http://freesoft.org/CIE/Course/Section4/8.htm>
 + <http://user.it.uu.se/~rmg/teaching/IP.pdf>
 + <http://www.scs.stanford.edu/nyu/03sp/notes/l8.pdf>
@@ -28,6 +31,8 @@
 + <http://web.cs.wpi.edu/~cs513/s07/week9-tcpipsuite.pdf>
 + <http://seclab.cs.sunysb.edu/sekar/papers/netattacks.pdf>
 + <https://users.ece.cmu.edu/~adrian/630-f04/readings/bellovin-tcp-ip.pdf>
+
+### Ventana deslizante
 
 + <http://www.site.uottawa.ca/~elsaddik/abedweb/applets/Applets/Sliding_Window/sliding_window.html>
 + <http://euclid.nmu.edu/~rappleto/Classes/CS228/Notes/IP-Protocols/tcp.html>
