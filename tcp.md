@@ -26,3 +26,15 @@
 + <http://web.cs.wpi.edu/~cs513/s07/week9-tcpipsuite.pdf>
 + <http://seclab.cs.sunysb.edu/sekar/papers/netattacks.pdf>
 + <https://users.ece.cmu.edu/~adrian/630-f04/readings/bellovin-tcp-ip.pdf>
+
++ <http://www.site.uottawa.ca/~elsaddik/abedweb/applets/Applets/Sliding_Window/sliding_window.html>
++ <http://euclid.nmu.edu/~rappleto/Classes/CS228/Notes/IP-Protocols/tcp.html>
++ <http://www.cs.montana.edu/~halla/csci466/lectures/lec25/lec25-tcp>
++ <http://www.lovemytool.com/blog/2010/07/practical-tcp-series-the-tcp-window-by-chris-greer.html>
++ <http://www.freesoft.org/CIE/Course/Section4/5.htm>
++ <https://web.cs.wpi.edu/~rek/Undergrad_Nets/C02/TCP_SlidingWindows.pdf>
++ <http://nptel.ac.in/courses/106106091/pdf/Lecture14_SlidingWindow.pdf>
++ <http://www.cs.utexas.edu/users/lam/396m/slides/Sliding_window+congestion_control.pdf>
++ <http://www.cs.uni.edu/~diesburg/courses/cs3470_fa14/sessions/s29/s29.pdf>
++ <https://www.nada.kth.se/kurser/kth/2D1392/05/lectures/lecture_4.pdf>
++ <https://cs.gmu.edu/~huangyih/455/windows.pdf>
