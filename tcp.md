@@ -5,6 +5,10 @@
 + [Captura en formato `pcap`](/files/captura.pcap "Captura de tráfico en formato PCAP")
 + [Captura en formato `txt `](/files/captura.txt  "Captura de tráfico en formato txt")
 
+## Tarea
+
++ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
+
 ## Referencias
 
 ### Cabeceras de TCP e IP
