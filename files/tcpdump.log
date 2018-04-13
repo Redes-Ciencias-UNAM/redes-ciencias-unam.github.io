@@ -1,0 +1,43 @@
+$ tcpdump -#vvvenr captura.pcap
+reading from file captura.pcap, link-type LINUX_SLL (Linux cooked)
+    1  17:43:57.781491 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 76: (tos 0x0, ttl 64, id 46452, offset 0, flags [DF], proto TCP (6), length 60)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [S], cksum 0xc373 (correct), seq 1346529629, win 29200, options [mss 1460,sackOK,TS val 18668585 ecr 0,nop,wscale 7], length 0
+    2  17:43:57.794234  In 64:a0:e7:40:ed:41 ethertype IPv4 (0x0800), length 76: (tos 0x0, ttl 59, id 0, offset 0, flags [DF], proto TCP (6), length 60)
+    132.247.70.37.80 > 10.4.1.174.42104: Flags [S.], cksum 0x30d9 (correct), seq 34764151, ack 1346529630, win 28960, options [mss 1380,sackOK,TS val 711651797 ecr 18668585,nop,wscale 7], length 0
+    3  17:43:57.794353 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 64, id 46453, offset 0, flags [DF], proto TCP (6), length 52)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [.], cksum 0xcf8d (correct), seq 1, ack 1, win 229, options [nop,nop,TS val 18668588 ecr 711651797], length 0
+    4  17:43:57.794562 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 143: (tos 0x0, ttl 64, id 46454, offset 0, flags [DF], proto TCP (6), length 127)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [P.], cksum 0xa7e7 (correct), seq 1:76, ack 1, win 229, options [nop,nop,TS val 18668589 ecr 711651797], length 75: HTTP, length: 75
+	GET / HTTP/1.1
+	User-Agent: curl/7.38.0
+	Host: www.unam.mx
+	Accept: */*
+	
+    5  17:43:57.826283  In 64:a0:e7:40:ed:41 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 59, id 32772, offset 0, flags [DF], proto TCP (6), length 52)
+    132.247.70.37.80 > 10.4.1.174.42104: Flags [.], cksum 0xcf21 (correct), seq 1, ack 76, win 227, options [nop,nop,TS val 711651831 ecr 18668589], length 0
+    6  17:43:57.830989  In 64:a0:e7:40:ed:41 ethertype IPv4 (0x0800), length 553: (tos 0x0, ttl 59, id 32773, offset 0, flags [DF], proto TCP (6), length 537)
+    132.247.70.37.80 > 10.4.1.174.42104: Flags [P.], cksum 0xb2a8 (correct), seq 1:486, ack 76, win 227, options [nop,nop,TS val 711651833 ecr 18668589], length 485: HTTP, length: 485
+	HTTP/1.1 301 Moved Permanently
+	Date: Thu, 05 Apr 2018 22:43:57 GMT
+	Server: Apache
+	Location: https://www.unam.mx/
+	Cache-Control: max-age=1209600
+	Expires: Thu, 19 Apr 2018 22:43:57 GMT
+	Content-Length: 228
+	Content-Type: text/html; charset=iso-8859-1
+	
+	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+	<html><head>
+	<title>301 Moved Permanently</title>
+	</head><body>
+	<h1>Moved Permanently</h1>
+	<p>The document has moved <a href="https://www.unam.mx/">here</a>.</p>
+	</body></html>
+    7  17:43:57.831014 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 64, id 46455, offset 0, flags [DF], proto TCP (6), length 52)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [.], cksum 0xcd27 (correct), seq 76, ack 486, win 237, options [nop,nop,TS val 18668598 ecr 711651833], length 0
+    8  17:43:57.831338 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 64, id 46456, offset 0, flags [DF], proto TCP (6), length 52)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [F.], cksum 0xcd26 (correct), seq 76, ack 486, win 237, options [nop,nop,TS val 18668598 ecr 711651833], length 0
+    9  17:43:57.839739  In 64:a0:e7:40:ed:41 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 59, id 32774, offset 0, flags [DF], proto TCP (6), length 52)
+    132.247.70.37.80 > 10.4.1.174.42104: Flags [F.], cksum 0xcd28 (correct), seq 486, ack 77, win 227, options [nop,nop,TS val 711651840 ecr 18668598], length 0
+   10  17:43:57.839778 Out b4:b6:76:d0:9d:e1 ethertype IPv4 (0x0800), length 68: (tos 0x0, ttl 64, id 46457, offset 0, flags [DF], proto TCP (6), length 52)
+    10.4.1.174.42104 > 132.247.70.37.80: Flags [.], cksum 0xcd1c (correct), seq 77, ack 487, win 237, options [nop,nop,TS val 18668600 ecr 711651840], length 0
