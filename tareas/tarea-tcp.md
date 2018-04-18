@@ -183,11 +183,31 @@ Guardar la versión en texto de la captura realizada en el archivo `www_unam_mx.
 
 ```
 
+#### Diagrama de la captura realizada
+
+Realizar un diagrama [en ASCII][captura-ditaa] o en formato de [imagen][captura-png] donde se pueda visualizar lo siguiente:
+
++ Dirección del paquete (del cliente al servidor o viceversa)
++ Banderas de TCP
++ Número de secuencia y número de ACK
++ Tamaño de la ventana
++ Longitud de los datos enviados
++ Si el paquete contiene datos de TCP, incluir la primer línea de la petición o respuesta
+
+Ver la [sección de TCP][seccion-tcp] o tomar los archivos mencionados arriba como ejemplo
+
+[seccion-tcp]: /tcp.md
+[captura-ditaa]: /files/captura.ditaa "Captura de tráfico en formato ditaa"
+[captura-png]:   /files/captura.png   "Captura de tráfico en formato png"
+
 ### 5. Documentar los pasos realizados y subir al repositorio
 
 Documentar los pasos realizados, así como los problemas encontrados y como se solucionaron en el archivo `tarea-tcp.md`
 
 > Si utilizaste `wireshark` para hacer la captura, debes subir las pantallas que muestren el procedimiento que seguiste
+
+
+#### Enviar al repositorio
 
 Agregar los archivos generados en la carpeta `tareas` dentro del repositorio:
 
