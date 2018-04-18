@@ -2,8 +2,11 @@
 
 ## Captura de tráfico
 
-+ [Captura en formato `pcap`](/files/captura.pcap "Captura de tráfico en formato PCAP")
-+ [Captura en formato `txt `](/files/captura.txt  "Captura de tráfico en formato txt")
++ [Captura en formato `pcap` ](/files/captura.pcap "Captura de tráfico en formato PCAP")
++ [Captura en formato `txt`  ](/files/captura.txt  "Captura de tráfico en formato txt")
++ [Captura en formato `ditaa`](/files/captura.txt  "Captura de tráfico en formato ditaa")
+
+<img alt="Captura de tráfico - diagrama" src="/files/captura.png" />
 
 ## Tarea
 
