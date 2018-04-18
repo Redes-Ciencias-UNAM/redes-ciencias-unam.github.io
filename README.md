@@ -20,7 +20,8 @@ Semestre 2018-2
   - [Práctica 3 - 27/02/2018 - Criptografía, PKI y SSL](/public/practicas/practica3.pdf "Práctica 3 - Criptografía, PKI y SSL")
   - [Práctica 4 - 06/03/2018 - SSH: Secure Shell](/public/practicas/practica4.pdf "Práctica 4 - SSH: Secure Shell")
   - [Práctica 5 - 12/03/2018 - FTP, SFTP y SMTP](/public/practicas/practica5.pdf "Práctica 5 - FTP, SFTP y SMTP")
-
+  - [Práctica 6 - 04/2018 - Implementacion de servicios](/public/practicas/practica6.pdf "Práctica 6 - Implementacion de servicios")
+  - [Práctica 7 - 04/2018 - Sockets TCP/UDP](/public/practicas/practica7.pdf "Práctica 7 - Sockets TCP/UDP")
 ### Temas
 
 + [Guía rápida de `git`](git.md "9418/tcp")
