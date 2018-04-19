@@ -129,7 +129,7 @@ Calendarización de examenes
 |--------------:|:------------------------------|
 | Parcial 1	| Martes, 20 de febrero de 2018	|
 | Parcial 2	| Jueves, 22 de marzo   de 2018	|
-| Parcial 3	| Jueves, 19 de abril   de 2018	|
+| Parcial 3	| Martes, 24 de abril   de 2018	|
 | Parcial 4	| Jueves, 17 de mayo    de 2018	|
 
 ##### Requisitos para presentar examen
