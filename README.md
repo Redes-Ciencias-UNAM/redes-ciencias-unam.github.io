@@ -41,7 +41,7 @@ Semestre 2018-2
 
 #### 3 - Capa de Red
 
-+ [IP](ip.md "Protocolo de Internet")
++ [IP - Internet Protocol](ip.md "Protocolo de Internet")
 
 ### Tareas
 
