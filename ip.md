@@ -11,6 +11,7 @@
 
 ### Subredes de IPv4 e IPv6
 
++ <https://linux.die.net/man/1/ipcalc>
 + <http://www.gestioip.net/cgi-bin/subnet_calculator.cgi>
 + <http://eecs.ucf.edu/~aeisler/ccna_prep/Mastering%20IP%20Subnetting%20Forever%21.pdf>
 + <https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.hald001/subnetting.htm>
