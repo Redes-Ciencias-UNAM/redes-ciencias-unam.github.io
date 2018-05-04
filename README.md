@@ -27,7 +27,7 @@ Semestre 2018-2
 
 + [Guía rápida de `git`](git.md "9418/tcp")
 
-#### Capa de Aplicación
+#### 7 - Capa de Aplicación
 
 + [DNS - Domain Name System](dns.md "53/udp , 53/tcp")
 + [WHOIS](whois.md "43/tcp")
@@ -35,19 +35,25 @@ Semestre 2018-2
 + [SSL - Secure Sockets Layer](ssl.md "ssl")
 + [SMTP - Simple Mail Transfer Protocol](smtp.md "25/tcp , 465/tcp , 587/tcp")
 
-#### Capa de transporte
+#### 4 - Capa de Transporte
 
 + [TCP - Transmission Control Protocol](tcp.md "TCP")
 
+#### 3 - Capa de Red
+
++ [IP](ip.md "Protocolo de Internet")
+
 ### Tareas
 
-#### Capa de Aplicación
+#### 7 - Capa de Aplicación
 
 + [Tarea DNS y WHOIS](tareas/tarea-dns.md "Tarea sobre los protocolos DNS y WHOIS")
 + [Tarea HTTP](tareas/tarea-http.md "Tarea sobre el protocolo HTTP")
 + [Tarea SSL](tareas/tarea-ssl.md "Tarea sobre el protoclo SSL")
-+ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
 
+#### 4 - Capa de Transporte
+
++ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
 
 ### Ligas de interés
 
