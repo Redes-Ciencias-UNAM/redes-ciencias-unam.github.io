@@ -1,3 +1,4 @@
+# tcpdump -#envr dhcp.pcap
     1  14:16:24.317453 00:0b:82:01:fc:42 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 314: (tos 0x0, ttl 250, id 43062, offset 0, flags [none], proto UDP (17), length 300)
     0.0.0.0.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 00:0b:82:01:fc:42, length 272, xid 0x3d1d, Flags [none]
 	  Client-Ethernet-Address 00:0b:82:01:fc:42
