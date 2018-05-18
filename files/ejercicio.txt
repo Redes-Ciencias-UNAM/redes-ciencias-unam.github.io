@@ -1,0 +1,681 @@
+# tcpdump -#vvvenr ejercicio.pcap
+reading from file ejercicio.pcap, link-type EN10MB (Ethernet)
+    1  02:30:32.652140 08:00:27:2c:38:e1 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 342: (tos 0x10, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 328)
+    0.0.0.0.68 > 255.255.255.255.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Discover
+	    Requested-IP Option 50, length 4: 192.168.56.103
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 20
+    2  02:30:33.690883 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x10, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [udp sum ok] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Offer
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+    3  02:30:33.694731 08:00:27:2c:38:e1 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 342: (tos 0x10, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 328)
+    0.0.0.0.68 > 255.255.255.255.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Requested-IP Option 50, length 4: 192.168.56.103
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 14
+    4  02:30:33.696141 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x10, ttl 128, id 0, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [udp sum ok] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+    5  02:32:02.715140 08:00:27:2c:38:e1 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+    6  02:32:02.715157 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+    7  02:32:02.715808 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34541, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.56.10: ICMP echo request, id 1509, seq 1, length 64
+    8  02:32:02.715851 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.10 > 192.168.56.103: ICMP echo reply, id 1509, seq 1, length 64
+    9  02:32:03.716403 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34682, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.56.10: ICMP echo request, id 1509, seq 2, length 64
+   10  02:32:03.716470 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.10 > 192.168.56.103: ICMP echo reply, id 1509, seq 2, length 64
+   11  02:32:04.716924 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34803, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.56.10: ICMP echo request, id 1509, seq 3, length 64
+   12  02:32:04.716977 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.10 > 192.168.56.103: ICMP echo reply, id 1509, seq 3, length 64
+   13  02:32:05.719306 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34963, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.56.10: ICMP echo request, id 1509, seq 4, length 64
+   14  02:32:05.719352 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 0, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.10 > 192.168.56.103: ICMP echo reply, id 1509, seq 4, length 64
+   15  02:32:24.502599 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 19917, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 10.0.2.1: ICMP echo request, id 1510, seq 1, length 64
+   16  02:32:24.503164 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 254, id 19917, offset 0, flags [DF], proto ICMP (1), length 84)
+    10.0.2.1 > 192.168.56.103: ICMP echo reply, id 1510, seq 1, length 64
+   17  02:32:25.503378 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20108, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 10.0.2.1: ICMP echo request, id 1510, seq 2, length 64
+   18  02:32:25.504104 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 254, id 20108, offset 0, flags [DF], proto ICMP (1), length 84)
+    10.0.2.1 > 192.168.56.103: ICMP echo reply, id 1510, seq 2, length 64
+   19  02:32:26.504506 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20312, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 10.0.2.1: ICMP echo request, id 1510, seq 3, length 64
+   20  02:32:26.505158 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 254, id 20312, offset 0, flags [DF], proto ICMP (1), length 84)
+    10.0.2.1 > 192.168.56.103: ICMP echo reply, id 1510, seq 3, length 64
+   21  02:32:27.505935 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20398, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 10.0.2.1: ICMP echo request, id 1510, seq 4, length 64
+   22  02:32:27.506691 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 254, id 20398, offset 0, flags [DF], proto ICMP (1), length 84)
+    10.0.2.1 > 192.168.56.103: ICMP echo reply, id 1510, seq 4, length 64
+   23  02:32:38.370280 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34521, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.100.1: ICMP echo request, id 1511, seq 1, length 64
+   24  02:32:38.372860 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 62, id 53631, offset 0, flags [none], proto ICMP (1), length 84)
+    192.168.100.1 > 192.168.56.103: ICMP echo reply, id 1511, seq 1, length 64
+   25  02:32:39.372313 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34766, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.100.1: ICMP echo request, id 1511, seq 2, length 64
+   26  02:32:39.376072 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 62, id 53699, offset 0, flags [none], proto ICMP (1), length 84)
+    192.168.100.1 > 192.168.56.103: ICMP echo reply, id 1511, seq 2, length 64
+   27  02:32:40.372447 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 34852, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.100.1: ICMP echo request, id 1511, seq 3, length 64
+   28  02:32:40.375711 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 62, id 53738, offset 0, flags [none], proto ICMP (1), length 84)
+    192.168.100.1 > 192.168.56.103: ICMP echo reply, id 1511, seq 3, length 64
+   29  02:32:41.373436 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 35036, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 192.168.100.1: ICMP echo request, id 1511, seq 4, length 64
+   30  02:32:41.376198 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 62, id 53805, offset 0, flags [none], proto ICMP (1), length 84)
+    192.168.100.1 > 192.168.56.103: ICMP echo reply, id 1511, seq 4, length 64
+   31  02:32:46.174775 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 26002, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 1.1.1.1: ICMP echo request, id 1512, seq 1, length 64
+   32  02:32:46.215068 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 49, id 60497, offset 0, flags [none], proto ICMP (1), length 84)
+    1.1.1.1 > 192.168.56.103: ICMP echo reply, id 1512, seq 1, length 64
+   33  02:32:47.177050 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 26039, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 1.1.1.1: ICMP echo request, id 1512, seq 2, length 64
+   34  02:32:47.218349 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 49, id 60886, offset 0, flags [none], proto ICMP (1), length 84)
+    1.1.1.1 > 192.168.56.103: ICMP echo reply, id 1512, seq 2, length 64
+   35  02:32:48.179180 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 26246, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 1.1.1.1: ICMP echo request, id 1512, seq 3, length 64
+   36  02:32:48.220204 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 49, id 61038, offset 0, flags [none], proto ICMP (1), length 84)
+    1.1.1.1 > 192.168.56.103: ICMP echo reply, id 1512, seq 3, length 64
+   37  02:32:49.179165 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 26334, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 1.1.1.1: ICMP echo request, id 1512, seq 4, length 64
+   38  02:32:49.219446 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 49, id 61639, offset 0, flags [none], proto ICMP (1), length 84)
+    1.1.1.1 > 192.168.56.103: ICMP echo reply, id 1512, seq 4, length 64
+   39  02:32:53.660664 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 30263, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 8.8.8.8: ICMP echo request, id 1513, seq 1, length 64
+   40  02:32:53.670542 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 56, id 44047, offset 0, flags [none], proto ICMP (1), length 84)
+    8.8.8.8 > 192.168.56.103: ICMP echo reply, id 1513, seq 1, length 64
+   41  02:32:54.664267 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 30506, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 8.8.8.8: ICMP echo request, id 1513, seq 2, length 64
+   42  02:32:54.673568 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 56, id 44276, offset 0, flags [none], proto ICMP (1), length 84)
+    8.8.8.8 > 192.168.56.103: ICMP echo reply, id 1513, seq 2, length 64
+   43  02:32:55.667514 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 30625, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 8.8.8.8: ICMP echo request, id 1513, seq 3, length 64
+   44  02:32:55.676752 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 56, id 44770, offset 0, flags [none], proto ICMP (1), length 84)
+    8.8.8.8 > 192.168.56.103: ICMP echo reply, id 1513, seq 3, length 64
+   45  02:32:56.668247 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 30765, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 8.8.8.8: ICMP echo request, id 1513, seq 4, length 64
+   46  02:32:56.678409 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 56, id 45770, offset 0, flags [none], proto ICMP (1), length 84)
+    8.8.8.8 > 192.168.56.103: ICMP echo reply, id 1513, seq 4, length 64
+   47  02:33:02.317087 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20566, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 9.9.9.9: ICMP echo request, id 1514, seq 1, length 64
+   48  02:33:02.401006 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 55, id 7844, offset 0, flags [none], proto ICMP (1), length 84)
+    9.9.9.9 > 192.168.56.103: ICMP echo reply, id 1514, seq 1, length 64
+   49  02:33:03.318062 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20715, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 9.9.9.9: ICMP echo request, id 1514, seq 2, length 64
+   50  02:33:03.401796 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 55, id 8101, offset 0, flags [none], proto ICMP (1), length 84)
+    9.9.9.9 > 192.168.56.103: ICMP echo reply, id 1514, seq 2, length 64
+   51  02:33:04.319677 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 20914, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 9.9.9.9: ICMP echo request, id 1514, seq 3, length 64
+   52  02:33:04.407345 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 55, id 8283, offset 0, flags [none], proto ICMP (1), length 84)
+    9.9.9.9 > 192.168.56.103: ICMP echo reply, id 1514, seq 3, length 64
+   53  02:33:05.321090 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 21069, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 9.9.9.9: ICMP echo request, id 1514, seq 4, length 64
+   54  02:33:05.404721 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 55, id 8463, offset 0, flags [none], proto ICMP (1), length 84)
+    9.9.9.9 > 192.168.56.103: ICMP echo reply, id 1514, seq 4, length 64
+   55  02:33:21.889026 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 71: (tos 0x0, ttl 64, id 29478, offset 0, flags [DF], proto UDP (17), length 57)
+    192.168.56.103.47122 > 192.168.56.10.53: [udp sum ok] 18864+ A? www.unam.mx. (29)
+   56  02:33:21.889226 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 313: (tos 0x0, ttl 64, id 51862, offset 0, flags [none], proto UDP (17), length 299)
+    192.168.56.10.53 > 192.168.56.103.47122: [bad udp cksum 0xf2ea -> 0x1b05!] 18864 q: A? www.unam.mx. 1/5/7 www.unam.mx. [1h35m29s] A 132.247.70.15 ns: unam.mx. [1h35m29s] NS ns5.unam.mx., unam.mx. [1h35m29s] NS ns4.unam.mx., unam.mx. [1h35m29s] NS ns2.unam.mx., unam.mx. [1h35m29s] NS ns1.unam.mx., unam.mx. [1h35m29s] NS ns3.unam.mx. ar: ns1.unam.mx. [1h35m29s] A 132.248.108.221, ns2.unam.mx. [1h35m29s] A 132.248.204.25, ns3.unam.mx. [1h35m29s] A 132.248.108.215, ns4.unam.mx. [1h35m29s] A 132.248.204.32, ns5.unam.mx. [1h35m29s] A 132.248.243.37, ns3.unam.mx. [1h35m29s] AAAA 2001:1218:100:10a:108::215, ns4.unam.mx. [1h35m29s] AAAA 2001:1218:403:203:204::32 (271)
+   57  02:33:21.893870 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 62164, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.247.70.15: ICMP echo request, id 1522, seq 1, length 64
+   58  02:33:21.962303 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 51, id 4682, offset 0, flags [none], proto ICMP (1), length 84)
+    132.247.70.15 > 192.168.56.103: ICMP echo reply, id 1522, seq 1, length 64
+   59  02:33:21.965153 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 86: (tos 0x0, ttl 64, id 29494, offset 0, flags [DF], proto UDP (17), length 72)
+    192.168.56.103.45129 > 192.168.56.10.53: [udp sum ok] 10930+ PTR? 15.70.247.132.in-addr.arpa. (44)
+   60  02:33:21.965309 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 201: (tos 0x0, ttl 64, id 24569, offset 0, flags [none], proto UDP (17), length 187)
+    192.168.56.10.53 > 192.168.56.103.45129: [bad udp cksum 0xf27a -> 0x649e!] 10930 q: PTR? 15.70.247.132.in-addr.arpa. 1/5/0 15.70.247.132.in-addr.arpa. [1h35m30s] PTR www.unam.mx. ns: 70.247.132.in-addr.arpa. [1h35m30s] NS ns3.unam.mx., 70.247.132.in-addr.arpa. [1h35m30s] NS ns2.unam.mx., 70.247.132.in-addr.arpa. [1h35m30s] NS ns5.unam.mx., 70.247.132.in-addr.arpa. [1h35m30s] NS ns1.unam.mx., 70.247.132.in-addr.arpa. [1h35m30s] NS ns4.unam.mx. (159)
+   61  02:33:22.895056 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 62181, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.247.70.15: ICMP echo request, id 1522, seq 2, length 64
+   62  02:33:22.963273 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 51, id 5221, offset 0, flags [none], proto ICMP (1), length 84)
+    132.247.70.15 > 192.168.56.103: ICMP echo reply, id 1522, seq 2, length 64
+   63  02:33:23.897248 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 62424, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.247.70.15: ICMP echo request, id 1522, seq 3, length 64
+   64  02:33:23.966646 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 51, id 5813, offset 0, flags [none], proto ICMP (1), length 84)
+    132.247.70.15 > 192.168.56.103: ICMP echo reply, id 1522, seq 3, length 64
+   65  02:33:24.900981 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 62474, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.247.70.15: ICMP echo request, id 1522, seq 4, length 64
+   66  02:33:24.969669 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 51, id 6604, offset 0, flags [none], proto ICMP (1), length 84)
+    132.247.70.15 > 192.168.56.103: ICMP echo reply, id 1522, seq 4, length 64
+   67  02:33:32.440696 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 81: (tos 0x0, ttl 64, id 29931, offset 0, flags [DF], proto UDP (17), length 67)
+    192.168.56.103.58012 > 192.168.56.10.53: [udp sum ok] 1764+ A? www.fciencias.unam.mx. (39)
+   68  02:33:32.440901 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 323: (tos 0x0, ttl 64, id 32758, offset 0, flags [none], proto UDP (17), length 309)
+    192.168.56.10.53 > 192.168.56.103.58012: [bad udp cksum 0xf2f4 -> 0xc8a8!] 1764 q: A? www.fciencias.unam.mx. 1/5/7 www.fciencias.unam.mx. [1h35m30s] A 132.248.181.248 ns: fciencias.unam.mx. [1h35m30s] NS ns4.unam.mx., fciencias.unam.mx. [1h35m30s] NS ns3.unam.mx., fciencias.unam.mx. [1h35m30s] NS ns5.unam.mx., fciencias.unam.mx. [1h35m30s] NS ns2.unam.mx., fciencias.unam.mx. [1h35m30s] NS ns1.unam.mx. ar: ns1.unam.mx. [1h35m18s] A 132.248.108.221, ns2.unam.mx. [1h35m18s] A 132.248.204.25, ns3.unam.mx. [1h35m18s] A 132.248.108.215, ns4.unam.mx. [1h35m18s] A 132.248.204.32, ns5.unam.mx. [1h35m18s] A 132.248.243.37, ns3.unam.mx. [1h35m18s] AAAA 2001:1218:100:10a:108::215, ns4.unam.mx. [1h35m18s] AAAA 2001:1218:403:203:204::32 (281)
+   69  02:33:32.443785 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 42250, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.248.181.248: ICMP echo request, id 1523, seq 1, length 64
+   70  02:33:32.511629 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 50, id 15395, offset 0, flags [none], proto ICMP (1), length 84)
+    132.248.181.248 > 192.168.56.103: ICMP echo reply, id 1523, seq 1, length 64
+   71  02:33:32.512586 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 88: (tos 0x0, ttl 64, id 29939, offset 0, flags [DF], proto UDP (17), length 74)
+    192.168.56.103.47711 > 192.168.56.10.53: [udp sum ok] 35141+ PTR? 248.181.248.132.in-addr.arpa. (46)
+   72  02:33:32.512754 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 213: (tos 0x0, ttl 64, id 398, offset 0, flags [none], proto UDP (17), length 199)
+    192.168.56.10.53 > 192.168.56.103.47711: [bad udp cksum 0xf286 -> 0x1f4e!] 35141 q: PTR? 248.181.248.132.in-addr.arpa. 1/5/0 248.181.248.132.in-addr.arpa. [1h35m30s] PTR www.fciencias.unam.mx. ns: 181.248.132.in-addr.arpa. [1h35m30s] NS ns3.unam.mx., 181.248.132.in-addr.arpa. [1h35m30s] NS ns4.unam.mx., 181.248.132.in-addr.arpa. [1h35m30s] NS ns1.unam.mx., 181.248.132.in-addr.arpa. [1h35m30s] NS ns2.unam.mx., 181.248.132.in-addr.arpa. [1h35m30s] NS ns5.unam.mx. (171)
+   73  02:33:33.444509 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 42289, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.248.181.248: ICMP echo request, id 1523, seq 2, length 64
+   74  02:33:33.512302 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 50, id 15715, offset 0, flags [none], proto ICMP (1), length 84)
+    132.248.181.248 > 192.168.56.103: ICMP echo reply, id 1523, seq 2, length 64
+   75  02:33:34.445870 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 42531, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.248.181.248: ICMP echo request, id 1523, seq 3, length 64
+   76  02:33:34.513665 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 50, id 15879, offset 0, flags [none], proto ICMP (1), length 84)
+    132.248.181.248 > 192.168.56.103: ICMP echo reply, id 1523, seq 3, length 64
+   77  02:33:35.447773 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 42598, offset 0, flags [DF], proto ICMP (1), length 84)
+    192.168.56.103 > 132.248.181.248: ICMP echo request, id 1523, seq 4, length 64
+   78  02:33:35.516369 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 50, id 16490, offset 0, flags [none], proto ICMP (1), length 84)
+    132.248.181.248 > 192.168.56.103: ICMP echo reply, id 1523, seq 4, length 64
+   79  02:33:54.520824 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 71: (tos 0x0, ttl 64, id 30447, offset 0, flags [DF], proto UDP (17), length 57)
+    192.168.56.103.51273 > 192.168.56.10.53: [udp sum ok] 1498+ A? www.unam.mx. (29)
+   80  02:33:54.520870 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 71: (tos 0x0, ttl 64, id 30448, offset 0, flags [DF], proto UDP (17), length 57)
+    192.168.56.103.51273 > 192.168.56.10.53: [udp sum ok] 19134+ AAAA? www.unam.mx. (29)
+   81  02:33:54.521005 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 313: (tos 0x0, ttl 64, id 11486, offset 0, flags [none], proto UDP (17), length 299)
+    192.168.56.10.53 > 192.168.56.103.51273: [bad udp cksum 0xf2ea -> 0xfba5!] 1498 q: A? www.unam.mx. 1/5/7 www.unam.mx. [1h34m56s] A 132.247.70.15 ns: unam.mx. [1h34m56s] NS ns5.unam.mx., unam.mx. [1h34m56s] NS ns4.unam.mx., unam.mx. [1h34m56s] NS ns2.unam.mx., unam.mx. [1h34m56s] NS ns1.unam.mx., unam.mx. [1h34m56s] NS ns3.unam.mx. ar: ns1.unam.mx. [1h34m56s] A 132.248.108.221, ns2.unam.mx. [1h34m56s] A 132.248.204.25, ns3.unam.mx. [1h34m56s] A 132.248.108.215, ns4.unam.mx. [1h34m56s] A 132.248.204.32, ns5.unam.mx. [1h34m56s] A 132.248.243.37, ns3.unam.mx. [1h34m56s] AAAA 2001:1218:100:10a:108::215, ns4.unam.mx. [1h34m56s] AAAA 2001:1218:403:203:204::32 (271)
+   82  02:33:54.591024 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 325: (tos 0x0, ttl 64, id 20233, offset 0, flags [none], proto UDP (17), length 311)
+    192.168.56.10.53 > 192.168.56.103.51273: [bad udp cksum 0xf2f6 -> 0x981c!] 19134 q: AAAA? www.unam.mx. 1/5/7 www.unam.mx. [2h] AAAA 2001:1218:101:135::12 ns: unam.mx. [2h] NS ns2.unam.mx., unam.mx. [2h] NS ns4.unam.mx., unam.mx. [2h] NS ns1.unam.mx., unam.mx. [2h] NS ns3.unam.mx., unam.mx. [2h] NS ns5.unam.mx. ar: ns1.unam.mx. [1h34m56s] A 132.248.108.221, ns2.unam.mx. [1h34m56s] A 132.248.204.25, ns3.unam.mx. [1h34m56s] A 132.248.108.215, ns4.unam.mx. [1h34m56s] A 132.248.204.32, ns5.unam.mx. [1h34m56s] A 132.248.243.37, ns3.unam.mx. [1h34m56s] AAAA 2001:1218:100:10a:108::215, ns4.unam.mx. [1h34m56s] AAAA 2001:1218:403:203:204::32 (283)
+   83  02:33:54.649210 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 74: (tos 0x0, ttl 64, id 8035, offset 0, flags [DF], proto TCP (6), length 60)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [S], cksum 0xd7d6 (correct), seq 1550588106, win 29200, options [mss 1460,sackOK,TS val 67497 ecr 0,nop,wscale 7], length 0
+   84  02:33:54.717589 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 58: (tos 0x0, ttl 254, id 2976, offset 0, flags [none], proto TCP (6), length 44)
+    132.247.70.15.80 > 192.168.56.103.48338: Flags [S.], cksum 0xa837 (correct), seq 31086, ack 1550588107, win 32768, options [mss 1460], length 0
+   85  02:33:54.718386 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 8036, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [.], cksum 0xcde4 (correct), seq 1, ack 1, win 29200, length 0
+   86  02:33:54.720380 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 129: (tos 0x0, ttl 64, id 8037, offset 0, flags [DF], proto TCP (6), length 115)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [P.], cksum 0x2eb7 (correct), seq 1:76, ack 1, win 29200, length 75: HTTP, length: 75
+	GET / HTTP/1.1
+	Host: www.unam.mx
+	User-Agent: curl/7.47.0
+	Accept: */*
+	
+   87  02:33:54.789470 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 539: (tos 0x0, ttl 254, id 2977, offset 0, flags [none], proto TCP (6), length 525)
+    132.247.70.15.80 > 192.168.56.103.48338: Flags [P.], cksum 0x819c (correct), seq 1:486, ack 76, win 32693, length 485: HTTP, length: 485
+	HTTP/1.1 301 Moved Permanently
+	Date: Thu, 17 May 2018 07:33:54 GMT
+	Server: Apache
+	Location: https://www.unam.mx/
+	Cache-Control: max-age=1209600
+	Expires: Thu, 31 May 2018 07:33:54 GMT
+	Content-Length: 228
+	Content-Type: text/html; charset=iso-8859-1
+	
+	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+	<html><head>
+	<title>301 Moved Permanently</title>
+	</head><body>
+	<h1>Moved Permanently</h1>
+	<p>The document has moved <a href="https://www.unam.mx/">here</a>.</p>
+	</body></html>
+   88  02:33:54.790145 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 8038, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [.], cksum 0xc884 (correct), seq 76, ack 486, win 30016, length 0
+   89  02:33:54.813081 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 8039, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [F.], cksum 0xc883 (correct), seq 76, ack 486, win 30016, length 0
+   90  02:33:54.813692 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 254, id 2978, offset 0, flags [none], proto TCP (6), length 40)
+    132.247.70.15.80 > 192.168.56.103.48338: Flags [.], cksum 0xbe0f (correct), seq 486, ack 77, win 32692, length 0
+   91  02:33:54.881058 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 254, id 2979, offset 0, flags [none], proto TCP (6), length 40)
+    132.247.70.15.80 > 192.168.56.103.48338: Flags [F.], cksum 0xbe0e (correct), seq 486, ack 77, win 32692, length 0
+   92  02:33:54.881749 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 27424, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.48338 > 132.247.70.15.80: Flags [.], cksum 0xc882 (correct), seq 77, ack 487, win 30016, length 0
+   93  02:34:00.035315 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 81: (tos 0x0, ttl 64, id 31067, offset 0, flags [DF], proto UDP (17), length 67)
+    192.168.56.103.49112 > 192.168.56.10.53: [udp sum ok] 6646+ A? www.fciencias.unam.mx. (39)
+   94  02:34:00.035360 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 81: (tos 0x0, ttl 64, id 31068, offset 0, flags [DF], proto UDP (17), length 67)
+    192.168.56.103.49112 > 192.168.56.10.53: [udp sum ok] 45301+ AAAA? www.fciencias.unam.mx. (39)
+   95  02:34:00.035482 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 323: (tos 0x0, ttl 64, id 59389, offset 0, flags [none], proto UDP (17), length 309)
+    192.168.56.10.53 > 192.168.56.103.49112: [bad udp cksum 0xf2f4 -> 0x445c!] 6646 q: A? www.fciencias.unam.mx. 1/5/7 www.fciencias.unam.mx. [1h35m2s] A 132.248.181.248 ns: fciencias.unam.mx. [1h35m2s] NS ns4.unam.mx., fciencias.unam.mx. [1h35m2s] NS ns3.unam.mx., fciencias.unam.mx. [1h35m2s] NS ns5.unam.mx., fciencias.unam.mx. [1h35m2s] NS ns2.unam.mx., fciencias.unam.mx. [1h35m2s] NS ns1.unam.mx. ar: ns1.unam.mx. [1h34m50s] A 132.248.108.221, ns2.unam.mx. [1h34m50s] A 132.248.204.25, ns3.unam.mx. [1h34m50s] A 132.248.108.215, ns4.unam.mx. [1h34m50s] A 132.248.204.32, ns5.unam.mx. [1h34m50s] A 132.248.243.37, ns3.unam.mx. [1h34m50s] AAAA 2001:1218:100:10a:108::215, ns4.unam.mx. [1h34m50s] AAAA 2001:1218:403:203:204::32 (281)
+   96  02:34:00.104373 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 125: (tos 0x0, ttl 64, id 54569, offset 0, flags [none], proto UDP (17), length 111)
+    192.168.56.10.53 > 192.168.56.103.49112: [bad udp cksum 0xf22e -> 0xfddc!] 45301 q: AAAA? www.fciencias.unam.mx. 0/1/0 ns: fciencias.unam.mx. [1h] SOA ns1.unam.mx. dns.unam.mx. 2018011801 3600 1200 604800 86400 (83)
+   97  02:34:00.158497 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 74: (tos 0x0, ttl 64, id 31495, offset 0, flags [DF], proto TCP (6), length 60)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [S], cksum 0x86dc (correct), seq 3132585484, win 29200, options [mss 1460,sackOK,TS val 68875 ecr 0,nop,wscale 7], length 0
+   98  02:34:00.226362 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 58: (tos 0x0, ttl 254, id 2981, offset 0, flags [none], proto TCP (6), length 44)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [S.], cksum 0x50a1 (correct), seq 34156, ack 3132585485, win 32768, options [mss 1460], length 0
+   99  02:34:00.230142 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31496, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x764e (correct), seq 1, ack 1, win 29200, length 0
+  100  02:34:00.230187 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 139: (tos 0x0, ttl 64, id 31497, offset 0, flags [DF], proto TCP (6), length 125)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [P.], cksum 0xbc5a (correct), seq 1:86, ack 1, win 29200, length 85: HTTP, length: 85
+	GET / HTTP/1.1
+	Host: www.fciencias.unam.mx
+	User-Agent: curl/7.47.0
+	Accept: */*
+	
+  101  02:34:00.312158 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1422: (tos 0x0, ttl 254, id 2982, offset 0, flags [none], proto TCP (6), length 1408)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x22d6 (correct), seq 1:1369, ack 86, win 32683, length 1368: HTTP, length: 1368
+	HTTP/1.1 200 OK
+	Date: Thu, 17 May 2018 07:33:59 GMT
+	Server: Apache
+	Content-Type: text/html;charset=UTF-8
+	Transfer-Encoding: chunked
+	
+	1ff8
+  102  02:34:00.312660 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2983, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x7e44 (correct), seq 1369:2829, ack 86, win 32683, length 1460: HTTP
+  103  02:34:00.320037 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31498, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x67c9 (correct), seq 86, ack 1369, win 31464, length 0
+  104  02:34:00.320080 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31499, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x541d (correct), seq 86, ack 2829, win 35040, length 0
+  105  02:34:00.320426 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2984, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x3add (correct), seq 2829:4289, ack 86, win 32683, length 1460: HTTP
+  106  02:34:00.320461 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2985, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x1d87 (correct), seq 4289:5749, ack 86, win 32683, length 1460: HTTP
+  107  02:34:00.320476 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2986, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x45be (correct), seq 5749:7209, ack 86, win 32683, length 1460: HTTP
+  108  02:34:00.323369 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2987, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0xdb8d (correct), seq 7209:8669, ack 86, win 32683, length 1460: HTTP
+  109  02:34:00.330074 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31500, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x4301 (correct), seq 86, ack 4289, win 37960, length 0
+  110  02:34:00.330151 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31501, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x31e5 (correct), seq 86, ack 5749, win 40880, length 0
+  111  02:34:00.330166 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31502, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x20c9 (correct), seq 86, ack 7209, win 43800, length 0
+  112  02:34:00.330177 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31503, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0x0fad (correct), seq 86, ack 8669, win 46720, length 0
+  113  02:34:00.330572 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 254, id 2988, offset 0, flags [none], proto TCP (6), length 1500)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x2903 (correct), seq 8669:10129, ack 86, win 32683, length 1460: HTTP
+  114  02:34:00.340074 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31504, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0xfe90 (correct), seq 86, ack 10129, win 49640, length 0
+  115  02:34:00.340564 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 993: (tos 0x0, ttl 254, id 2989, offset 0, flags [none], proto TCP (6), length 979)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x335d (correct), seq 10129:11068, ack 86, win 32683, length 939: HTTP
+  116  02:34:00.350099 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31505, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0xef7d (correct), seq 86, ack 11068, win 52560, length 0
+  117  02:34:00.381145 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1422: (tos 0x0, ttl 254, id 2990, offset 0, flags [none], proto TCP (6), length 1408)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0xd1e2 (correct), seq 11068:12436, ack 86, win 32683, length 1368: HTTP
+  118  02:34:00.389028 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31506, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0xdebd (correct), seq 86, ack 12436, win 55480, length 0
+  119  02:34:00.389437 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 1344: (tos 0x0, ttl 254, id 2991, offset 0, flags [none], proto TCP (6), length 1330)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [P.], cksum 0x11cf (correct), seq 12436:13726, ack 86, win 32683, length 1290: HTTP
+  120  02:34:00.390090 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31507, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0xce4b (correct), seq 86, ack 13726, win 58400, length 0
+  121  02:34:00.400093 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 31508, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [F.], cksum 0xce4a (correct), seq 86, ack 13726, win 58400, length 0
+  122  02:34:00.400632 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 254, id 2992, offset 0, flags [none], proto TCP (6), length 40)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [.], cksum 0x32c1 (correct), seq 13726, ack 87, win 32682, length 0
+  123  02:34:00.467764 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 254, id 2993, offset 0, flags [none], proto TCP (6), length 40)
+    132.248.181.248.80 > 192.168.56.103.56562: Flags [F.], cksum 0x32c0 (correct), seq 13726, ack 87, win 32682, length 0
+  124  02:34:00.474433 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 54: (tos 0x0, ttl 64, id 38305, offset 0, flags [DF], proto TCP (6), length 40)
+    192.168.56.103.56562 > 132.248.181.248.80: Flags [.], cksum 0xce49 (correct), seq 87, ack 13727, win 58400, length 0
+  125  02:36:29.372960 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 86: (tos 0x0, ttl 64, id 54947, offset 0, flags [DF], proto UDP (17), length 72)
+    192.168.56.103.51071 > 192.168.56.10.53: [udp sum ok] 4695+ PTR? 10.56.168.192.in-addr.arpa. (44)
+  126  02:36:29.373202 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 113: (tos 0x0, ttl 64, id 52194, offset 0, flags [none], proto UDP (17), length 99)
+    192.168.56.10.53 > 192.168.56.103.51071: [bad udp cksum 0xf222 -> 0xd271!] 4695* q: PTR? 10.56.168.192.in-addr.arpa. 1/0/0 10.56.168.192.in-addr.arpa. [1h] PTR pfSense.local. (71)
+  127  02:36:34.375665 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  128  02:36:34.375683 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  129  03:11:20.419656 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 49347, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  130  03:11:20.424769 08:00:27:22:4d:35 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.103 tell 192.168.56.10, length 28
+  131  03:11:20.425703 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.103 is-at 08:00:27:2c:38:e1, length 28
+  132  03:11:20.425728 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 4170, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xe670!] BOOTP/DHCP, Reply, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  133  03:20:42.146369 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 38740, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  134  03:20:42.147076 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 5003, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xb98b!] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 6638
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  135  03:20:47.144250 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  136  03:20:47.144280 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  137  04:03:01.640969 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 54552, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  138  04:03:01.642367 08:00:27:22:4d:35 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.103 tell 192.168.56.10, length 28
+  139  04:03:01.643347 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.103 is-at 08:00:27:2c:38:e1, length 28
+  140  04:03:01.643364 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 64529, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xe670!] BOOTP/DHCP, Reply, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  141  04:04:00.297815 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 56020, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  142  04:04:00.298171 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 52770, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xc289!] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7141
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  143  04:04:05.313085 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  144  04:04:05.313101 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  145  04:57:48.970638 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 11554, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  146  04:57:48.974260 08:00:27:22:4d:35 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.103 tell 192.168.56.10, length 28
+  147  04:57:48.975181 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.103 is-at 08:00:27:2c:38:e1, length 28
+  148  04:57:48.975199 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 28358, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0x8789!] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  149  05:02:05.220034 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 41500, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  150  05:02:05.220646 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 39312, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xe771!] BOOTP/DHCP, Reply, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 6943
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  151  05:02:10.227908 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  152  05:02:10.227940 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  153  05:50:39.102219 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 9720, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  154  05:50:39.103339 08:00:27:22:4d:35 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.103 tell 192.168.56.10, length 28
+  155  05:50:39.104205 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.103 is-at 08:00:27:2c:38:e1, length 28
+  156  05:50:39.104218 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 18128, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0xe670!] BOOTP/DHCP, Reply, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  157  05:54:21.856291 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 15964, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  158  05:54:21.856583 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 23219, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0x658a!] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 6978
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  159  05:54:26.868401 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  160  05:54:26.868428 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  161  06:45:35.100411 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 9904, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  162  06:45:35.104749 08:00:27:22:4d:35 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.103 tell 192.168.56.10, length 28
+  163  06:45:35.105485 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.103 is-at 08:00:27:2c:38:e1, length 28
+  164  06:45:35.105500 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 42321, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0x8789!] BOOTP/DHCP, Reply, length 300, xid 0x9ff12530, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7200
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  165  06:48:00.649554 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 35884, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Request
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    Parameter-Request Option 55, length 13: 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 26
+  166  06:48:00.650002 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 58987, offset 0, flags [none], proto UDP (17), length 328)
+    192.168.56.10.67 > 192.168.56.103.68: [bad udp cksum 0xf307 -> 0x7771!] BOOTP/DHCP, Reply, length 300, xid 0x5530110a, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Your-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: ACK
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Lease-Time Option 51, length 4: 7055
+	    Subnet-Mask Option 1, length 4: 255.255.255.0
+	    Default-Gateway Option 3, length 4: 192.168.56.10
+	    Domain-Name Option 15, length 5: "local"
+	    Domain-Name-Server Option 6, length 4: 192.168.56.10
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 19
+  167  06:48:05.664638 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 192.168.56.10 tell 192.168.56.103, length 28
+  168  06:48:05.664663 08:00:27:22:4d:35 > 08:00:27:2c:38:e1, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 192.168.56.10 is-at 08:00:27:22:4d:35, length 28
+  169  07:19:53.699920 08:00:27:2c:38:e1 > 08:00:27:22:4d:35, ethertype IPv4 (0x0800), length 342: (tos 0x0, ttl 64, id 42173, offset 0, flags [DF], proto UDP (17), length 328)
+    192.168.56.103.68 > 192.168.56.10.67: [udp sum ok] BOOTP/DHCP, Request from 08:00:27:2c:38:e1, length 300, xid 0xd2dcd85f, Flags [none] (0x0000)
+	  Client-IP 192.168.56.103
+	  Client-Ethernet-Address 08:00:27:2c:38:e1
+	  Vendor-rfc1048 Extensions
+	    Magic Cookie 0x63825363
+	    DHCP-Message Option 53, length 1: Release
+	    Server-ID Option 54, length 4: 192.168.56.10
+	    Hostname Option 12, length 13: "ubuntu-xenial"
+	    END Option 255, length 0
+	    PAD Option 0, length 0, occurs 35
