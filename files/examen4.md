@@ -46,6 +46,5 @@ Con base en el escenario mostrado en la imagen anexa, mostrar en un diagrama de 
 
 ## Extra
 
-+ Habilitar el servicio de **DHCP** en el **Router1** y **Router2**, de tal manera que se pueda eliminar el Servidor2 y que los clientes e impresoras obtengan su dirección por medio de DHCP. Documentar la configuración realizada e incluir la configuración necesaria en los equipos.
-+ Instalar un servidor **TFTP** y copiar en él las configuraciones de todos los equipos de red (switches y ruteadores) incluyendo el nombre del dispositivo para diferenciarlos (**Switch1.cfg**, **Router2.cfg**, etc.).
-
++ Habilitar el servicio de **DHCP** en el **Router1** y **Router2**, de tal manera que se pueda eliminar el **Servidor2** y que los clientes e impresoras obtengan su dirección por medio de DHCP. Documentar la configuración realizada e incluir la configuración necesaria en los equipos.
++ Instalar en la red `γ` un **Servidor3** que brinde el servicio de **TFTP** y copiar en él las configuraciones de todos los equipos de red (switches y ruteadores) incluyendo el nombre del dispositivo para diferenciarlos (**Switch1.cfg**, **Router2.cfg**, etc.). Documentar la configuración realizada.
