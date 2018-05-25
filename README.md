@@ -56,6 +56,10 @@ Semestre 2018-2
 
 + [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
 
+### Examen de casa
+
++ [Examen 4](/files/examen4.md "Examen 4")
+
 ### Ligas de interés
 
 + <http://redes-ciencias-unam.gitlab.io/>
