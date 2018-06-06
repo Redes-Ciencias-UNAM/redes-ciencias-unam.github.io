@@ -1,5 +1,5 @@
 # Redes de Computadoras
-# Tarea examen
+# Examen de casa
 
 ## Descripción
 
@@ -7,7 +7,7 @@ El presente trabajo corresponde al cuarto examen de la materia de Redes de Compu
 
 + El trabajo se debe realizar en equipo, con un máximo de 4 integrantes.
 + La fecha límite de entrega es el día martes 5 de junio, personalmente en el aula de clases. Es necesario que se presenten todos los integrantes del equipo.
-+ Esta tarea-examen no sustituye otros trabajos no entregados durante el semestre.
++ Este examen de casa no sustituye otros trabajos no entregados durante el semestre.
 
 ![Escenario para el examen 4](/img/examen4.png)
 
@@ -19,7 +19,46 @@ Con base en el escenario mostrado en la imagen anexa, mostrar en un diagrama de 
 + También se debe verificar que no existan direcciones MAC inválidas o repetidas en los equipos pertenecientes al escenario.
 + Incluir una descripción detallada del procedimiento seguido por el cliente para obtener los datos necesarios para realizar la conexión con el servidor, a partir de la URL recibida, así como para manejar las direcciones lógicas y físicas, incluyendo los servicios de red involucrados.
 + Se deben mostrar los paquetes generados para los siguientes protocolos y servicios: **HTTP**, **DNS**, **DHCP**, **TCP**, **ICMP**, **IP**, **ARP** y **Ethernet**.
-+ Mostrar la forma en la que se calculan y comprueban las sumas de verificación (_checksums_) de los paquetes generados.
+
+  * Llenar el [archivo de plantilla](/files/examen4.txt "Plantilla de capturas de protocolos")
+
++ Documentar en el archivo `README.md` la forma en la que se calculan y comprueban las sumas de verificación (_checksums_) de los paquetes:
+
+  * Realizar una captura de tráfico o tomar alguna [captura de muestra de WireShark](https://wiki.wireshark.org/SampleCaptures "Capturas de muestra de WireShark")
+  * Elegir un paquete **IP**, **TCP**, **UDP** e **ICMP** y mostrar el proceso mediante el cual se hace la suma de verificación de cada uno.
+
+## Entregables
+
+Se deberán entregar los siguientes archivos en el repositorio de cada equipo:
+
+| Archivo                 | Descripción |
+|:------------------------|:------------|
+|`README.md`              | Documentación de los pasos requeridos para construir el escenario descrito |
+|`examen.pkt`             | Escenario realizado en formato de _Packet Tracer_ |
+|`etc/ethers`             | Lista de direcciones MAC y nombres de host de acuerdo con [el formato de ethers(5)](https://linux.die.net/man/5/ethers "man 5 ethers") `*` |
+|`etc/hosts`              | Lista de direcciones IP y nombres de host de acuerdo con [el formato de hosts(5)](https://linux.die.net/man/5/hosts "man 5 hosts") `*` |
+|`etc/networks`           | Lista de segmentos de red con su respectivo nombre de acuerdo con [el formato de networks(5)](https://linux.die.net/man/5/networks "man 5 networks") `**` |
+|`cfg/SwitchX.cfg`        | Configuración de cada **ruteador** presente en el escenario `***` |
+|`cfg/RouterY.cfg`        | Configuración de cada **switch** presente en el escenario `***` |
+|`cfg/index.html`         | Página web entregada por el servidor HTTP |
+|`img/conf-servidor-*.png`| Capturas de pantalla que muestren la configuración de cada **servidor** presente en el escenario `****` |
+|`img/conf-cliente-*.png` | Capturas de pantalla que muestren la configuración de cada **cliente** presente en el escenario `****` |
+
+### Notas
+
++ `*`: El _nombre de host_ únicamente puede contener minúsculas, números y guión **medio**.
+
+  * Los nombres de host entregados en los archivos `ethers` y `hosts` deben estar presentes en la configuración del servidor DNS bajo el dominio que haya elegido el equipo sobre el TLD `.local`.
+  * Para los equipos de red se debe indicar tambien la interfaz en la que está presente esa dirección MAC.
+  * Ej. `pc0.example.local`, `servidor0.example.local`, `router0-fa1-2.example.local`
+
++ `**`: Los nombres propuestos de red son `alfa`, `beta`, `gama`, `xi`, `psi`, `omega`. Cada equipo puede cambiarlos si gusta.
++ `***`: Obtener la configuración con el comando `show running-config` en la línea de comandos del equipo en cuestión. Guardar las configuraciones en el directorio `cfg/` del repositorio.
+
+  * Guardar los cambios realizados en la configuración de switches y ruteadores con el comando `copy running-config startup-config`.
+
++ `****`: Referenciar las imágenes del directorio `img/` en la documentación (`README.md`)
+
 
 ### Detalles sobre el escenario
 

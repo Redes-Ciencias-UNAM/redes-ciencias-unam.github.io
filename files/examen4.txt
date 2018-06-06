@@ -1,0 +1,173 @@
+######  #     #  #####  ######
+#     # #     # #     # #     #
+#     # #     # #       #     #
+#     # ####### #       ######
+#     # #     # #       #
+#     # #     # #     # #
+######  #     #  #####  #
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.68 > DDD.DDD.DDD.DDD.67: [udp sum ok] BOOTP/DHCP, Request from MM:MM:MM:MM:MM:MM
+	  Client-Ethernet-Address MM:MM:MM:MM:MM:MM
+	  Vendor-rfc1048 Extensions
+	    DHCP-Message Option 53 Discover
+	    Requested-IP Option 50 DDD.DDD.DDD.DDD
+	    Hostname Option 12 "hostname.local"
+	    Parameter-Request Option 55 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.67 > DDD.DDD.DDD.DDD.68: [udp sum ok] BOOTP/DHCP, Reply
+	  Your-IP DDD.DDD.DDD.DDD
+	  Client-Ethernet-Address MM:MM:MM:MM:MM:MM
+	  Vendor-rfc1048 Extensions
+	    DHCP-Message Option 53 Offer
+	    Server-ID Option 54 DDD.DDD.DDD.DDD
+	    Lease-Time Option 51 7200
+	    Subnet-Mask Option 1 DDD.DDD.DDD.DDD
+	    Default-Gateway Option 3 DDD.DDD.DDD.DDD
+	    Domain-Name Option 15 "local"
+	    Domain-Name-Server Option 6 DDD.DDD.DDD.DDD
+	    END Option 255
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.68 > DDD.DDD.DDD.DDD.67: [udp sum ok] BOOTP/DHCP, Request from MM:MM:MM:MM:MM:MM
+	  Client-Ethernet-Address MM:MM:MM:MM:MM:MM
+	  Vendor-rfc1048 Extensions
+	    DHCP-Message Option 53 Request
+	    Server-ID Option 54 DDD.DDD.DDD.DDD
+	    Requested-IP Option 50 DDD.DDD.DDD.DDD
+	    Hostname Option 12 "hostname.local"
+	    Parameter-Request Option 55 
+	      Subnet-Mask, BR, Time-Zone, Default-Gateway
+	      Domain-Name, Domain-Name-Server, Option 119, Hostname
+	      Netbios-Name-Server, Netbios-Scope, MTU, Classless-Static-Route
+	      NTP
+	    END Option 255
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.67 > DDD.DDD.DDD.DDD.68: [udp sum ok] BOOTP/DHCP, Reply
+	  Your-IP DDD.DDD.DDD.DDD
+	  Client-Ethernet-Address MM:MM:MM:MM:MM:MM
+	  Vendor-rfc1048 Extensions
+	    DHCP-Message Option 53 ACK
+	    Server-ID Option 54 DDD.DDD.DDD.DDD
+	    Lease-Time Option 51 7200
+	    Subnet-Mask Option 1 DDD.DDD.DDD.DDD
+	    Default-Gateway Option 3 DDD.DDD.DDD.DDD
+	    Domain-Name Option 15 "local"
+	    Domain-Name-Server Option 6 DDD.DDD.DDD.DDD
+	    END Option 255
+
+   #    ######  ######
+  # #   #     # #     #
+ #   #  #     # #     #
+#     # ######  ######
+####### #   #   #
+#     # #    #  #
+#     # #     # #
+
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype ARP (0x0806) Ethernet IPv4 Request who-has DDD.DDD.DDD.DDD tell DDD.DDD.DDD.DDD
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype ARP (0x0806) Ethernet IPv4 Reply DDD.DDD.DDD.DDD is-at MM:MM:MM:MM:MM:MM
+
+  ###    #####  #     # ######
+   #    #     # ##   ## #     #          #####      #    #    #   ####
+   #    #       # # # # #     #          #    #     #    ##   #  #    #
+   #    #       #  #  # ######           #    #     #    # #  #  #
+   #    #       #     # #                #####      #    #  # #  #  ###
+   #    #     # #     # #                #          #    #   ##  #    #
+  ###    #####  #     # #                #          #    #    #   ####
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto ICMP)
+    DDD.DDD.DDD.DDD > DDD.DDD.DDD.DDD: ICMP echo request, id A, seq B
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto ICMP)
+    DDD.DDD.DDD.DDD > DDD.DDD.DDD.DDD: ICMP echo reply, id A, seq B
+
+######  #     #  #####
+#     # ##    # #     #
+#     # # #   # #
+#     # #  #  #  #####
+#     # #   # #       #
+#     # #    ## #     #
+######  #     #  #####
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.51071 > DDD.DDD.DDD.DDD.53: [udp sum ok] 4695+ PTR? DDD.DDD.DDD.DDD.in-addr.arpa.
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.51071: [udp sum ok] 4695* q: PTR? DDD.DDD.DDD.DDD.in-addr.arpa. DDD.DDD.DDD.DDD.in-addr.arpa. PTR router.local.
+
+
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.47122 > DDD.DDD.DDD.DDD.53: [udp sum ok] 18864+ A? www.example.local.
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.47122: [udp sum ok] 18864 q: A? www.example.local. www.example.local. A DDD.DDD.DDD.DDD ns: ns1.example.local. A DDD.DDD.DDD.DDD
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.45129 > DDD.DDD.DDD.DDD.53: [udp sum ok] 10930+ PTR? DDD.DDD.DDD.DDD.in-addr.arpa.
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.45129: [udp sum ok] 10930 q: PTR? DDD.DDD.DDD.DDD.in-addr.arpa. DDD.DDD.DDD.DDD.in-addr.arpa. PTR www.example.local. ns: DDD.DDD.DDD.in-addr.arpa. NS ns1.example.local., DDD.DDD.DDD.in-addr.arpa.
+
+
+#     # ####### ####### ######
+#     #    #       #    #     #
+#     #    #       #    #     #
+#######    #       #    ######
+#     #    #       #    #
+#     #    #       #    #
+#     #    #       #    #
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [S], cksum 0xZZZZ (correct)
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.80 > DDD.DDD.DDD.DDD.48338: Flags [S.], cksum 0xZZZZ (correct)
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [.], cksum 0xZZZZ (correct)
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [P.], cksum 0xZZZZ (correct) HTTP
+	GET / HTTP/1.1
+	Host: www.example.local
+	User-Agent: curl/7.47.0
+	Accept: */*
+	
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.80 > DDD.DDD.DDD.DDD.48338: Flags [P.], cksum 0xZZZZ (correct) HTTP
+	HTTP/1.1 301 Moved Permanently
+	Date: Fri, 21 Dec 2012 00:00:00 UTC
+	Server: Apache
+	Location: https://www.example.local/
+	Cache-Control: max-age=86400
+	Expires: Tue, 19 Jan 2038 03:14:07 UTC
+	Content-Length: 228
+	Content-Type: text/html; charset=iso-8859-1
+	
+	<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+	<html><head>
+	<title>301 Moved Permanently</title>
+	</head><body>
+	<h1>Moved Permanently</h1>
+	<p>The document has moved <a href="https://www.example.local/">here</a>.</p>
+	</body></html>
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [.], cksum 0xZZZZ (correct)
+
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [F.], cksum 0xZZZZ (correct)
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.80 > DDD.DDD.DDD.DDD.48338: Flags [.], cksum 0xZZZZ (correct)
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.80 > DDD.DDD.DDD.DDD.48338: Flags [F.], cksum 0xZZZZ (correct)
+    #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto TCP)
+    DDD.DDD.DDD.DDD.48338 > DDD.DDD.DDD.DDD.80: Flags [.], cksum 0xZZZZ (correct)
+
