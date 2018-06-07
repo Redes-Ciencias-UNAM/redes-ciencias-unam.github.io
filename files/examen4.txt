@@ -12,7 +12,7 @@
 	  Vendor-rfc1048 Extensions
 	    DHCP-Message Option 53 Discover
 	    Requested-IP Option 50 DDD.DDD.DDD.DDD
-	    Hostname Option 12 "hostname.local"
+	    Hostname Option 12 "hostname.example.local"
 	    Parameter-Request Option 55 
 	      Subnet-Mask, BR, Time-Zone, Default-Gateway
 	      Domain-Name, Domain-Name-Server, Option 119, Hostname
@@ -41,7 +41,7 @@
 	    DHCP-Message Option 53 Request
 	    Server-ID Option 54 DDD.DDD.DDD.DDD
 	    Requested-IP Option 50 DDD.DDD.DDD.DDD
-	    Hostname Option 12 "hostname.local"
+	    Hostname Option 12 "hostname.example.local"
 	    Parameter-Request Option 55 
 	      Subnet-Mask, BR, Time-Zone, Default-Gateway
 	      Domain-Name, Domain-Name-Server, Option 119, Hostname
@@ -99,10 +99,10 @@
 ######  #     #  #####
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.51071 > DDD.DDD.DDD.DDD.53: [udp sum ok] 4695+ PTR? DDD.DDD.DDD.DDD.in-addr.arpa.
+    DDD.DDD.DDD.DDD.51071 > DDD.DDD.DDD.DDD.53: [udp sum ok] 4695+ PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.51071: [udp sum ok] 4695* q: PTR? DDD.DDD.DDD.DDD.in-addr.arpa. DDD.DDD.DDD.DDD.in-addr.arpa. PTR router.local.
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.51071: [udp sum ok] 4695* q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa. RRR.RRR.RRR.RRR.in-addr.arpa. PTR router.example.local.
 
 
 
@@ -113,10 +113,10 @@
     DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.47122: [udp sum ok] 18864 q: A? www.example.local. www.example.local. A DDD.DDD.DDD.DDD ns: ns1.example.local. A DDD.DDD.DDD.DDD
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.45129 > DDD.DDD.DDD.DDD.53: [udp sum ok] 10930+ PTR? DDD.DDD.DDD.DDD.in-addr.arpa.
+    DDD.DDD.DDD.DDD.45129 > DDD.DDD.DDD.DDD.53: [udp sum ok] 10930+ PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.45129: [udp sum ok] 10930 q: PTR? DDD.DDD.DDD.DDD.in-addr.arpa. DDD.DDD.DDD.DDD.in-addr.arpa. PTR www.example.local. ns: DDD.DDD.DDD.in-addr.arpa. NS ns1.example.local., DDD.DDD.DDD.in-addr.arpa.
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.45129: [udp sum ok] 10930 q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa. RRR.RRR.RRR.RRR.in-addr.arpa. PTR www.example.local. ns: RRR.RRR.RRR.in-addr.arpa. NS ns1.example.local., RRR.RRR.RRR.in-addr.arpa.
 
 
 #     # ####### ####### ######

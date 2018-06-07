@@ -20,7 +20,17 @@ Con base en el escenario mostrado en la imagen anexa, mostrar en un diagrama de 
 + Incluir una descripción detallada del procedimiento seguido por el cliente para obtener los datos necesarios para realizar la conexión con el servidor, a partir de la URL recibida, así como para manejar las direcciones lógicas y físicas, incluyendo los servicios de red involucrados.
 + Se deben mostrar los paquetes generados para los siguientes protocolos y servicios: **HTTP**, **DNS**, **DHCP**, **TCP**, **ICMP**, **IP**, **ARP** y **Ethernet**.
 
-  * Llenar el [archivo de plantilla](/files/examen4.txt "Plantilla de capturas de protocolos")
+  * Llenar el [archivo de plantilla](/files/examen4.txt "Plantilla de capturas de protocolos") con la información relevante del protocolo en cuestión
+  * Reemplazar los siguientes campos con la información específica del escenario que construyeron:
+
+
+| Elemento                    | Descripción    |
+|:----------------------------|:---------------|
+| `MM:MM:MM:MM:MM:MM`         | Dirección MAC  |
+| `DDD.DDD.DDD.DDD`           | Dirección IPv4 |
+| `*.example.local`           | Nombre de host bajo el dominio elegido por el equipo |
+| `RRR.RRR.RRR.in-addr.arpa.` | Registro `PTR` de DNS inverso |
+| Contenido de la respuesta HTTP | Insertar la página `index.html` que construyó el equipo |
 
 + Documentar en el archivo `README.md` la forma en la que se calculan y comprueban las sumas de verificación (_checksums_) de los paquetes:
 
