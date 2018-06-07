@@ -71,7 +71,6 @@
 #     # #    #  #
 #     # #     # #
 
-
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype ARP (0x0806) Ethernet IPv4 Request who-has DDD.DDD.DDD.DDD tell DDD.DDD.DDD.DDD
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype ARP (0x0806) Ethernet IPv4 Reply DDD.DDD.DDD.DDD is-at MM:MM:MM:MM:MM:MM
@@ -99,25 +98,29 @@
 ######  #     #  #####
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.51071 > DDD.DDD.DDD.DDD.53: [udp sum ok] 4695+ PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
+    DDD.DDD.DDD.DDD.51071 > DDD.DDD.DDD.DDD.53: [udp sum ok]    PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.51071: [udp sum ok] 4695* q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa. RRR.RRR.RRR.RRR.in-addr.arpa. PTR router.example.local.
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.51071: [udp sum ok] q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
+	RRR.RRR.RRR.RRR.in-addr.arpa. PTR router.example.local.
 
 
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.47122 > DDD.DDD.DDD.DDD.53: [udp sum ok] 18864+ A? www.example.local.
+    DDD.DDD.DDD.DDD.47122 > DDD.DDD.DDD.DDD.53: [udp sum ok]    A? www.example.local.
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.47122: [udp sum ok] 18864 q: A? www.example.local. www.example.local. A DDD.DDD.DDD.DDD ns: ns1.example.local. A DDD.DDD.DDD.DDD
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.47122: [udp sum ok] q: A? www.example.local.
+	www.example.local. A DDD.DDD.DDD.DDD ns: ns1.example.local. A DDD.DDD.DDD.DDD
+
+
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.45129 > DDD.DDD.DDD.DDD.53: [udp sum ok] 10930+ PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
+    DDD.DDD.DDD.DDD.45129 > DDD.DDD.DDD.DDD.53: [udp sum ok]    PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
 
     #   MM:MM:MM:MM:MM:MM > MM:MM:MM:MM:MM:MM, ethertype IPv4 (0x0800) (proto UDP)
-    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.45129: [udp sum ok] 10930 q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa. RRR.RRR.RRR.RRR.in-addr.arpa. PTR www.example.local. ns: RRR.RRR.RRR.in-addr.arpa. NS ns1.example.local., RRR.RRR.RRR.in-addr.arpa.
-
+    DDD.DDD.DDD.DDD.53 > DDD.DDD.DDD.DDD.45129: [udp sum ok] q: PTR? RRR.RRR.RRR.RRR.in-addr.arpa.
+	RRR.RRR.RRR.RRR.in-addr.arpa. PTR www.example.local. ns: RRR.RRR.RRR.in-addr.arpa. NS ns1.example.local., RRR.RRR.RRR.in-addr.arpa.
 
 #     # ####### ####### ######
 #     #    #       #    #     #

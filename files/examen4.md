@@ -45,6 +45,7 @@ Se deberán entregar los siguientes archivos en el repositorio de cada equipo:
 |:------------------------|:------------|
 |`README.md`              | Documentación de los pasos requeridos para construir el escenario descrito |
 |`examen.pkt`             | Escenario realizado en formato de _Packet Tracer_ |
+|`examen.txt`             | [Plantilla de capturas de protocolos](/files/examen4.txt) llenada con la información relevante |
 |`etc/ethers`             | Lista de direcciones MAC y nombres de host de acuerdo con [el formato de ethers(5)](https://linux.die.net/man/5/ethers "man 5 ethers") `*` |
 |`etc/hosts`              | Lista de direcciones IP y nombres de host de acuerdo con [el formato de hosts(5)](https://linux.die.net/man/5/hosts "man 5 hosts") `*` |
 |`etc/networks`           | Lista de segmentos de red con su respectivo nombre de acuerdo con [el formato de networks(5)](https://linux.die.net/man/5/networks "man 5 networks") `**` |
