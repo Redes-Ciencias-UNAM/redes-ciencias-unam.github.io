@@ -125,12 +125,12 @@ Se considerarán los siguientes elementos para llevar a cabo la evaluación:
 
 Calendarización de examenes
 
-| Examen	| Fecha				|
-|--------------:|:------------------------------|
-| Parcial 1	| Martes, 20 de febrero de 2018	|
-| Parcial 2	| Jueves, 22 de marzo   de 2018	|
-| Parcial 3	| Martes, 24 de abril   de 2018	|
-| Parcial 4	| Jueves, 17 de mayo    de 2018	|
+| Examen	| Fecha					|
+|--------------:|:--------------------------------------|
+| Parcial 1	| Lunes,     18 de febrero de 2019	|
+| Parcial 2	| Miércoles, 20 de marzo   de 2019	|
+| Parcial 3	| Lunes,     22 de abril   de 2019	|
+| Parcial 4	| Lunes,     20 de mayo    de 2019	|
 
 #####	Requisitos para presentar examen
 
@@ -199,11 +199,9 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
     * El trabajo en equipo no implica la división de la tarea por partes iguales entre los integrantes del mismo
     * Se dará por sentado que estos trabajos se desarrollaron colectivamente por todos los integrantes, por lo que no se evaluará cada parte individualmente; cada uno de los miembros de un equipo deberá poder defender, en su totalidad, el trabajo entregado
 
-<!--
 + Correo electrónico para dudas y preguntas:
 
     * <code><redes-alumnos@ciencias.unam.mx></code>
--->
 
 + Para las tareas que se entreguen en papel, se sugiere hacer uso de hojas recicladas
 
