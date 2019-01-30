@@ -1,70 +1,81 @@
-# Universidad Nacional Autónoma de México
-# Facultad de Ciencias
-# Ciencias de la Computación
+#	Universidad Nacional Autónoma de México
+#	Facultad de Ciencias
+#	Ciencias de la Computación
 
-## Redes de Computadoras
+##	Redes de Computadoras
 
-Semestre 2018-2
+Semestre 2019-2
 
-### Presentación del curso
+###	Presentación del curso
 
 + [Presentación del curso](presentacion.md "Generalidades del curso")
 
-### Prácticas
+--------------------------------------------------------------------------------
 
+###	Prácticas
+
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 + [Índice de prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
 + [Especificaciones de las prácticas en formato PDF](/public/practicas "Archivos PDF de las prácticas")
 
-  - [Práctica 1 - 12/02/2018 - Repaso de programación y sistemas operativos](/public/practicas/practica1.pdf "Práctica 1 - Repaso de programación y sistemas operativos")
-  - [Práctica 2 - 19/02/2018 - HTTP y DNS](/public/practicas/practica2.pdf "Práctica 2 - HTTP y DNS")
-  - [Práctica 3 - 27/02/2018 - Criptografía, PKI y SSL](/public/practicas/practica3.pdf "Práctica 3 - Criptografía, PKI y SSL")
-  - [Práctica 4 - 06/03/2018 - SSH: Secure Shell](/public/practicas/practica4.pdf "Práctica 4 - SSH: Secure Shell")
-  - [Práctica 5 - 12/03/2018 - FTP, SFTP y SMTP](/public/practicas/practica5.pdf "Práctica 5 - FTP, SFTP y SMTP")
-  - [Práctica 6 -    04/2018 - Implementacion de servicios](/public/practicas/practica6.pdf "Práctica 6 - Implementacion de servicios")
-  - [Práctica 7 -    04/2018 - Sockets TCP/UDP](/public/practicas/practica7.pdf "Práctica 7 - Sockets TCP/UDP")
+--------------------------------------------------------------------------------
 
-### Temas
+###	Temas
 
++ [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2019-2 "Accesible con cuenta @ciencias")
 + [Guía rápida de `git`](git.md "9418/tcp")
++ [Flujo de trabajo para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/workflow#readme "fork y merge request")
 
-#### 7 - Capa de Aplicación
+####	1 - Capa Física
 
-+ [DNS - Domain Name System](dns.md "53/udp , 53/tcp")
++ [Medios de transmisión](media.md "Medios de transmisión")
+
+####	2 - Capa de Enlace
+
++ [Ethernet](ethernet.md "Ethernet")
+
+####	3 - Capa de Red
+
++ [IP - Internet Protocol](ip.md "Protocolo de Internet")
+
+####	4 - Capa de Transporte
+
++ [TCP - Transmission Control Protocol](tcp.md "TCP")
+
+####	7 - Capa de Aplicación
+
 + [WHOIS](whois.md "43/tcp")
++ [DNS - Domain Name System](dns.md "53/udp , 53/tcp")
 + [HTTP - HyperText Transfer Protocol](http.md "80/tcp , 443/tcp")
 + [SSL - Secure Sockets Layer](ssl.md "ssl")
 + [SMTP - Simple Mail Transfer Protocol](smtp.md "25/tcp , 465/tcp , 587/tcp")
 + [DHCP - Dynamic Host Configuration Protocol](dhcp.md "67/udp , 68/udp")
 
-#### 4 - Capa de Transporte
+--------------------------------------------------------------------------------
 
-+ [TCP - Transmission Control Protocol](tcp.md "TCP")
+###	Tareas
 
-#### 3 - Capa de Red
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 
-+ [IP - Internet Protocol](ip.md "Protocolo de Internet")
+####	4 - Capa de Transporte
 
-### Tareas
++ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
 
-#### 7 - Capa de Aplicación
+####	7 - Capa de Aplicación
 
 + [Tarea DNS y WHOIS](tareas/tarea-dns.md "Tarea sobre los protocolos DNS y WHOIS")
 + [Tarea HTTP](tareas/tarea-http.md "Tarea sobre el protocolo HTTP")
 + [Tarea SSL](tareas/tarea-ssl.md "Tarea sobre el protoclo SSL")
 
-#### 4 - Capa de Transporte
+--------------------------------------------------------------------------------
 
-+ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
-
-### Examen de casa
-
-+ [Examen 4](/files/examen4.md "Examen 4")
-
-### Ligas de interés
+###	Ligas de interés
 
 + <http://redes-ciencias-unam.gitlab.io/>
 + <http://redes-ciencias-unam.gitlab.io/practicas/>
-+ <http://tinyurl.com/ListaRedes-2018-2>
++ <https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes>
++ <http://tinyurl.com/ListaRedes-2019-2>
++ <http://tinyurl.com/PizarronRedes-2019-2>
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
-+ <http://www.fciencias.unam.mx/docencia/horarios/detalles/290785>
++ <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>

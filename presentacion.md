@@ -1,8 +1,8 @@
-# Universidad Nacional Autónoma de México
-# Facultad de Ciencias
-# Ciencias de la Computación
+#	Universidad Nacional Autónoma de México
+#	Facultad de Ciencias
+#	Ciencias de la Computación
 
-## Redes de Computadoras
+##	Redes de Computadoras
 
 Semestre 2018-2
 
@@ -10,7 +10,7 @@ Semestre 2018-2
 + Andrés Leonardo Hernández Bermúdez
 + Fernando Castañeda González
 
-### Requisitos
+###	Requisitos
 
 + Conocimientos básicos de GNU/Linux
 + Conocimientos de Sistemas Operativos
@@ -18,7 +18,7 @@ Semestre 2018-2
 + No tener materias encimadas
 + Asistencia regular a clase
 
-### Objetivos
+###	Objetivos
 
 + Conocer y comprender los conceptos, técnicas y algoritmos más importantes involucrados en redes de computadoras
 + Conocer los modelos de referencia empleados para la especificación de redes y hacer una revisión de TCP/IP
@@ -29,30 +29,30 @@ Semestre 2018-2
 + Abordar temás básicos de seguridad en redes a nivel práctico
 + Obtener conocimientos de administración de sistemas GNU/Linux enfocados a redes, mediante la revisión de comandos y aplicaciones propios del sistema operativo
 
-### Sistemas Operativos
+###	Sistemas Operativos
 
 + GNU/Linux
 + Windows
 
-### Lenguaje de programación
+###	Lenguaje de programación
 
 + C
 
-### Impartición de las clases
+###	Impartición de las clases
 
-#### Teoría
+####	Teoría
 
-+ Lunes y miércoles de 18:30 a 20:00 horas en el [salón 302 de Yelizcalli][salon-Y302]
-+ Martes y jueves de 19:00 a 20:00 horas en el [salón 302 de Yelizcalli][salon-Y302]
++ Profesor: Lunes y miércoles de 18:30 a 20:00 horas en el [salón 303 de Yelizcalli][salon-Y303]
++ Ayudante: Martes y jueves de 18:30 a 19:30 horas en el [salón 303 de Yelizcalli][salon-Y303]
 
-#### Laboratorio
+####	Laboratorio
 
 + Lunes de 14:00 a 16:00 horas
 + [Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información][Taller-Tlahuizcalpan]
 
-### Contenido del curso
+###	Contenido del curso
 
-### Contenido del curso
+###	Contenido del curso
 
 + Conceptos generales de redes de computadoras
 + Repaso de GNU/Linux
@@ -115,13 +115,13 @@ Semestre 2018-2
   * Servicios de red
   * Sistemas distribuidos
 
-### Evaluación del semestre
+###	Evaluación del semestre
 
 Se considerarán los siguientes elementos para llevar a cabo la evaluación:
 
-#### 1. Asistencia regular a clase
+####	1. Asistencia regular a clase
 
-#### 2. Exámenes
+####	2. Exámenes
 
 Calendarización de examenes
 
@@ -132,33 +132,33 @@ Calendarización de examenes
 | Parcial 3	| Martes, 24 de abril   de 2018	|
 | Parcial 4	| Jueves, 17 de mayo    de 2018	|
 
-##### Requisitos para presentar examen
+#####	Requisitos para presentar examen
 
 + Haber entregado puntualmente las tareas anteriores a la fecha del examen
 + No habrá reposiciones de examenes
 + Es requisito indispensable el contar con un promedio aprobatorio en los examenes y haberlos presentado todos, sin excepción, para tener derecho a obtener una calificación final aprobatoria en el semestre
 
-#### 3. Prácticas
+####	3. Prácticas
 
 + Prácticas sobre cada uno de los temas principales vistos a lo largo del semestre
 + Las prácticas están diseñadas en forma seriada, por lo que se sugiere no omitir la elaboración de ninguna de ellas.
 + Es requisito indispensable el haber entregado todas las prácticas para tener derecho a obtener una calificación final aprobatoria en el semestre
 
-#### 4. Exposiciones
+####	4. Exposiciones
 
 + Se propondrá una lista de temas a exponer *en equipo*
 + Cada equipo contará con al menos dos semanas para la preparación del tema correspondiente
 
-#### 5. Tareas teórico-prácticas
+####	5. Tareas teórico-prácticas
 
 + En estas tareas se aplicarán todos los conocimientos vistos a la fecha, complementados con material adicional
 
-#### 6. Participaciones en clase
+####	6. Participaciones en clase
 
 + Éstas son **obligatorias** y son un elemento fundamental en la evaluación final
 + Se tomarán en cuenta sobre todo aquellas participaciones que refuercen lo visto en clase y que constituyan una aportación importante a la misma
 
-### Notas
+###	Notas
 
 + La entrega de todos los trabajos será improrrogable
 + Todos los trabajos duplicados _serán evaluados con cero_, sin hacer indagaciones
@@ -170,7 +170,7 @@ Calendarización de examenes
 + De ninguna manera se dará un trato ni una calificación especial a ningún estudiante, por el hecho de trabajar, tener un promedio alto en su historial académico, contar con algún tipo de beca o tener materias encimadas
 + Tampoco se tomarán en cuenta recomendaciones de ninguna persona para asignar la calificación final
 
-### Evaluación
+###	Evaluación
 
 La calificación final se calculará en base a los siguientes porcentajes:
 
@@ -178,12 +178,12 @@ La calificación final se calculará en base a los siguientes porcentajes:
 |--------------:|:------|
 | Exposición	| 10%	|
 | Examenes	| 30%	|
-| Prácticas	| 40%	|
-| Tareas	| 20%	|
+| Prácticas	| 50%	|
+| Tareas	| 10%	|
 
 Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la calificación final
 
-### Observaciones adicionales
+###	Observaciones adicionales
 
 + Se prohíben los teléfonos celulares durante la clase
 
@@ -219,7 +219,7 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 
 + Tampoco deberán permanecer dentro después de finalizada la clase, a menos que se cuente con la autorización de la Coordinación de la Licenciatura en Ciencias de la Computación, para hacer uso de este espacio fuera del horario normal
 
-### Bibliografía básica
+###	Bibliografía básica
 
 >>>
 + Computer Networking: a top down approach. 6th edition  
@@ -239,7 +239,7 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
   * [Catálogo LIBRUNAM][tanenbaum-librunam-catalogo]
 >>>
 
-### Ligas de interés
+###	Ligas de interés
 
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 + <http://www.fciencias.unam.mx/docencia/horarios/presentacion/290785>
@@ -256,6 +256,5 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 [tanenbaum-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networks)+AND+(AU+Tanenbaum%2c+Andrew+S.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
 [tanenbaum-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-10009?func=short-refine-exec&set_number=036004&request_op=AND&request=Tanenbaum%2C+Andrew+S.&find_code=WAT&x=66&y=13&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
 
-[salon-Y302]: http://www.fciencias.unam.mx/plantel/horariosalon/20182/448 "Salón 302 de Yelizcalli"
-[Taller-Tlahuizcalpan]: http://www.fciencias.unam.mx/plantel/horariosalon/20182/258 "Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información"
-
+[salon-Y303]: http://www.fciencias.unam.mx/plantel/detalle/449 "Salón 303 de Yelizcalli"
+[Taller-Tlahuizcalpan]: http://www.fciencias.unam.mx/plantel/detalle/258 "Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información"
