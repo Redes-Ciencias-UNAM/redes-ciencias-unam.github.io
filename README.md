@@ -83,5 +83,7 @@ Semestre 2019-2
 + <http://tinyurl.com/ListaRedes-2019-2>
 + <http://tinyurl.com/PizarronRedes-2019-2>
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
++ <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20192/218/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
