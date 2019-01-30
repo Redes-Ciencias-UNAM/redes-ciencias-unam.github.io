@@ -8,7 +8,7 @@ Semestre 2018-2
 
 + **José Luis Torres Rodríguez**
 + Andrés Leonardo Hernández Bermúdez
-+ Fernando Castañeda González
++ Andrea Itzel González Vargas
 
 ###	Requisitos
 
