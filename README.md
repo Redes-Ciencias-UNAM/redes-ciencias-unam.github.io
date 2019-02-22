@@ -23,33 +23,33 @@ Semestre 2019-2
 ###	Temas
 
 + [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2019-2 "Accesible con cuenta @ciencias")
-+ [Guía rápida de `git`](git.md "9418/tcp")
++ [Guía rápida de `git`](temas/git.md "9418/tcp")
 + [Flujo de trabajo para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/workflow#readme "fork y merge request")
 
 ####	1 - Capa Física
 
-+ [Medios de transmisión](media.md "Medios de transmisión")
++ [Medios de transmisión](temas/media.md "Medios de transmisión")
 
 ####	2 - Capa de Enlace
 
-+ [Ethernet](ethernet.md "Ethernet")
++ [Ethernet](temas/ethernet.md "Ethernet")
 
 ####	3 - Capa de Red
 
-+ [IP - Internet Protocol](ip.md "Protocolo de Internet")
++ [IP - Internet Protocol](temas/ip.md "Protocolo de Internet")
 
 ####	4 - Capa de Transporte
 
-+ [TCP - Transmission Control Protocol](tcp.md "TCP")
++ [TCP - Transmission Control Protocol](temas/tcp.md "TCP")
 
 ####	7 - Capa de Aplicación
 
-+ [WHOIS](whois.md "43/tcp")
-+ [DNS - Domain Name System](dns.md "53/udp , 53/tcp")
-+ [HTTP - HyperText Transfer Protocol](http.md "80/tcp , 443/tcp")
-+ [SSL - Secure Sockets Layer](ssl.md "ssl")
-+ [SMTP - Simple Mail Transfer Protocol](smtp.md "25/tcp , 465/tcp , 587/tcp")
-+ [DHCP - Dynamic Host Configuration Protocol](dhcp.md "67/udp , 68/udp")
++ [WHOIS](temas/whois.md "43/tcp")
++ [DNS - Domain Name System](temas/dns.md "53/udp , 53/tcp")
++ [HTTP - HyperText Transfer Protocol](temas/http.md "80/tcp , 443/tcp")
++ [SSL - Secure Sockets Layer](temas/ssl.md "ssl")
++ [SMTP - Simple Mail Transfer Protocol](temas/smtp.md "25/tcp , 465/tcp , 587/tcp")
++ [DHCP - Dynamic Host Configuration Protocol](temas/dhcp.md "67/udp , 68/udp")
 
 --------------------------------------------------------------------------------
 
