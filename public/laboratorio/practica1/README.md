@@ -1,6 +1,6 @@
 # Práctica 1: Programación en C
 
-###Fecha de entrega: 4/Mar/19
+### Fecha de entrega: 4/Mar/19
 
 ## Especificaciones
 

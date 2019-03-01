@@ -1,6 +1,6 @@
 # Práctica 3: Manejo de archivos binarios y captura de paquetes
 
-###Fecha de entrega: 10/Mar/19
+### Fecha de entrega: 10/Mar/19
 
 ## Especificaciones
 
