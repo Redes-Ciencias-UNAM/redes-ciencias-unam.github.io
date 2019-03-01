@@ -19,9 +19,9 @@ Semestre 2019-2
 + [Guia rápida del lenguaje C](/public/laboratorio/guia_c.pdf "Guia rápida del lenguaje C")
 + [Especificaciones de las prácticas en formato PDF](/public/practicas "Archivos PDF de las prácticas")
 
-  - [Práctica 1 - 11/02/2019 - Programación en C](/public/practicas/practica1.pdf "Práctica 1 - Programación en C")
-  - [Práctica 2 - 18/02/2019 - Sockets](/public/practicas/practica2.pdf "Práctica 1 - Sockets en C")
-
+  - [Práctica 1 - 11/02/2019 - Programación en C](/public/laboratorio/practica1 "Práctica 1 - Programación en C")
+  - [Práctica 2 - 18/02/2019 - Sockets](/public/laboratorio/practica2 "Práctica 2 - Sockets en C")
+  - [Práctica 3 - 25/02/2019 - Manejo de archivos binarios y captura de paquetes](/public/laboratorio/practica3 "Práctica 3 - Manejo de archivos binarios y captura de paquetes")
 
 
 --------------------------------------------------------------------------------
