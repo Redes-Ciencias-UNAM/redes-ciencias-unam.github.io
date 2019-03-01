@@ -17,7 +17,7 @@ Semestre 2019-2
 + [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 + [Índice de prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
 + [Guia rápida del lenguaje C](/public/laboratorio/guia_c.pdf "Guia rápida del lenguaje C")
-+ [Especificaciones de las prácticas en formato PDF](/public/practicas "Archivos PDF de las prácticas")
++ [Especificaciones de las prácticas](/public/laboratorio "Prácticas del laboratorio")
 
   - [Práctica 1 - 11/02/2019 - Programación en C](/public/laboratorio/practica1 "Práctica 1 - Programación en C")
   - [Práctica 2 - 18/02/2019 - Sockets](/public/laboratorio/practica2 "Práctica 2 - Sockets en C")
