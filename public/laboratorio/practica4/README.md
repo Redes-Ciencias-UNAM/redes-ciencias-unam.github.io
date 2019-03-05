@@ -198,7 +198,7 @@ Reiniciar servicio de DHCP
 root@dhcp:~# systemctl restart isc-dhcp-server
 ```
 
-root@dhcp:~# Instalar servidor TFTP
+Instalar servidor TFTP
 
 ```
 root@dhcp:~# apt install tftpd-hpa
