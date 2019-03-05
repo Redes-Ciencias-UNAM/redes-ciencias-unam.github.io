@@ -7,6 +7,7 @@
 + Esta práctica es individual.
 + Documentar práctica en un archivo `README.md` con capturas de pantalla de los pasos seguidos.
 + Para esta práctica se utilizó VMware, se puede utilizar cualquier software de virtualización pero se debe de investigar cómo hacer las configuraciones mostradas.
++ Adjuntar en entrega capturas de tráfico obtenidas en el desarrollo de la práctica.
 
 ### Creación de red virtual
 
@@ -240,7 +241,6 @@ Terminar captura de tráfico, observar cómo se lleva a cabo el intercambio del 
 - ¿Cómo funciona el protocolo DHCP?
 - ¿Cómo se filtra el tráfico del protocolo DHCP en una captura de tráfico en Wireshark y en tcpdump?
 - ¿Qué es el estándar PXE y cuál es su utilidad?
-- Adjuntar las capturas de tráfico obtenidas en la práctica. 
 
 ## Referencias
 [1] [https://wiki.debian.org/PXEBootInstall](https://wiki.debian.org/PXEBootInstall)
