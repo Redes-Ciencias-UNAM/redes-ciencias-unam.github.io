@@ -22,7 +22,7 @@ Semestre 2019-2
   - [Práctica 1 - 11/02/2019 - Programación en C](/public/laboratorio/practica1 "Práctica 1 - Programación en C")
   - [Práctica 2 - 18/02/2019 - Sockets](/public/laboratorio/practica2 "Práctica 2 - Sockets en C")
   - [Práctica 3 - 25/02/2019 - Manejo de archivos binarios y captura de paquetes](/public/laboratorio/practica3 "Práctica 3 - Manejo de archivos binarios y captura de paquetes")
-
+  - [Práctica 4 - 05/03/2019 - DHCP](/public/laboratorio/practica4 "Práctica 4 - DHCP")
 
 --------------------------------------------------------------------------------
 
