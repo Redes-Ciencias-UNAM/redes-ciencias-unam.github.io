@@ -195,23 +195,23 @@ group {
 Reiniciar servicio de DHCP
 
 ```
-systemctl restart isc-dhcp-server
+root@dhcp:~# systemctl restart isc-dhcp-server
 ```
 
-Instalar servidor TFTP
+root@dhcp:~# Instalar servidor TFTP
 
 ```
-apt install tftpd-hpa
+root@dhcp:~# apt install tftpd-hpa
 ```
 
 Descargar imagen de sistema operativo:
 
 ```
-cd /srv/tftp/
-wget http://ftp.mx.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/netboot.tar.gz
-tar xzvf netboot.tar.gz
-chmod -R a+r *
-systemctl restart tftpd-hpa
+root@dhcp:~# cd /srv/tftp/
+root@dhcp:~# wget http://ftp.mx.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/netboot.tar.gz
+root@dhcp:~# tar xzvf netboot.tar.gz
+root@dhcp:~# chmod -R a+r *
+root@dhcp:~# systemctl restart tftpd-hpa
 ```
  
 Crear una nueva máquina virtual de la siguiente manera:
