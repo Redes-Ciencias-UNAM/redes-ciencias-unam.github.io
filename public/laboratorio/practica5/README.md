@@ -314,5 +314,6 @@ tcp 189.240.230.2:1025 10.10.10.10:1025   189.240.70.2:80    189.240.70.2:80
 + ¿Qué diferencia hay entre un switch y un router?
 + ¿Qué tipos de switches hay?
 + ¿Qué es una lista de acceso y para qué se utilizan?
++ Se creó una lista de acceso con el comando `access-list 1 permit 192.168.1.0 0.0.0.255`, la última parte del comando (0.0.0.255) es una _wildcard_, ¿qué es una wildcard  y en qué se diferencia con una máscara de red?
 + ¿Qué diferencia hay entre una dirección IP pública y una privada?
 + ¿Qué diferencia hay entre NAT estática, NAT dinámica y PAT? ¿Cuál es la que se encuentra usualmente en los routers de los hogares?
