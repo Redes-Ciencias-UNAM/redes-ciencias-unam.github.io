@@ -67,7 +67,7 @@ Comprobar con `nslookup` que se puede hacer la resolución de nombre de host a l
 
 ### 3. Packet Tracer
 
-Implementar la siguiente topología en Packet Tracer y documentar procedimiento seguido con capturas de pantalla:
+Implementar la siguiente topología en Packet Tracer y documentar procedimiento seguido con capturas de pantalla. Incluir en entrega archivo generado por Packet Tracer.
 
 ![](media/p5_80.png)
 
