@@ -3,7 +3,7 @@
 ## Instrucciones
 
 + Esta tarea debe ser entregada de manera **personal**
-+ Se utilizará el mismo nombre de dominio que se anotó en la [lista del grupo][ListaRedes-2018-2]
++ Se utilizará el mismo nombre de dominio que se anotó en la [lista del grupo][ListaRedes-2019-2]
 
 ### 1. Verificar que el dominio tenga el servicio de HTTP
 
