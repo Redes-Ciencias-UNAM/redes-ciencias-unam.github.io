@@ -3,7 +3,7 @@
 ## Instrucciones
 
 + Esta tarea debe ser entregada de manera **personal**
-+ Se utilizará el mismo nombre de dominio que se anotó en la [lista del grupo][ListaRedes-2018-2]
++ Se utilizará el mismo nombre de dominio que se anotó en la [lista del grupo][ListaRedes]
 
 ### 1. Verificar que el dominio tenga el servicio de HTTP
 
@@ -223,7 +223,7 @@ Generar _issue_ para avisar que ya se terminó la tarea
 
 ## Referencias
 
-[ListaRedes-2018-2]: http://tinyurl.com/ListaRedes-2018-2 "Lista Redes Semestre 2018-2"
+[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"
 + <https://wiki.wireshark.org/SampleCaptures>
 + <https://wiki.wireshark.org/TcpDump>
 + <https://wiki.wireshark.org/CaptureSetup/>
