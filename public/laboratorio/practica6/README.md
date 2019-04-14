@@ -73,12 +73,10 @@ Para CentOS es recomendable habilitar el repositorio de `EPEL`
     - `Remi` o `IUS` para CentOS
         - [rpms.remirepo.net](rpms.remirepo.net)
         - [ius.io](ius.io)
-
 + Instalar `MySQL` o `MariaDB` desde el repositorio oficial:
     - [https://dev.mysql.com/downloads/repo/apt/](https://dev.mysql.com/downloads/repo/apt/)
     - [https://dev.mysql.com/downloads/repo/yum/](https://dev.mysql.com/downloads/repo/yum/)
     - [https://downloads.mariadb.org/mariadb/repositories/](https://downloads.mariadb.org/mariadb/repositories/)
-
 + Instalar `PostgreSQL` desde el repositorio oficial:
     - [https://wiki.postgresql.org/wiki/Apt](https://wiki.postgresql.org/wiki/Apt)
     - [https://www.postgresql.org/download/linux/redhat/](https://www.postgresql.org/download/linux/redhat/)
