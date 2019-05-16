@@ -10,7 +10,7 @@ Crear una carpeta llamada `tareas` y otra llamada `tareas/tarea01` en el reposit
 
 ###	1. Elegir el nombre de dominio
 
-Elegir el nombre de dominio y anotarlo en la [lista del grupo][ListaRedes-2019-2], además anotar el nombre de dominio seleccionado en el archivo `dominio.txt`
+Elegir el nombre de dominio y anotarlo en la [lista del grupo][ListaRedes], además anotar el nombre de dominio seleccionado en el archivo `dominio.txt`
 
   + El nombre DNS elegido debe ser **único** para cada persona
   + Revisar la [lista del grupo][ListaRedes] y ponerse de acuerdo en caso de haber duplicidad de nombres
