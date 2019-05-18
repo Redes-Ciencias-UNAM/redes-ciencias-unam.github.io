@@ -25,6 +25,7 @@ Semestre 2019-2
   - [Práctica 4 - 05/03/2019 - DHCP](/public/laboratorio/practica4 "Práctica 4 - DHCP")
   - [Práctica 5 - 11/03/2019 - Inyección de paquetes, DNS y Packet Tracer](/public/laboratorio/practica5 "Práctica 5 - Inyección de paquetes, DNS y Packet Tracer")
   - [Práctica 6 - 08/04/2019 - Web Stack](/public/laboratorio/practica6 "Práctica 6 - Web Stack")
+  - [Práctica 7 - 17/05/2019 - AWS](/public/laboratorio/practica7/practica7.pdf "Práctica 7 - AWS")
 
 --------------------------------------------------------------------------------
 
