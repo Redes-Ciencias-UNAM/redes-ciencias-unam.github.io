@@ -4,7 +4,7 @@
 
 ##	Redes de Computadoras
 
-Semestre 2018-2
+Semestre 2019-2
 
 + **José Luis Torres Rodríguez**
 + Andrés Leonardo Hernández Bermúdez
@@ -246,7 +246,9 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20192/218/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
++ [lista del grupo][ListaRedes]
 
+[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"
 [kurose-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networking+%3a+a+top-down+approach)+AND+(AU+Kurose%2c+James+F.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
 [kurose-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-63897?func=short-refine-exec&set_number=035774&request_op=AND&request=Kurose%2C+James+F.&find_code=WAT&x=73&y=17&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
 [kurose-librunam-busqueda]: http://132.248.67.82:8991/F/-/?func=direct&doc_number=001200728current_base=MX001 "Búsqueda LIBRUNAM"

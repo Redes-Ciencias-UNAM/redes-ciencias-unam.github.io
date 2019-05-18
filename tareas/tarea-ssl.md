@@ -9,7 +9,7 @@ Esta tarea debe ser entregada de manera **personal**
 Localizar el dominio DNS _utilizado en las tareas anteriores_
 
   + Ver el archivo `tareas/dominio.txt`
-  + Utilizar la [lista del grupo][ListaRedes-2018-2]
+  + Utilizar la [lista del grupo][ListaRedes]
 
 Localizar el archivo `tareas/ip.txt`
 
@@ -255,4 +255,4 @@ Leer la página de _man_ de verify(1) (`man 1 verify`) y justificar por que se c
 
 Mencionar cómo es que se realiza la validación de los certificados y qué función realizan la ruta `/etc/ssl/certs` y el archivo `chain.pem`
 
-[ListaRedes-2018-2]: http://tinyurl.com/ListaRedes-2018-2 "Lista Redes Semestre 2018-2"
+[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"

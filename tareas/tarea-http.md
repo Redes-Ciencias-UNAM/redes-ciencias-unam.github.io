@@ -9,7 +9,7 @@ Esta tarea debe ser entregada de manera **personal**
 Localizar el dominio DNS _utilizado en la tarea anterior_
 
   + Ver el archivo `tareas/dominio.txt`
-  + Utilizar la [lista del grupo][ListaRedes-2018-2]
+  + Utilizar la [lista del grupo][ListaRedes]
 
 ### 1. Anotar la direccion IP a la que resuelve el nombre DNS
 
@@ -128,6 +128,6 @@ Después de comparar los archivos, responder a las siguientes preguntas:
   + ¿Por qué se quitó la opción `--compressed` en la línea de comandos de `curl`?
   + ¿Por qué se alteró el valor de la cabecera `Accept` que se mandó en la petición?
 
-[ListaRedes-2018-2]: http://tinyurl.com/ListaRedes-2018-2 "Lista Redes Semestre 2018-2"
+[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"
 [Inspector-Red-Firefox]: https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor "Abrir el inspector de red en Mozilla Firefox"
 [Inspector-Red-Chrome]: https://developer.chrome.com/devtools#improving-network-performance "Abrir el inspector de red en Google Chrome"

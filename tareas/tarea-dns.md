@@ -10,10 +10,10 @@ Crear una carpeta llamada `tareas` y otra llamada `tareas/tarea01` en el reposit
 
 ###	1. Elegir el nombre de dominio
 
-Elegir el nombre de dominio y anotarlo en la [lista del grupo][ListaRedes-2019-2], además anotar el nombre de dominio seleccionado en el archivo `dominio.txt`
+Elegir el nombre de dominio y anotarlo en la [lista del grupo][ListaRedes], además anotar el nombre de dominio seleccionado en el archivo `dominio.txt`
 
   + El nombre DNS elegido debe ser **único** para cada persona
-  + Revisar la [lista del grupo][ListaRedes-2019-2] y ponerse de acuerdo en caso de haber duplicidad de nombres
+  + Revisar la [lista del grupo][ListaRedes] y ponerse de acuerdo en caso de haber duplicidad de nombres
   + Únicamente se debe elegir un nombre de dominio como `example.com` y no se permite elegir subdominios (ej. `www.example.com`)
   + El dominio debe ser _completamente_ diferente, no se permite elegir `example.com` y que otra persona elija `example.com.mx`
   + No se permite elegir el _dominio_ `unam.mx` ni un _subdominio_ de el (ej. `fciencias.unam.mx`)
@@ -104,7 +104,7 @@ Hacer `git push` para subir todos los cambios realizados al repositorio y hacer 
 
 --------------------------------------------------------------------------------
 
-[ListaRedes-2019-2]: http://tinyurl.com/ListaRedes-2019-2
+[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"
 [Busqueda-iterativa-DNS]: /dns.md#búsqueda-iterativa "Búsqueda iterativa manual de DNS"
 [WikiBooks-DNS]: https://en.wikibooks.org/wiki/Communication_Networks/DNS "Página de DNS en WikiBooks"
 [Diagrama-busqueda-iterativa]: https://commons.wikimedia.org/wiki/File:Iterative.jpg "Diagrama de la búsqueda iterativa de DNS - WikiBooks"
