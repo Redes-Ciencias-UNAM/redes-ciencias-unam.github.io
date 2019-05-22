@@ -91,3 +91,6 @@ Semestre 2019-2
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20192/218/714>
 + <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
++ [Clase de ayudantía por videoconferencia][google-meet]
+
+[google-meet]: https://meet.google.com/wzm-pxrq-sas
