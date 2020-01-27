@@ -4,11 +4,11 @@
 
 ##	Redes de Computadoras
 
-Semestre 2019-2
+Semestre 2020-2
 
 + **José Luis Torres Rodríguez**
 + Andrés Leonardo Hernández Bermúdez
-+ Andrea Itzel González Vargas
++ Juan Alberto Camacho Bolaños
 
 ###	Requisitos
 
@@ -40,17 +40,11 @@ Semestre 2019-2
 
 ###	Impartición de las clases
 
-####	Teoría
-
-+ Profesor: Lunes y miércoles de 18:30 a 20:00 horas en el [salón 303 de Yelizcalli][salon-Y303]
-+ Ayudante: Martes y jueves de 18:30 a 19:30 horas en el [salón 303 de Yelizcalli][salon-Y303]
-
-####	Laboratorio
-
-+ Lunes de 14:00 a 16:00 horas
-+ [Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información][Taller-Tlahuizcalpan]
-
-###	Contenido del curso
+|             | Día               | Hora          | Salón                                 |
+|:-----------:|:-----------------:|:-------------:|:-------------------------------------:|
+| Profesor    | Lunes y miércoles | 17:30 a 19:00 | [salón 302 de Yelizcalli][salon-Y302] |
+| Ayudante    | Martes y jueves   | 17:30 a 18:30 | [salón 302 de Yelizcalli][salon-Y302] |
+| Laboratorio | Lunes             | 13:00 a 15:00 | [Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información][Taller-Tlahuizcalpan] |
 
 ###	Contenido del curso
 
@@ -63,16 +57,18 @@ Semestre 2019-2
   * El modelo de referencia TCP/IP
   * Comparación de ambos modelos
 + Revisión de las capas del modelo de referencia TCP/IP
-  * Capa de Aplicación
-     - Revisión de protocolos de capa de aplicación
-     - Creación de aplicaciones para implementar protocolos de capa de aplicación
-  * Capa de Transporte
-     - Revisión de TCP y UDP
-     - Protocolos de transferencia confiable
-     - Control de flujo
-     - Control de congestión
-     - Capturas de tráfico, revisión de cabeceras sobre paquetes capturados
-     - Creación de aplicaciones para el manejo de paquetes de capa de transporte
+  * Capa de Enlace
+     - Técnicas de detección y corrección de errores
+         + Bits de paridad
+         + Sumas de verificación
+         + CRC
+     - Cabeceras de capa de enlace
+     - LAN's y protocolos de acceso múltiple
+     - Direccionamiento en capa de enlace
+         + Direcciones MAC
+         + ARP
+     - Revisión de Ethernet
+     - PPP
   * Capa de Red
      - Revisión de IP: IPv4, IPv6
      - Revisión de ICMP
@@ -86,18 +82,16 @@ Semestre 2019-2
      - Broadcast y multicast
      - iptables
      - Creación de una red con servicios básicos y conexión a Internet
-  * Capa de Enlace
-     - Técnicas de detección y corrección de errores
-         + Bits de paridad
-         + Sumas de verificación
-         + CRC
-     - Cabeceras de capa de enlace
-     - LAN's y protocolos de acceso múltiple
-     - Direccionamiento en capa de enlace
-         + Direcciones MAC
-         + ARP
-     - Revisión de Ethernet
-     - PPP
+  * Capa de Transporte
+     - Revisión de TCP y UDP
+     - Protocolos de transferencia confiable
+     - Control de flujo
+     - Control de congestión
+     - Capturas de tráfico, revisión de cabeceras sobre paquetes capturados
+     - Creación de aplicaciones para el manejo de paquetes de capa de transporte
+  * Capa de Aplicación
+     - Revisión de protocolos de capa de aplicación
+     - Creación de aplicaciones para implementar protocolos de capa de aplicación
 + Revisión de las características de los principales tipos de redes empleadas actualmente
 + Redes inalámbricas
   * 802.11
@@ -127,10 +121,10 @@ Calendarización de examenes
 
 | Examen	| Fecha					|
 |--------------:|:--------------------------------------|
-| Parcial 1	| Lunes,     18 de febrero de 2019	|
-| Parcial 2	| Miércoles, 20 de marzo   de 2019	|
-| Parcial 3	| Lunes,     22 de abril   de 2019	|
-| Parcial 4	| Lunes,     20 de mayo    de 2019	|
+| Parcial 1	|                  febrero de 2020	|
+| Parcial 2	|                  marzo   de 2020	|
+| Parcial 3	|                  abril   de 2020	|
+| Parcial 4	|                  mayo    de 2020	|
 
 #####	Requisitos para presentar examen
 
@@ -244,11 +238,11 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 + <http://www.fciencias.unam.mx/docencia/horarios/detalles/300977>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20192/218/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20202/218/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20202/1556/714>
 + [lista del grupo][ListaRedes]
 
-[ListaRedes]: http://tinyurl.com/ListaRedes-2019-2 "Lista Redes Semestre 2019-2"
+[ListaRedes]: http://tinyurl.com/ListaRedes-2020-2 "Lista Redes Semestre 2020-2"
 [kurose-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networking+%3a+a+top-down+approach)+AND+(AU+Kurose%2c+James+F.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
 [kurose-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-63897?func=short-refine-exec&set_number=035774&request_op=AND&request=Kurose%2C+James+F.&find_code=WAT&x=73&y=17&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
 [kurose-librunam-busqueda]: http://132.248.67.82:8991/F/-/?func=direct&doc_number=001200728current_base=MX001 "Búsqueda LIBRUNAM"
@@ -256,5 +250,5 @@ Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la 
 [tanenbaum-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networks)+AND+(AU+Tanenbaum%2c+Andrew+S.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
 [tanenbaum-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-10009?func=short-refine-exec&set_number=036004&request_op=AND&request=Tanenbaum%2C+Andrew+S.&find_code=WAT&x=66&y=13&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
 
-[salon-Y303]: http://www.fciencias.unam.mx/plantel/detalle/449 "Salón 303 de Yelizcalli"
+[salon-Y302]: http://www.fciencias.unam.mx/plantel/detalle/448 "Salón 302 de Yelizcalli"
 [Taller-Tlahuizcalpan]: http://www.fciencias.unam.mx/plantel/detalle/258 "Taller de Sistemas Operativos, Redes de Cómputo, Sistemas Distribuidos y Manejo de Información"

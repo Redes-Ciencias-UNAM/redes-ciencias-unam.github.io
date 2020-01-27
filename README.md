@@ -4,7 +4,7 @@
 
 ##	Redes de Computadoras
 
-Semestre 2019-2
+Semestre 2020-2
 
 ###	Presentación del curso
 
@@ -14,7 +14,7 @@ Semestre 2019-2
 
 ###	Prácticas
 
-+ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes "Las tareas se entregan a traves de merge-request")
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 + [Índice de prácticas](http://redes-ciencias-unam.gitlab.io/practicas/ "Índice de prácticas")
 + [Guia rápida del lenguaje C](/public/laboratorio/guia_c.pdf "Guia rápida del lenguaje C")
 + [Especificaciones de las prácticas](/public/laboratorio "Prácticas del laboratorio")
@@ -31,7 +31,7 @@ Semestre 2019-2
 
 ###	Temas
 
-+ [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2019-2 "Accesible con cuenta @ciencias")
++ [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2020-2 "Accesible con cuenta @ciencias")
 + [Guía rápida de `git`](temas/git.md "9418/tcp")
 + [Flujo de trabajo para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/workflow#readme "fork y merge request")
 
@@ -65,7 +65,7 @@ Semestre 2019-2
 
 ###	Tareas
 
-+ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes "Las tareas se entregan a traves de merge-request")
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 
 ####	4 - Capa de Transporte
 
@@ -83,14 +83,14 @@ Semestre 2019-2
 
 + <http://redes-ciencias-unam.gitlab.io/>
 + <http://redes-ciencias-unam.gitlab.io/practicas/>
-+ <https://gitlab.com/Redes-Ciencias-UNAM/2019-2/tareas-redes>
-+ <http://tinyurl.com/ListaRedes-2019-2>
-+ <http://tinyurl.com/PizarronRedes-2019-2>
++ <https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes>
++ <http://tinyurl.com/ListaRedes-2020-2>
++ <http://tinyurl.com/PizarronRedes-2020-2>
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20192/218/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20192/1556/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20202/218/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20202/1556/714>
 + [Clase de ayudantía por videoconferencia][google-meet]
 
-[google-meet]: https://meet.google.com/wzm-pxrq-sas
+[google-meet]: https://meet.google.com/xmv-czqp-ehd
