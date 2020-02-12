@@ -35,9 +35,15 @@ Semestre 2020-2
 + [Guía rápida de `git`](temas/git.md "9418/tcp")
 + [Flujo de trabajo para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/workflow#readme "fork y merge request")
 
+####	0 - Modelos de referencia
+
++ [Modelos de referencia](temas/models.md "Modelo OSI vs modelo TCP/IP")
+
 ####	1 - Capa Física
 
 + [Medios de transmisión](temas/media.md "Medios de transmisión")
++ [Cableado estructurado](temas/structured-cabling.md "Cableado estructurado")
++ [Topologías de red](temas/topology.md "Topologías de red")
 
 ####	2 - Capa de Enlace
 
