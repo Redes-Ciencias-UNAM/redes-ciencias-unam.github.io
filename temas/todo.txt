@@ -1,0 +1,24 @@
+# https://Redes-Ciencias-UNAM.gitlab.io/
+# https://t.me/redes_ciencias_unam
+# http://tinyurl.com/PizarronRedes-2020-2
+
+x	2020-02-04	Capa física: Medios de transmisión
+x	2020-02-06	Capa física: Cableado estructurado
+x	2020-02-06	Capa física: Componentes de una red
+x	2020-02-11	Modelos: Modelo OSI
+x	2020-02-11	Modelos: Modelo TCP/IP
+x	2020-02-13	Capa física: Topologías de red
+x	2020-02-13	Dispositivos activos: Funcionamiento de hub, switch y router
+x	2020-02-18	Capa física: Ethernet (señalización)
+x	2020-02-18	Capa de enlace: Ethernet direcciones MAC y formato de la trama
+x	2020-02-18	Dispositivos activos: Funcionamiento store and forward y cut through
+
+	Revisar: 802.3 Ethernet II
+	Revisar: vLAN (802.1q)
+	Revisar: vLAN sobre vLAN o QinQ (802.1ad)
+	Revisar: Store and forward y cut through
+	Revisar: Dominio de broadcast
+	Revisar: Dominio de colisión
+	Revisar: Puertos troncales (trunk)
+	Revisar: Unicast, Multicast, Broadcast y Anycast
+
