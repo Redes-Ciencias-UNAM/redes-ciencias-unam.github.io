@@ -43,6 +43,10 @@ Semestre 2020-2
 
 + [IP - Internet Protocol](temas/ip.md "Protocolo de Internet")
 + [ICMP - Internet Control Message Protocol](temas/icmp.md "ICMP")
++ Configuración de ruteo en Cisco IOS
+  * [Topología para ruteo interno](temas/routing-topology.md)
+  * [Configuración de ruteo estático en Cisco IOS](temas/routing-static.md)
+  * [Configuración de ruteo RIPv2 en Cisco IOS](temas/routing-rip.md)
 
 ####	4 - Capa de Transporte
 
