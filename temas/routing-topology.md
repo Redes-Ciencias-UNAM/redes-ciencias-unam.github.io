@@ -55,3 +55,6 @@ Redes que interconectan a los ruteadores
 | Z   | R3     | 172.16.3.1       | 255.255.255.252 |
 | Z   | R0     | 172.16.3.2       | 255.255.255.252 |
 
+# Referencias
+
++ <https://www.cisco.com/c/en/us/td/docs/switches/wan/mgx/mgx_8850/software/mgx_r3/rpm/rpm_r1-1/configuration/guide/appc.html#wp1002608>

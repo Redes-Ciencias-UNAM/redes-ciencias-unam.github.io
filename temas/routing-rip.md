@@ -339,3 +339,8 @@ show ip rip database
     [2] via 172.16.1.2, 00:00:08, GigabitEthernet0/0
 ```
 
+# Referencias
+
++ <https://www.cisco.com/c/en/us/td/docs/ios/iproute_rip/command/reference/irr_book/irr_rip.html>
++ <https://www.computernetworkingnotes.com/ccna-study-guide/rip-protocol-configuration-guide-with-examples.html>
+

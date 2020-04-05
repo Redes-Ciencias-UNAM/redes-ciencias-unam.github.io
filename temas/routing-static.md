@@ -253,3 +253,7 @@ S    192.168.0.0/24 [1/0] via 172.16.3.2
 C    192.168.100.0/24 is directly connected, GigabitEthernet2/0
 ```
 
+# Referencias
+
++ <https://www.cisco.com/c/en/us/td/docs/ios/iproute_pi/command/reference/iri_book/iri_pi1.html#ip_route>
++ <https://www.computernetworkingnotes.com/ccna-study-guide/static-routing-configuration-guide-with-examples.html>
