@@ -77,7 +77,7 @@ Router-0(config)#
 Al finalizar la configuración se debe ejecutar el comando `end` para aplicar los cambios
 
 ```
-Router-0(config)#end
+Router-0(config)# end
 Router-0#
 %SYS-5-CONFIG_I: Configured from console by console
 ```
@@ -95,6 +95,8 @@ Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
        * - candidate default, U - per-user static route, o - ODR
        P - periodic downloaded static route
 ```
+
+--------------------------------------------------------------------------------
 
 ### Configuración para `Router-0`
 
@@ -118,10 +120,10 @@ end
 #### Tabla de rutas para `Router-0`
 
 ```
-show ip route
+Router-0# show ip route
 
 Gateway of last resort is not set
- 
+
      10.0.0.0/24 is subnetted, 2 subnets
 S       10.10.10.0 [1/0] via 172.16.0.2
 S       10.20.20.0 [1/0] via 172.16.1.2
@@ -134,6 +136,8 @@ C       172.16.3.0 is directly connected, GigabitEthernet1/0
 C    192.168.0.0/24 is directly connected, GigabitEthernet2/0
 S    192.168.100.0/24 [1/0] via 172.16.3.1
 ```
+
+--------------------------------------------------------------------------------
 
 ### Configuración para `Router-1`
 
@@ -158,10 +162,10 @@ end
 #### Tabla de rutas para `Router-1`
 
 ```
-show ip route
+Router-1# show ip route
 
 Gateway of last resort is not set
- 
+
      10.0.0.0/24 is subnetted, 2 subnets
 C       10.10.10.0 is directly connected, GigabitEthernet2/0
 S       10.20.20.0 [1/0] via 172.16.1.2
@@ -174,6 +178,8 @@ S    192.168.0.0/24 [1/0] via 172.16.0.1
 S    192.168.100.0/24 [1/0] via 172.16.0.1
                       [1/0] via 172.16.1.2
 ```
+
+--------------------------------------------------------------------------------
 
 ### Configuración para `Router-2`
 
@@ -198,7 +204,7 @@ end
 #### Tabla de rutas para `Router-2`
 
 ```
-show ip route
+Router-2# show ip route
 
 Gateway of last resort is not set
 
@@ -214,6 +220,8 @@ S    192.168.0.0/24 [1/0] via 172.16.0.1
                     [1/0] via 172.16.3.2
 S    192.168.100.0/24 [1/0] via 172.16.2.2
 ```
+
+--------------------------------------------------------------------------------
 
 ### Configuración para `Router-3`
 
@@ -238,7 +246,7 @@ end
 #### Tabla de rutas para `Router-3`
 
 ```
-show ip route
+Router-3# show ip route
 
 Gateway of last resort is not set
 
@@ -252,6 +260,8 @@ C       172.16.3.0 is directly connected, GigabitEthernet0/0
 S    192.168.0.0/24 [1/0] via 172.16.3.2
 C    192.168.100.0/24 is directly connected, GigabitEthernet2/0
 ```
+
+--------------------------------------------------------------------------------
 
 # Referencias
 

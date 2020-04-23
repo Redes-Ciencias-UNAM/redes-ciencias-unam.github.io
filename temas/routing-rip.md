@@ -77,7 +77,7 @@ Router-0(config)#
 Al finalizar la configuración se debe ejecutar el comando `end` para aplicar los cambios
 
 ```
-Router-0(config)#end
+Router-0(config)# end
 Router-0#
 %SYS-5-CONFIG_I: Configured from console by console
 ```
@@ -95,6 +95,8 @@ Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
        * - candidate default, U - per-user static route, o - ODR
        P - periodic downloaded static route
 ```
+
+--------------------------------------------------------------------------------
 
 ### Configuración para `Router-0`
 
@@ -338,6 +340,8 @@ show ip rip database
     [2] via 172.16.0.1, 00:00:05, GigabitEthernet1/0
     [2] via 172.16.1.2, 00:00:08, GigabitEthernet0/0
 ```
+
+--------------------------------------------------------------------------------
 
 # Referencias
 
