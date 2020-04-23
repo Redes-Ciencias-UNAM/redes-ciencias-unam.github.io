@@ -47,6 +47,7 @@ Semestre 2020-2
   * [Topología para ruteo interno](temas/routing-topology.md)
   * [Configuración de ruteo estático en Cisco IOS](temas/routing-static.md)
   * [Configuración de ruteo RIPv2 en Cisco IOS](temas/routing-rip.md)
+  * [Configuración de ruteo OSPF en Cisco IOS](temas/routing-ospf.md)
 
 ####	4 - Capa de Transporte
 
