@@ -984,6 +984,7 @@ Link ID         ADV Router      Age         Seq#       Checksum
 # Referencias
 
 + <https://www.cisco.com/c/en/us/td/docs/ios/>
++ <https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/command/iro-cr-book/ospf-s1.html>
 + <https://www.computernetworkingnotes.com/ccna-study-guide/ospf-fundamental-terminology-explained.html>
 + <https://www.computernetworkingnotes.com/ccna-study-guide/ospf-neighborship-condition-and-requirement.html>
 + <https://www.computernetworkingnotes.com/ccna-study-guide/ospf-neighbor-states-explained-with-example.html>
