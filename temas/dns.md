@@ -8,6 +8,20 @@ domain			53/udp
 domain			53/tcp
 ```
 
+--------------------------------------------------------------------------------
+
+||
+|:------:|
+|![](img/DNS-001-gTLD.png"Top level domains")|
+<img src="img/DNS-001-gTLD.png" alt="Top level domains" />
+
+||
+|:------:|
+|![](img/DNS-002-ccTLD.png" Country code top level domains")|
+<img src="img/DNS-002-ccTLD.png" alt="Country code top level domains" />
+
+--------------------------------------------------------------------------------
+
 ## Registros
 
 ### Registro A
@@ -78,7 +92,7 @@ $ dig +all 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.a
 |:---------------------:|:-----:|:-----:|:-----:|:-----:|
 | `1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa.`	| 3600	| IN	| PTR	| `omega.example.net.`	|
 
-### Registro NS
+### Registros NS (__glue records__)
 
 + También conocidos como __glue records__, son el elemento que liga a las zonas DNS entre sí
 + Lista a los servidores **autoritativos** para esa zona
@@ -126,12 +140,19 @@ ff02::2 ip6-allrouters
 
 ## Búsquedas
 
+--------------------------------------------------------------------------------
+
 ### Búsqueda recursiva
 
 + El cliente le pregunta el registro al servidor
 + El servidor realiza la búsqueda iterativa preguntando a otros servidores
 + Regresa __el mejor resultado obtenido__
 + Respuesta no autoritativa
+
+||
+|:------:|
+|![](img/DNS-003-Search_recursive.png" Recursivesearch")|
+<img src="img/DNS-003-Search_recursive.png" alt="Recursivesearch" />
 
 ```
 $ dig +all www.unam.mx.
@@ -148,13 +169,15 @@ $ dig +all www.unam.mx.
 ;www.unam.mx.			IN	A
 
 ;; ANSWER SECTION:
-www.unam.mx.		3077	IN	A	132.247.70.37
+www.unam.mx.		3077	IN	A	132.247.10.44
 
 ;; Query time: 44 msec
 ;; SERVER: 208.67.222.222#53(208.67.222.222)
 ;; WHEN: Tue Feb 13 16:53:11 CST 2018
 ;; MSG SIZE  rcvd: 56
 ```
+
+--------------------------------------------------------------------------------
 
 ### Búsqueda iterativa
 
@@ -163,6 +186,15 @@ www.unam.mx.		3077	IN	A	132.247.70.37
 + El cliente pregunta por la raíz del espacio de nombres de DNS
   * Esta zona raíz tiene el dominio `root-servers.net`
   * Normalmente no es necesario preguntar por la zona raíz, ya que viene precargada en los clientes de DNS
+
+||
+|:------:|
+|![](img/DNS-004-Search_iterative.png" Iterative search")|
+<img src="img/DNS-004-Search_iterative.png" alt="Iterative search" />
+
+----------------------------------------
+
+#### Zona raíz
 
 ```
 $ dig +all NS .
@@ -227,6 +259,10 @@ m.root-servers.net.     172541  IN      AAAA    2001:dc3::35
 ;; MSG SIZE  rcvd: 811
 ```
 
+----------------------------------------
+
+#### NS de `mx.`
+
 + El cliente pregunta por la __primer__ parte del nombre DNS a alguno de los servidores raíz
 
 ```
@@ -284,6 +320,10 @@ root-servers.net.	10800	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 20180
 ;; MSG SIZE  rcvd: 105
 ```
 
+----------------------------------------
+
+#### NS de `unam.mx.`
+
 + El cliente pregunta por la __segunda__ parte del dominio a alguno de los servidores NS de la zona `mx.`
 
 ```
@@ -317,6 +357,10 @@ ns4.unam.mx.		86400	IN	AAAA	2001:1218:403:203:204::32
 ;; MSG SIZE  rcvd: 160
 ```
 
+----------------------------------------
+
+#### Consulta al DNS de `unam.mx.` por `www`
+
 + El cliente pregunta por la siguiente parte del nombre de dominio al servidor autoritativo
 
 ```
@@ -335,7 +379,7 @@ $ dig +all www.unam.mx. @ns3.unam.mx.
 ;www.unam.mx.			IN	A
 
 ;; ANSWER SECTION:
-www.unam.mx.		7200	IN	A	132.247.70.37
+www.unam.mx.		7200	IN	A	132.247.10.44
 
 ;; AUTHORITY SECTION:
 unam.mx.		7200	IN	NS	ns1.unam.mx.
@@ -358,6 +402,8 @@ ns5.unam.mx.		7200	IN	A	132.248.243.37
 ;; WHEN: Tue Feb 13 16:42:33 CST 2018
 ;; MSG SIZE  rcvd: 282
 ```
+
+--------------------------------------------------------------------------------
 
 + <https://howdns.works/>
 + <http://networktools.he.net/>
