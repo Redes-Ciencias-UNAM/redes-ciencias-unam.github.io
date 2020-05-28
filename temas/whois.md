@@ -9,15 +9,15 @@ whois                 43/tcp nicname
 
 ||
 |:------:|
-|![](img/WHOIS-001-Database.png "Generic top level domains")|
+|![](img/WHOIS-001-Database.png)|
 
 ||
 |:------:|
-|![](img/WHOIS-002-Register_domain.png "Register domain name")|
+|![](img/WHOIS-002-Register_domain.png)|
 
 ||
 |:------:|
-|![](img/WHOIS-003-Glue_records.png "Glue records")|
+|![](img/WHOIS-003-Glue_records.png)|
 
 --------------------------------------------------------------------------------
 

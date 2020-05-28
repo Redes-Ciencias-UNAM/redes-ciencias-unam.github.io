@@ -12,11 +12,11 @@ domain			53/tcp
 
 ||
 |:------:|
-|![](img/DNS-001-gTLD.png "Top level domains")|
+|![](img/DNS-001-gTLD.png)|
 
 ||
 |:------:|
-|![](img/DNS-002-ccTLD.png "Country code top level domains")|
+|![](img/DNS-002-ccTLD.png)|
 
 --------------------------------------------------------------------------------
 
@@ -149,7 +149,7 @@ ff02::2 ip6-allrouters
 
 ||
 |:------:|
-|![](img/DNS-003-Search_recursive.png "Recursivesearch")|
+|![](img/DNS-003-Search_recursive.png)|
 
 ```
 $ dig +all www.unam.mx.
@@ -186,7 +186,7 @@ www.unam.mx.		3077	IN	A	132.247.10.44
 
 ||
 |:------:|
-|![](img/DNS-004-Search_iterative.png "Iterative search")|
+|![](img/DNS-004-Search_iterative.png)|
 
 ----------------------------------------
 
