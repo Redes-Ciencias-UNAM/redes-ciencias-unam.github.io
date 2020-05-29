@@ -60,12 +60,12 @@ phone:        +52 (81) 8864 2600
 fax-no:       +52 (81) 8864 2600
 e-mail:       tech-iana@nic.mx
 
-nserver:      C.MX-NS.MX 192.100.224.1 2001:1258:0:0:0:0:0:1
-nserver:      E.MX-NS.MX 189.201.244.1
-nserver:      I.MX-NS.MX 207.248.68.1
 nserver:      M.MX-NS.MX 200.94.176.1 2001:13c7:7000:0:0:0:0:1
-nserver:      O.MX-NS.MX 200.23.1.1
+nserver:      E.MX-NS.MX 189.201.244.1
 nserver:      X.MX-NS.MX 201.131.252.1
+nserver:      I.MX-NS.MX 207.248.68.1
+nserver:      C.MX-NS.MX 192.100.224.1 2001:1258:0:0:0:0:0:1
+nserver:      O.MX-NS.MX 200.23.1.1
 ds-rdata:     61382 8 2 0FA4420673F1B728F8612C61F3C225DF1E64400044468581DD8CA7DCAFDCA663
 
 whois:        whois.mx
