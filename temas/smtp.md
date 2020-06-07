@@ -14,6 +14,8 @@ submission		587/tcp
 |:------:|
 |![](img/SMTP-001-Mail_delivery.png)|
 
+--------------------------------------------------------------------------------
+
 ### Componentes
 
 | Elemento				| Protocolo				| Descripción									| Software					|
@@ -22,6 +24,8 @@ submission		587/tcp
 | **MSA**: Mail _Submission_ Agent	| SMTP					| Se encarga de **recibir**   el mensaje de correo electrónico			| Postfix, Sendmail, exim, qmail, …		|
 | **MTA**: Mail _Transfer_ Agent	| SMTP(S)				| Se encarga de **transmitir** el mensaje de correo electrónico			| Postfix, Sendmail, exim, qmail, …		|
 | **MDA**: Mail _Delivery_ Agent	| IMAP(S),POP3(S),SMTPS,Summission	| Se encarga de **entregar**   el mensaje de correo electrónico en el buzón	| Postfix, Sendmail, exim, qmail, …		|
+
+--------------------------------------------------------------------------------
 
 ### Prueba de SMTP __sin autenticación__
 
@@ -61,7 +65,7 @@ $ swaks --to bob@example.net --server mx.example.net:25
 <-  250-PIPELINING
 <-  250-CHUNKING
 <-  250 SMTPUTF8
- -> MAIL FROM: <username@hostname.example.local>
+ -> MAIL FROM: <alice@example.org>
 <-  250 2.1.0 OK 012-3456789abcdef.0f - gsmtp
  -> RCPT TO: <bob@example.net>
 <-  250 2.1.5 OK 012-3456789abcdef.0f - gsmtp
@@ -69,7 +73,7 @@ $ swaks --to bob@example.net --server mx.example.net:25
 <-  354  Go ahead 012-3456789abcdef.0f - gsmtp
  -> Date: Tue, 20 Mar 2020 18:19:20 -0600
  -> To: bob@example.net
- -> From: username@hostname.example.local
+ -> From: alice@example.org
  -> Subject: test Tue, 20 Mar 2020 18:19:20 -0600
  -> X-Mailer: swaks v20130209.0 jetmore.org/john/code/swaks/
  -> 
@@ -96,7 +100,7 @@ Received: by 10.192.145.44 with SMTP id aaaaaaaaaaaaaaa;
 
 	...
 
-Return-Path: <username@hostname.example.local>
+Return-Path: <alice@example.org>
 Received: from hostname.example.local ([198.51.100.0])
         by mx.example.net with ESMTP id 012-3456789abcdef.0f.2020.03.20.17.18.19
         for <bob@example.net>;
@@ -107,12 +111,14 @@ Received: from hostname.example.local ([198.51.100.0])
 Message-Id: <5ab1a7c9.1c69fb81.99996.3682-SMTPIN_ADDED_MISSING@mx.example.net>
 Date: Tue, 20 Mar 2020 18:19:20 -0600
 To: bob@example.net
-From: username@hostname.example.local
+From: alice@example.org
 Subject: test Tue, 20 Mar 2020 18:19:20 -0600
 X-Mailer: swaks v20130209.0 jetmore.org/john/code/swaks/
 
 This is a test mailing
 ```
+
+--------------------------------------------------------------------------------
 
 ### Prueba de SMTP __con autenticación__
 
@@ -240,6 +246,8 @@ This is a test mailing
 
 ```
 
+--------------------------------------------------------------------------------
+
 #### Autenticación SMTP
 
 + La contraseña se transmite de manera _codificada_ utilizando `base64`
@@ -263,6 +271,8 @@ $ echo -n 'AGFsaWNlQGV4YW1wbGUub3JnAHBhc3N3b3Jk' | base64 -d | hexdump -C
 00000010  72 67 00 70 61 73 73 77  6f 72 64                 |rg.password     |
 0000001b
 ```
+
+--------------------------------------------------------------------------------
 
 ## Referencias
 
