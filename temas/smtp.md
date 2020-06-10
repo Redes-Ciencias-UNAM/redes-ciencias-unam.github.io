@@ -102,7 +102,7 @@ El formato del registro DNS es el siguiente:
 
 | Nombre				| TTL	| Clase	| Tipo	| Valor	|
 |:-------------------------------------:|:-----:|:-----:|:-----:|:-----:|
-| `_dmarc.example.com.`	| 3600	| IN	| TXT	| `"v=DMARC1;p=none;sp=quarantine;pct=100;rua=mailto:dmarc@example.com;"`	|
+| `_dmarc.example.com.`	| 3600	| IN	| TXT	| `"v=DMARC1; p=none; sp=quarantine; pct=100; rua=mailto:dmarc@example.com;"`	|
 
 En este registro DNS el campo __valor__ es compuesto por varios elementos:
 
