@@ -60,6 +60,7 @@ Semestre 2020-2
 + [HTTP - HyperText Transfer Protocol](temas/http.md "80/tcp , 443/tcp")
 + [SSL - Secure Sockets Layer](temas/ssl.md "ssl")
 + [SMTP - Simple Mail Transfer Protocol](temas/smtp.md "25/tcp , 465/tcp , 587/tcp")
+  - [Validación de correo electrónico (MX, SPF, DKIM, DMARC)](temas/smtp-dns.md "MX, SPF, DKIM, DMARC")
 + [DHCP - Dynamic Host Configuration Protocol](temas/dhcp.md "67/udp , 68/udp")
 
 --------------------------------------------------------------------------------
