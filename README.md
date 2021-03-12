@@ -4,7 +4,7 @@
 
 ##	Redes de Computadoras
 
-Semestre 2020-2
+Semestre 2021-2
 
 ###	Presentación del curso
 
@@ -14,16 +14,16 @@ Semestre 2020-2
 
 ###	Prácticas
 
-+ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes "Las tareas se entregan a traves de merge-request")
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes "Las tareas se entregan a traves de merge-request")
 + [Guia rápida del lenguaje C](/public/laboratorio/guia_c.pdf "Guia rápida del lenguaje C")
 
 --------------------------------------------------------------------------------
 
 ###	Temas
 
-+ [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2020-2 "Accesible con cuenta @ciencias")
++ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes "Las tareas se entregan a traves de merge-request")
++ [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2021-2 "Accesible con cuenta @ciencias")
 + [Guía rápida de `git`](temas/git.md "9418/tcp")
-+ [Flujo de trabajo para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/workflow#readme "fork y merge request")
 
 ####	0 - Modelos de referencia
 
@@ -65,26 +65,14 @@ Semestre 2020-2
 
 --------------------------------------------------------------------------------
 
-###	Tareas
-
-+ [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes "Las tareas se entregan a traves de merge-request")
-
-####	4 - Capa de Transporte
-
-
-####	7 - Capa de Aplicación
-
---------------------------------------------------------------------------------
-
 ###	Ligas de interés
 
 + <http://redes-ciencias-unam.gitlab.io/>
-+ <http://redes-ciencias-unam.gitlab.io/practicas/>
-+ <https://gitlab.com/Redes-Ciencias-UNAM/2020-2/tareas-redes>
-+ <http://tinyurl.com/ListaRedes-2020-2>
-+ <http://tinyurl.com/PizarronRedes-2020-2>
++ <https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes>
++ <http://tinyurl.com/ListaRedes-2021-2>
++ <http://tinyurl.com/PizarronRedes-2021-2>
 + <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 + <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20202/218/714>
-+ <http://www.fciencias.unam.mx/docencia/horarios/20202/1556/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20212/218/714>
++ <http://www.fciencias.unam.mx/docencia/horarios/20212/1556/714>
