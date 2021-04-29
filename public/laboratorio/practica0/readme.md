@@ -74,7 +74,7 @@ Seguir las siguientes instrucciones para acceder a los beneficios.
    se deberá de estar autenticado. Aquí se encontrarán los detalles sobre la forma de obtener
    los recursos de cada herramienta o servicio. Esta lista se actualiza constantemente.
 
-    ![Correo de confirmación](images/a_07.png)
+    ![Lista de recursos](images/a_07.png)
 
 
 
@@ -84,7 +84,8 @@ Seguir las siguientes instrucciones para acceder a los beneficios.
 
 La Facultad de Ciencias en conjunto con Amazon Web Services, pone a la disposición de sus estudiantes el programa AWS Educate, con el cual podrán obtener una cuenta educativa que les permitirá acceder a los recursos necesarios para su formación académica en tecnologías en la nube.
 
-    ![Correo de confirmación](images/awseduc_01.png)
+
+    ![Programa AWS Educate para estudiantes](images/awseduc_01.png)
 
 
 En las propias palabras de AWS, este programa es
@@ -94,5 +95,5 @@ En las propias palabras de AWS, este programa es
     y dar clic en _Manual AWS Educate para estudiantes_
 
 
-    ![Correo de confirmación](images/awseduc_02.png)
+    ![Manual AWS Educate para estudiantes](images/awseduc_02.png)
 
