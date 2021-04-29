@@ -84,8 +84,7 @@ Seguir las siguientes instrucciones para acceder a los beneficios.
 
 La Facultad de Ciencias en conjunto con Amazon Web Services, pone a la disposición de sus estudiantes el programa AWS Educate, con el cual podrán obtener una cuenta educativa que les permitirá acceder a los recursos necesarios para su formación académica en tecnologías en la nube.
 
-
-    ![Programa AWS Educate para estudiantes](images/awseduc_01.png)
+![Programa AWS Educate para estudiantes](images/awseduc_01.png)
 
 
 En las propias palabras de AWS, este programa es
