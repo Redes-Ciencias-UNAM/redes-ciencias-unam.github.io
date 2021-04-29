@@ -76,3 +76,23 @@ Seguir las siguientes instrucciones para acceder a los beneficios.
 
     ![Correo de confirmación](images/a_07.png)
 
+
+
+
+### Guía para adherirse al Programa AWS Educate
+-----------------------------------------------
+
+La Facultad de Ciencias en conjunto con Amazon Web Services, pone a la disposición de sus estudiantes el programa AWS Educate, con el cual podrán obtener una cuenta educativa que les permitirá acceder a los recursos necesarios para su formación académica en tecnologías en la nube.
+
+    ![Correo de confirmación](images/awseduc_01.png)
+
+
+En las propias palabras de AWS, este programa es
+> AWS Educate es una iniciativa global de Amazon cuyo objetivo es proveer a los estudiantes recursos integrales para desarrollar habilidades vinculadas con la nube. Es un programa sin costo que brinda acceso a contenido, formación técnica, métodos, servicios de AWS y el panel de trabajo de AWS Educate con oportunidades de empleo.
+
+1.  Para consultar el manual para adherirse a este programa ingresar a <https://computo.fciencias.unam.mx/guias_utilidad.html>,
+    y dar clic en _Manual AWS Educate para estudiantes_
+
+
+    ![Correo de confirmación](images/awseduc_02.png)
+
