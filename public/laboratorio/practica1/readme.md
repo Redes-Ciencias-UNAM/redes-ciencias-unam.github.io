@@ -66,11 +66,20 @@ host individual, el registro de recursos más común es la dirección IP.
 Por lo que la función principal del DNS es relacionar los nombres de
 dominio con los registros de recursos. Algunos de los registros son:
 
--   A - Dirección IPv4 de un host.
--   NS - Servidor de nombres para un dominio.
--   CNAME - Nombre canónico.
--   MX - Indica qué nombre dominio puede enviar y recibir correo
-    electrónico.
+| Registro | Descripción |
+|:--------:|:-----------:|
+| SOA      | Lista la _información autoritativa_ para una zona de DNS |
+| NS       | Lista los _servidores autoritativos_ para una zona de DNS |
+| A        | Dirección IPv4 de un host |
+| AAAA     | Dirección IPv6 de un host |
+| CNAME    | Alias de un nombre DNS |
+| TXT      | Guarda un texto arbitrario |
+| MX       | Se utiliza para listar los servidores que envían y reciben correo para un dominio |
+
+Para más información consultar el [documento del tema de DNS][tema-dns] y la lista de reproducción con los [videos de WHOIS y DNS][videos-whois-dns]
+
+[tema-dns]: ../../temas/dns.md
+[videos-whois-dns]: https://www.youtube.com/watch?v=WC2YzuCkBgQ&list=PLN1TFzSBXi3RQnsEWk0tChmXFPEC4UfbU
 
 ### Desarrollo
 ----------------
