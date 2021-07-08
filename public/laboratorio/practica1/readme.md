@@ -74,7 +74,7 @@ dominio con los registros de recursos. Algunos de los registros son:
 
 ### Desarrollo
 ----------------
-La práctica consiste en registrar un dominio *.tech*, a través de *.tech
+La práctica consiste en registrar un dominio `.tech`, a través de *.tech
 Domains*, cuyo es sitio <https://get.tech>. Para posteriormente crear
 algunos registros DNS usando los servicios de *Hurricane Electric* o HE,
 a través de su sitio <https://dns.he.net>. Y por último, verificar que
@@ -92,22 +92,22 @@ de *.tech Domains* sea gratuito durante un año.
     la [figura 3](#Student_Developer_Pack), y dar clic en el botón *GitHub
     Student Developer Pack*, para acceder a los beneficios del programa.
 
-    <a name="Student_Developer_Pack">*Figura 3. Github Student Developer Pack*</a>
-    ![Github Student Developer Pack](images/a_01_2.png)
+<a name="Student_Developer_Pack">*Figura 3. Github Student Developer Pack*</a>
+![Github Student Developer Pack](images/a_01_2.png)
 
 2.  En la siguiente pantalla se pueden revisar todos los servicios y
     herramientas que ofrece el programa. Para continuar con el registro,
     dar clic en el botón *Get your pack*, [figura 4](#Github_student_benefits).
 
-    <a name="Github_student_benefits">*Figura 4. Beneficios del programa*</a>
-    ![Beneficios del programa](images/a_02_2.png)
+<a name="Github_student_benefits">*Figura 4. Beneficios del programa*</a>
+![Beneficios del programa](images/a_02_2.png)
 
 3.  A continuación se muestran los beneficios del programa tanto para
     estudiantes como para profesores. Dar clic en el botón *Get student
     benefits*, como se muestra en la [figura 5](#student_benefits).
 
-    <a name="student_benefits">*Figura 5.Beneficios para el estudiante y el profesor*</a>
-    ![Beneficios para el estudiante y el profesor](images/a_03_2.png)
+<a name="student_benefits">*Figura 5.Beneficios para el estudiante y el profesor*</a>
+![Beneficios para el estudiante y el profesor](images/a_03_2.png)
 
 4.  Para el siguiente paso es necesario ingresar usando una cuenta de
     GitHub, si ya se tiene una bastará con ingresar los datos de acceso
@@ -118,8 +118,8 @@ de *.tech Domains* sea gratuito durante un año.
     `@unam.mx`, como por ejemplo, las cuentas de correo
     `@ciencias.unam.mx`, o `@comunidad.unam.mx`.
 
-    <a name="signin">*Figura 6. Ingreso a cuenta de GitHub*</a>
-    ![Ingreso a cuenta de GitHub](images/a_04_2.png)
+<a name="signin">*Figura 6. Ingreso a cuenta de GitHub*</a>
+![Ingreso a cuenta de GitHub](images/a_04_2.png)
 
 5.  Una vez que se ha ingresado con una cuenta de GitHub, cumplimentar
     el formulario de solicitud de ingreso al programa Github Student
@@ -131,17 +131,17 @@ de *.tech Domains* sea gratuito durante un año.
     se hace a través del botón *Add an email address*. Una vez que se
     envían los datos, éstos no pueden ser modificados.
 
-    <a name="student_application">*Figura 7. Solicitud de ingreso al programa*</a>
-    ![Solicitud de ingreso al programa](images/a_05_2.png)
+<a name="student_application">*Figura 7. Solicitud de ingreso al programa*</a>
+![Solicitud de ingreso al programa](images/a_05_2.png)
 
 6.  Una vez que se ha llenado y enviado la solicitud, verificar el
     correo electrónico que indica que ha sido aprobada la solicitud,
     [figura 8](#email_confirmation).
 
-    <a name="email_confirmation">*Figura 8. Correo de confirmación*</a>
-    ![Correo de confirmación](images/a_06.png)
+<a name="email_confirmation">*Figura 8. Correo de confirmación*</a>
+![Correo de confirmación](images/a_06.png)
 
-#### Obtener un dominio en .tech Domains
+#### Obtener un dominio en `.tech` Domains
 
 Se usará el servicio de *.tech Domains* para registrar de forma
 gratuita, gracias al programa Github Student Developer Pack, el dominio
@@ -153,16 +153,16 @@ que usaremos a lo largo de todo el semestre.
     el servicio de *.tech Domains*, y dar clic en el enlace *.TECH*,
     [figura 9](#link_to_techdomains).
 
-    <a name="link_to_techdomains">*Figura 9. Enlace al servicio de .tech Domains*</a>
-    ![Enlace al servicio de *.tech Domains*](images/b_00_2.png)
+<a name="link_to_techdomains">*Figura 9. Enlace al servicio de .tech Domains*</a>
+![Enlace al servicio de *.tech Domains*](images/b_00_2.png)
 
 2.  Una vez que se ha ingresado al sitio, en el campo de búsqueda de
     dominio, escribir el dominio .tech por el que tenemos interés en
     registrar, después dar clic en el botón *SEARCH*, como se puede
     observar en la [figura 10](#domain_search).
 
-    <a name="domain_search">*Figura 10.Búsqueda de nombre de dominio*</a>
-    ![Búsqueda de nombre de dominio](images/b_01_2.png)
+<a name="domain_search">*Figura 10.Búsqueda de nombre de dominio*</a>
+![Búsqueda de nombre de dominio](images/b_01_2.png)
 
 3.  Si se encuentra disponible para su registro, aparecerá una pantalla
     como la de la [figura 11](#domain_name_availability)
@@ -171,8 +171,8 @@ que usaremos a lo largo de todo el semestre.
     necesario escoger otro y de nuevo verificar su disponibilidad. Dar
     clic en el ícono de carrito de compras.
 
-    <a name="domain_name_availability">*Figura 11.Verificación de la disponibilidad del dominio*</a>
-    ![Verificación de la disponibilidad del dominio](images/b_02_2.png)
+<a name="domain_name_availability">*Figura 11.Verificación de la disponibilidad del dominio*</a>
+![Verificación de la disponibilidad del dominio](images/b_02_2.png)
 
 4.  En la siguiente pantalla de la [figura 12](#domain_name_selection)
     , aparecerá la opción de compra,
@@ -180,8 +180,8 @@ que usaremos a lo largo de todo el semestre.
     botón, este proceso se puede continuar ingresando a la opción de
     carrito de compras desde la pantalla inicial del sitio.
 
-    <a name="domain_name_selection">*Figura 12. Selección del nombre de dominio*</a>
-    ![Selección del nombre de dominio](images/b_03_2.png)
+<a name="domain_name_selection">*Figura 12. Selección del nombre de dominio*</a>
+![Selección del nombre de dominio](images/b_03_2.png)
 
 5.  Enseguida aparecerá una pantalla como la de la [figura 13](#shopping)
     , dar clic en el botón *LOGIN WITH GITHUB*,
@@ -189,25 +189,24 @@ que usaremos a lo largo de todo el semestre.
     deberá ingresar con los datos de la cuenta de GitHub previamente
     afiliada al programa Github Student Developer Pack.
 
-    <a name="shopping">*Figura 13. Carrito de compra*</a>
-    ![Carrito de compra](images/b_04_2.png)
+<a name="shopping">*Figura 13. Carrito de compra*</a>
+![Carrito de compra](images/b_04_2.png)
 
 6.  Ingresar a la cuenta de GitHub y dar autorización para la
     autenticación entre GitHub y .tech Domains, [figura 14](#github_authentication)
     . Dar clic en el botón *Authorize
     RadixFZC*. Después redigirá a la página de .tech Domains.
 
-    <a name="github_authentication">*Figura 14. Autenticación con Github*</a>
-    ![Autenticación con Github](images/b_05_2.png)
+<a name="github_authentication">*Figura 14. Autenticación con Github*</a>
+![Autenticación con Github](images/b_05_2.png)
 
 7.  Una vez completado el paso anterior, dar clic en el botón *PLACE
     ORDER*, para continuar con el proceso de registro. Notar que se
     aplicó un descuento del 100% en el registro del nombre de dominio,
     esto gracias al programa Github Student Developer Pack, [figura 15](#github_discount).
 
-    <a name="github_discount">*Figura 15. Descuento en la compra por el programa Github Student Developer Pack*</a>
-    ![Descuento en la compra por el programa Github Student Developer
-    Pack](images/b_06_2.png)
+<a name="github_discount">*Figura 15. Descuento en la compra por el programa Github Student Developer Pack*</a>
+![Descuento en la compra por el programa Github Student Developer Pack](images/b_06_2.png)
 
 8.  Antes de continuar, se solicita el ingreso con una cuenta de .tech
     Domains. Si se cuenta con una, sólo bastará con poner las
@@ -215,28 +214,27 @@ que usaremos a lo largo de todo el semestre.
     así, entonces dar clic en el botón *CREATE ACCOUNT*, para crear una,
     [figura 16](#.techdomain_creation_account).
 
-    <a name=".techdomain_creation_account">*Figura 16. Generar una cuenta en .tech Domains*</a>
-    ![Generar una cuenta en .tech Domains](images/b_07_2.png)
+<a name=".techdomain_creation_account">*Figura 16. Generar una cuenta en .tech Domains*</a>
+![Generar una cuenta en .tech Domains](images/b_07_2.png)
 
 9.  Cumplimentar el formulario de registro, y después dar clic en el
     botón *CREATE ACCOUNT* para continuar con el registro del nombre de
     dominio, [figura 17](#.techdomain_account_form).
 
-    <a name=".techdomain_account_form">*Figura 17. Formulario de registro*</a>
-    ![Formulario de registro](images/b_08_2.png)
+<a name=".techdomain_account_form">*Figura 17. Formulario de registro*</a>
+![Formulario de registro](images/b_08_2.png)
 
 10. Una vez completado el paso anterior, sólo restará dar clic en el
     botón *CONFIRM ORDER* para terminar con el registro, [figura 18](#.techdomain_confirm_order).
 
-    <a name=".techdomain_confirm_order">*Figura 18. Confirmar orden de compra*</a>
-    ![Confirmar orden de compra](images/b_09_2.png)
+<a name=".techdomain_confirm_order">*Figura 18. Confirmar orden de compra*</a>
+![Confirmar orden de compra](images/b_09_2.png)
 
 11. Por último, si el procedimiento fue exitoso, nos mostrará una
     pantalla indicándolo, [figura 19](#.techdomain_order_sucessful).
 
-    <a name=".techdomain_order_sucessful">*Figura 19. Confirmación de la orden de compra del nombre de dominio*</a>
-    ![Confirmación de la orden de compra del nombre de
-    dominio](images/b_10.png)
+<a name=".techdomain_order_sucessful">*Figura 19. Confirmación de la orden de compra del nombre de dominio*</a>
+![Confirmación de la orden de compra del nombre de dominio](images/b_10.png)
 
 #### Obtener cuenta en Hurricane Electric
 
@@ -246,25 +244,25 @@ Se usará el servicio de DNS de HE para crear los registros necesarios.
     cuenta en el sitio, dar clic en el botón *Register* para realizar el
     registro de una, [figura 20](#dnshenet_web).
 
-    <a name="dnshenet_web">*Figura 20. Sitio de Hurricane Electric Free DNS*</a>
-    ![Sitio de Hurricane Electric Free DNS](images/c_01_2.png)
+<a name="dnshenet_web">*Figura 20. Sitio de Hurricane Electric Free DNS*</a>
+![Sitio de Hurricane Electric Free DNS](images/c_01_2.png)
 
 2.  Cumplimentar el formulario con los datos que se piden, y dar clic en
     el botón Register que se encuentra al final de dicho formulario,
     [figura 21](#dnshenet_register).
 
-    <a name="dnshenet_register">*Figura 21. Formulario de registro*</a>
-    ![Formulario de registro](images/c_02_2.png)
+<a name="dnshenet_register">*Figura 21. Formulario de registro*</a>
+![Formulario de registro](images/c_02_2.png)
 
 3.  Se recibirá un correo electrónico similar al de la [figura 22](#dnshenet_email_1)
     y la [figura 23](#dnshenet_email_2),
     indicando los pasos para confirmar el registro.
 
-    <a name="dnshenet_email_1">*Figura 22. Correo de confirmación*</a>
-    ![Correo de confirmación](images/c_03.png)
+<a name="dnshenet_email_1">*Figura 22. Correo de confirmación*</a>
+![Correo de confirmación](images/c_03.png)
 
-    <a name="dnshenet_email_2">*Figura 23. Verificación*</a>
-    ![Verificación](images/c_04.png)
+<a name="dnshenet_email_2">*Figura 23. Verificación*</a>
+![Verificación](images/c_04.png)
 
 #### Configuración de los *Name Servers*
 
@@ -276,44 +274,44 @@ seguir los siguiente pasos.
     copiar los servidores de la lista que se muestra, éstos se
     configurarán en .tech Domains, [figura 24](#dnshenet_ns).
 
-    <a name="dnshenet_ns">*Figura 24. Name servers*</a>
-    ![Name servers](images/c_05_2.png)
+<a name="dnshenet_ns">*Figura 24. Name servers*</a>
+![Name servers](images/c_05_2.png)
 
 2.  Ingresar a .tech Domain con la cuenta configurada previamente. Una
     vez dentro, ingresar en el menú *MY ACCOUNT*, [figura 25](#.techdomains_myaccount).
 
-    <a name=".techdomains_myaccount">*Figura 25. Configuración de My Account*</a>
-    ![Configuración de My Account](images/c_06_2.png)
+<a name=".techdomains_myaccount">*Figura 25. Configuración de My Account*</a>
+![Configuración de My Account](images/c_06_2.png)
 
 3.  Una vez dentro, ir al menú *Manage Orders* > *List/Search Orders*,
     [figura 26](#.techdomains_listorders).
 
-    <a name=".techdomains_listorders">*Figura 26. Menú de lista de dominios registrados*</a>
-    ![Menú de lista de dominios registrados](images/c_07_2.png)
+<a name=".techdomains_listorders">*Figura 26. Menú de lista de dominios registrados*</a>
+![Menú de lista de dominios registrados](images/c_07_2.png)
 
 4.  A continuación el sitio mostrará los dominios que se han registrado,
     dar clic sobre el dominio que se registró previamente, [figura 27](#.techdomains_listdomainnames).
 
-    <a name=".techdomains_listdomainnames">*Figura 27. Lista de dominios registrados en .tech Domains*</a>
-    ![Lista de dominios registrados en .tech Domains](images/c_08_2.png)
+<a name=".techdomains_listdomainnames">*Figura 27. Lista de dominios registrados en .tech Domains*</a>
+![Lista de dominios registrados en .tech Domains](images/c_08_2.png)
 
 5.  Ahora, dar clic en la opción *Name Servers*, [figura 28](#.techdomains_nsservers).
 
-    <a name=".techdomains_nsservers">*Figura 28. Configuración de servidores autoritativos*</a>
-    ![Configuración de servidores autoritativos](images/c_09_2.png)
+<a name=".techdomains_nsservers">*Figura 28. Configuración de servidores autoritativos*</a>
+![Configuración de servidores autoritativos](images/c_09_2.png)
 
 6.  En el cuadro desplegado, pegar los dominios de los
     servidores autoritativos de HE, y después dar clic en botón *Update
     Name Servers*, [figura 29](#.techdomains_nsservershe).
 
-    <a name=".techdomains_nsservershe">*Figura 29. Servidores autoritativos de HE*</a>
-    ![Servidores autoritativos de HE](images/c_10_2.png)
+<a name=".techdomains_nsservershe">*Figura 29. Servidores autoritativos de HE*</a>
+![Servidores autoritativos de HE](images/c_10_2.png)
 
 7.  Si la configuración fue exitosa, se desplegará un mensaje de
     confirmación parecido al de la [figura 30](#.techdomains_nsserversconfirm).
 
-    <a name=".techdomains_nsserversconfirm">*Figura 30. Mensaje de confirmación*</a>
-    ![Mensaje de confirmación](images/c_11_2.png)
+<a name=".techdomains_nsserversconfirm">*Figura 30. Mensaje de confirmación*</a>
+![Mensaje de confirmación](images/c_11_2.png)
 
 8.  Realiza una consulta al servicio `WHOIS` para revisar si los servidores DNS autoritativos aparecen listados.
 
@@ -329,7 +327,7 @@ domain:       TECH				<=	Dominio DNS de primer nivel
 
 	...
 
-Domain Name: DOMINIO.TECH			<=	Nombre de dominio DNS
+Domain Name: MI-DOMINIO.TECH			<=	Nombre de dominio DNS
 Registry Domain ID: D206985368-CNIC
 Registrar WHOIS Server: whois.dotserve.website
 Registrar URL: http://dotserve.website
@@ -355,22 +353,23 @@ URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
 >>> Last update of WHOIS database: 2021-07-04T06:53:00.0Z <<<
 ```
 
-Si los nombres y/o direcciones IP de los servidores DNS autoritativos para esta zona están listados continuar con el siguiente paso. En caso contrario esperar unos minutos y volver a intentar.
+Si los nombres y/o direcciones IP de los servidores DNS autoritativos para esta zona están listados continuar con el siguiente paso.
+En caso contrario esperar unos minutos y volver a intentar.
 **Anexa esta consulta de WHOIS a tu reporte.**
 
 9.  Regresar al sitio de Hurricane Electric, y configurar ahora el
     nombre de dominio. En el menú derecho dar clic en la opción *Add a
     new domain*, [figura 31](#dnshenet_newdomain).
 
-    <a name="dnshenet_newdomain">*Figura 31. Agregar un nuevo dominio*</a>
-    ![Agregar un nuevo dominio](images/c_12_2.png)
+<a name="dnshenet_newdomain">*Figura 31. Agregar un nuevo dominio*</a>
+![Agregar un nuevo dominio](images/c_12_2.png)
 
 10.  En el cuadro de diálogo ingresar el nombre de dominio registrado
     previamente en .tech Domains, y después dar clic en el botón *Add
     Domain!*, [figura 32](#dnshenet_newdomainname).
 
-    <a name="dnshenet_newdomainname">*Figura 32. Ingresar nombre de dominio*</a>
-    ![Ingresar nombre de dominio](images/c_13_2.png)
+<a name="dnshenet_newdomainname">*Figura 32. Ingresar nombre de dominio*</a>
+![Ingresar nombre de dominio](images/c_13_2.png)
 
 11. Si la configuración fue correcta, aparecerá una pantalla similar a
     la de la [figura 33](#dnshenet_confirm)
@@ -380,21 +379,21 @@ Si los nombres y/o direcciones IP de los servidores DNS autoritativos para esta 
     creación automática tanto de los registros SOA como NS, dar clic en
     el botón *Edit zone*.
 
-    <a name="dnshenet_confirm">*Figura 33. Alta de nombre de dominio en Hurricane Electric*</a>
-    ![Alta de nombre de dominio en Hurricane Electric](images/c_15_2.png)
+<a name="dnshenet_confirm">*Figura 33. Alta de nombre de dominio en Hurricane Electric*</a>
+![Alta de nombre de dominio en Hurricane Electric](images/c_15_2.png)
 
 12. A continuación se mostrarán dichos registros, con una configuración
     parecida a la de la [figura 34](#dnshenet_confirm).
 
-    <a name="dnshenet_confirm">*Figura 34. Alta de nombre de dominio en Hurricane Electric*</a>
-    ![Alta de nombre de dominio en Hurricane Electric](images/c_16.png)
+<a name="dnshenet_confirm">*Figura 34. Alta de nombre de dominio en Hurricane Electric*</a>
+![Alta de nombre de dominio en Hurricane Electric](images/c_16.png)
 
 13. Además, podemos utilizar el comando dig para verificar que la
     propagación de la configuración ya fue aplicada. Para ello es
     necesario abrir una terminal de comandos en nuestros equipos, e
     introducir los siguientes comandos.
 
-    -   Consultas al servidor DNS autoritativo de Hurricane Electric.
+    - Consultas al servidor DNS autoritativo de Hurricane Electric.
 
 ```
 $ dig SOA mi-dominio.tech. @ns1.he.net
@@ -402,7 +401,7 @@ $ dig SOA mi-dominio.tech. @ns1.he.net
 $ dig NS  mi-dominio.tech. @ns1.he.net
 ```
 
-    -   Consultas a un servidor DNS público. Al hacer ésto se realiza una consulta DNS recursiva.
+    - Consultas a un servidor DNS público. Al hacer ésto se realiza una consulta DNS recursiva.
 
 ```
 $ dig SOA mi-dominio.tech. @1.1.1.1
@@ -512,7 +511,6 @@ Consultas DNS
 Preguntas de los puntos 16, 18 y 19
 -->
 
-
 ### Notas adicionales
 ---------------------
 
@@ -531,10 +529,7 @@ Preguntas de los puntos 16, 18 y 19
     prácticas definida al inicio del curso,
     <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>.
 
-
-
 ##### *Notas al pie*
-
 
 [^1]: La ICANN, es un departamento que pertenece a la IANA *Internet
     Assigned Numbers Authority*
