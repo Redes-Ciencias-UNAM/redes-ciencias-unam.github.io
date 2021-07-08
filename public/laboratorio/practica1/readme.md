@@ -405,7 +405,7 @@ En caso contrario esperar unos minutos y volver a intentar.
     necesario abrir una terminal de comandos en nuestros equipos, e
     introducir los siguientes comandos.
 
-    - Consultas al servidor DNS autoritativo de Hurricane Electric.
+  - Consultas al servidor DNS autoritativo de Hurricane Electric.
 
 ```
 $ dig SOA mi-dominio.tech. @ns1.he.net
@@ -413,7 +413,7 @@ $ dig SOA mi-dominio.tech. @ns1.he.net
 $ dig NS  mi-dominio.tech. @ns1.he.net
 ```
 
-    - Consultas a un servidor DNS público. Al hacer ésto se realiza una consulta DNS recursiva.
+  - Consultas a un servidor DNS público. Al hacer ésto se realiza una consulta DNS recursiva.
 
 ```
 $ dig SOA mi-dominio.tech. @1.1.1.1
