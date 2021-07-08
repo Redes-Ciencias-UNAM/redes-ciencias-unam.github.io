@@ -76,9 +76,11 @@ dominio con los registros de recursos. Algunos de los registros son:
 | TXT      | Guarda un texto arbitrario |
 | MX       | Se utiliza para listar los servidores que envían y reciben correo para un dominio |
 
-Para más información consultar el [documento del tema de DNS][tema-dns] y la lista de reproducción con los [videos de WHOIS y DNS][videos-whois-dns]
+Para más información consultar las páginas de los temas de [WHOIS][tema-whois] y [DNS][tema-dns]
+También existe una lista de reproducción con los [videos de WHOIS y DNS][videos-whois-dns]
 
-[tema-dns]: ../../temas/dns.md
+[tema-whois]: temas/whois.md
+[tema-dns]: temas/dns.md
 [videos-whois-dns]: https://www.youtube.com/watch?v=WC2YzuCkBgQ&list=PLN1TFzSBXi3RQnsEWk0tChmXFPEC4UfbU
 
 ### Desarrollo
