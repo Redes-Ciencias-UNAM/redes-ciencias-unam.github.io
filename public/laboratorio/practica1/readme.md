@@ -400,7 +400,18 @@ En caso contrario esperar unos minutos y volver a intentar.
 <a name="dnshenet_confirm">*Figura 34. Alta de nombre de dominio en Hurricane Electric*</a>
 ![Alta de nombre de dominio en Hurricane Electric](images/c_16.png)
 
-13. Además, podemos utilizar el comando dig para verificar que la
+13. Al dar de alta la zona aparecerá un mensaje indicando que se deben dar de alta los servidores DNS autoritativos en el panel donde se registró el dominio [figura 35](#dnshenet_green).
+
+<a name="dnshenet_green">*Figura 35. Advertencia de delegación de zona en Hurricane Electric*</a>
+![Advertencia de delegación de zona en Hurricane Electric](images/c_16_1.png)
+
+14.  Este proceso puede tomar 24 horas si ya se registró el dominio previamente.
+    Para dominios nuevos el proceso puede tardar un par de horas [figura 36](#dnshenet_red).
+
+<a name="dnshenet_red">*Figura 36. Error de delegación de zona en Hurricane Electric*</a>
+![Error de delegación de zona en Hurricane Electric](images/c_16_2.png)
+
+15. Además, podemos utilizar el comando `dig` para verificar que la
     propagación de la configuración ya fue aplicada. Para ello es
     necesario abrir una terminal de comandos en nuestros equipos, e
     introducir los siguientes comandos.
@@ -423,7 +434,7 @@ $ dig NS  mi-dominio.tech. @1.1.1.1
 
 **Anexa estas consultas de DNS a tu reporte de la práctica.**
 
-14. Agrega dos registros de host para asociar un nombre DNS con una dirección de IPv4 (registro `A`) y con una dirección de IPv6 (registro `AAAA`).
+16. Agrega dos registros de host para asociar un nombre DNS con una dirección de IPv4 (registro `A`) y con una dirección de IPv6 (registro `AAAA`).
 
 ```
 host.mi-dominio.tech.	300	IN	A	94.177.170.210
@@ -434,7 +445,7 @@ host.mi-dominio.tech.	300	IN	AAAA	2a00:6d40:60:69d2::1
 Verifica que los registros se hayan guardado en el servidor DNS con el comando `dig`.
 **Anexa estas consultas de DNS a tu reporte de la práctica.**
 
-15. Agrega un registro `CNAME` para asociar el nombre de host `prueba` en el contexto de tu dominio con los registros DNS del paso anterior.
+17. Agrega un registro `CNAME` para asociar el nombre de host `prueba` en el contexto de tu dominio con los registros DNS del paso anterior.
 
 ```
 prueba.mi-dominio.tech.	300	IN	CNAME	host.mi-dominio.tech.
@@ -443,12 +454,12 @@ prueba.mi-dominio.tech.	300	IN	CNAME	host.mi-dominio.tech.
 Verifica que los registros se hayan guardado en el servidor DNS con el comando `dig`.
 **Anexa estas consultas de DNS a tu reporte de la práctica.**
 
-16. Accede a la URL `http://prueba.mi-dominio.tech/` en un navegador web.
+18. Accede a la URL `http://prueba.mi-dominio.tech/` en un navegador web.
 
   - ¿Qué contenido muestra la página web?.
   - ¿Qué significa la parte que está resaltada en amarillo?
 
-17. Agrega dos registros `CNAME` más que hagan referencia a otros nombres DNS en un dominio diferente.
+19. Agrega dos registros `CNAME` más que hagan referencia a otros nombres DNS en un dominio diferente.
 
 ```
 test-1.mi-dominio.tech.	300	IN	CNAME	test.redes.tonejito.cf.
@@ -459,13 +470,13 @@ test-3.mi-dominio.tech.	300	IN	CNAME	vhost.redes.tonejito.cf.
 Verifica que los registros se hayan guardado en el servidor DNS con el comando `dig`.
 **Anexa estas consultas de DNS a tu reporte de la práctica.**
 
-18. Accede a la URL de cada uno de los registros de DNS de tu dominio por HTTP en un navegador web.
+20. Accede a la URL de cada uno de los registros de DNS de tu dominio por HTTP en un navegador web.
 ¿Qué pasa?. ¿Alguna página marca error?. ¿Por qué sucede esto?.
 
-19. Accede a los registros DNS del dominio `redes.tonejto.cf` por medio de HTTP en un navegador web.
+21. Accede a los registros DNS del dominio `redes.tonejto.cf` por medio de HTTP en un navegador web.
 ¿Obtienes una respuesta similar al paso anterior?. ¿Qué diferencia hubo?. ¿Por qué sucede esto?.
 
-20. Agrega varios registros de tipo `TXT` con el nombre de cada uno los integrantes de tu equipo.
+22. Agrega varios registros de tipo `TXT` con el nombre de cada uno los integrantes de tu equipo.
 No utilices acentos, eñe, ni caracteres especiales.
 
 ```
