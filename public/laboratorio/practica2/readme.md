@@ -227,9 +227,11 @@ $ ping -c 4 dns.local
   - Resolución de DNS
 
 ```
-$ dig example.com.
+$ dig example.com. @192.168.56.254
 
 $ dig example.com. @dns.local
+
+$ dig example.com.
 ```
 
   - Conectividad externa
