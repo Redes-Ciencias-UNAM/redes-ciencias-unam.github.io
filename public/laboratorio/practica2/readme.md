@@ -20,6 +20,7 @@ La configuración de VirtualBox está explicada en la primer parte del video "Co
 ### Fecha de entrega
 
 - **Domingo 18 de junio de 2021 a las 23:59**.
+- La fecha de entrega se extiende unos días si decides hacer la [actividad extra](#actividad-extra)
 
 ### Objetivos
 
