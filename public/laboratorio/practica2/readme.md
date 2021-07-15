@@ -17,6 +17,10 @@ La configuración de VirtualBox está explicada en la primer parte del video "Co
 - [Protocolo DNS 📼](https://www.youtube.com/watch?v=r4PntflJs9E&t=51s)
 - [Configuración de iptables en GNU/Linux 📼](https://www.youtube.com/watch?v=6lYnadL60Cs)
 
+### Fecha de entrega
+
+- **Domingo 18 de junio de 2021 a las 23:59**.
+
 ### Objetivos
 
 * El alumno aplicará los conceptos teóricos de un NAT y DHCP en una topología de red básica
@@ -112,7 +116,7 @@ net.ipv4.ip_forward = 1
 
 ```
 option  domain-name  "ciencias.local"
-option  domain-name-serves  1.1.1.1 , 8.8.8.8 , 9.9.9.9;
+option  domain-name-servers  192.168.56.254;
 
 # No se dará servicio en la red externa (NAT de VirtualBox)
 subnet 10.0.2.0 netmask 255.255.255.0 {
@@ -142,20 +146,11 @@ INTERFACESv4="eth0"
 # systemctl status isc-dhcp-server
 ```
 
-#### En la maquina CentOS
-
-6. Reiniciar la interface de red para que se le asigne una nueva dirección IP.
-
-```
-# ifdown eth0
-# ifup eth0
-```
-
 #### **Actividad**
 
-* Configurar una dirección estatica con el DHCP para la máquina CentOS 7.
+* Reservar una dirección estatica con el DHCP para la máquina CentOS 7.
 
-* Anexa en el cuestionario como se asigna la IP estática.
+* Anexa en el cuestionario como es que se reserva la dirección IP para un cliente en la configuración del DHCP.
 
 
 ### Configuración del _forwarder_ de *DNS*
@@ -199,13 +194,7 @@ nameserver	9.9.9.9
 
 **Anexa el archivo `/etc/resolv-upstream.conf` a tu reporte de la práctica**.
 
-4. Indicar el nuevo *DNS* en la configuración del *DHCP* `/etc/dhcp/dhcpd.conf` 
-
-```
-option  domain-name-servers  192.168.56.254;
-```
-
-5. Reiniciar servicios
+4. Reiniciar servicios
 
 ```
 # service dnsmasq restart
@@ -214,7 +203,7 @@ option  domain-name-servers  192.168.56.254;
 
 #### En la máquina Debian 10
 
-6. Una vez verifico el correcto funcionamiento del *DNS* local modificar el archivo `/etc/resolv.conf`
+5. Una vez verifico el correcto funcionamiento del *DNS* local modificar el archivo `/etc/resolv.conf`
 
 ```
 # Envía la consultas de DNS a dnsmasq local
@@ -225,14 +214,14 @@ nameserver  127.0.0.1
 
 #### En la máquina CentOS 7
 
-7. Reiniciar la interface de red para obtener los nuevos parámetros de red
+6. Reiniciar la interface de red para obtener los nuevos parámetros de red
 
 ```
 # ifdown eth0
 # ifup eth0
 ```
 
-8. Verificar los nuevos parámetros de red.
+7. Verificar los nuevos parámetros de red.
 **Anexa la salida de todos estos comandos en tu reporte**.
 
   - Configuración de red
@@ -302,7 +291,7 @@ $ ping -c 4 example.com.
 
 5. ¿Cuál es la utilidad del *DHCP* en esta topología de red? ¿Qué utilidad tendría en topologías mas grandes?
 
-6. Investiga qué es un **relay de *DHCP*** y para qué sirve
+6. Investiga qué es un **relay de *DHCP** y para qué sirve
 
 7. Muestra claramente como es que el *DHCP* asigna las direcciones IP automaticamente
 
@@ -331,7 +320,7 @@ $ ping -c 4 example.com.
 
 ### Actividad Extra
 
-Esta actividad es opcional
+Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se extiende hasta el **miércoles 21 de junio de 2021 a las 23:59**.
 
 * Modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología
 
