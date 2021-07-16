@@ -338,10 +338,13 @@ $ links -dump http://example.com/
 
 Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se extiende hasta el **miércoles 21 de junio de 2021 a las 23:59**.
 
+#### En la máquina Debian 10
+
 * En la máquina **Debian 10** modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología.
   **Nota**: Puede que necesites especificar si la interfaz bridge es con tu interfaz física cableada o inalámbrica.
 
-* Agrega otro cliente, se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].
+#### En la máquina CentOS
+
   Capturar el tráfico *DNS* y *DHCP* en el cliente CentOS.
   No todo el tráfico se captura, explica por qué.
 
@@ -356,5 +359,10 @@ Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se 
 ```
 # tcpdump -veni eth0 -o captura-dns-cliente.pcap 'port 53'
 ```
+
+#### En VirtualBox
+
+* Agrega otra máquina virtual para que sea otro cliente en la red _host-only_
+* Se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].
 
 [alpine-linux-iso]: https://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/alpine-virt-3.14.0-x86_64.iso
