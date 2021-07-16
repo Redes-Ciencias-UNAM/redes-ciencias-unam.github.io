@@ -13,9 +13,9 @@ La configuración de VirtualBox está explicada en la primer parte del video "Co
 
 - [Configuración de NAT, DHCP y Forwarder de DNS en GNU/Linux 📼](https://www.youtube.com/watch?v=BzL3MQkHjwg)
 - [Configuración persistente de direcciones IP en GNU/Linux 📼](https://www.youtube.com/watch?v=UErZ4i9XmLM)
-- [Protocolo DHCP 📼](https://www.youtube.com/watch?v=6l4WQJfD7o0)
-- [Protocolo DNS 📼](https://www.youtube.com/watch?v=r4PntflJs9E&t=51s)
 - [Configuración de iptables en GNU/Linux 📼](https://www.youtube.com/watch?v=6lYnadL60Cs)
+- [Protocolo DHCP 📼](https://www.youtube.com/watch?v=6l4WQJfD7o0)
+- [Protocolo DNS 📼](https://www.youtube.com/watch?v=r4PntflJs9E)
 
 ### Fecha de entrega
 
@@ -43,6 +43,13 @@ Deshabilitar el servicio de DHCP en la interfaz host only.
 ![Deshabilitar el servicio de DHCP en la red host-only de VirtualBox](images/vbox-hostonly-dhcp.png "Deshabilitar el servicio de DHCP en la red host-only de VirtualBox")
 
 #### En la máquina Debian 10
+
+0. Instalar las utilerias de red
+
+```
+# apt -q update
+# apt -qy install net-tools
+```
 
 1. Instalar `iptables-persistent` para cargar las reglas de iptables en el inicio del sistema.
 
@@ -77,7 +84,7 @@ net.ipv4.ip_forward = 1
 5. Habilitar la regla en la tabla de NAT de `iptables`.
 
 ```
-# iptables -t nat -A POSTROUTING -o eth1  -j MASQUARADE
+# iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 ```
 
 6. Indicar a `iptables` que se el tráfico puede entrada por *host-only* (`eth0`) y salir por la NAT (`eth1`) y viceversa.
@@ -99,19 +106,13 @@ net.ipv4.ip_forward = 1
 
 #### En la maquina Debian 10
 
-1. Actualizar la lista de repositorios.
-
-```
-# apt -q update
-```
-
-2. Instalar el programa para configurar DHCP.
+1. Instalar el programa para configurar DHCP.
 
 ```
 # apt -qy install isc-dhcp-server
 ```
 
-3. Configurar el DHCP en el archivo `/etc/dhcp/dhcpd.conf`.
+2. Configurar el DHCP en el archivo `/etc/dhcp/dhcpd.conf`.
    Buscar y sustituir las líneas por defecto con la siguiente información.
    **Nota:** Hacer una copia del archivo antes de modificarlo.
 
@@ -132,7 +133,7 @@ subnet  192.168.56.0  netmask  255.255.255.0 {
 
 **Anexa el archivo `/etc/dhcp/dhcpd.conf` a tu reporte de la práctica**.
 
-4. Especificar la interface (*host-only* -> `eth0`) por donde escuchará el DHCP en el archivo `/etc/default/isc-dhcp-server`.
+3. Especificar la interface (*host-only* -> `eth0`) por donde escuchará el DHCP en el archivo `/etc/default/isc-dhcp-server`.
 
 ```
 INTERFACESv4="eth0"
@@ -140,7 +141,7 @@ INTERFACESv4="eth0"
 
 **Anexa el archivo `/etc/default/isc-dhcp-server` a tu reporte de la práctica**.
 
-5. Reiniciar y revisar que el status del servicio de *DHCP* este corriendo.
+4. Reiniciar y revisar que el status del servicio de *DHCP* este corriendo.
 
 ```
 # service isc-dhcp-server restart
@@ -215,11 +216,18 @@ nameserver  127.0.0.1
 
 #### En la máquina CentOS 7
 
-6. Reiniciar la interface de red para obtener los nuevos parámetros de red
+6. Reiniciar la interface de red para obtener los nuevos parámetros de red.
+   **Nota**: Otra opción es reiniciar la máquina virtual para obtener los nuevos parámetros de red.
 
 ```
 # ifdown eth0
 # ifup eth0
+```
+
+7. Instala los comandos para la utilerias de red:
+
+```
+# yum -y install net-tools elinks
 ```
 
 7. Verificar los nuevos parámetros de red.
@@ -261,6 +269,8 @@ $ dig example.com.
 $ ping -c 4 1.1.1.1
 
 $ ping -c 4 example.com.
+
+$ links -dump http://example.com/
 ```
 
 ### Cuestionario
@@ -296,7 +306,10 @@ $ ping -c 4 example.com.
 
 7. Muestra claramente como es que el *DHCP* asigna las direcciones IP automaticamente
 
-8. Explica el contenido del archivo `/var/lib/dhcp/dhcp.leases`
+8. Anexa el archivo `/var/lib/dhcp/dhcpd.leases` correspondiente al servidor de DHCP a tu reporte de la práctica y explica el contenido.
+   **Nota**: Existe otro archivo llamado `dhcp.leases` que es para el cliente de DHCP, este archivo no se requiere.
+
+  - Para más información consulta la página de manual del archivo [`man 5 dhcpd.leases`](https://linux.die.net/man/5/dhcpd.leases "Lo invitamos a leer el man")
 
 9. ¿Cuál es la utilidad del *DNS* local para esta topología de red?
 
@@ -319,11 +332,14 @@ $ ping -c 4 example.com.
 
 [entrega-de-tareas]: https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/
 
+--------------------------------------------------------------------------------
+
 ### Actividad Extra
 
 Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se extiende hasta el **miércoles 21 de junio de 2021 a las 23:59**.
 
-* Modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología
+* En la máquina **Debian 10** modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología.
+  **Nota**: Puede que necesites especificar si la interfaz bridge es con tu interfaz física cableada o inalámbrica.
 
 * Agrega otro cliente, se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].
   Capturar el tráfico *DNS* y *DHCP* en el cliente CentOS.
