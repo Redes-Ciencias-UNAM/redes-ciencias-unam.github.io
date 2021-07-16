@@ -302,7 +302,7 @@ $ links -dump http://example.com/
 
 5. ¿Cuál es la utilidad del *DHCP* en esta topología de red? ¿Qué utilidad tendría en topologías mas grandes?
 
-6. Investiga qué es un **relay de *DHCP** y para qué sirve
+6. Investiga qué es un **relay de DHCP** y para qué sirve
 
 7. Muestra claramente como es que el *DHCP* asigna las direcciones IP automaticamente
 
@@ -340,12 +340,12 @@ Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se 
 
 #### En la máquina Debian 10
 
-* En la máquina **Debian 10** modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología.
+- Modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología.
   **Nota**: Puede que necesites especificar si la interfaz bridge es con tu interfaz física cableada o inalámbrica.
 
 #### En la máquina CentOS
 
-  Capturar el tráfico *DNS* y *DHCP* en el cliente CentOS.
+- Capturar el tráfico *DNS* y *DHCP* en el cliente CentOS.
   No todo el tráfico se captura, explica por qué.
 
   - Tráfico de DHCP en la interfaz host-only `eth0`
@@ -362,7 +362,7 @@ Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se 
 
 #### En VirtualBox
 
-* Agrega otra máquina virtual para que sea otro cliente en la red _host-only_
-* Se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].
+- Agrega otra máquina virtual para que sea otro cliente en la red _host-only_
+- Se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].
 
 [alpine-linux-iso]: https://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86_64/alpine-virt-3.14.0-x86_64.iso
