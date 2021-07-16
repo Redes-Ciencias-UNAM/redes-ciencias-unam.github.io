@@ -345,16 +345,16 @@ Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se 
 
 #### En la máquina CentOS
 
-- Capturar el tráfico *DNS* y *DHCP* en el cliente CentOS.
+- Captura el tráfico *DNS* y *DHCP* en el cliente CentOS.
   No todo el tráfico se captura, explica por qué.
 
-  - Tráfico de DHCP en la interfaz host-only `eth0`
+- Tráfico de DHCP en la interfaz host-only `eth0`
 
 ```
 # tcpdump -veni eth0 -o captura-dhcp-cliente.pcap 'port (67 or 68)'
 ```
 
-  - Tráfico DNS en todas las interfaces de red.
+- Tráfico DNS en todas las interfaces de red.
 
 ```
 # tcpdump -veni eth0 -o captura-dns-cliente.pcap 'port 53'
