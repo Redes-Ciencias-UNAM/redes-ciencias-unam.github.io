@@ -557,6 +557,16 @@ al reporte.
 -   Incluya en su reporte tanto las respuestas del Cuestionario, como un
     apartado de conclusiones referentes al trabajo realizado.
 
+-   Por cada uno de los cuatro router, cree un archivo de texto que contenga 
+    la configuración del router en cuestión. El nombre de cada archivo corresponderá
+    al nombre del router, a saber, *NAT*, *Router-UNAM*, *Router-Google* y 
+    *Router-Telmex*. La configuración que pegará en cada archivo de texto la puede
+    obtener del router al ejecutar el comando `show startup-config`, recuerde que 
+    previamente se tuvo que haber guardado las configuraciones con el comando 
+    `copy running-config startup-config`.
+    Cree un directorio llamado *config*, y dentro de éste ubique los archivo de 
+    texto solicitados.
+
 -   Puede agregar posibles errores, complicaciones, opiniones, críticas
     de la práctica o del laboratorio, o cualquier comentario relativo a
     la misma.
