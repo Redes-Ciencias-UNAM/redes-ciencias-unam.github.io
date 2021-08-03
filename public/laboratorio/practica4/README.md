@@ -37,7 +37,7 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 - Asignar un nombre de dominio DNS que apunte a la máquina virtual
 - Instalar el servidor web Apache HTTPD y configurarlo para que sirva tráfico de HTTP y HTTPS
 - Configurar un par de VirtualHosts para HTTP y otro par de VirtualHosts para HTTPS
-- Generar un certificado SSL con Let's Encrypt utilizando el cliente `certbot` 
+- Generar un certificado SSL con Let's Encrypt utilizando el cliente `certbot`
 
 ### Desarrollo
 
@@ -45,11 +45,11 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 
 Iniciar sesión en la cuenta de AWS Educate Starter
 
-Navegar a la consola de AWS EC2 y dar clic en la sección `Security Groups`.
+Navegar a la consola de AWS EC2 .
 
 - https://console.aws.amazon.com/ec2
 
-<!-- image EC2 console -->
+![Consola EC2](img/001-EC2-console.png)
 
 ##### Generar una llave SSH
 
@@ -73,15 +73,19 @@ usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
 Mostrar el contenido de la llave **pública**
 
 ```
-usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDXEaFaGDkmaDWTAtx8rXBRpPtrdseDfOqn9x28RKeITpmIN/SeV0Fe1vsYCG8+JdKbQ/59vCK82LLpHYf26I/Vu1BQA7w0thwjs9zTyPP/3NARWLnNa4aaG4r938p3EvuXb3Jkkvvahe7zhwuBDETf3AXblf4PBkDgfkC49vJKFQ== Equipo-AAAA-BBBB-CCCC-DDDD
+usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAAD...lf4PBkDgfkC49vJKFQ== Equipo-AAAA-BBBB-CCCC-DDDD
 ```
 
 Entrar a la consola de EC2 y dar clic en `keypairs`
 
 - https://console.aws.amazon.com/ec2
 
+![Consola EC2](img/002-EC2-keypair-console.png)
+
 Dar clic en el botón `Actions` y después en `Import keypair`
+
+![Consola EC2](img/003-EC2-keypair-import.png)
 
 En la ventana para importar una llave de SSH
 
@@ -91,49 +95,8 @@ En la ventana para importar una llave de SSH
 
 - Ir al final de la página y dar clic en el botón `Import keypair`
 
-##### Crear un _grupo de seguridad_ para la instancia EC2
+![Consola EC2](img/004-EC2-keypair-import-contents.png)
 
-Dar clic en el botón `Create security group` en la consola web de EC2
-
-Llenar los detalles principales del grupo de seguridad
-
-- Nombrar al grupo de seguridad `practica-redes`
-
-- Escribir como descripción: `Permite el acceso por SSH, HTTP y HTTPS`
-
-- Dejar seleccionada la `VPC` predeterminada
-
-<!-- image SG basic details -->
-
-Agregar reglas de entrada
-
-- Dar clic en el botón `Add rule` para agregar una nueva regla de entrada
-
-- Seleccionar el protocolo de la lista
-
-- Seleccionar `Anywhere IPv4` como origen
-
-> Amazon actualmente no soporta IPv6 en las direcciones IP elásticas asociadas a las instancias EC2
-
-- Agregar una descripción
-
-- Repetir para cada protocolo de entrada
-
-| Puerto | Servicio  | Origen |
-|:------:|:---------:|:-------|
-| `22`   | **SSH**   | Anywhere IPv4 (`0.0.0.0/0`) |
-| `80`   | **HTTP**  | Anywhere IPv4 (`0.0.0.0/0`) |
-| `443`  | **HTTPS** | Anywhere IPv4 (`0.0.0.0/0`) |
-
-<!-- image SG inbound rules -->
-
-Guardar los cambios en el grupo de seguridad
-
-- Ir al final de la página y dar clic en el botón `Create security group`
-
-- Anotar el ID del grupo de seguridad
-
-<!-- image SG id -->
 
 ##### Creación de la instancia EC2
 
@@ -141,11 +104,18 @@ Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
 
 - https://console.aws.amazon.com/ec2
 
+![Consola EC2](006-EC2-console.png)
+![Consola EC2](007-EC2-instance-create.png)
+
 Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
 
 - `ami-087b6081d18c91a97`
 
+![Consola EC2](img/008-EC2-instance-start.png)
+
 Aparece un mensaje indicando que se encontró un resultado para imagenes AMI hechas por la comunidad, dar clic en ese mensaje
+
+![Consola EC2](img/009-EC2-instance-type-ami.png)
 
 Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
 
@@ -155,15 +125,25 @@ Revisar que se liste la información del AMI de Debian 10 `buster` para arquitec
 
 [ami-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;imageId=ami-087b6081d18c91a97;sort=name
 
+![Consola EC2](img/010-EC2-instance-ami-debian10-arm.png)
+
 Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
+
+![Consola EC2](img/011-EC2-instance-ami-family.png)
 
 Seleccionar los siguientes parámetros para configurar la instancia EC2
 
 Dejar los valores predeterminados en el paso `Configure Instance Details` y dar clic en el botón **gris** `Next: Add storage`
 
+![Consola EC2](img/012-EC2-instance-configure-instance.png)
+
 Cambiar el tamaño del almacenamiento a `10 GB` y el tipo a `gp3`. Dar clic en el botón **gris** `Next: Add tags`
 
+![Consola EC2](img/013-EC2-instance-instance-storage.png)
+
 En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
+
+![Consola EC2](img/014-EC2-instance-tags.png)
 
 Configurar grupo de seguridad
 
@@ -189,6 +169,8 @@ Configurar grupo de seguridad
 
 Dar clic en el boton **azul** `Review and Launch`
 
+![Consola EC2](img/015-EC2-instance-security-group.png)
+
 - Revisar los detalles y dar clic en el botón **azul** `Launch`
 
 Seleccionar la llave de SSH
@@ -201,9 +183,15 @@ Seleccionar la llave de SSH
 
 - Dar clic en el botón `Launch Instance`
 
+![Consola EC2](img/016-EC2-instance-select-keypair.png)
+
 - Dar clic en el identificador de la instancia que aparece en el panel verde para revisar el estado de la instancia
 
+![Consola EC2](img/017-EC2-instance-launching.png)
+
 - Esperar aproximadamente 5 minutos a que la instancia termine de inicializarse. El estado debe aparecer como `Running`
+
+![Consola EC2](img/018-EC2-instance-running.png)
 
 - Anotar el identificador de la instancia EC2
 
@@ -218,7 +206,11 @@ Seleccionar la llave de SSH
 
 - Entrar a la consola de EC2 y dar clic en `Elastic IPs`
 
+![Consola EC2](img/019-EC2-elastic_ip-console.png)
+
 - Dar clic en el botón `Allocate Elastic IP address`
+
+![Consola EC2](img/020-EC2-elastic_ip-allocate.png)
 
 - Aceptar los parámetros predeterminados, ir al final de la página y dar clic en el botón `Allocate`
 
@@ -226,13 +218,19 @@ Seleccionar la llave de SSH
 
 - Dar clic en el botón `Actions` y después en `Associate Elastic IP address`
 
+![Consola EC2](img/021-EC2-elastic_ip-associate.png)
+
 - Seleccionar la instancia EC2, ir al final de la página y dar clic en el botón `Associate`
+
+![Consola EC2](img/022-EC2-elastic_ip-associate-instance.png)
 
 - Seleccionar `Instances` en el panel izquierdo y seleccionar la instancia EC2 que se creó
 
+![Consola EC2](img/023-EC2-elastic_ip-associate-instance-ok.png)
+
 - Buscar la dirección IP elástica para confirmar que está asociada a la instancia EC2
 
-
+![Consola EC2](img/024-EC2-elastic_ip-associate-instance-ok-EC2.png)
 
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
@@ -244,8 +242,6 @@ Seleccionar la llave de SSH
 ##### Asignación de nombre DNS a la instancia EC2
 
 Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
-
-<!-- image -->
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
