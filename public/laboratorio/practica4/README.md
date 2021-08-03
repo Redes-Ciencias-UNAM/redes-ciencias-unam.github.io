@@ -65,10 +65,15 @@ Crear registros DNS de acuerdo a la siguiente tabla:
 | Nombre               | Tipo    | Valor |
 |:--------------------:|:-------:|:-----:|
 |       `example.com.` | `A`     | `192.0.2.100` |
-| `sitio.example.com.` | `CNAME` | `example.com.` |
 
 - Reemplazar `192.0.2.100` con la dirección IP de la IP elástica
 - Reemplazar `example.com` con el nombre de dominio
+
+Revisa que el registro este presente utilizando el comando `dig`
+
+```
+usuario@laptop:~$ dig A example.com.
+```
 
 ##### Autenticación SSH en la instancia EC2
 
@@ -285,7 +290,27 @@ Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes
 - Subject Alt name: example.com
 - Subject Alt name: *.example.com
 
+> Let's Encrypt pide que generes un archivo dentro de la ruta `/.well-known/acme-challente` y un registro DNS de tipo TXT llamado `_acme-challenge.example.com.`
+
 ##### Configuración de VirtualHosts para HTTP y HTTPS
+
+Crear registros DNS de acuerdo a la siguiente tabla:
+
+| Nombre                  | Tipo    | Valor |
+|------------------------:|:-------:|---------------------:|
+|    `sitio.example.com.` | `CNAME` |       `example.com.` |
+|   `pagina.example.com.` | `CNAME` | `sitio.example.com.` |
+| `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
+
+Revisa que los registros estén presentes utilizando el comando `dig`
+
+```
+usuario@laptop:~$ dig A sitio.example.com.
+
+usuario@laptop:~$ dig A pagina.example.com.
+
+usuario@laptop:~$ dig A estatico.example.com.
+```
 
 Editar el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplazar esta línea:
 
@@ -304,14 +329,6 @@ Recargar el servicio
 ```
 root@example:~# systemctl reload apache2
 ```
-
-Crea un par de VirtualHosts adicionales para servir el tráfico de los siguientes dominios:
-
-| Tipo          | Dominio                |
-|:-------------:|:----------------------:|
-| `ServerName`  |    `sitio.example.com` |
-| `ServerAlias` |   `pagina.example.com` |
-| `ServerAlias` | `estatico.example.com` |
 
 Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com`, `pagina.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
 
@@ -334,6 +351,21 @@ root@example:~# apt install git mkdocs mkdocs-doc
 ```
 
 ##### VirtualHost para documentación de `mkdocs`
+
+Crear registros DNS de acuerdo a la siguiente tabla:
+
+| Nombre                  | Tipo    | Valor |
+|------------------------:|:-------:|-------------------:|
+|      `doc.example.com.` | `CNAME` |     `example.com.` |
+|   `mkdocs.example.com.` | `CNAME` | `doc.example.com.` |
+
+Revisa que los registros estén presentes utilizando el comando `dig`
+
+```
+usuario@laptop:~$ dig A doc.example.com.
+
+usuario@laptop:~$ dig A mkdocs.example.com.
+```
 
 Crea un VirtualHost que responda a `doc.example.com` y `mkdocs.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/mkdocs/html`
 
@@ -430,17 +462,25 @@ admin@example:~$ curl -v "http://sitio.example.com/"
 
 Repite este paso para todos los dominios configurados en tus VirtualHosts
 
+- `http://192.0.2.100/`
 - `http://example.com/`
+- `http://doc.example.com/`
+- `http://mkdocs.example.com/`
 - `http://sitio.example.com/`
 - `http://pagina.example.com/`
 - `http://estatico.example.com/`
 
 Visita los dominios con un navegador web para comprobar que el VirtualHost esté configurado correctamente
 
-- `https://example.com/`
-- `https://sitio.example.com/`
-- `https://pagina.example.com/`
-- `https://estatico.example.com/`
+| Dominio                        | Sitio |
+|-------------------------------:|:------|
+| `https://192.0.2.100/`          | Página genérica |
+| `https://example.com/`          | Página genérica |
+| `https://doc.example.com/`      | Documentación de `mkdocs` |
+| `https://mkdocs.example.com/`   | Documentación de `mkdocs` |
+| `https://sitio.example.com/`    | Sitio estático del _repositorio de tareas_ |
+| `https://pagina.example.com/`   | Sitio estático del _repositorio de tareas_ |
+| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ |
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
