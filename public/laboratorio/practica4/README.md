@@ -105,6 +105,7 @@ Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
 - https://console.aws.amazon.com/ec2
 
 ![Consola EC2](006-EC2-console.png)
+
 ![Consola EC2](007-EC2-instance-create.png)
 
 Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
