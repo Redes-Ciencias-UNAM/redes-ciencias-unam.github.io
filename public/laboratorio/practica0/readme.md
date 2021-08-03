@@ -1,4 +1,5 @@
-![UNAM](images/img_logoFC_2019.png)
+![UNAM-FC](images/UNAM-FC.png)
+
 # Redes de Computadoras
 
 ## Recursos gratuitos para el desarrollo de proyectos estudiantiles 
