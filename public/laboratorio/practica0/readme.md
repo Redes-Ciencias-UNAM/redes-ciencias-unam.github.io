@@ -1,4 +1,4 @@
-![UNAM-FC](images/UNAM-FC.png)
+![UNAM-FC](../UNAM-FC.png)
 
 # Redes de Computadoras
 
