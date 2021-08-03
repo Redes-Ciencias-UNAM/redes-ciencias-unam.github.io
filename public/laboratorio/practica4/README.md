@@ -245,17 +245,67 @@ Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la s
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
-| Nombre               | Tipo    | Valor         |
-|:--------------------:|:-------:|:-------------:|
-|       `example.com.` | `A`     | `192.0.2.100` |
+| Nombre               | Tipo    | Valor           |
+|:--------------------:|:-------:|:---------------:|
+|       `example.com.` | `A`     | `203.0.113.100` |
 
-- Reemplazar `192.0.2.100` con la dirección IP de la IP elástica
+- Reemplazar `203.0.113.100` con la dirección IP de la IP elástica
 - Reemplazar `example.com` con el nombre de dominio
 
 Revisa que el registro este presente utilizando el comando `dig`
 
 ```
 usuario@laptop:~$ dig A example.com.
+```
+
+##### Acceso por SSH a la instancia EC2
+
+```
+usuario@laptop:~$ ssh -i ~/.ssh/equipo_redes_rsa admin@203.0.113.100
+
+The authenticity of host '203.0.113.100 (203.0.113.100)' can't be established.
+ECDSA key fingerprint is SHA256:Gui6wCWdr+ifqtgLEuzSmWmWRHEO97Cg943UnZn5NK0.
+Are you sure you want to continue connecting (yes/no)? yes
+
+Warning: Permanently added '203.0.113.100' (ECDSA) to the list of known hosts.
+Linux ip-192-0-2-200 4.19.0-17-arm64 #1 SMP Debian 4.19.194-3 (2021-07-18) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+
+	...     Mensajes sobre la configuración de `locale`	...
+
+admin@ip-192-0-2-200:~$
+```
+
+Verifica que puedas elevar privilegios con `sudo`
+
+```
+admin@ip-192-0-2-200:~$ sudo -i
+
+	...     Mensajes sobre la configuración de `locale`	...
+
+root@ip-192-0-2-200:~#
+```
+
+Crea un bloque de configuración en el archivo ~/.ssh/config para facilitar el acceso por SSH
+
+```
+Host 203.0.113.100 example.com *.example.com
+  User admin
+  IdentityFile ~/.ssh/equipo_redes_rsa
+```
+
+Prueba la configuración del cliente de SSH
+
+```
+usuario@laptop:~$ ssh example.com
+	...
+admin@ip-192-0-2-200:~$
 ```
 
 ##### Autenticación SSH en la instancia EC2
@@ -332,10 +382,10 @@ ff02::2		ip6-allrouters
 127.0.0.1	example.com
 ::1		example.com
 
-192.0.2.100		example.com
+203.0.113.100	example.com
 ```
 
-- Reemplazar `192.0.2.100` con la dirección IP de la IP elástica
+- Reemplazar `203.0.113.100` con la dirección IP de la IP elástica
 - Reemplazar `example.com` con el nombre de dominio
 
 ##### locale
@@ -562,10 +612,10 @@ root@example:~# apt install linux-doc
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
-| Nombre                | Tipo    | Valor         |
-|----------------------:|:-------:|:-------------:|
-|   `docs.example.com.` | `A`     | `192.0.2.100` |
-| `manual.example.com.` | `A`     | `192.0.2.100` |
+| Nombre                | Tipo    | Valor           |
+|----------------------:|:-------:|:---------------:|
+|   `docs.example.com.` | `A`     | `203.0.113.100` |
+| `manual.example.com.` | `A`     | `203.0.113.100` |
 
 Revisa que los registros estén presentes utilizando el comando `dig`
 
@@ -678,7 +728,7 @@ admin@example:~$ curl -v "http://sitio.example.com/"
 
 Repite este paso para todos los dominios configurados en tus VirtualHosts
 
-- `http://192.0.2.100/`
+- `http://203.0.113.100/`
 - `http://example.com/`
 - `http://doc.example.com/`
 - `http://mkdocs.example.com/`
@@ -690,10 +740,10 @@ Visita los dominios con un navegador web para comprobar que el VirtualHost esté
 
 | Dominio                        | Sitio |
 |-------------------------------:|:------|
-| `https://192.0.2.100/`          | Página genérica |
+| `https://203.0.113.100/`        | Página genérica |
 | `https://example.com/`          | Página genérica |
-| `https://doc.example.com/`      | Documentación de `mkdocs` |
-| `https://mkdocs.example.com/`   | Documentación de `mkdocs` |
+| `https://doc.example.com/`      | Documentación del _kernel_ |
+| `https://mkdocs.example.com/`   | Documentación del _kernel_ |
 | `https://sitio.example.com/`    | Sitio estático del _repositorio de tareas_ |
 | `https://pagina.example.com/`   | Sitio estático del _repositorio de tareas_ |
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ |
