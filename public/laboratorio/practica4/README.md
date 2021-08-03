@@ -2,7 +2,7 @@
 
 # Redes de Computadoras
 
-## Creación de una red con Packet Tracer
+## Implementación de sitios web sobre HTTPS
 
 Se pide estudiar los siguientes videos sobre los temas que trata la práctica, para su mejor comprensión y aprendizaje.
 
@@ -80,7 +80,9 @@ usuario@laptop:~$ scp redes_rsa.pub admin@example.com:/tmp/redes_rsa.pub
 usuario@laptop:~$ ssh admin@example.com
 
 admin@example:~$ install --owner admin --group staff /tmp/redes_rsa.pub ~admin/.ssh/authorized_keys2
+
 admin@example:~$ sudo install --owner root --group root /tmp/redes_rsa.pub ~root/.ssh/authorized_keys2
+
 admin@example:~$ sudo chattr +i ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
 ```
 
@@ -95,16 +97,12 @@ admin@example:~$ sudo -i
 
 root@example:~# apt -q update
 
-root@example:~# apt install net-tools
+root@example:~# apt install net-tools wget curl
 ```
 
 ##### hostname
 
 ```
-usuario@laptop:~$ ssh admin@example.com
-
-admin@example:~$ sudo -i
-
 root@example:~# hostnamectl set-hostname example.com
 ```
 
@@ -130,10 +128,6 @@ ff02::2		ip6-allrouters
 ##### locale
 
 ```
-usuario@laptop:~$ ssh admin@example.com
-
-admin@example:~$ sudo -i
-
 root@example:~# dpkg-reconfigure -p low locales
 ```
 
@@ -141,8 +135,8 @@ Seleccionar los siguientes en el cuadro de diálogo `Configuring locales`:
 
 Aparece un mensaje `Locales to be generated`, seleccionar los siguientes de la lista:
 
-- en_US.UTF-8
-- es_MX.UTF-8
+- `en_US.UTF-8`
+- `es_MX.UTF-8`
 
 > - Puedes utilizar las flechas de teclado y/o la tecla de tabulador para navegar entre las opciones
 > - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
@@ -155,10 +149,6 @@ Aparece un mensaje `Default locale for the system environment`:
 ##### Zona horaria
 
 ```
-usuario@laptop:~$ ssh admin@example.com
-
-admin@example:~$ sudo -i
-
 root@example:~# dpkg-reconfigure -p low tzdata
 ```
 
@@ -182,23 +172,19 @@ Reiniciar la máquina virtual después de aplicar los cambios.
 #### Instalación del servidor Apache HTTPD
 
 ```
-usuario@laptop:~$ ssh admin@example.com
-
-admin@example:~$ sudo -i
-
 root@example:~# apt install apache2
 ```
 
 Revisa que Apache escuche en el puerto `80`
 
 ```
+root@example:~# netstat -ntulp | grep apache2
+tcp6    0    0    :::80     :::*    LISTEN    3306/apache2
+
 root@example:~# apachectl -S
 VirtualHost configuration:
 *:80                   example.com (/etc/apache2/sites-enabled/000-default.conf:1)
 	...
-
-root@example:~# netstat -ntulp | grep apache2
-tcp6    0    0    :::80     :::*    LISTEN    3306/apache2
 ```
 
 Configurar la directiva `ServerName` en `/etc/apache2/conf-available/servername.conf`
@@ -225,13 +211,10 @@ root@example:~# a2enmod ssl
 
 root@example:~# a2ensite default-ssl
 
-root@example:~# systemctl restart apache2
+root@example:~# apachectl -t
+Syntax OK
 
-root@example:~# apachectl -S
-VirtualHost configuration:
-*:80                   example.com (/etc/apache2/sites-enabled/000-default.conf:1)
-*:443                  example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
-	...
+root@example:~# systemctl restart apache2
 ```
 
 Revisa que Apache escuche en los puertos `80` y `443`
@@ -240,6 +223,12 @@ Revisa que Apache escuche en los puertos `80` y `443`
 root@example:~# netstat -ntulp | grep apache2
 tcp6    0    0    :::80     :::*    LISTEN    5432/apache2
 tcp6    0    0    :::443    :::*    LISTEN    5432/apache2
+
+root@example:~# apachectl -S
+VirtualHost configuration:
+*:80                   example.com (/etc/apache2/sites-enabled/000-default.conf:1)
+*:443                  example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
+	...
 ```
 
 <!--
@@ -279,7 +268,7 @@ Syntax OK
 
 root@example:/etc/apache2# systemctl reload apache2
 
-root@example:/etc/apache2# apachectl -S
+# apachectl -S
 *:80                   is a NameVirtualHost
          default server example.com (/etc/apache2/sites-enabled/000-default.conf:1)
 	...
@@ -287,6 +276,14 @@ root@example:/etc/apache2# apachectl -S
          default server example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
 	...
 ```
+
+##### Tramite de certificado SSL con Let's Encrypt
+
+Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes características
+
+- Subject CN = example.com
+- Subject Alt name: example.com
+- Subject Alt name: *.example.com
 
 ##### Configuración de VirtualHosts para HTTP y HTTPS
 
@@ -310,9 +307,11 @@ root@example:~# systemctl reload apache2
 
 Crea un par de VirtualHosts adicionales para servir el tráfico de los siguientes dominios:
 
-- sitio.example.com (`ServerName`)
-- pagina.example.com (`ServerAlias`)
-- estatico.example.com (`ServerAlias`)
+| Tipo          | Dominio                |
+|:-------------:|:----------------------:|
+| `ServerName`  |    `sitio.example.com` |
+| `ServerAlias` |   `pagina.example.com` |
+| `ServerAlias` | `estatico.example.com` |
 
 Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com`, `pagina.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
 
@@ -388,11 +387,54 @@ root@example:~# apachectl -S
 root@example:~# systemctl reload apache2
 ```
 
-Visita los dominios para comprobar que el VirtualHost esté configurado correctamente
+Revisa que `curl` te redirija desde el sitio de HTTP a su versión con HTTPS
 
-- `sitio.example.com`
-- `pagina.example.com`
-- `estatico.example.com`
+- El código de estado de HTTP debe ser `301` o `302`
+- La cabecera `Location` debe estar presente y su valor apunta a la versión HTTPS del sitio
+- El contenido de la página muestra que el documento fue movido a una nueva ubicación
+
+```
+admin@example:~$ curl -v "http://sitio.example.com/"
+*   Trying 142.47.219.62...
+* TCP_NODELAY set
+* Connected to example.com (142.47.219.62) port 80 (#0)
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/7.54.0
+> Accept: */*
+>
+< HTTP/1.1 301 Moved Permanently
+< Date: Tue, 03 Aug 2021 12:40:05 GMT
+< Server: Apache
+< Location: https://example.com/
+< Content-Length: 317
+< Content-Type: text/html; charset=iso-8859-1
+<
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://example.com/">here</a>.</p>
+<hr>
+<address>Apache Server at example.com Port 80</address>
+</body></html>
+* Connection #0 to host example.com left intact
+```
+
+Repite este paso para todos los dominios configurados en tus VirtualHosts
+
+- `http://example.com/`
+- `http://sitio.example.com/`
+- `http://pagina.example.com/`
+- `http://estatico.example.com/`
+
+Visita los dominios con un navegador web para comprobar que el VirtualHost esté configurado correctamente
+
+- `https://example.com/`
+- `https://sitio.example.com/`
+- `https://pagina.example.com/`
+- `https://estatico.example.com/`
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
@@ -408,7 +450,6 @@ Visita los dominios para comprobar que el VirtualHost esté configurado correcta
 
 -   Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso,
     <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>.
-
 
 <!--
 
