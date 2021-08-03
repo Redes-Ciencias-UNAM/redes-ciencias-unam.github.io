@@ -330,10 +330,16 @@ Ubica la rama donde estas entregando tus tareas en el repositorio
 Instalar `git` y `mkdocs`:
 
 ```
-root@example:~# apt install git mkdocs
+root@example:~# apt install git mkdocs mkdocs-doc
 ```
 
-Clonar el repositorio de tareas del equipo utilizando el usuario `admin`
+##### VirtualHost para documentación de `mkdocs`
+
+Crea un VirtualHost que responda a `doc.example.com` y `mkdocs.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/mkdocs/html`
+
+##### VirtualHost para contenido del _repositorio de tareas_
+
+Clona el repositorio de tareas del equipo utilizando el usuario `admin`
 
 ```
 admin@example:~$ cd /srv
