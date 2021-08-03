@@ -43,14 +43,196 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 
 #### Creación de la máquina virtual en AWS
 
+Iniciar sesión en la cuenta de AWS Educate Starter
+
+Navegar a la consola de AWS EC2 y dar clic en la sección `Security Groups`.
+
+- https://console.aws.amazon.com/ec2
+
+<!-- image EC2 console -->
+
+##### Generar una llave SSH
+
+Crear una llave SSH para autenticarse en la instancia EC2
+
+```
+usuario@laptop:~$ ssh-keygen -t rsa -b 4096 -C "Equipo-AAAA-BBBB-CCCC-DDDD" -f ~/.ssh/equipo_redes_rsa -N ""
+```
+
+Listar el par de llaves SSH
+
+- La llave `equipo_redes_rsa` es la llave **PRIVADA** y únicamente debe compartirse con los integrantes del equipo
+- La llave `equipo_redes_rsa.pub` es la llave **pública**, deben subir una copia de esta en el directorio `files` de su reporte
+
+```
+usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
+-rw------- 1 tonejito staff 3389 Aug  3 13:19 /Users/tonejito/.ssh/equipo_redes_rsa
+-rw-r--r-- 1 tonejito staff  752 Aug  3 13:19 /Users/tonejito/.ssh/equipo_redes_rsa.pub
+```
+
+Mostrar el contenido de la llave **pública**
+
+```
+usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDXEaFaGDkmaDWTAtx8rXBRpPtrdseDfOqn9x28RKeITpmIN/SeV0Fe1vsYCG8+JdKbQ/59vCK82LLpHYf26I/Vu1BQA7w0thwjs9zTyPP/3NARWLnNa4aaG4r938p3EvuXb3Jkkvvahe7zhwuBDETf3AXblf4PBkDgfkC49vJKFQ== Equipo-AAAA-BBBB-CCCC-DDDD
+```
+
+Entrar a la consola de EC2 y dar clic en `keypairs`
+
+- https://console.aws.amazon.com/ec2
+
+Dar clic en el botón `Actions` y después en `Import keypair`
+
+En la ventana para importar una llave de SSH
+
+- Nombrar la llave como `Equipo-AAAA-BBBB-CCCC-DDDD`
+
+- Pegar el contenido de la llave pública (todo va en una sola línea) o bien buscar el archivo `~/.ssh/equipo_redes_rsa.pub` en el equipo y subirlo.
+
+- Ir al final de la página y dar clic en el botón `Import keypair`
+
+##### Crear un _grupo de seguridad_ para la instancia EC2
+
+Dar clic en el botón `Create security group` en la consola web de EC2
+
+Llenar los detalles principales del grupo de seguridad
+
+- Nombrar al grupo de seguridad `practica-redes`
+
+- Escribir como descripción: `Permite el acceso por SSH, HTTP y HTTPS`
+
+- Dejar seleccionada la `VPC` predeterminada
+
+<!-- image SG basic details -->
+
+Agregar reglas de entrada
+
+- Dar clic en el botón `Add rule` para agregar una nueva regla de entrada
+
+- Seleccionar el protocolo de la lista
+
+- Seleccionar `Anywhere IPv4` como origen
+
+> Amazon actualmente no soporta IPv6 en las direcciones IP elásticas asociadas a las instancias EC2
+
+- Agregar una descripción
+
+- Repetir para cada protocolo de entrada
+
+| Puerto | Servicio  | Origen |
+|:------:|:---------:|:-------|
+| `22`   | **SSH**   | Anywhere IPv4 (`0.0.0.0/0`) |
+| `80`   | **HTTP**  | Anywhere IPv4 (`0.0.0.0/0`) |
+| `443`  | **HTTPS** | Anywhere IPv4 (`0.0.0.0/0`) |
+
+<!-- image SG inbound rules -->
+
+Guardar los cambios en el grupo de seguridad
+
+- Ir al final de la página y dar clic en el botón `Create security group`
+
+- Anotar el ID del grupo de seguridad
+
+<!-- image SG id -->
+
+##### Creación de la instancia EC2
+
+Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
+
+- https://console.aws.amazon.com/ec2
+
+Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
+
+- `ami-087b6081d18c91a97`
+
+Aparece un mensaje indicando que se encontró un resultado para imagenes AMI hechas por la comunidad, dar clic en ese mensaje
+
+Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
+
+| Región    | Arquitectura   | Instancias | Imagen AMI                         | Nombre AMI                     |
+|:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
+| us-east-1 | ARM64          | t4         | [ami-087b6081d18c91a97][ami-arm64] | `debian-10-arm64-20210721-710` |
+
+[ami-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;imageId=ami-087b6081d18c91a97;sort=name
+
+Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
+
+Seleccionar los siguientes parámetros para configurar la instancia EC2
+
+Dejar los valores predeterminados en el paso `Configure Instance Details` y dar clic en el botón **gris** `Next: Add storage`
+
+Cambiar el tamaño del almacenamiento a `10 GB` y el tipo a `gp3`. Dar clic en el botón **gris** `Next: Add tags`
+
+En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
+
+Configurar grupo de seguridad
+
+- Dar clic en el botón radio `Create a new security group`
+
+- Asignar el nombre `practica redes` (sin acentos)
+
+- Dar clic en el botón `Add rule` para agregar una nueva regla de entrada
+
+- Seleccionar el protocolo de la lista
+
+- Seleccionar `Anywhere` como origen
+
+- Agregar una descripción (sin acentos)
+
+- Repetir para cada protocolo de entrada
+
+| Puerto | Servicio  | Origen                          |
+|:------:|:---------:|:-------------------------------:|
+| `22`   | **SSH**   | Anywhere (`0.0.0.0/0` y `::/0`) |
+| `80`   | **HTTP**  | Anywhere (`0.0.0.0/0` y `::/0`) |
+| `443`  | **HTTPS** | Anywhere (`0.0.0.0/0` y `::/0`) |
+
+Dar clic en el boton **azul** `Review and Launch`
+
+- Revisar los detalles y dar clic en el botón **azul** `Launch`
+
+Seleccionar la llave de SSH
+
+- Seleccionar `Choose an existing keypair` para utilizar la llave SSH que se importó previamente
+
+- Seleccionar la llave `Equipo-AAAA-BBBB-CCCC-DDDD`
+
+- Marcar la casilla que confirma que se tiene acceso a la llave privada que es la contraparte de esta llave pública
+
+- Dar clic en el botón `Launch Instance`
+
+- Dar clic en el identificador de la instancia que aparece en el panel verde para revisar el estado de la instancia
+
+- Esperar aproximadamente 5 minutos a que la instancia termine de inicializarse. El estado debe aparecer como `Running`
+
+- Anotar el identificador de la instancia EC2
+
+
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html
-<!--
-- https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html
--->
+
+
 
 ##### Asignación de IP estática a la instancia EC2
+
+- Entrar a la consola de EC2 y dar clic en `Elastic IPs`
+
+- Dar clic en el botón `Allocate Elastic IP address`
+
+- Aceptar los parámetros predeterminados, ir al final de la página y dar clic en el botón `Allocate`
+
+- Anotar la dirección que se asignó a la _IP elástica_.
+
+- Dar clic en el botón `Actions` y después en `Associate Elastic IP address`
+
+- Seleccionar la instancia EC2, ir al final de la página y dar clic en el botón `Associate`
+
+- Seleccionar `Instances` en el panel izquierdo y seleccionar la instancia EC2 que se creó
+
+- Buscar la dirección IP elástica para confirmar que está asociada a la instancia EC2
+
+
 
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
@@ -58,12 +240,17 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating
 
+
 ##### Asignación de nombre DNS a la instancia EC2
+
+Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
+
+<!-- image -->
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
-| Nombre               | Tipo    | Valor |
-|:--------------------:|:-------:|:-----:|
+| Nombre               | Tipo    | Valor         |
+|:--------------------:|:-------:|:-------------:|
 |       `example.com.` | `A`     | `192.0.2.100` |
 
 - Reemplazar `192.0.2.100` con la dirección IP de la IP elástica
@@ -77,18 +264,43 @@ usuario@laptop:~$ dig A example.com.
 
 ##### Autenticación SSH en la instancia EC2
 
-- Agregar la [llave SSH de los profesores](files/redes_rsa.pub), la cual ayudará a calificar la práctica.
+Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica.
+
+- Copia la llave a la máquina virtual
 
 ```
-usuario@laptop:~$ scp redes_rsa.pub admin@example.com:/tmp/redes_rsa.pub
+usuario@laptop:~$ scp profesores_redes_rsa.pub admin@example.com:/tmp/profesores_redes_rsa.pub
 
 usuario@laptop:~$ ssh admin@example.com
+```
 
-admin@example:~$ install --owner admin --group staff /tmp/redes_rsa.pub ~admin/.ssh/authorized_keys2
+- Instala la llave en la cuenta del usuario `admin`
 
-admin@example:~$ sudo install --owner root --group root /tmp/redes_rsa.pub ~root/.ssh/authorized_keys2
+```
+admin@example:~$ test -d ~/.ssh || mkdir -vp ~/.ssh
 
-admin@example:~$ sudo chattr +i ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
+admin@example:~$ chmod 0700 ~/.ssh
+
+admin@example:~$ install --owner admin --group staff --mode 0600 /tmp/profesores_redes_rsa.pub ~/.ssh/authorized_keys2
+```
+
+- Instala la llave SSH en la cuenta del usuario `root`
+
+```
+admin@example:~$ sudo -i
+
+root@example:~# test -d ~/.ssh || mkdir -vp ~/.ssh
+
+root@example:~# install --owner root --group root --mode 0600 /tmp/profesores_redes_rsa.pub ~/.ssh/authorized_keys2
+```
+
+- Aplica el atributo _inmutable_ a las llaves SSH instaladas y borra la llave de /tmp
+
+```
+root@example:~# chattr +i ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
+
+root@example:~# rm -v /tmp/profesores_redes_rsa.pub
+removed '/tmp/redes_rsa.pub'
 ```
 
 #### Configuración inicial de la instancia EC2
@@ -143,7 +355,7 @@ Aparece un mensaje `Locales to be generated`, seleccionar los siguientes de la l
 - `en_US.UTF-8`
 - `es_MX.UTF-8`
 
-> - Puedes utilizar las flechas de teclado y/o la tecla de tabulador para navegar entre las opciones
+> - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
 > - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
 > - No usar Ctrl+C porque se interrumpe el proceso de configuración y puede causar problemas
 
@@ -344,20 +556,20 @@ Ubica la rama donde estas entregando tus tareas en el repositorio
 
 - https://gitlab.com/USUARIO/tareas-redes.git
 
-Instalar `git` y `mkdocs`:
+Instalar el paquete `linux-doc`:
 
 ```
-root@example:~# apt install git mkdocs mkdocs-doc
+root@example:~# apt install linux-doc
 ```
 
-##### VirtualHost para documentación de `mkdocs`
+##### VirtualHost para documentación
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
 | Nombre                | Tipo    | Valor         |
 |----------------------:|:-------:|:-------------:|
-|    `doc.example.com.` | `A`     | `192.0.2.100` |
-| `mkdocs.example.com.` | `A`     | `192.0.2.100` |
+|   `docs.example.com.` | `A`     | `192.0.2.100` |
+| `manual.example.com.` | `A`     | `192.0.2.100` |
 
 Revisa que los registros estén presentes utilizando el comando `dig`
 
@@ -367,9 +579,17 @@ usuario@laptop:~$ dig A doc.example.com.
 usuario@laptop:~$ dig A mkdocs.example.com.
 ```
 
-Crea un VirtualHost que responda a `doc.example.com` y `mkdocs.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/mkdocs/html`
+- Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
+
+- Recuerda que se debe agregar la directiva `<Directory>` correspondiente puesto que este contenido está fuera de `/var/www`
 
 ##### VirtualHost para contenido del _repositorio de tareas_
+
+Instalar los paquetes en el sistema operativo:
+
+```
+root@example:~# apt install git mkdocs
+```
 
 Clona el repositorio de tareas del equipo utilizando el usuario `admin`
 
