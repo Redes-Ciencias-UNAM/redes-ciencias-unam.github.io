@@ -354,10 +354,10 @@ root@example:~# apt install git mkdocs mkdocs-doc
 
 Crear registros DNS de acuerdo a la siguiente tabla:
 
-| Nombre                  | Tipo    | Valor |
-|------------------------:|:-------:|-------------------:|
-|      `doc.example.com.` | `CNAME` |     `example.com.` |
-|   `mkdocs.example.com.` | `CNAME` | `doc.example.com.` |
+| Nombre                | Tipo    | Valor         |
+|----------------------:|:-------:|:-------------:|
+|    `doc.example.com.` | `A`     | `192.0.2.100` |
+| `mkdocs.example.com.` | `A`     | `192.0.2.100` |
 
 Revisa que los registros estén presentes utilizando el comando `dig`
 
@@ -485,6 +485,8 @@ Visita los dominios con un navegador web para comprobar que el VirtualHost esté
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
 ### Cuestionario
+
+- ¿Existe alguna diferencia al crear los registros DNS para el VirtualHost como `A` y `CNAME`?
 
 ### Notas adicionales
 
