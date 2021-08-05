@@ -800,14 +800,14 @@ Repite este paso para todos los dominios configurados en tus VirtualHosts
 
 Visita los dominios con un navegador web para comprobar que el `VirtualHost` esté configurado correctamente
 
-| Dominio                         | Sitio                                      | Referencia                                                 | Ejemplo                          |
-|--------------------------------:|:-------------------------------------------|:-----------------------------------------------------------|---------------------------------:|
-|        `https://50.19.212.156/` | Página genérica                            | https://example.com/                                       |       https://redes.tonejito.cf/ |
-|          `https://example.com/` | Página genérica                            | https://example.com/                                       |       https://redes.tonejito.cf/ |
-|     `https://docs.example.com/` | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/                    |  https://docs.redes.tonejito.cf/ |
-|   `https://manual.example.com/` | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/                    |  https://docs.redes.tonejito.cf/ |
-|    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ | https://sitio.redes.tonejito.cf/ |
-| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ | https://sitio.redes.tonejito.cf/ |
+| Dominio                         | Sitio                                      | Ejemplo                          |
+|--------------------------------:|:-------------------------------------------|---------------------------------:|
+|        `https://50.19.212.156/` | Página genérica                            |       https://redes.tonejito.cf/ |
+|          `https://example.com/` | Página genérica                            |       https://redes.tonejito.cf/ |
+|     `https://docs.example.com/` | Documentación del _kernel_ Linux           |  https://docs.redes.tonejito.cf/ |
+|   `https://manual.example.com/` | Documentación del _kernel_ Linux           |  https://docs.redes.tonejito.cf/ |
+|    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ | https://sitio.redes.tonejito.cf/ |
+| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://sitio.redes.tonejito.cf/ |
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
