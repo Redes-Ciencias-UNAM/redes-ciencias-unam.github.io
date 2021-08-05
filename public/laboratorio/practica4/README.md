@@ -43,26 +43,18 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 
 #### Creación de la máquina virtual en AWS
 
-Iniciar sesión en la cuenta de AWS Educate Starter
-
-Navegar a la consola de AWS EC2 .
-
-- https://console.aws.amazon.com/ec2
-
-![Consola EC2](img/001-EC2-console.png)
-
 ##### Generar una llave SSH
 
-Crear una llave SSH para autenticarse en la instancia EC2
+- Crear una llave SSH para autenticarse en la instancia EC2
 
 ```
 usuario@laptop:~$ ssh-keygen -t rsa -b 4096 -C "Equipo-AAAA-BBBB-CCCC-DDDD" -f ~/.ssh/equipo_redes_rsa -N ""
 ```
 
-Listar el par de llaves SSH
+- Listar el par de llaves SSH
 
-- La llave `equipo_redes_rsa` es la llave **PRIVADA** y únicamente debe compartirse con los integrantes del equipo
-- La llave `equipo_redes_rsa.pub` es la llave **pública**, deben subir una copia de esta en el directorio `files` de su reporte
+  - La llave `equipo_redes_rsa` es la llave **PRIVADA** y únicamente debe compartirse con los integrantes del equipo
+  - La llave `equipo_redes_rsa.pub` es la llave **pública**, deben subir una copia de esta en el directorio `files` de su reporte
 
 ```
 usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
@@ -70,57 +62,59 @@ usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
 -rw-r--r-- 1 tonejito staff  752 Aug  3 13:19 /Users/tonejito/.ssh/equipo_redes_rsa.pub
 ```
 
-Mostrar el contenido de la llave **pública**
+- Mostrar el contenido de la llave **pública**
+
+> El contenido de la llave es una cadena muy larga que viene en una sola línea
 
 ```
 usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAAD...lf4PBkDgfkC49vJKFQ== Equipo-AAAA-BBBB-CCCC-DDDD
 ```
 
-Entrar a la consola de EC2 y dar clic en `keypairs`
+- Iniciar sesión en la cuenta de AWS Educate Starter
 
-- https://console.aws.amazon.com/ec2
+- Entrar a la consola de EC2 y dar clic en `keypairs`
+
+  - https://console.aws.amazon.com/ec2
 
 ![Consola EC2](img/002-EC2-keypair-console.png)
 
-Dar clic en el botón `Actions` y después en `Import keypair`
+- Dar clic en el botón `Actions` y después en `Import keypair`
 
 ![Consola EC2](img/003-EC2-keypair-import.png)
 
 En la ventana para importar una llave de SSH
 
-- Nombrar la llave como `Equipo-AAAA-BBBB-CCCC-DDDD`
+  - Nombrar la llave como `Equipo-AAAA-BBBB-CCCC-DDDD`
 
-- Pegar el contenido de la llave pública (todo va en una sola línea) o bien buscar el archivo `~/.ssh/equipo_redes_rsa.pub` en el equipo y subirlo.
+  - Pegar el contenido de la llave pública (todo va en una sola línea) o bien buscar el archivo `~/.ssh/equipo_redes_rsa.pub` en el equipo y subirlo.
 
-- Ir al final de la página y dar clic en el botón `Import keypair`
+  - Ir al final de la página y dar clic en el botón `Import keypair`
 
 ![Consola EC2](img/004-EC2-keypair-import-contents.png)
 
 
 ##### Creación de la instancia EC2
 
-Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
+- Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
 
-- https://console.aws.amazon.com/ec2
-
-![Consola EC2](img/006-EC2-console.png)
+  - https://console.aws.amazon.com/ec2
 
 ![Consola EC2](img/007-EC2-instance-create.png)
 
-Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
+-  Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
 
-- `ami-087b6081d18c91a97`
+  - `ami-087b6081d18c91a97`
 
 ![Consola EC2](img/008-EC2-instance-start.png)
 
-Aparece un mensaje indicando que se encontró un resultado para imagenes AMI hechas por la comunidad, dar clic en ese mensaje
+- Aparece un mensaje indicando que se encontró un resultado para imagenes AMI hechas por la comunidad, dar clic en ese mensaje
 
 ![Consola EC2](img/009-EC2-instance-type-ami.png)
 
-Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
+- Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
 
-| Región    | Arquitectura   | Instancias | Imagen AMI                         | Nombre AMI                     |
+| Región    | Arquitectura   | Instancias | ID imágen AMI                      | Nombre de la imágen AMI        |
 |:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
 | us-east-1 | ARM64          | t4         | [ami-087b6081d18c91a97][ami-arm64] | `debian-10-arm64-20210721-710` |
 
@@ -128,39 +122,41 @@ Revisar que se liste la información del AMI de Debian 10 `buster` para arquitec
 
 ![Consola EC2](img/010-EC2-instance-ami-debian10-arm.png)
 
-Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
+- Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
 
 ![Consola EC2](img/011-EC2-instance-ami-family.png)
 
-Seleccionar los siguientes parámetros para configurar la instancia EC2
+- Seleccionar los siguientes parámetros para configurar la instancia EC2
 
-Dejar los valores predeterminados en el paso `Configure Instance Details` y dar clic en el botón **gris** `Next: Add storage`
+  - Dejar los valores predeterminados y dar clic en el botón **gris** `Next: Add storage`
 
 ![Consola EC2](img/012-EC2-instance-configure-instance.png)
 
-Cambiar el tamaño del almacenamiento a `10 GB` y el tipo a `gp3`. Dar clic en el botón **gris** `Next: Add tags`
+- Cambiar el tamaño del almacenamiento a `10 GB` y el tipo a `gp3`. Dar clic en el botón **gris** `Next: Add tags`
 
 ![Consola EC2](img/013-EC2-instance-instance-storage.png)
 
-En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
+- En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
+
+> No se utilizan _tags_ en esta actividad
 
 ![Consola EC2](img/014-EC2-instance-tags.png)
 
-Configurar grupo de seguridad
+- Configurar grupo de seguridad
 
-- Dar clic en el botón radio `Create a new security group`
+  - Dar clic en el botón radio `Create a new security group`
 
-- Asignar el nombre `practica redes` (sin acentos)
+  - Asignar el nombre `practica redes` (sin acentos)
 
-- Dar clic en el botón `Add rule` para agregar una nueva regla de entrada
+  - Dar clic en el botón `Add rule` para agregar una nueva regla de entrada
 
-- Seleccionar el protocolo de la lista
+  - Seleccionar el protocolo de la lista
 
-- Seleccionar `Anywhere` como origen
+  - Seleccionar `Anywhere` como origen
 
-- Agregar una descripción (sin acentos)
+  - Agregar una descripción (sin acentos)
 
-- Repetir para cada protocolo de entrada
+  - Repetir para cada protocolo de entrada
 
 | Puerto | Servicio  | Origen                          |
 |:------:|:---------:|:-------------------------------:|
@@ -168,21 +164,21 @@ Configurar grupo de seguridad
 | `80`   | **HTTP**  | Anywhere (`0.0.0.0/0` y `::/0`) |
 | `443`  | **HTTPS** | Anywhere (`0.0.0.0/0` y `::/0`) |
 
-Dar clic en el boton **azul** `Review and Launch`
+- Dar clic en el boton **azul** `Review and Launch`
 
 ![Consola EC2](img/015-EC2-instance-security-group.png)
 
 - Revisar los detalles y dar clic en el botón **azul** `Launch`
 
-Seleccionar la llave de SSH
+- Seleccionar la llave de SSH
 
-- Seleccionar `Choose an existing keypair` para utilizar la llave SSH que se importó previamente
+  - Seleccionar `Choose an existing keypair` para utilizar la llave SSH que se importó previamente
 
-- Seleccionar la llave `Equipo-AAAA-BBBB-CCCC-DDDD`
+  - Seleccionar la llave `Equipo-AAAA-BBBB-CCCC-DDDD`
 
-- Marcar la casilla que confirma que se tiene acceso a la llave privada que es la contraparte de esta llave pública
+  - Marcar la casilla que confirma que se tiene acceso a la llave privada que es la contraparte de esta llave pública
 
-- Dar clic en el botón `Launch Instance`
+  - Dar clic en el botón `Launch Instance`
 
 ![Consola EC2](img/016-EC2-instance-select-keypair.png)
 
@@ -194,8 +190,7 @@ Seleccionar la llave de SSH
 
 ![Consola EC2](img/018-EC2-instance-running.png)
 
-- Anotar el identificador de la instancia EC2
-
+- Anotar el identificador de la instancia EC2 en el reporte
 
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
@@ -233,6 +228,8 @@ Seleccionar la llave de SSH
 
 ![Consola EC2](img/024-EC2-elastic_ip-associate-instance-ok-EC2.png)
 
+- Anotar la dirección IP elástica asociada a la instancia EC2 en el reporte
+
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
 - https://aws.amazon.com/premiumsupport/knowledge-center/ec2-associate-static-public-ip/
@@ -242,21 +239,29 @@ Seleccionar la llave de SSH
 
 ##### Asignación de nombre DNS a la instancia EC2
 
-Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
+- Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
 
-Crear registros DNS de acuerdo a la siguiente tabla:
+- Crear registros DNS de acuerdo a la siguiente tabla:
 
 | Nombre               | Tipo    | Valor           |
 |:--------------------:|:-------:|:---------------:|
 |       `example.com.` | `A`     | `50.19.212.156` |
 
-- Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
-- Reemplazar `example.com` con el nombre de dominio
+> - Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
+> - Reemplazar `example.com` con el nombre de dominio
 
 Revisa que el registro este presente utilizando el comando `dig`
 
 ```
-usuario@laptop:~$ dig A example.com.
+usuario@laptop:~$ dig +noall +comments +answer example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42942
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+example.com.	299	IN	A	50.19.212.156
 ```
 
 ##### Acceso por SSH a la instancia EC2
@@ -312,6 +317,8 @@ admin@ip-172-31-85-20:~$
 ##### Autenticación SSH en la instancia EC2
 
 Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica.
+
+> Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso
 
 - Copia la llave a la máquina virtual
 
@@ -553,25 +560,46 @@ Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes
 
 ##### Configuración de VirtualHosts para HTTP y HTTPS
 
-Crear registros DNS de acuerdo a la siguiente tabla:
+- Crea los registros DNS de acuerdo a la siguiente tabla:
 
 | Nombre                  | Tipo    | Valor |
 |------------------------:|:-------:|---------------------:|
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
-|   `pagina.example.com.` | `CNAME` | `sitio.example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
-Revisa que los registros estén presentes utilizando el comando `dig`
+- Revisa que los registros estén presentes utilizando el comando `dig`
+
+> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
 
 ```
 usuario@laptop:~$ dig A sitio.example.com.
+usuario@laptop:~$ dig +noall +comments +answer A sitio.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43466
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
 
-usuario@laptop:~$ dig A pagina.example.com.
-
-usuario@laptop:~$ dig A estatico.example.com.
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+sitio.example.com.	299	IN	CNAME	example.com.
+example.com.		299	IN	A	50.19.212.156
 ```
 
-Editar el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplazar esta línea:
+```
+usuario@laptop:~$ dig +noall +comments +answer A estatico.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59174
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+estatico.example.com.	299	IN	CNAME	sitio.example.com.
+sitio.example.com.	299	IN	CNAME	example.com.
+example.com.		299	IN	A	50.19.212.156
+```
+
+- Edita el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplazar esta línea:
 
 ```
 	<VirtualHost *:443>
@@ -583,27 +611,26 @@ Por esta otra
 	<VirtualHost _default_:443>
 ```
 
-Recargar el servicio
+- Recarga el servicio de Apache HTTPD
 
 ```
 root@example:~# systemctl reload apache2
 ```
 
-Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com`, `pagina.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
-
-Estos VirtualHosts deben servir el contenido desde la carpeta `/srv` y recuerda que debes definir la directiva `<Directory>` para permitir que el servidor muestre el contenido.
+- Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com`, `pagina.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
 
 - `/etc/apache2/sites-enabled/sitio.example.com.conf`
 
+> - Estos VirtualHosts deben servir el contenido desde la carpeta `/srv` y recuerda que debes definir la directiva `<Directory>` para permitir que el servidor muestre el contenido.
 > - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
 #### Contenido web para sitio estático
 
-Ubica la rama donde estas entregando tus tareas en el repositorio
+- Ubica la rama donde estas entregando tus tareas en el repositorio
 
-- https://gitlab.com/USUARIO/tareas-redes.git
+  - `https://gitlab.com/USUARIO/tareas-redes.git`
 
-Instalar el paquete `linux-doc`:
+- Instalar el paquete `linux-doc`:
 
 ```
 root@example:~# apt install linux-doc
@@ -611,7 +638,7 @@ root@example:~# apt install linux-doc
 
 ##### VirtualHost para documentación
 
-Crear registros DNS de acuerdo a la siguiente tabla:
+- Crea los registros DNS de acuerdo a la siguiente tabla:
 
 | Nombre                | Tipo    | Valor           |
 |----------------------:|:-------:|:---------------:|
@@ -621,9 +648,27 @@ Crear registros DNS de acuerdo a la siguiente tabla:
 Revisa que los registros estén presentes utilizando el comando `dig`
 
 ```
-usuario@laptop:~$ dig A doc.example.com.
+usuario@laptop:~$ # dig +noall +comments +answer A docs.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55594
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
-usuario@laptop:~$ dig A mkdocs.example.com.
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+docs.example.com.	299	IN	A	50.19.212.156
+```
+
+```
+usuario@laptop:~$ dig +noall +comments +answer A manual.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49129
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+manual.example.com. 299	IN	A	50.19.212.156
 ```
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
@@ -679,7 +724,9 @@ drwxr-xr-x  5 admin staff   160 Aug  3 02:54 workflow
 -rw-r--r--  1 admin staff   625 Aug  3 02:54 sitemap.xml.gz
 ```
 
-Ajusta la configuración de los VirtualHosts para que sirvan contenido desde la carpeta `/srv/repositorio/public`. Recuerda ajustar la directiva `<Directory>` para permitir que el servidor muestre el contenido.
+Ajusta la configuración de los VirtualHosts para que sirvan contenido desde la carpeta `/srv/repositorio/public`.
+
+> Recuerda ajustar la directiva `<Directory>` para permitir que el servidor muestre el contenido.
 
 ```
 root@example:~# a2ensite sitio.example.com
@@ -700,9 +747,9 @@ Revisa que `curl` te redirija desde el sitio de HTTP a su versión con HTTPS
 
 ```
 admin@example:~$ curl -v "http://example.com/"
-*   Trying 142.47.219.62...
+*   Trying 50.19.212.156...
 * TCP_NODELAY set
-* Connected to example.com (142.47.219.62) port 80 (#0)
+* Connected to example.com (50.19.212.156) port 80 (#0)
 > GET / HTTP/1.1
 > Host: example.com
 > User-Agent: curl/7.54.0
@@ -733,7 +780,7 @@ Repite este paso para todos los dominios configurados en tus VirtualHosts
 
 - `http://50.19.212.156/`
 - `http://example.com/`
-- `http://doc.example.com/`
+- `http://docs.example.com/`
 - `http://manual.example.com/`
 - `http://sitio.example.com/`
 - `http://estatico.example.com/`
@@ -742,9 +789,9 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 
 | Dominio                         | Sitio                                      | Ejemplo                    |
 |--------------------------------:|:-------------------------------------------|:---------------------------|
-| `https://50.19.212.156/`        | Página genérica                            | https://redes.tonejito.cf/ |
-| `https://example.com/`          | Página genérica                            | https://redes.tonejito.cf/ |
-| `https://doc.example.com/`      | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
+| `https://50.19.212.156/`        | Página genérica                            | https://example.com/ |
+| `https://example.com/`          | Página genérica                            | https://example.com/ |
+| `https://docs.example.com/`      | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
 | `https://manual.example.com/`   | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
 | `https://sitio.example.com/`    | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
