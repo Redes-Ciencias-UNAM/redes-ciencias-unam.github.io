@@ -120,8 +120,12 @@ En la ventana para importar una llave de SSH
 
 | Región    | Arquitectura   | Instancias | ID imágen AMI                      | Nombre de la imágen AMI        |
 |:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
-| us-east-1 | ARM64          | t4         | [ami-087b6081d18c91a97][ami-arm64] | `debian-10-arm64-20210721-710` |
+| us-east-1 | ARM64          | t4g        | [ami-087b6081d18c91a97][ami-arm64] | `debian-10-arm64-20210721-710` |
+<!--
+| us-east-1 | AMD64 (x86_64) | t3a        | [ami-05ad4ed7f9c48178b][ami-amd64] | `debian-10-amd64-20210721-710` |
+-->
 
+[ami-amd64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=x86_64;imageId=ami-05ad4ed7f9c48178b;sort=name
 [ami-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;imageId=ami-087b6081d18c91a97;sort=name
 
 ![Consola EC2](img/010-EC2-instance-ami-debian10-arm.png)
@@ -240,21 +244,28 @@ En la ventana para importar una llave de SSH
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating
 
+--------------------------------------------------------------------------------
 
 ##### Asignación de nombre DNS a la instancia EC2
 
 - Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
 
-- Crear registros DNS de acuerdo a la siguiente tabla:
+- Crear los registros DNS de acuerdo a la siguiente tabla:
 
-| Nombre               | Tipo    | Valor           |
-|:--------------------:|:-------:|:---------------:|
-|       `example.com.` | `A`     | `50.19.212.156` |
+| Nombre                  | Tipo    | Valor                |
+|------------------------:|:-------:|---------------------:|
+|          `example.com.` | `A`     |      `50.19.212.156` |
+|     `docs.example.com.` | `A`     |      `50.19.212.156` |
+|   `manual.example.com.` | `A`     |      `50.19.212.156` |
+|    `sitio.example.com.` | `CNAME` |       `example.com.` |
+| `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
 > - Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
 > - Reemplazar `example.com` con el nombre de dominio
 
-Revisa que el registro este presente utilizando el comando `dig`
+- Revisa que existan los registros DNS utilizando el comando `dig`
+
+> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
 
 ```
 usuario@laptop:~$ dig +noall +comments +answer example.com.
@@ -267,6 +278,59 @@ usuario@laptop:~$ dig +noall +comments +answer example.com.
 ;; ANSWER SECTION:
 example.com.	299	IN	A	50.19.212.156
 ```
+
+```
+usuario@laptop:~$ # dig +noall +comments +answer A docs.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55594
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+docs.example.com.	299	IN	A	50.19.212.156
+```
+
+```
+usuario@laptop:~$ dig +noall +comments +answer A manual.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49129
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+manual.example.com. 299	IN	A	50.19.212.156
+```
+
+```
+usuario@laptop:~$ dig +noall +comments +answer A sitio.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43466
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+sitio.example.com.	299	IN	CNAME	example.com.
+example.com.		299	IN	A	50.19.212.156
+```
+
+```
+usuario@laptop:~$ dig +noall +comments +answer A estatico.example.com.
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59174
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; ANSWER SECTION:
+estatico.example.com.	299	IN	CNAME	sitio.example.com.
+sitio.example.com.	299	IN	CNAME	example.com.
+example.com.		299	IN	A	50.19.212.156
+```
+
+--------------------------------------------------------------------------------
 
 ##### Acceso por SSH a la instancia EC2
 
@@ -361,6 +425,8 @@ root@example:~# rm -v /tmp/profesores_redes_rsa.pub
 removed '/tmp/redes_rsa.pub'
 ```
 
+--------------------------------------------------------------------------------
+
 #### Configuración inicial de la instancia EC2
 
 ##### Utilerias de red
@@ -443,6 +509,8 @@ Tue 03 Aug 2021 02:03:04 AM CDT
 ```
 
 Reiniciar la máquina virtual después de aplicar los cambios.
+
+--------------------------------------------------------------------------------
 
 #### Instalación del servidor Apache HTTPD
 
@@ -552,6 +620,8 @@ root@example:/etc/apache2# systemctl reload apache2
 	...
 ```
 
+--------------------------------------------------------------------------------
+
 ##### Tramite de certificado SSL con Let's Encrypt
 
 Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes características
@@ -560,48 +630,16 @@ Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes
 - Subject Alt name: example.com
 - Subject Alt name: *.example.com
 
-> Let's Encrypt pide que generes un archivo dentro de la ruta `/.well-known/acme-challente` y un registro DNS de tipo TXT llamado `_acme-challenge.example.com.`
+> Let's Encrypt pide que generes un archivo dentro de la ruta `/.well-known/acme-challenge` y un registro DNS de tipo TXT llamado `_acme-challenge.example.com.`
+
+--------------------------------------------------------------------------------
 
 ##### Configuración de VirtualHosts para HTTP y HTTPS
 
-- Crea los registros DNS de acuerdo a la siguiente tabla:
+- Revisa que existan los siguientes registros utilizando el comando `dig`
 
-| Nombre                  | Tipo    | Valor |
-|------------------------:|:-------:|---------------------:|
-|    `sitio.example.com.` | `CNAME` |       `example.com.` |
-| `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
-
-- Revisa que los registros estén presentes utilizando el comando `dig`
-
-> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
-
-```
-usuario@laptop:~$ dig A sitio.example.com.
-usuario@laptop:~$ dig +noall +comments +answer A sitio.example.com.
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 43466
-;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; ANSWER SECTION:
-sitio.example.com.	299	IN	CNAME	example.com.
-example.com.		299	IN	A	50.19.212.156
-```
-
-```
-usuario@laptop:~$ dig +noall +comments +answer A estatico.example.com.
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59174
-;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; ANSWER SECTION:
-estatico.example.com.	299	IN	CNAME	sitio.example.com.
-sitio.example.com.	299	IN	CNAME	example.com.
-example.com.		299	IN	A	50.19.212.156
-```
+  - `sitio.example.com.`
+  - `estatico.example.com.`
 
 - Edita el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplazar esta línea:
 
@@ -642,38 +680,10 @@ root@example:~# apt install linux-doc
 
 ##### VirtualHost para documentación
 
-- Crea los registros DNS de acuerdo a la siguiente tabla:
+- Revisa que existan los siguientes registros utilizando el comando `dig`
 
-| Nombre                | Tipo    | Valor           |
-|----------------------:|:-------:|:---------------:|
-|   `docs.example.com.` | `A`     | `50.19.212.156` |
-| `manual.example.com.` | `A`     | `50.19.212.156` |
-
-Revisa que los registros estén presentes utilizando el comando `dig`
-
-```
-usuario@laptop:~$ # dig +noall +comments +answer A docs.example.com.
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 55594
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; ANSWER SECTION:
-docs.example.com.	299	IN	A	50.19.212.156
-```
-
-```
-usuario@laptop:~$ dig +noall +comments +answer A manual.example.com.
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49129
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; ANSWER SECTION:
-manual.example.com. 299	IN	A	50.19.212.156
-```
+  - `docs.example.com.`
+  - `manual.example.com.`
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
 
@@ -710,10 +720,8 @@ admin@example:/srv/repositorio$ mkdocs build --strict --verbose
 Lista el contenido del directorio `public`
 
 ```
-admin@example:/srv/repositorio$ ls -la public
+admin@example:/srv/repositorio$ ls -lA public
 total 64
-drwxr-xr-x 14 admin staff   448 Aug  3 02:54 .
-drwxr-xr-x 13 admin staff   416 Aug  3 02:53 ..
 drwxr-xr-x  4 admin staff   128 Aug  3 02:54 css
 drwxr-xr-x  7 admin staff   224 Aug  3 02:54 entrega
 drwxr-xr-x  9 admin staff   288 Aug  3 02:54 fonts
@@ -795,12 +803,14 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 |--------------------------------:|:-------------------------------------------|:---------------------------|
 | `https://50.19.212.156/`        | Página genérica                            | https://example.com/ |
 | `https://example.com/`          | Página genérica                            | https://example.com/ |
-| `https://docs.example.com/`      | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
+| `https://docs.example.com/`     | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
 | `https://manual.example.com/`   | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
 | `https://sitio.example.com/`    | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
+
+--------------------------------------------------------------------------------
 
 ### Cuestionario
 
