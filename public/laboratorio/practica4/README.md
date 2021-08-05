@@ -289,7 +289,7 @@ usuario@laptop:~$ dig +noall +comments +answer example.com.
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 512
 ;; ANSWER SECTION:
-example.com.	299	IN	A	50.19.212.156
+example.com.		299	IN	A	50.19.212.156
 ```
 
 ```
@@ -313,7 +313,7 @@ usuario@laptop:~$ dig +noall +comments +answer A manual.example.com.
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 512
 ;; ANSWER SECTION:
-manual.example.com. 299	IN	A	50.19.212.156
+manual.example.com.	299	IN	A	50.19.212.156
 ```
 
 ```
@@ -680,7 +680,7 @@ Por esta otra
 root@example:~# systemctl reload apache2
 ```
 
-- Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com`, `pagina.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
+- Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
 
 - `/etc/apache2/sites-enabled/sitio.example.com.conf`
 
