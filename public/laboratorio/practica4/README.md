@@ -333,7 +333,7 @@ example.com.		299	IN	A	50.19.212.156
 
 --------------------------------------------------------------------------------
 
-##### Acceso por SSH a la instancia EC2
+##### Acceso inicial por SSH a la instancia EC2
 
 ```
 usuario@laptop:~$ ssh -i ~/.ssh/equipo_redes_rsa admin@50.19.212.156
@@ -509,7 +509,13 @@ root@example:~# date
 Tue 03 Aug 2021 02:03:04 AM CDT
 ```
 
-Reiniciar la máquina virtual después de aplicar los cambios.
+##### Reiniciar la máquina virtual
+
+Reinicia la máquina virtual después de aplicar los cambios.
+
+```
+admin@example:~$ sudo systemctl reboot
+```
 
 --------------------------------------------------------------------------------
 
@@ -523,7 +529,7 @@ Revisa que Apache escuche en el puerto `80`
 
 ```
 root@example:~# netstat -ntulp | grep apache2
-tcp6    0    0    :::80     :::*    LISTEN    3306/apache2
+tcp6	0	0	:::80	:::*	LISTEN	3306/apache2
 
 root@example:~# apachectl -S
 VirtualHost configuration:
@@ -565,8 +571,8 @@ Revisa que Apache escuche en los puertos `80` y `443`
 
 ```
 root@example:~# netstat -ntulp | grep apache2
-tcp6    0    0    :::80     :::*    LISTEN    5432/apache2
-tcp6    0    0    :::443    :::*    LISTEN    5432/apache2
+tcp6	0	0	:::80	:::*	LISTEN	5432/apache2
+tcp6	0	0	:::443	:::*	LISTEN	5432/apache2
 
 root@example:~# apachectl -S
 VirtualHost configuration:
