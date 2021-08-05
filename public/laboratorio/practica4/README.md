@@ -4,6 +4,10 @@
 
 ## Implementación de sitios web sobre HTTPS
 
+[[_TOC_]]
+
+### Videos de la parte teórica y de implementación
+
 Se pide estudiar los siguientes videos sobre los temas que trata la práctica, para su mejor comprensión y aprendizaje.
 
 - Todos estos videos están en una [lista de reproducción][playlist-https].
