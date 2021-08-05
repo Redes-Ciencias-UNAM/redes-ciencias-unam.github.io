@@ -28,6 +28,8 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 
   - [Certificados SSL con OpenSSL y VirtualHost HTTPS en Apache HTTPD 📼](https://youtu.be/66dOHHD6L5I&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=7)
 
+  - [Trámite de un certificado SSL con Let's Encrypt utilizando certbot 📼](https://youtu.be/kpiChLT5JPs&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=8)
+
 ### Fecha de entrega
 
 - [Lunes 9 de agosto de 2021 a las 23:59 hrs][countdown].
