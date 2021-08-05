@@ -4,7 +4,12 @@
 
 ## Implementación de sitios web sobre HTTPS
 
+<details open>
+  <summary>Tabla de contenido</summary>
+
 [[_TOC_]]
+
+</details>
 
 ### Videos de la parte teórica y de implementación
 
