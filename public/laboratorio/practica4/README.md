@@ -260,6 +260,7 @@ En la ventana para importar una llave de SSH
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
+> - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS
 > - Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
 > - Reemplazar `example.com` con el nombre de dominio
 
@@ -799,14 +800,14 @@ Repite este paso para todos los dominios configurados en tus VirtualHosts
 
 Visita los dominios con un navegador web para comprobar que el `VirtualHost` esté configurado correctamente
 
-| Dominio                         | Sitio                                      | Ejemplo                    |
-|--------------------------------:|:-------------------------------------------|:---------------------------|
-| `https://50.19.212.156/`        | Página genérica                            | https://example.com/ |
-| `https://example.com/`          | Página genérica                            | https://example.com/ |
-| `https://docs.example.com/`     | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
-| `https://manual.example.com/`   | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/ |
-| `https://sitio.example.com/`    | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
-| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ |
+| Dominio                         | Sitio                                      | Referencia                                                 | Ejemplo                          |
+|--------------------------------:|:-------------------------------------------|:-----------------------------------------------------------|---------------------------------:|
+|        `https://50.19.212.156/` | Página genérica                            | https://example.com/                                       |       https://redes.tonejito.cf/ |
+|          `https://example.com/` | Página genérica                            | https://example.com/                                       |       https://redes.tonejito.cf/ |
+|     `https://docs.example.com/` | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/                    |  https://docs.redes.tonejito.cf/ |
+|   `https://manual.example.com/` | Documentación del _kernel_ Linux           | https://www.kernel.org/doc/html/latest/                    |  https://docs.redes.tonejito.cf/ |
+|    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ | https://sitio.redes.tonejito.cf/ |
+| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/ | https://sitio.redes.tonejito.cf/ |
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
