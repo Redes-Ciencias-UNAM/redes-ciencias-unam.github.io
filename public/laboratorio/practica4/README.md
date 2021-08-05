@@ -123,7 +123,7 @@ En la ventana para importar una llave de SSH
 - Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
 
 ##### ID de imagenes AMI
-<a id="ami"></a>
+<a id="ami" name="ami"></a>
 
 | Región    | Arquitectura   | Instancias | ID imágen AMI                      | Nombre de la imágen AMI        |
 |:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
@@ -258,6 +258,7 @@ En la ventana para importar una llave de SSH
 --------------------------------------------------------------------------------
 
 ##### Asignación de nombre DNS a la instancia EC2
+<a id="dns" name="dns"></a>
 
 - Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
 
@@ -395,6 +396,7 @@ admin@ip-172-31-85-20:~$
 ```
 
 ##### Autenticación SSH en la instancia EC2
+<a id="ssh-key" name="ssh-key"></a>
 
 Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica.
 
@@ -440,6 +442,7 @@ removed '/tmp/redes_rsa.pub'
 --------------------------------------------------------------------------------
 
 #### Configuración inicial de la instancia EC2
+<a id="config" name="config"></a>
 
 ##### Utilerias de red
 
