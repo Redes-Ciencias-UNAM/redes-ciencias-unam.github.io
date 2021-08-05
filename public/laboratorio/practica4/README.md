@@ -108,7 +108,11 @@ En la ventana para importar una llave de SSH
 
 -  Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
 
-  - `ami-087b6081d18c91a97`
+  - `ami-087b6081d18c91a97` para instancias `t4g` de arquitectura `arm64`
+<!--
+  - `ami-05ad4ed7f9c48178b` para instancias `t3a` de arquitectura `amd64` (`x86_64`)
+-->
+
 
 ![Consola EC2](img/008-EC2-instance-start.png)
 
@@ -117,6 +121,9 @@ En la ventana para importar una llave de SSH
 ![Consola EC2](img/009-EC2-instance-type-ami.png)
 
 - Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
+
+##### ID de imagenes AMI
+<a id="ami"></a>
 
 | Región    | Arquitectura   | Instancias | ID imágen AMI                      | Nombre de la imágen AMI        |
 |:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
@@ -131,6 +138,10 @@ En la ventana para importar una llave de SSH
 ![Consola EC2](img/010-EC2-instance-ami-debian10-arm.png)
 
 - Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
+
+> En caso de error seleccionar con la instancia `t4g.micro`  (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa gratuita**][aws-free-tier] de AWS.
+
+[aws-free-tier]: https://aws.amazon.com/free/
 
 ![Consola EC2](img/011-EC2-instance-ami-family.png)
 
