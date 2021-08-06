@@ -1073,17 +1073,39 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 
 ### Cuestionario
 
+-  De acuerdo a la siguiente información proporcionada por AWS https://aws.amazon.com/es/ec2/instance-types/
+
+    - ¿Qué ventajas tiene elegir el tipo de instancia o Instance Type t3g.micro sobre otras?
+
+    - ¿Cuál podría ser la razón de que AWS ofrezca muy diversos tipos de instancia?
+
+- ¿Qué es una _IP Elástica_?, ¿qué diferencia existe entre una **IP elástica** y la dirección IP que le es asignada a una instancia EC2 de manera predeterminada?
+
+- ¿Qué es una _Imagen AMI_ y para qué sirve?, ¿un usuario puede crear sus propias imágenes o depende de proveedores de terceros que las generen?
+
+- ¿Para qué sirvió la configuración inicial de la máquina virtual?, ¿qué ventajas proporciona respecto a una máquina virtual que no tenga esta configuración?
+
 - ¿Existe alguna diferencia al crear los registros DNS para el VirtualHost como `CNAME` en lugar de `A` y `AAAA`?
+
+- ¿Cómo se verifica que la llave privada ubicada en `/etc/letsencrypt/archive/example.com/cert1.pem` corresponde al certificado ubicado en `/etc/letsencrypt/archive/example.com/privkey1.pem`?
+
+- ¿Qué contienen los archivos `/etc/letsencrypt/archive/example.com/chain1.pem` y `/etc/letsencrypt/archive/example.com/fullchain1.pem`?, ¿en qué se relacionan con el certificado SSL `cert1.pem`?
+
+- ¿Para qué sirven las directivas `ServerName` y `ServerAlias` en la configuración de Apache HTTPD?, ¿en que secciones de la configuración se utilizan?
+
+- ¿Qué otros mecanismos propondrías para convertir archivos en algún formato como Markdown, ReStructured Text o AsciiDoc a HTML para hospedar un **sitio web estático** de documentación?
+
+
 
 ### Notas adicionales
 
--   Redacte un reporte por equipo, en el que consigne los pasos que considere necesarios para explicar cómo realizó la práctica, incluya capturas de pantalla que justifiquen su trabajo.
+-   Redacte un reporte por equipo, en el que consigne los pasos que considere necesarios para explicar cómo realizó la práctica, incluya capturas de pantalla que justifiquen su trabajo
 
--   Incluya en su reporte tanto las respuestas del Cuestionario, como un apartado de conclusiones referentes al trabajo realizado.
+-   Incluya en su reporte tanto las respuestas del Cuestionario, como un apartado de conclusiones referentes al trabajo realizado
 
--   Puede agregar posibles errores, complicaciones, opiniones, críticas de la práctica o del laboratorio, o cualquier comentario relativo a la misma.
+-   Puede agregar posibles errores, complicaciones, opiniones, críticas de la práctica o del laboratorio, o cualquier comentario relativo a la misma
 
--   Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso,
+-   Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso
     <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>.
 
 <!--
