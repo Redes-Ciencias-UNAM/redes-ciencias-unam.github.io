@@ -1073,29 +1073,53 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 
 ### Cuestionario
 
--  De acuerdo a la siguiente información proporcionada por AWS https://aws.amazon.com/es/ec2/instance-types/
-
-    - ¿Qué ventajas tiene elegir el tipo de instancia o Instance Type t3g.micro sobre otras?
-
-    - ¿Cuál podría ser la razón de que AWS ofrezca muy diversos tipos de instancia?
-
-- ¿Qué es una _IP Elástica_?, ¿qué diferencia existe entre una **IP elástica** y la dirección IP que le es asignada a una instancia EC2 de manera predeterminada?
-
-- ¿Qué es una _Imagen AMI_ y para qué sirve?, ¿un usuario puede crear sus propias imágenes o depende de proveedores de terceros que las generen?
+<!--
+#### Práctica
+-->
 
 - ¿Para qué sirvió la configuración inicial de la máquina virtual?, ¿qué ventajas proporciona respecto a una máquina virtual que no tenga esta configuración?
 
+- ¿Para qué sirve la configuración de seguridad que se aplicó a Apache HTTPD?, ¿qué ventajas proporciona respecto a un servidor que no cuente con estas configuraciones?
+
 - ¿Existe alguna diferencia al crear los registros DNS para el VirtualHost como `CNAME` en lugar de `A` y `AAAA`?
+
+- ¿Para qué sirve el VirtualHost `_default_` que se configuró en los archivos `000-default` y `default-ssl`?
+
+- ¿Para qué sirven las directivas `ServerName` y `ServerAlias` en la configuración de Apache HTTPD?, ¿en que secciones de la configuración se utilizan?
 
 - ¿Cómo se verifica que la llave privada ubicada en `/etc/letsencrypt/archive/example.com/cert1.pem` corresponde al certificado ubicado en `/etc/letsencrypt/archive/example.com/privkey1.pem`?
 
 - ¿Qué contienen los archivos `/etc/letsencrypt/archive/example.com/chain1.pem` y `/etc/letsencrypt/archive/example.com/fullchain1.pem`?, ¿en qué se relacionan con el certificado SSL `cert1.pem`?
 
-- ¿Para qué sirven las directivas `ServerName` y `ServerAlias` en la configuración de Apache HTTPD?, ¿en que secciones de la configuración se utilizan?
-
+<!--
 - ¿Qué otros mecanismos propondrías para convertir archivos en algún formato como Markdown, ReStructured Text o AsciiDoc a HTML para hospedar un **sitio web estático** de documentación?
+-->
 
+<!--
+#### AWS
+-->
 
+-  De acuerdo a la siguiente información proporcionada por AWS https://aws.amazon.com/es/ec2/instance-types/
+
+    - ¿Qué ventajas tiene elegir el tipo de instancia `t3g.micro` o `t4g.micro` sobre otras?
+
+    - ¿Cuál podría ser la razón de que AWS ofrezca muy diversos tipos de instancia?
+
+- Para el contexto de las actividades de esta práctica, ¿hay alguna diferencia entre realizar las actividades en una máquina virtual con arquitectura `x86_64` y `ARM`?
+
+- ¿Qué es una _IP Elástica_?, ¿qué diferencia existe entre una **IP elástica** y la dirección IP que le es asignada a una instancia EC2 de manera predeterminada?
+
+- ¿Qué es una _Imagen AMI_ y para qué sirve?, ¿un usuario puede crear sus propias imágenes o depende de proveedores de terceros que las generen?
+
+- Ve el siguiente video, emite un comentario sobre los conceptos utilizados en esta práctica y haz un diagrama que muestre cómo es que llega una petición HTTP entre tu equipo local y la instancia EC2 hospedada en AWS
+
+    - [Fundamentos de redes en AWS - AWS Summit America 2020 📼](https://youtu.be/iwCZVBWDkoU&list=PL2yQDdvlhXf-KBzPOpzRVvujzT2N0hvoU&index=27)
+
+<!--
+    - [AWS Networking Fundamentals 📼](https://youtu.be/hiKPPy584Mg)
+
+    - [Seguridad en AWS - AWS Public Sector Summit Mexico City 2020 📼](https://youtu.be/d3jnbtaLb24&list=PL2yQDdvlhXf_h40vMoMoh2SBa05geKLDq&index=10)
+-->
 
 ### Notas adicionales
 
