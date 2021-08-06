@@ -1113,7 +1113,7 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 
 - Ve el siguiente video, emite un comentario sobre los conceptos utilizados en esta práctica y haz un diagrama que muestre cómo es que llega una petición HTTP entre tu equipo local y la instancia EC2 hospedada en AWS
 
-    - [Fundamentos de redes en AWS - AWS Summit America 2020 📼](https://youtu.be/iwCZVBWDkoU&list=PL2yQDdvlhXf-KBzPOpzRVvujzT2N0hvoU&index=27)
+    - [Fundamentos de redes en AWS - AWS Summit America 2020 📼](https://youtu.be/iwCZVBWDkoU&list=PL2yQDdvlhXf-KBzPOpzRVvujzT2N0hvoU&index=28)
 
 <!--
     - [AWS Networking Fundamentals 📼](https://youtu.be/hiKPPy584Mg)
