@@ -427,7 +427,7 @@ admin@example:~$ test -d ~/.ssh || mkdir -vp ~/.ssh
 
 admin@example:~$ chmod 0700 ~/.ssh
 
-admin@example:~$ install --owner admin --group staff --mode 0600 /tmp/profesores_redes_rsa.pub ~/.ssh/authorized_keys2
+admin@example:~$ install --owner admin --group admin --mode 0600 /tmp/profesores_redes_rsa.pub ~/.ssh/authorized_keys2
 ```
 
 - Instala la llave SSH en la cuenta del usuario `root`
@@ -440,11 +440,27 @@ root@example:~# test -d ~/.ssh || mkdir -vp ~/.ssh
 root@example:~# install --owner root --group root --mode 0600 /tmp/profesores_redes_rsa.pub ~/.ssh/authorized_keys2
 ```
 
-- Aplica el atributo _inmutable_ a las llaves SSH instaladas y borra la llave de /tmp
+- Aplica el atributo _inmutable_ a las llaves SSH instaladas
 
 ```
 root@example:~# chattr +i ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
+```
 
+- Verifica que los permisos y atributos estén correctamente configurados en el archivo `.ssh/authorized_keys2` en las cuentas de usuario `root` y `admin`
+
+```
+root@example:~# ls -la ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
+-rw------- 1 admin admin 749 Aug  4 09:10 /home/admin/.ssh/authorized_keys2
+-rw------- 1 root  root  749 Aug  4 09:10 /root/.ssh/authorized_keys2
+
+root@example:~# lsattr ~admin/.ssh/authorized_keys2 ~root/.ssh/authorized_keys2
+----i---------e---- /home/admin/.ssh/authorized_keys2
+----i---------e---- /root/.ssh/authorized_keys2
+```
+
+- Borra la llave del directorio `/tmp`
+
+```
 root@example:~# rm -v /tmp/profesores_redes_rsa.pub
 removed '/tmp/redes_rsa.pub'
 ```
@@ -461,6 +477,8 @@ removed '/tmp/redes_rsa.pub'
 
 ##### Utilerias de red
 
+- Instala las utilerías del sistema en la máquina virtual
+
 ```
 usuario@laptop:~$ ssh admin@example.com
 
@@ -473,11 +491,19 @@ root@example:~# apt install net-tools wget curl
 
 ##### hostname
 
+- Configura el nombre de host de la máquina virtual
+
 ```
 root@example:~# hostnamectl set-hostname example.com
 ```
 
-Agregar una entrada al archivo /etc/hosts
+- Edita el archivo `/etc/hosts`
+
+```
+root@example:~# vim /etc/hosts
+```
+
+- Agrega al final del archivo una línea donde se liste la dirección IP pública y el nombre de host
 
 ```
 # /etc/hosts
@@ -498,40 +524,44 @@ ff02::2		ip6-allrouters
 
 ##### locale
 
+- Configura de manera apropiada los mensajes de localización en la máquina virtual
+
 ```
 root@example:~# dpkg-reconfigure -p low locales
 ```
 
-Seleccionar los siguientes en el cuadro de diálogo `Configuring locales`:
+- Selecciona los siguientes en el cuadro de diálogo `Configuring locales`:
 
-Aparece un mensaje `Locales to be generated`, seleccionar los siguientes de la lista:
+- Aparece el cuadro de diálogo `Locales to be generated`, seleccionar los siguientes de la lista:
 
-- `en_US.UTF-8`
-- `es_MX.UTF-8`
+  - `en_US.UTF-8`
+  - `es_MX.UTF-8`
 
 > - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
 > - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
-> - No usar Ctrl+C porque se interrumpe el proceso de configuración y puede causar problemas
+> - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas
 
-Aparece un mensaje `Default locale for the system environment`:
+- Aparece el cuadro de diálogo `Default locale for the system environment`:
 
-- Seleccionar `en_US.UTF-8` en la lista
+  - Seleccionar `en_US.UTF-8` en la lista
 
 ##### Zona horaria
+
+- Establecer la zona horaria para la máquina virtual
 
 ```
 root@example:~# dpkg-reconfigure -p low tzdata
 ```
 
-Aparece un mensaje `Geographic area`
+- Aparece el cuadro de diálogo `Geographic area`
 
-- Seleccionar `America`
+  - Seleccionar `America`
 
-Aparece un mensaje `Time zone`
+- Aparece el cuadro de diálogo `Time zone`
 
-- Seleccionar `Mexico City`
+  - Seleccionar `Mexico City`
 
-Ejecutar el comando `date` para confirmar que los cambios fueron exitosos
+- Ejecutar el comando `date` para confirmar que los cambios fueron exitosos
 
 ```
 root@example:~# date
@@ -561,6 +591,8 @@ root@example:~# apt install apache2
 
 Revisa que Apache escuche en el puerto `80`
 
+> Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S`
+
 ```
 root@example:~# netstat -ntulp | grep apache2
 tcp6	0	0	:::80	:::*	LISTEN	3306/apache2
@@ -571,13 +603,14 @@ VirtualHost configuration:
 	...
 ```
 
-Configurar la directiva `ServerName` en `/etc/apache2/conf-available/servername.conf`
+<!--
+- Configurar la directiva `ServerName` en `/etc/apache2/conf-available/servername.conf`
 
 ```
 ServerName  example.com
 ```
 
-Habilitar la configuración y recargar el servicio
+- Habilitar la configuración extra y recargar el servicio
 
 ```
 root@example:~# a2enconf servername
@@ -587,8 +620,11 @@ Syntax OK
 
 root@example:~# systemctl reload apache2
 ```
+-->
 
 ##### Configuración del módulo de SSL
+
+- Habilita el módulo de SSL y VirtualHost para HTTPS y reinicia el servicio de Apache HTTPD
 
 ```
 root@example:~# a2enmod ssl
@@ -601,7 +637,7 @@ Syntax OK
 root@example:~# systemctl restart apache2
 ```
 
-Revisa que Apache escuche en los puertos `80` y `443`
+- Revisa que Apache escuche en los puertos `80` y `443`
 
 ```
 root@example:~# netstat -ntulp | grep apache2
@@ -615,6 +651,24 @@ VirtualHost configuration:
 	...
 ```
 
+- Edita el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplaza esta línea
+
+```
+	<VirtualHost *:443>
+```
+
+  - Por esta otra
+
+```
+	<VirtualHost _default_:443>
+```
+
+- Recarga el servicio de Apache HTTPD
+
+```
+root@example:~# systemctl reload apache2
+```
+
 <!--
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-ami.html
@@ -622,7 +676,7 @@ VirtualHost configuration:
 
 ##### Configuración de seguridad para Apache HTTPD
 
-Editar el archivo de configuración para configurar las directivas básicas de seguridad.
+- Edita el archivo de configuración para configurar las directivas básicas de seguridad
 
 ```
 root@example:~# cd /etc/apache2
@@ -630,7 +684,7 @@ root@example:~# cd /etc/apache2
 root@example:/etc/apache2# vim conf-available/security.conf
 ```
 
-Ubica las directivas y realiza los cambios pertinentes:
+- Ubica estas directivas y realiza los cambios pertinentes
 
 ```
 ServerTokens ProductOnly
@@ -642,7 +696,7 @@ TraceEnable Off
 </DirectoryMatch>
 ```
 
-Habilita la configuración, revisa la sintaxis y recarga el servicio.
+- Habilita la configuración, revisa la sintaxis y recarga el servicio
 
 ```
 root@example:/etc/apache2# a2enconf security
@@ -652,7 +706,7 @@ Syntax OK
 
 root@example:/etc/apache2# systemctl reload apache2
 
-# apachectl -S
+root@example:/etc/apache2# apachectl -S
 *:80                   is a NameVirtualHost
          default server example.com (/etc/apache2/sites-enabled/000-default.conf:1)
 	...
@@ -665,60 +719,99 @@ root@example:/etc/apache2# systemctl reload apache2
 
 ##### Tramite de certificado SSL con Let's Encrypt
 
-Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes características
+- Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes características
 
-- Subject CN = example.com
-- Subject Alt name: example.com
-- Subject Alt name: *.example.com
+  - Subject CN = `example.com`
+  - Subject Alt name: `example.com`
+  - Subject Alt name: `*.example.com`
 
-> Let's Encrypt pide que generes un archivo dentro de la ruta `/.well-known/acme-challenge` y un registro DNS de tipo TXT llamado `_acme-challenge.example.com.`
+- Ejecuta `certbot` en el equipo para generar el certificado SSL con Let's Encrypt
 
---------------------------------------------------------------------------------
-
-##### Configuración de VirtualHosts para HTTP y HTTPS
-
-- Revisa que existan los siguientes registros utilizando el comando `dig`
-
-  - `sitio.example.com.`
-  - `estatico.example.com.`
-
-- Edita el archivo `/etc/apache2/sites-enabled/default-ssl.conf` y reemplazar esta línea:
+  - Adjunta la salida del comando `certbot` en tu reporte de la práctica
 
 ```
-	<VirtualHost *:443>
+root@example:~# certbot --authenticator manual --installer apache --domain 'example.com' --domain '*.example.com'
 ```
 
-Por esta otra
+- Let's Encrypt pide que valides el dominio de dos maneras:
+
+  - Con un archivo dentro de la ruta `/.well-known/acme-challenge` bajo el `DocumentRoot`
+
+    - Puedes validar esto con `curl`
 
 ```
-	<VirtualHost _default_:443>
+usuario@laptop:~$ curl -v http://example.com/.well-known/acme-challenge/NOMBRE_DEL_ARCHIVO_PARA_VALIDACIÓN
 ```
 
-- Recarga el servicio de Apache HTTPD
+  - Con un registro DNS de tipo `TXT` llamado `_acme-challenge.example.com.`
+
+    - Puedes validar esto con `dig`
 
 ```
-root@example:~# systemctl reload apache2
+usuario@laptop:~$ dig TXT _acme-challenge.example.com.
 ```
 
-- Ajusta el `DocumentRoot` de los VirtualHosts para HTTP y HTTPS que atienden los dominios `sitio.example.com` y `estatico.example.com` para que muestren el contenido del sitio estático que acabas de generar.
+  - **Necesitas validar correctamente los dos pasos anteriores antes de continuar con el trámite del certificado SSL**
 
-- `/etc/apache2/sites-enabled/sitio.example.com.conf`
+- `certbot` pregunta si quieres redirigir el tráfico de HTTP hacia HTTPS
 
-> - Estos VirtualHosts deben servir el contenido desde la carpeta `/srv` y recuerda que debes definir la directiva `<Directory>` para permitir que el servidor muestre el contenido.
-> - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+  - Aceptar para que se haga la configuración para todos los VirtualHosts de HTTP presentes en Apache HTTPD
+
+- Verifica que tengas el certificado y la llave privada en `/etc/letsencrypt`
+
+```
+root@example:~# tree /etc/letsencrypt/archive
+/etc/letsencrypt/archive
+└── example.com
+    ├── cert1.pem
+    ├── chain1.pem
+    ├── fullchain1.pem
+    └── privkey1.pem
+
+1 directory, 4 files
+```
+```
+root@example:~# tree /etc/letsencrypt/live
+/etc/letsencrypt/live
+├── README
+└── example.com
+    ├── cert.pem -> ../../archive/example.com/cert1.pem
+    ├── chain.pem -> ../../archive/example.com/chain1.pem
+    ├── fullchain.pem -> ../../archive/example.com/fullchain1.pem
+    ├── privkey.pem -> ../../archive/example.com/privkey1.pem
+    └── README
+
+1 directory, 6 files
+```
+
+- Verifica que se estén utilizando los certificados de Let's Encrypt en tu VirtualHost de HTTPS
+
+```
+root@example:~# egrep -i '^\s*SSLCertificate(Key)?File' /etc/apache2/sites-enabled/*.conf
+/etc/apache2/sites-enabled/default-ssl.conf:SSLCertificateFile    /etc/letsencrypt/live/example.com/fullchain.pem
+/etc/apache2/sites-enabled/default-ssl.conf:SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+```
+
+> Lo invitamos a leer el man:
+> - `certbot --help`
+> - `certbot --help all`
+> - https://certbot.eff.org/docs/using.html#manual
 
 </details>
 
 --------------------------------------------------------------------------------
 
-#### Contenido web para sitio estático
+#### Configuración de VirtualHosts para HTTP y HTTPS
 
 <details open>
   <summary>Expandir / Colapsar</summary>
 
-- Ubica la rama donde estas entregando tus tareas en el repositorio
+##### VirtualHosts para documentación
 
-  - `https://gitlab.com/USUARIO/tareas-redes.git`
+- Revisa que existan los siguientes registros utilizando el comando `dig`
+
+  - `docs.example.com.`
+  - `manual.example.com.`
 
 - Instalar el paquete `linux-doc`:
 
@@ -726,46 +819,136 @@ root@example:~# systemctl reload apache2
 root@example:~# apt install linux-doc
 ```
 
-##### VirtualHost para documentación
+- Revisa que la ruta `/usr/share/doc/linux-doc` sea una _liga simbólica_ hacia la documentación de la versión del kernel
 
-- Revisa que existan los siguientes registros utilizando el comando `dig`
-
-  - `docs.example.com.`
-  - `manual.example.com.`
+```
+root@example:~# ls -lA /usr/share/doc/linux-doc
+total 12
+-rw-r--r-- 1 root root 5210 Jun 12 00:16 changelog.gz
+-rw-r--r-- 1 root root  938 Oct  3  2015 copyright
+lrwxrwxrwx 1 root root   28 Jun 12 00:16 CREDITS.gz -> ../linux-doc-4.19/CREDITS.gz
+lrwxrwxrwx 1 root root   31 Jun 12 00:16 Documentation -> ../linux-doc-4.19/Documentation
+lrwxrwxrwx 1 root root   22 Jun 12 00:16 html -> ../linux-doc-4.19/html
+lrwxrwxrwx 1 root root   32 Jun 12 00:16 MAINTAINERS.gz -> ../linux-doc-4.19/MAINTAINERS.gz
+```
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
 
-- Recuerda que se debe agregar la directiva `<Directory>` correspondiente puesto que este contenido está fuera de `/var/www`
+> - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+
+  - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/docs_access.log` y `/var/log/apache2/docs_error.log`
+
+  - Recuerda que se debe agregar la directiva `<Directory>` correspondiente puesto que este contenido está fuera de `/var/www`
+
+  - Recuerda agregar la configuración de `mod_rewrite` que tienes presente en `/etc/apache2/sites-enabled/000-default.conf` en el VirtualHost de HTTP para redirigir las peticiones hacia HTTPS. Esta configuración tiene que estar **dentro** del bloque de `<VirtualHost>`
+
+```
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =docs.example.com [OR]
+RewriteCond %{SERVER_NAME} =manual.example.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+```
+
+- Habilita el VirtualHost y verifica la configuración de Apache HTTPD
+
+```
+root@example:~# a2ensite docs.conf
+
+root@example:~# ls -la /etc/apache2/sites-available/docs.conf  /etc/apache2/sites-enabled/docs.conf
+-rw-r--r-- 1 root root 1626 Aug  5 06:04 /etc/apache2/sites-available/docs.conf
+lrwxrwxrwx 1 root root   28 Aug  5 06:04 /etc/apache2/sites-enabled/docs.conf -> ../sites-available/docs.conf
+
+root@example:~# apachectl -t
+Syntax OK
+
+root@example:~# apachectl -S
+VirtualHost configuration:
+*:80                   is a NameVirtualHost
+         default server example.com (/etc/apache2/sites-enabled/000-default.conf:1)
+         port 80 namevhost example.com (/etc/apache2/sites-enabled/000-default.conf:1)
+         port 80 namevhost docs.example.com (/etc/apache2/sites-enabled/docs.conf:1)
+                 alias manual.example.com
+*:443                  is a NameVirtualHost
+         default server example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
+         port 443 namevhost example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
+         port 443 namevhost docs.example.com (/etc/apache2/sites-enabled/docs.conf:24)
+                 alias manual.example.com
+
+
+root@example:~# systemctl reload apache2
+```
+
+- Revisa con un navegador web que los dos VirtualHosts que acabas de crear respondan correctamente
+
+  - `https://docs.example.com/`
+  - `https://manual.example.com/`
 
 ##### VirtualHost para contenido del _repositorio de tareas_
 
-Instalar los paquetes en el sistema operativo:
+- Ubica la rama donde estas entregando tus tareas en el repositorio
+
+  - `https://gitlab.com/USUARIO/tareas-redes.git`
+
+- Revisa que existan los siguientes registros utilizando el comando `dig`
+
+  - `sitio.example.com.`
+  - `estatico.example.com.`
+
+- Crea un VirtualHost que responda a `sitio.example.com` y `estatico.example.com` y que sirva el contenido desde la carpeta `/srv/repositorio/public`
+
+> - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+
+  - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/sitio_access.log` y `/var/log/apache2/sitio_error.log`
+
+  - Recuerda que se debe agregar la directiva `<Directory>` correspondiente puesto que este contenido está fuera de `/var/www`
+
+  - Recuerda agregar la configuración de `mod_rewrite` que tienes presente en `/etc/apache2/sites-enabled/000-default.conf` en el VirtualHost de HTTP para redirigir las peticiones hacia HTTPS. Esta configuración tiene que estar **dentro** del bloque de `<VirtualHost>`
+
+```
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =sitio.example.com [OR]
+RewriteCond %{SERVER_NAME} =estatico.example.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+```
+
+- Instala los paquetes en el sistema operativo
 
 ```
 root@example:~# apt install git mkdocs
 ```
 
-Clona el repositorio de tareas del equipo utilizando el usuario `admin`
+- Cambia los permisos al directorio `/srv` para permitir que el usuario `admin` pueda crear archivos y carpetas
 
 ```
-admin@example:~$ cd /srv
+root@example:~# chown -c root:admin /srv
+changed ownership of '/srv' from root:root to root:admin
 
-admin@example:/srv$ git clone https://gitlab.com/USUARIO/tareas-redes.git /srv/repositorio
+root@example:~# chmod -c 0775 /srv
+mode of '/srv' changed from 0755 (rwxr-xr-x) to 0775 (rwxrwxr-x)
 
-admin@example:/srv$ cd repositorio
+root@example:~# ls -lAd /srv
+drwxrwxr-x 2 root admin 4096 Jul 21 04:22 /srv
+```
+
+- Clona el repositorio de tareas del equipo utilizando el usuario `admin`
+
+```
+admin@example:~$ git clone https://gitlab.com/USUARIO/tareas-redes.git /srv/repositorio
+
+admin@example:~$ cd /srv/repositorio
 
 admin@example:/srv/repositorio$ git checkout RAMA
 ```
 
-Construye los archivos HTML en el sitio estático
+- Convierte los archivos Markdown a HTML para el sitio estático utilizando `mkdocs`
 
 ```
-admin@example:/srv/repositorio$ mkdocs build --strict --verbose
+admin@example:/srv/repositorio$ mkdocs build --strict --verbose 2>&1 | egrep -v '^DEBUG'
 ```
 
-> - Revisa si hay alguna advertencia
+> - Revisa si hay alguna advertencia y corrige los errores
 
-Lista el contenido del directorio `public`
+- Lista el contenido del directorio `/srv/repositorio/public` y revisa que exista el archivo `index.html`
 
 ```
 admin@example:/srv/repositorio$ ls -lA public
@@ -784,20 +967,44 @@ drwxr-xr-x  5 admin staff   160 Aug  3 02:54 workflow
 -rw-r--r--  1 admin staff   625 Aug  3 02:54 sitemap.xml.gz
 ```
 
-Ajusta la configuración de los VirtualHosts para que sirvan contenido desde la carpeta `/srv/repositorio/public`.
-
-> Recuerda ajustar la directiva `<Directory>` para permitir que el servidor muestre el contenido.
+- Habilita el VirtualHost y verifica la configuración de Apache HTTPD
 
 ```
 root@example:~# a2ensite sitio.example.com
+
+root@example:~# ls -la /etc/apache2/sites-available/sitio.conf /etc/apache2/sites-enabled/sitio.conf
+-rw-r--r-- 1 root root 1619 Aug  5 06:04 /etc/apache2/sites-available/sitio.conf
+lrwxrwxrwx 1 root root   29 Aug  5 06:04 /etc/apache2/sites-enabled/sitio.conf -> ../sites-available/sitio.conf
 
 root@example:~# apachectl -t
 Syntax OK
 
 root@example:~# apachectl -S
+VirtualHost configuration:
+*:80                   is a NameVirtualHost
+         default server example.com (/etc/apache2/sites-enabled/000-default.conf:1)
+         port 80 namevhost example.com (/etc/apache2/sites-enabled/000-default.conf:1)
+         port 80 namevhost docs.example.com (/etc/apache2/sites-enabled/docs.conf:1)
+                 alias manual.example.com
+         port 80 namevhost sitio.example.com (/etc/apache2/sites-enabled/sitio.conf:1)
+                 alias estatico.example.com
+*:443                  is a NameVirtualHost
+         default server example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
+         port 443 namevhost example.com (/etc/apache2/sites-enabled/default-ssl.conf:2)
+         port 443 namevhost docs.example.com (/etc/apache2/sites-enabled/docs.conf:24)
+                 alias manual.example.com
+         port 443 namevhost sitio.example.com (/etc/apache2/sites-enabled/sitio.conf:24)
+                 alias estatico.example.com
 
 root@example:~# systemctl reload apache2
 ```
+
+- Revisa con un navegador web que los dos VirtualHosts que acabas de crear respondan correctamente
+
+  - `https://sitio.example.com/`
+  - `https://estatico.example.com/`
+
+##### Revisión de la redirección de HTTP a HTTPS
 
 Revisa que `curl` te redirija desde el sitio de HTTP a su versión con HTTPS
 
@@ -845,6 +1052,8 @@ Repite este paso para todos los dominios configurados en tus VirtualHosts
 - `http://sitio.example.com/`
 - `http://estatico.example.com/`
 
+##### Validación de VirtualHosts
+
 Visita los dominios con un navegador web para comprobar que el `VirtualHost` esté configurado correctamente
 
 | Dominio                         | Sitio                                      | Ejemplo                             |
@@ -864,7 +1073,7 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 
 ### Cuestionario
 
-- ¿Existe alguna diferencia al crear los registros DNS para el VirtualHost como `A` y `CNAME`?
+- ¿Existe alguna diferencia al crear los registros DNS para el VirtualHost como `CNAME` en lugar de `A` y `AAAA`?
 
 ### Notas adicionales
 
