@@ -1118,7 +1118,7 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 <!--
     - [AWS Networking Fundamentals 📼](https://youtu.be/hiKPPy584Mg)
 
-    - [Seguridad en AWS - AWS Public Sector Summit Mexico City 2020 📼](https://youtu.be/d3jnbtaLb24&list=PL2yQDdvlhXf_h40vMoMoh2SBa05geKLDq&index=10)
+    - [Seguridad en AWS - AWS Public Sector Summit Mexico City 2020 📼](https://youtu.be/d3jnbtaLb24&list=PL2yQDdvlhXf_h40vMoMoh2SBa05geKLDq&index=10&t=1635)
 -->
 
 ### Notas adicionales
