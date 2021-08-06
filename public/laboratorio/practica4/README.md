@@ -5,7 +5,7 @@
 ## Implementación de sitios web sobre HTTPS
 
 <details open>
-  <summary>Tabla de contenido</summary>
+  <summary>Expandir / Colapsar</summary>
 
 [[_TOC_]]
 
@@ -53,6 +53,9 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 ### Desarrollo
 
 #### Creación de la máquina virtual en AWS
+
+<details open>
+  <summary>Expandir / Colapsar</summary>
 
 ##### Generar una llave SSH
 
@@ -446,10 +449,15 @@ root@example:~# rm -v /tmp/profesores_redes_rsa.pub
 removed '/tmp/redes_rsa.pub'
 ```
 
+</details>
+
 --------------------------------------------------------------------------------
 
 #### Configuración inicial de la instancia EC2
 <a id="config" name="config"></a>
+
+<details open>
+  <summary>Expandir / Colapsar</summary>
 
 ##### Utilerias de red
 
@@ -538,9 +546,14 @@ Reinicia la máquina virtual después de aplicar los cambios.
 admin@example:~$ sudo systemctl reboot
 ```
 
+</details>
+
 --------------------------------------------------------------------------------
 
 #### Instalación del servidor Apache HTTPD
+
+<details open>
+  <summary>Expandir / Colapsar</summary>
 
 ```
 root@example:~# apt install apache2
@@ -694,7 +707,14 @@ root@example:~# systemctl reload apache2
 > - Estos VirtualHosts deben servir el contenido desde la carpeta `/srv` y recuerda que debes definir la directiva `<Directory>` para permitir que el servidor muestre el contenido.
 > - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
+</details>
+
+--------------------------------------------------------------------------------
+
 #### Contenido web para sitio estático
+
+<details open>
+  <summary>Expandir / Colapsar</summary>
 
 - Ubica la rama donde estas entregando tus tareas en el repositorio
 
@@ -837,6 +857,8 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://estatico.redes.tonejito.cf/ |
 
 > - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
+
+</details>
 
 --------------------------------------------------------------------------------
 
