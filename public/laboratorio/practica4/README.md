@@ -274,6 +274,10 @@ En la ventana para importar una llave de SSH
 
 - Crear los registros DNS de acuerdo a la siguiente tabla:
 
+> Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1]
+
+[practica-1]: /public/laboratorio/practica1#obtener-un-dominio-en-tech-domains
+
 | Nombre                  | Tipo    | Valor                |
 |------------------------:|:-------:|---------------------:|
 |          `example.com.` | `A`     |      `50.19.212.156` |
