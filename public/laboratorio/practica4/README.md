@@ -78,7 +78,11 @@ usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
 
 - Mostrar el contenido de la llave **pública**
 
-> El contenido de la llave es una cadena muy larga que viene en una sola línea
+>>>
+| Nota |
+|:-----|
+| El contenido de la llave es una cadena muy larga que viene en una sola línea |
+>>>
 
 ```
 usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub
@@ -149,7 +153,11 @@ En la ventana para importar una llave de SSH
 
 - Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
 
-> En caso de error seleccionar con la instancia `t4g.micro`  (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa gratuita**][aws-free-tier] de AWS.
+>>>
+| Nota |
+|:-----|
+| En caso de error seleccionar con la instancia `t4g.micro`  (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa gratuita**][aws-free-tier] de AWS. |
+>>>
 
 [aws-free-tier]: https://aws.amazon.com/free/
 
@@ -167,7 +175,11 @@ En la ventana para importar una llave de SSH
 
 - En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
 
-> No se utilizan _tags_ en esta actividad
+>>>
+| Nota |
+|:-----|
+| No se utilizan _tags_ en esta actividad |
+>>>
 
 ![Consola EC2](img/014-EC2-instance-tags.png)
 
@@ -274,7 +286,11 @@ En la ventana para importar una llave de SSH
 
 - Crear los registros DNS de acuerdo a la siguiente tabla:
 
-> Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1]
+>>>
+| Nota |
+|:-----|
+| Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1] |
+>>>
 
 [practica-1]: /public/laboratorio/practica1#obtener-un-dominio-en-tech-domains
 
@@ -286,13 +302,21 @@ En la ventana para importar una llave de SSH
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
-> - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS
-> - Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
-> - Reemplazar `example.com` con el nombre de dominio
+>>>
+| Nota |
+|:-----|
+| - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS |
+| - Reemplazar `50.19.212.156` con la dirección de la IP elástica |
+| - Reemplazar `example.com` con el nombre de dominio |
+>>>
 
 - Revisa que existan los registros DNS utilizando el comando `dig`
 
-> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
+>>>
+| Nota |
+|:-----|
+| El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta |
+>>>
 
 ```
 usuario@laptop:~$ dig +noall +comments +answer example.com.
@@ -412,9 +436,13 @@ admin@ip-172-31-85-20:~$
 ##### Autenticación SSH en la instancia EC2
 <a id="ssh-key" name="ssh-key"></a>
 
-Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica.
+Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica
 
-> Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso
+>>>
+| Nota |
+|:-----|
+| Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso |
+>>>
 
 - Copia la llave a la máquina virtual
 
@@ -541,9 +569,13 @@ root@example:~# dpkg-reconfigure -p low locales
   - `en_US.UTF-8`
   - `es_MX.UTF-8`
 
-> - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
-> - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
-> - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas
+>>>
+| Nota |
+|:-----|
+| - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones |
+| - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones |
+| - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas |
+>>>
 
 - Aparece el cuadro de diálogo `Default locale for the system environment`:
 
@@ -595,7 +627,11 @@ root@example:~# apt install apache2
 
 Revisa que Apache escuche en el puerto `80`
 
-> Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S`
+>>>
+| Nota |
+|:-----|
+| Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S` |
+>>>
 
 ```
 root@example:~# netstat -ntulp | grep apache2
@@ -796,10 +832,14 @@ root@example:~# egrep -i '^\s*SSLCertificate(Key)?File' /etc/apache2/sites-enabl
 /etc/apache2/sites-enabled/default-ssl.conf:SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 ```
 
-> Lo invitamos a leer el man:
-> - `certbot --help`
-> - `certbot --help all`
-> - https://certbot.eff.org/docs/using.html#manual
+>>>
+| Nota |
+|:-----|
+| Lo invitamos a leer el man:
+| - `certbot --help`
+| - `certbot --help all`
+| - https://certbot.eff.org/docs/using.html#manual
+>>>
 
 </details>
 
@@ -838,7 +878,11 @@ lrwxrwxrwx 1 root root   32 Jun 12 00:16 MAINTAINERS.gz -> ../linux-doc-4.19/MAI
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
 
-> - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+>>>
+| Nota |
+|:-----|
+| Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración |
+>>>
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/docs_access.log` y `/var/log/apache2/docs_error.log`
 
@@ -900,7 +944,11 @@ root@example:~# systemctl reload apache2
 
 - Crea un VirtualHost que responda a `sitio.example.com` y `estatico.example.com` y que sirva el contenido desde la carpeta `/srv/repositorio/public`
 
-> - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+>>>
+| Nota |
+|:-----|
+| Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración |
+>>>
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/sitio_access.log` y `/var/log/apache2/sitio_error.log`
 
@@ -950,7 +998,11 @@ admin@example:/srv/repositorio$ git checkout RAMA
 admin@example:/srv/repositorio$ mkdocs build --strict --verbose 2>&1 | egrep -v '^DEBUG'
 ```
 
-> - Revisa si hay alguna advertencia y corrige los errores
+>>>
+| Nota |
+|:-----|
+| Revisa si hay alguna advertencia y corrige los errores |
+>>>
 
 - Lista el contenido del directorio `/srv/repositorio/public` y revisa que exista el archivo `index.html`
 
@@ -1047,7 +1099,11 @@ admin@example:~$ curl -v "http://example.com/"
 
 Repite este paso para todos los dominios configurados en tus VirtualHosts
 
-> Si gustas puedes automatizarlo con un script de bash y subirlo a la carpeta `files`
+>>>
+| Nota |
+|:-----|
+| Si gustas puedes automatizarlo con un script de bash y subirlo a la carpeta `files` |
+>>>
 
 - `http://50.19.212.156/`
 - `http://example.com/`
@@ -1069,7 +1125,12 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 |    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ |    https://sitio.redes.tonejito.cf/ |
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://estatico.redes.tonejito.cf/ |
 
-> - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
+
+>>>
+| Nota |
+|:-----|
+| Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché. |
+>>>
 
 </details>
 
