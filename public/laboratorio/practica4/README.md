@@ -218,11 +218,38 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
   - Repetir para cada protocolo de entrada
 
-| Puerto | Servicio  | Origen                          |
-|:------:|:---------:|:-------------------------------:|
-| `22`   | **SSH**   | Anywhere (`0.0.0.0/0` y `::/0`) |
-| `80`   | **HTTP**  | Anywhere (`0.0.0.0/0` y `::/0`) |
-| `443`  | **HTTPS** | Anywhere (`0.0.0.0/0` y `::/0`) |
+| Puerto   | Servicio      | Origen                          |
+|:--------:|:-------------:|:-------------------------------:|
+| `22`     | **SSH**       | Anywhere (`0.0.0.0/0` y `::/0`) |
+| `80`     | **HTTP**      | Anywhere (`0.0.0.0/0` y `::/0`) |
+| `443`    | **HTTPS**     | Anywhere (`0.0.0.0/0` y `::/0`) |
+| `ICMPv4` | **ICMP IPv4** | Anywhere IPv4 (`0.0.0.0/0`)     |
+| `ICMPv6` | **ICMP IPv6** | Anywhere IPv6 (`::/0`)          |
+
+>>>
+
+<a id="icmp" name="icmp"></a>
+
+<details open>
+  <summary>Expandir / Colapsar</summary>
+
+- Agrega las reglas para el tráfico ICMP de entrada para IPv4 e IPv6
+
+  - Da clic en la sección `Security Groups` el panel izquierdo
+
+  - Selecciona el grupo de seguridad `practica-redes` y da clic en `Edit inbound rules`
+
+![Consola EC2](img/025-EC2-security-group.png)
+
+  - Agrega las reglas de entrada para el protocolo ICMP sobre IPv4 e IPv6 y da clic en el botón `Save rules`
+
+![Consola EC2](026-EC2-security-group-edit.png)
+
+  - Estos cambios se verán reflejados de manera inmediata en tu instancia EC2
+
+</details>
+
+>>>
 
 - Dar clic en el boton **azul** `Review and Launch`
 
