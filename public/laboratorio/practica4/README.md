@@ -124,11 +124,16 @@ En la ventana para importar una llave de SSH
 
 -  Escribir el ID de la imágen de máquina virtual en el campo de búsqueda y dar enter
 
-  - `ami-087b6081d18c91a97` para instancias `t4g` de arquitectura `arm64`
-<!--
-  - `ami-05ad4ed7f9c48178b` para instancias `t3a` de arquitectura `amd64` (`x86_64`)
--->
+  - [`ami-087b6081d18c91a97`][ami-debian-10-buster-arm64] para instancias `t4g` de arquitectura `ARM64`
+  - [`ami-05ad4ed7f9c48178b`][ami-debian-10-buster-amd64] para instancias `t3a`, `t3` y `t2` de arquitectura `amd64` (`x86_64`)
 
+<blockquote>
+
+| Nota |
+|:-----|
+| Algunas cuentas de AWS únicamente pueden lanzar instancias `t2.micro`
+
+</blockquote>
 
 ![Consola EC2](img/008-EC2-instance-start.png)
 
@@ -136,20 +141,27 @@ En la ventana para importar una llave de SSH
 
 ![Consola EC2](img/009-EC2-instance-type-ami.png)
 
-- Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM y dar clic en el botón **azul** `Select`
+- Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM o amd64 (x86_64) y dar clic en el botón **azul** `Select`
 
 ##### ID de imagenes AMI
 <a id="ami" name="ami"></a>
 
-| Región    | Arquitectura   | Instancias | ID imágen AMI                      | Nombre de la imágen AMI        |
-|:---------:|:--------------:|:----------:|:----------------------------------:|:-------------------------------:
-| us-east-1 | ARM64          | t4g        | [ami-087b6081d18c91a97][ami-arm64] | `debian-10-arm64-20210721-710` |
+| Región    | Arquitectura   | Instancias         | ID imágen AMI                                         | Nombre de la imágen AMI        |
+|:---------:|:--------------:|:------------------:|:-----------------------------------------------------:|:-------------------------------:
+| us-east-1 | ARM64          | `t4g`              | [`ami-087b6081d18c91a97`][ami-debian-10-buster-arm64] | `debian-10-arm64-20210721-710` |
+| us-east-1 | amd64 (x86_64) | `t3a`, `t3` y `t2` | [`ami-05ad4ed7f9c48178b`][ami-debian-10-buster-amd64] | `debian-10-amd64-20210721-710` |
+| us-east-1 | ARM64          | `t4g`              | [`ami-0af96487b9b9c4577`][ami-debian-9-stretch-arm64] | `debian-stretch-hvm-arm64-gp2-2021-07-21-65720`  |
+| us-east-1 | amd64 (x86_64) | `t3a`, `t3` y `t2` | [`ami-0d69a91f191e32057`][ami-debian-9-stretch-amd64] | `debian-stretch-hvm-x86_64-gp2-2021-07-21-65742` |
+
 <!--
-| us-east-1 | AMD64 (x86_64) | t3a        | [ami-05ad4ed7f9c48178b][ami-amd64] | `debian-10-amd64-20210721-710` |
+https://wiki.debian.org/Cloud/AmazonEC2Image/Stretch#Stretch
+https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 -->
 
-[ami-amd64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=x86_64;imageId=ami-05ad4ed7f9c48178b;sort=name
-[ami-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;imageId=ami-087b6081d18c91a97;sort=name
+[ami-debian-10-buster-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;ownerAlias=136693071363;imageId=ami-087b6081d18c91a97;name=debian-10-arm64-20210721-710
+[ami-debian-10-buster-amd64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=x86_64;ownerAlias=136693071363;imageId=ami-05ad4ed7f9c48178b;name=debian-10-amd64-20210721-710
+[ami-debian-9-stretch-arm64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=arm64;ownerAlias=379101102735;imageId=ami-0af96487b9b9c4577;name=debian-stretch-hvm-arm64-gp2-2021-07-21-65720
+[ami-debian-9-stretch-amd64]: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;architecture=x86_64;ownerAlias=379101102735;imageId=ami-0d69a91f191e32057;name=debian-stretch-hvm-x86_64-gp2-2021-07-21-65742
 
 ![Consola EC2](img/010-EC2-instance-ami-debian10-arm.png)
 
