@@ -171,7 +171,8 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 | Nota |
 |:-----|
-| En caso de error seleccionar con la instancia `t4g.micro`  (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa gratuita**][aws-free-tier] de AWS. |
+| En caso de error seleccionar con la instancia `t4g.micro` (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa de uso gratuita**][aws-free-tier] de AWS. |
+| Algunas cuentas únicamente pueden lanzar instancias `t2.micro`, si este es el caso verifica que tengas el AMI para arquitectura amd64 (x86_64) |
 
 </blockquote>
 
