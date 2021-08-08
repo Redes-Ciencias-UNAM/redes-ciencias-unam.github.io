@@ -720,6 +720,39 @@ root@example:~# systemctl reload apache2
 ```
 -->
 
+##### Página para el VirtualHost predeterminado
+
+- Crea la página de inicio del VirtualHost `_default_` para HTTP y HTTPS con el siguiente contenido en el archivo `/var/www/html/index.html`
+
+<blockquote>
+
+| Nota |
+|:-----|
+| - Reemplazar `Equipo-AAAA-BBBB-CCCC-DDDD` con el identificador de tu equipo |
+| - Reemplazar `example.com` con el nombre de dominio |
+
+</blockquote>
+
+```html
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Práctica redes</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+    <h1>Hola</h1>
+    <div>
+      <p>Esta es la página del <code>Equipo-AAAA-BBBB-CCCC-DDDD</code></p>
+      <p>Nuestro dominio DNS es <code>example.com</code></p>
+    </div>
+    <hr/>
+    <code>Redes de Computadoras</code>
+  </body>
+</html>
+```
+
 ##### Configuración del módulo de SSL
 
 - Habilita el módulo de SSL y VirtualHost para HTTPS y reinicia el servicio de Apache HTTPD
