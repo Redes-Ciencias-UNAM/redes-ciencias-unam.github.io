@@ -1165,14 +1165,6 @@ admin@example:~$ curl -v "http://example.com/"
 
 Repite este paso para todos los dominios configurados en tus VirtualHosts
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Si gustas puedes automatizarlo con un script de bash y subirlo a la carpeta `files` |
-
-</blockquote>
-
 - `http://50.19.212.156/`
 - `http://example.com/`
 - `http://docs.example.com/`
@@ -1203,6 +1195,93 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 </blockquote>
 
 </details>
+
+--------------------------------------------------------------------------------
+
+### Entregables
+
+Sube al directorio `files` de tu reporte los siguientes archivos:
+
+- Archivo `virtualhosts.txt` con el listado de VirtualHosts en la configuración de Apache HTTPD
+
+```
+root@example:~# apachectl -S 2>&1 | tee virtualhosts.txt
+```
+
+- Copia de seguridad de la configuración de Apache HTTPD en el directorio `/etc/apache2`
+
+```
+root@example:~# tar -cvvf apache2.tar -C /etc/apache2 .
+```
+
+- Copia de seguridad del directorio `/var/www`
+
+```
+root@example:~# tar -cvvf www.tar -C /var/www .
+```
+
+- Archivo `registros-dns.txt` donde vengan las consultas de todos los nombres DNS que generaste
+
+| Nombre                  | Tipo    | Valor                |
+|------------------------:|:-------:|---------------------:|
+|          `example.com.` | `A`     |      `50.19.212.156` |
+|     `docs.example.com.` | `A`     |      `50.19.212.156` |
+|   `manual.example.com.` | `A`     |      `50.19.212.156` |
+|    `sitio.example.com.` | `CNAME` |       `example.com.` |
+| `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
+
+>>>
+
+Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`][files/consulta-dns.sh]
+
+```
+usuario@laptop:~$ chmod +x consulta-dns.sh
+usuario@laptop:~$ ./consulta-dns.sh example.com 2>&1 | tee registros-dns.txt
+```
+
+>>>
+
+- Archivo con el diagnóstico de consultas HTTP y HTTPS a la dirección IP y nombres DNS de los VirtualHosts
+
+>>>
+
+- Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`][files/consulta-http.sh]
+
+```
+usuario@laptop:~$ chmod +x consulta-http.sh
+usuario@laptop:~$ ./consulta-http.sh example.com 2>&1 | tee diagnostico-http.txt
+```
+
+>>>
+
+- Archivo con el diagnóstico de certificados SSL que regresa cada VirtualHost configurado
+
+>>>
+
+- Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`][files/consulta-ssl.sh]
+
+```
+usuario@laptop:~$ chmod +x consulta-ssl.sh
+usuario@laptop:~$ ./consulta-ssl.sh example.com 2>&1 | tee diagnostico-ssl.txt
+```
+
+>>>
+
+<!--
+- Copia de seguridad de las bitácoras de Apache HTTPD
+
+```
+root@example:~# tar -cvvzpf apache2-logs.tar.gz /var/log/apache2
+```
+-->
+<!--
+- Copia de seguridad de los datos generados por `certbot`
+
+```
+root@example:~# tar -cvvf letsencrypt.tar /etc/letsencrypt /var/lib/letsencrypt /var/log/letsencrypt
+```
+-->
+
 
 --------------------------------------------------------------------------------
 
