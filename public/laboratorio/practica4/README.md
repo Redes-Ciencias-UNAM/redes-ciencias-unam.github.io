@@ -1265,7 +1265,7 @@ root@example:~# tar -cvvf www.tar -C /var/www .
 
 >>>
 
-Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`][files/consulta-dns.sh]
+Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`](files/consulta-dns.sh)
 
 ```
 usuario@laptop:~$ chmod +x consulta-dns.sh
@@ -1278,7 +1278,7 @@ usuario@laptop:~$ ./consulta-dns.sh example.com 2>&1 | tee registros-dns.txt
 
 >>>
 
-- Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`][files/consulta-http.sh]
+- Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`](files/consulta-http.sh)
 
 ```
 usuario@laptop:~$ chmod +x consulta-http.sh
@@ -1291,7 +1291,7 @@ usuario@laptop:~$ ./consulta-http.sh example.com 2>&1 | tee diagnostico-http.txt
 
 >>>
 
-- Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`][files/consulta-ssl.sh]
+- Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`](files/consulta-ssl.sh)
 
 ```
 usuario@laptop:~$ chmod +x consulta-ssl.sh
