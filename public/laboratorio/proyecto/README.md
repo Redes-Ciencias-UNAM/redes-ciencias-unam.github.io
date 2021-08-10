@@ -28,17 +28,27 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 - De la tabla que se muestra a continuación, elegir un elemento de cada columna
 
-- Habilitar el soporte de "userdir" donde cada usuario tenga en su directorio home una carpeta llamada "public_html" o "public_tomcat" que sirva para que el usuario suba sus archivos y que estén disponibles en `/~usuario` en el servidor
+- Habilitar el soporte de `userdir` donde cada usuario tenga en su directorio home una carpeta llamada `public_html` o `public_tomcat` que sirva para que el usuario suba sus archivos y que estén disponibles en `/~usuario` en el servidor
 
     - Ej. `/home/andres/public_html` ⇨ `https://example.com/~andres`
 
-- Montar una aplicación web simple que se conecte al motor de caché y a la base de datos (la que hayan elegido en la columna de Aplicación Web).
+- Instalar y configurar una aplicación web simple que se conecte al motor de caché y a la base de datos
 
-- El sitio debe tener un certificado SSL emitido por Let's Encrypt, el equipo puede tramitar una zona DNS en FreeNom o pedir que se le delegue una zona para completar la validación del certificado
+  - Elegir una aplicación de la tabla
+
+  - Montar la aplicación elegida en el directorio `/opt`
+
+  - Crear un VirtualHost para que la aplicación responda en los dominios `proyecto.example.com` y `aplicacion.example.com` sobre HTTP y HTTPS
+
+  - No utilizar los VirtualHosts predeterminados para HTTP ni HTTPS
+
+- El sitio debe tener un certificado **wildcard** SSL emitido por Let's Encrypt y se debe utilizar el mismo nombre de dominio que en la [práctica 4][practica-4]
+
+[practica-4]: /public/laboratorio/practica4
 
 - El sitio debe hacer redirección de todas las peticiones HTTP hacía su versión en HTTPS
 
-    - Se puede usar redirecciones estándar 301 y 302 de HTTP
+    - Se pueden usar redirecciones estándar 301 y 302 de HTTP
 
 |                                       |
 |:-------------------------------------:|
@@ -49,6 +59,10 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 ## Servidor de monitoreo
 
 - Instalar un servidor de monitoreo mediante el software Nagios o Icinga
+
+  - Crear un VirtualHost para que la aplicación responda en los dominios `proyecto.example.com` y `aplicacion.example.com` sobre HTTP y HTTPS
+
+  - No utilizar los VirtualHosts predeterminados para HTTP ni HTTPS
 
 - Se debe configurar el servidor para llevar a cabo el monitoreo de estado de los siguientes servicios de red:
 
