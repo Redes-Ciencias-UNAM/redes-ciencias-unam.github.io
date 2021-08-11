@@ -5,7 +5,11 @@
 
 Este trabajo corresponde al último proyecto que deben entregar para realizar la evaluación del curso de Redes de Computadoras
 
-Cada equipo tendrá que configurar uno de los servicios de red que se describen a continuación
+Cada equipo tendrá que configurar uno de los servicios de red que se describen a continuación y anotar su elección en [la hoja de cálculo compartida][hoja-de-calculo]
+
+No se permite tener proyectos repetidos, revisar los requerimientos de la aplicación o sistema elegido para seleccionar la base de datos y motor de caché en memoria (si aplica).
+
+[hoja-de-calculo]: https://docs.google.com/spreadsheets/d/1sySU1Smq105bm8y_5oDMSlUfgankQeqxzEXx5wLHUL4/edit#gid=1809055496
 
 ## Evaluación
 
