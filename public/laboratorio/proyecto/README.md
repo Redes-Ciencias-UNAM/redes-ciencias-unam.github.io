@@ -7,7 +7,11 @@ Este trabajo corresponde al último proyecto que deben entregar para realizar la
 
 Cada equipo tendrá que configurar uno de los servicios de red que se describen a continuación
 
-**Tabla de contenido**
+## Evaluación
+
+La evaluación de este proyecto se pondera con el valor de **dos prácticas** y se promedia con la calificación de las demás prácticas para obtener la calificación final del semestre
+
+## Tabla de contenido
 
 <details open>
   <summary>Expandir / Colapsar</summary>
