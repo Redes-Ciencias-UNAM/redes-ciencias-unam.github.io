@@ -26,7 +26,15 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 ## Implementación de un _stack_ web
 
-- Habilitar el soporte de `userdir` donde cada usuario tenga en su directorio home una carpeta llamada `public_html` o `public_tomcat` que sirva para que el usuario suba sus archivos y que estén disponibles en `/~usuario` en el servidor
+- El sitio debe tener un certificado **wildcard** SSL emitido por Let's Encrypt y se debe utilizar el mismo nombre de dominio que en la [práctica 4][practica-4]
+
+- El sitio debe hacer redirección de todas las peticiones HTTP hacía su versión en HTTPS
+
+    - Se pueden usar redirecciones estándar 301 y 302 de HTTP
+
+    - Utilizar la directiva [`Redirect`][apache-redirect-https] o la configuración de [`mod_rewrite`][apache-rewrite-https] (pero no ambas porque son excluyentes entre si)
+
+- Habilitar el soporte de `userdir` donde cada usuario tenga en su directorio home una carpeta llamada [`public_html`][apache-userdir] o `public_tomcat` que sirva para que el usuario suba sus archivos y que estén disponibles en `/~usuario` en el servidor
 
     - Ej. `/home/andres/public_html` ⇨ `https://example.com/~andres`
 
@@ -40,12 +48,6 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
   - No utilizar los VirtualHosts predeterminados para HTTP ni HTTPS
 
-- El sitio debe tener un certificado **wildcard** SSL emitido por Let's Encrypt y se debe utilizar el mismo nombre de dominio que en la [práctica 4][practica-4]
-
-- El sitio debe hacer redirección de todas las peticiones HTTP hacía su versión en HTTPS
-
-    - Se pueden usar redirecciones estándar 301 y 302 de HTTP
-
 |                                       |
 |:-------------------------------------:|
 | ![Proyecto web](img/proyecto-web.png) |
@@ -53,6 +55,14 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 --------------------------------------------------------------------------------
 
 ## Servidor de monitoreo
+
+- El sitio debe tener un certificado **wildcard** SSL emitido por Let's Encrypt y se debe utilizar el mismo nombre de dominio que en la [práctica 4][practica-4]
+
+- El sitio debe hacer redirección de todas las peticiones HTTP hacía su versión en HTTPS
+
+    - Se pueden usar redirecciones estándar 301 y 302 de HTTP
+
+    - Utilizar la directiva [`Redirect`][apache-redirect-https] o la configuración de [`mod_rewrite`][apache-rewrite-https] (pero no ambas porque son excluyentes entre si)
 
 - Instalar un servidor de monitoreo mediante el software Nagios o Icinga
 
@@ -144,7 +154,7 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 - Implementar la cabecera [`X-Robots-Tag`][x-robots-tag] para evitar que los motores de búsqueda indexen el sitio
 
-#### Para los proyectos del _stack_ web
+### Para los proyectos del _stack_ web
 
 - Proteger la _sección administrativa_ del sitio utilizando [autenticación de tipo `digest`][apache-auth-digest]
 
@@ -156,7 +166,7 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
     - Subir otro archivo con los datos de todas las tablas
 
-#### Para el proyecto de monitoreo
+### Para el proyecto de monitoreo
 
 - El sistema de monitoreo instala una autenticación de tipo `basic` de manera predeterminada, [cambiar el tipo de autenticación a `digest`][apache-auth-digest]
 
@@ -185,6 +195,10 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 --------------------------------------------------------------------------------
 
 [practica-4]: /public/laboratorio/practica4
+
+[apache-userdir]: https://httpd.apache.org/docs/2.4/howto/public_html.html
+[apache-redirect-https]: https://cwiki.apache.org/confluence/plugins/servlet/mobile?contentId=115522478#content/view/115522444
+[apache-rewrite-https]: https://cwiki.apache.org/confluence/plugins/servlet/mobile?contentId=115522478#content/view/115522478
 [api-telegram]: https://core.telegram.org/
 [api-twitter]: https://developer.twitter.com/en/docs/twitter-api
 [carpeta-drive]: https://drive.google.com/drive/folders/1D2tlDRzfSISp39eJKZiosRcnwp-7djMD
