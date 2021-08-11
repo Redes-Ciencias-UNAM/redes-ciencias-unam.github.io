@@ -42,8 +42,6 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 - El sitio debe tener un certificado **wildcard** SSL emitido por Let's Encrypt y se debe utilizar el mismo nombre de dominio que en la [práctica 4][practica-4]
 
-[practica-4]: /public/laboratorio/practica4
-
 - El sitio debe hacer redirección de todas las peticiones HTTP hacía su versión en HTTPS
 
     - Se pueden usar redirecciones estándar 301 y 302 de HTTP
@@ -77,8 +75,8 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 - Generar alertas en caso de falla y avisos de recuperación de los servicios utilizando scripts guardados en el directorio `/usr/local/bin`
 
-    - Telegram
-    - Twitter
+    - [Telegram][api-telegram]: Crear un canal y publicar un mensaje cada que un host o servicio cambie de estado
+    - [Twitter][api-twitter]: Crear una nueva cuenta y publicar un _tweet_ cada que un host o servicio cambie de estado
 
 - Los elementos que se deberán implementar en este servicio se muestran en el diagrama:
 
@@ -92,9 +90,9 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 ### General
 
-[carpeta-drive]: https://drive.google.com/drive/folders/1D2tlDRzfSISp39eJKZiosRcnwp-7djMD
+- [Crear una imágen AMI][aws-ec2-ami] de la instancia EC2 y [compartirla con los profesores][aws-ec2-ami-share]
 
-- Crear una imágen AMI de la instancia EC2 y compartirla con los profesores
+    - Cuenta de AWS `374417498684`
 
 - Ver el siguiente video y emitir un comentario sobre la relación del contenido presentado y los conceptos utilizados en este proyecto
 
@@ -140,19 +138,19 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 ### General
 
-- Implementar **HSTS** en las cabeceras del sitio para forzar a que se pida el contenido del sitio a través de HTTPS
+- Implementar [**HSTS**][hsts] en las cabeceras del sitio para forzar a que se pida el contenido del sitio a través de HTTPS
 
     - Establecer un timeout bajo de entre `60` y `300` segundos
 
-- Implementar la cabecera `X-Robots-Tag` para evitar que los motores de búsqueda indexen el sitio
+- Implementar la cabecera [`X-Robots-Tag`][x-robots-tag] para evitar que los motores de búsqueda indexen el sitio
 
 #### Para los proyectos del _stack_ web
 
-- Proteger la _sección administrativa_ del sitio utilizando autenticación de tipo `digest`
+- Proteger la _sección administrativa_ del sitio utilizando [autenticación de tipo `digest`][apache-auth-digest]
 
 - Automatizar el respaldo de la base de datos en "esquema" y "contenido"
 
-    - Script y configuración de la tarea programada para respaldar la base de datos **diario a media noche**
+    - Script y configuración de la tarea programada para respaldar la base de datos [**diario a media noche**][cron]
 
     - Subir un archivo con el "esquema" de la base de datos (definición de tablas)
 
@@ -160,11 +158,11 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 #### Para el proyecto de monitoreo
 
-- Proteger todo el acceso al sitio utilizando autenticación de tipo `digest`, el sistema de monitoreo instala una autenticación de tipo `basic` de manera predeterminada
+- El sistema de monitoreo instala una autenticación de tipo `basic` de manera predeterminada, [cambiar el tipo de autenticación a `digest`][apache-auth-digest]
 
 - Automatizar el respaldo de las bitácoras del servidor y los archivos de trabajo de Nagios o Icinga
 
-    - Script y configuración de la tarea programada para respaldar la base de datos **diario a media noche**
+    - Script y configuración de la tarea programada para respaldar la base de datos [**diario a media noche**][cron]
 
     - Creación de archivo `TAR` con las bitácoras del servidor
 
@@ -182,5 +180,18 @@ Cada equipo tendrá que configurar uno de los servicios de red que se describen 
 
 - Puede agregar posibles errores, complicaciones, opiniones, críticas de el proyecto, o cualquier comentario relacionado
 
-- Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso
-    <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>
+- Entregue su reporte de acuerdo a la [forma de entrega de tareas y prácticas][lineamientos-entrega] definida al inicio del curso
+
+--------------------------------------------------------------------------------
+
+[practica-4]: /public/laboratorio/practica4
+[api-telegram]: https://core.telegram.org/
+[api-twitter]: https://developer.twitter.com/en/docs/twitter-api
+[carpeta-drive]: https://drive.google.com/drive/folders/1D2tlDRzfSISp39eJKZiosRcnwp-7djMD
+[aws-ec2-ami]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html
+[aws-ec2-ami-share]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-explicit.html
+[hsts]: https://https.cio.gov/hsts/
+[x-robots-tag]: https://developers.google.com/search/docs/advanced/robots/robots_meta_tag
+[apache-auth-digest]: https://httpd.apache.org/docs/2.4/howto/auth.html
+[cron]: https://opensource.com/article/17/11/how-use-cron-linux
+[lineamientos-entrega]: https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/
