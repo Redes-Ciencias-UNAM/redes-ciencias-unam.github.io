@@ -204,6 +204,12 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 
 --------------------------------------------------------------------------------
 
+# Monitoreo del estado de la infraestructura
+
+![Nagios](https://nagios.redes.tonejito.cf/map.png)
+
+--------------------------------------------------------------------------------
+
 [practica-4]: /public/laboratorio/practica4
 
 [apache-userdir]: https://httpd.apache.org/docs/2.4/howto/public_html.html
