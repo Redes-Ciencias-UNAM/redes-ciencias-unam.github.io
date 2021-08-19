@@ -89,7 +89,9 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
     - MySQL
     - PostgreSQL
     - Validez del certificado SSL
+<!--
     - Expiración del dominio
+-->
 
 - Generar alertas en caso de falla y avisos de recuperación de los servicios utilizando scripts guardados en el directorio `/usr/local/bin`
 
@@ -108,10 +110,6 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 
 ### General
 
-- [Crear una imágen AMI][aws-ec2-ami] de la instancia EC2 y [compartirla con los profesores][aws-ec2-ami-share]
-
-    - Cuenta de AWS `374417498684`
-
 - Ver el siguiente video y emitir un comentario sobre la relación del contenido presentado y los conceptos utilizados en este proyecto
 
     - [Seguridad en AWS - AWS Public Sector Summit Mexico City 2020 📼](https://youtu.be/d3jnbtaLb24&list=PL2yQDdvlhXf_h40vMoMoh2SBa05geKLDq&index=10&)
@@ -122,7 +120,7 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 
     - Lista de usuarios y contraseñas para acceder a la aplicación web, base de datos y demás, en un archivo de texto llamado `accesos.txt`
 
-    - Certificado y llave privada utilizados en el sitio web
+    - Certificado y llave privada utilizados en el sitio web en un archivo `TAR` (directorio `/etc/letsencrypt`)
 
     - Respaldo de configuraciones del servidor en un archivo `TAR` (directorio `/etc`)
 
@@ -144,7 +142,7 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 
     - Respaldo de los archivos de trabajo del sistema de monitoreo en un archivo `TAR`
 
-        - Nagios: directorio `/var/lib/nagios3`
+        - Nagios: directorio `/var/lib/nagios4`
 
         - Icinga: directorio `/var/lib/icinga2`
 
@@ -155,6 +153,10 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 ## Extra
 
 ### General
+
+- [Crear una imágen AMI][aws-ec2-ami] de la instancia EC2 y [compartirla con los profesores][aws-ec2-ami-share]
+
+    - Cuenta de AWS `374417498684`
 
 - Implementar [**HSTS**][hsts] en las cabeceras del sitio para forzar a que se pida el contenido del sitio a través de HTTPS
 
