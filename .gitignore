@@ -1,6 +1,8 @@
 .*.sw?
 *~
 
+public/
+
 .DS_Store
 Icon
 ._*

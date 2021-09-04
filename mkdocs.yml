@@ -1,0 +1,7 @@
+# https://www.mkdocs.org/user-guide/configuration/
+site_name: Redes de Computadoras - Facultad de Ciencias - UNAM
+site_url: https://Redes-Ciencias-UNAM.gitlab.io
+site_dir: public
+docs_dir: docs
+theme: readthedocs
+# theme: mkdocs
