@@ -10,7 +10,7 @@
 
 ## Tarea
 
-+ [Tarea TCP](tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
++ [Tarea TCP](../tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
 
 ## Referencias
 

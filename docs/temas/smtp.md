@@ -12,7 +12,7 @@ submission		587/tcp
 
 ||
 |:------:|
-|![](img/SMTP-001-Mail_delivery.png)|
+|![](../img/SMTP-001-Mail_delivery.png)|
 
 --------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ De manera esencial, el único registro necesario para la recepción de correo es
 
 Los registros DNS utilizados para la entrega y validación de correo electrónico están en este documento:
 
-* [Validación de correo electrónico (MX, SPF, DKIM, DMARC)](temas/smtp-dns.md "MX, SPF, DKIM, DMARC")
+* [Validación de correo electrónico (MX, SPF, DKIM, DMARC)](smtp-dns.md "MX, SPF, DKIM, DMARC")
 
 --------------------------------------------------------------------------------
 
@@ -43,7 +43,7 @@ Esta prueba consiste en hacer una conexión **directa** al servidor MTA de desti
 
 ||
 |:------:|
-|![](img/SMTP-002-Direct_delivery.png)|
+|![](../img/SMTP-002-Direct_delivery.png)|
 
 Se necesita conocer el servidor que **recibe** el correo, este dato se guarda en el registro MX de DNS para ese dominio.
 
@@ -75,7 +75,7 @@ Esta prueba consiste en hacer una conexión **directa** al servidor MTA de desti
 
 ||
 |:------:|
-|![](img/SMTP-002-Direct_delivery.png)|
+|![](../img/SMTP-002-Direct_delivery.png)|
 
 Se necesita conocer el servidor que **recibe** el correo, este dato se guarda en el registro MX de DNS para ese dominio.
 
@@ -107,7 +107,7 @@ Esta prueba consiste en hacer una conexión **directa** al servidor MTA de desti
 
 ||
 |:------:|
-|![](img/SMTP-002-Direct_delivery.png)|
+|![](../img/SMTP-002-Direct_delivery.png)|
 
 Se necesita conocer el servidor que **recibe** el correo, este dato se guarda en el registro MX de DNS para ese dominio.
 
@@ -160,11 +160,11 @@ $ swaks --to bob@example.net --server mx.example.net:25
 === Connection closed with remote host.
 ```
 
-El destinatario `bob@example.net` recibe un correo [parecido a este](files/mail.eml "Mensaje de correo electrónico enviado utilizando conexión directa al servidor SMTP de destino")
+El destinatario `bob@example.net` recibe un correo [parecido a este](../files/mail.eml "Mensaje de correo electrónico enviado utilizando conexión directa al servidor SMTP de destino")
 
 ||
 |:------:|
-|![](img/SMTP-003-Envelope_message.png)|
+|![](../img/SMTP-003-Envelope_message.png)|
 
 
 ```
@@ -270,7 +270,7 @@ Password: ********
 === Connection closed with remote host.
 ```
 
-El destinatario `bob@example.net` recibe un correo [parecido a este](files/mail+auth.eml "Mensaje de correo electrónico enviado utilizando una conexión autenticada al servidor SMTP de origen")
+El destinatario `bob@example.net` recibe un correo [parecido a este](../files/mail+auth.eml "Mensaje de correo electrónico enviado utilizando una conexión autenticada al servidor SMTP de origen")
 
 ```
 Received: from DM5PR07MB3609.namprd07.prod.example.net (2603:10b6:4:60::32) by
