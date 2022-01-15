@@ -7,3 +7,5 @@ docs_dir: docs
 theme:
   name: readthedocs
   locale: es
+  analytics:
+    gtag: G-CYE5VJNLW4
