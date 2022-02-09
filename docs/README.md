@@ -1,28 +1,54 @@
-#	Universidad Nacional Autónoma de México
-#	Facultad de Ciencias
-#	Ciencias de la Computación
+#	Redes de Computadoras
 
-##	Redes de Computadoras
+Facultad de Ciencias, UNAM
 
-Semestre 2021-2
+Ciencias de la Computación - Semestre 2022-2
 
-###	Presentación del curso
+##	Presentación del curso
 
 - [Presentación del curso](curso/ "Generalidades del curso")
+- [Temario del curso](curso/temario.md "Lista de temas")
+
+## Flujo de trabajo
+
+- [Guía rápida de `git`](temas/git/ "9418/tcp")
+
+- [Flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
+
+- [Repositorio para la entrega de tareas y prácticas][repositorio-tareas-practicas]
+    - Las tareas y prácticas se entregan a traves de [_merge request_][repositorio-tareas-practicas-merge-requests]
+
+<!--
+--------------------------------------------------------------------------------
+
+## Tareas y Prácticas
+
+- [Lista de tareas](./tareas)
+- [Lista de prácticas de laboratorio](./laboratorio)
+-->
 
 --------------------------------------------------------------------------------
 
-###	Prácticas
+## Recursos
 
-- [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes "Las tareas se entregan a traves de merge-request")
-- [Guia rápida del lenguaje C](/public/laboratorio/guia_c.pdf "Guia rápida del lenguaje C")
+- [Página del curso][pagina-curso]
+- [Grupo de GitLab][grupo-gitlab]
+- [Lista de alumnos][lista]
+- [Grupo de Telegram][telegram]
 
+## Videos
+
+- [Canal de YouTube][youtube]
+- [Lista de videos semestre][youtube-lista-semestre]
+- [Lista de videos complementarios][youtube-lista-complementarios]
+
+<!--
 --------------------------------------------------------------------------------
 
 ###	Temas
 
-- [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes "Las tareas se entregan a traves de merge-request")
-- [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2021-2 "Accesible con cuenta @ciencias")
+- [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes "Las tareas se entregan a traves de merge-request")
+- [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2022-2 "Accesible con cuenta @ciencias")
 - [Guía rápida de `git`](temas/git.md "9418/tcp")
 
 ####	0 - Modelos de referencia
@@ -62,17 +88,61 @@ Semestre 2021-2
 - [SMTP - Simple Mail Transfer Protocol](temas/smtp.md "25/tcp , 465/tcp , 587/tcp")
     - [Validación de correo electrónico (MX, SPF, DKIM, DMARC)](temas/smtp-dns.md "MX, SPF, DKIM, DMARC")
 - [DHCP - Dynamic Host Configuration Protocol](temas/dhcp.md "67/udp , 68/udp")
+-->
 
 --------------------------------------------------------------------------------
+<!--
 
 ###	Ligas de interés
 
-- <http://redes-ciencias-unam.gitlab.io/>
-- <https://gitlab.com/Redes-Ciencias-UNAM/2021-2/tareas-redes>
-- <http://tinyurl.com/ListaRedes-2021-2>
-- <http://tinyurl.com/PizarronRedes-2021-2>
+- <http://Redes-Ciencias-UNAM.gitlab.io/>
+- <https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes>
+- <http://tinyurl.com/ListaRedes-2022-2>
+- <http://tinyurl.com/PizarronRedes-2022-2>
 - <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 - <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 - <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
 - <http://www.fciencias.unam.mx/docencia/horarios/20212/218/714>
 - <http://www.fciencias.unam.mx/docencia/horarios/20212/1556/714>
+
+-->
+
+##	Ligas de interés
+
+- [Fechas oficiales][fechas-oficiales] del semestre 2022-2 aprobadas por el Consejo Técnico de la FC
+- [Calendario escolar][calendario-unam] en la [página de la DGAE][pagina-dgae]
+- [Temario][temario] en la página de la Facultad de Ciencias
+- [Detalles del curso][detalles] en la página de la Facultad de Ciencias
+- [Presentación][presentacion] en la página de la Facultad de Ciencias
+- Horarios en la página de la Facultad de Ciencias: [plan 1994][horarios-plan-1994], [plan 2013][horarios-plan-2013]
+- [Lista del grupo][lista]
+
+--------------------------------------------------------------------------------
+
+[fechas-oficiales]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosct/2022-0001
+[calendario-unam]: https://www.dgae.unam.mx/assets/images/semestral2022.jpg
+[pagina-dgae]: https://www.dgae.unam.mx/calendarios_escolares.html
+[temario]: http://www.fciencias.unam.mx/asignaturas/714.pdf
+[detalles]: https://www.fciencias.unam.mx/docencia/horarios/detalles/332404
+[horarios-plan-1994]: https://www.fciencias.unam.mx/docencia/horarios/20222/218/714
+[horarios-plan-2013]: https://www.fciencias.unam.mx/docencia/horarios/20222/1556/714
+[presentacion]: https://www.fciencias.unam.mx/docencia/horarios/presentacion/332404
+
+[youtube]: https://tinyurl.com/Redes-Ciencias-UNAM-YouTube
+[youtube-lista-semestre]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d
+[youtube-lista-complementarios]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QLYF_TQ1ryoRtl-bYFHbGn
+[google-meet]: https://meet.google.com/hrd-hczh-bzo
+[jitsi]: https://meet.jit.si/redes-fciencias
+[zoom]: https://cuaieed-unam.zoom.us/j/87534368361
+
+[pagina-curso]: https://Redes-Ciencias-UNAM.gitlab.io/
+[grupo-gitlab]: https://gitlab.com/Redes-Ciencias-UNAM/
+[lista]: https://tinyurl.com/ListaRedes-2022-2
+[pizarron]: https://tinyurl.com/PizarronRedes-2022-2
+[telegram]: https://t.me/redes_ciencias_unam
+
+[pagina-tareas]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes
+[repositorio-tareas-practicas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes
+[repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+
+[flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes/workflow/
