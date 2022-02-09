@@ -1,13 +1,25 @@
 # https://gitlab.com/pages/mkdocs/blob/master/.gitlab-ci.yml
-image: python:3.8-buster
+#	= ^ . ^ =
+image: python:3.9-slim-bullseye
 
 before_script:
+  - truncate --size=0 /etc/apt/apt.conf.d/99-local
+  - echo 'quiet "2";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'APT::Get::Assume-Yes "1";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'APT::Install-Recommends "0";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'APT::Install-Suggests "0";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'APT::Color "0";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'Dpkg::Progress "0";' >> /etc/apt/apt.conf.d/99-local
+  - echo 'Dpkg::Progress-Fancy "0";' >> /etc/apt/apt.conf.d/99-local
+  - apt update
+  - apt install make
+  - pip config --global set global.progress_bar off
   - pip install -r requirements.txt
 
 test:
   stage: test
   script:
-  - mkdocs build --strict --site-dir test
+  - make test
   artifacts:
     paths:
     - test
@@ -17,7 +29,7 @@ test:
 pages:
   stage: deploy
   script:
-  - mkdocs build --strict --verbose
+  - make build
   artifacts:
     paths:
     - public
