@@ -1,6 +1,12 @@
 # Documentation static site generator & deployment tool
 mkdocs>=1.1.2
 
+# https://www.mkdocs.org/user-guide/localizing-your-theme/
+mkdocs[i18n]
+
 # Add your custom theme if not inside a theme_dir
-# (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+# https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
 #  mkdocs-material>=5.4.0
+
+# Plugins
+mkdocs-exclude>=1.0.2
