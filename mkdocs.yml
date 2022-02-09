@@ -1,11 +1,37 @@
 # https://www.mkdocs.org/user-guide/configuration/
-site_name: Redes de Computadoras - Facultad de Ciencias - UNAM
+repo_name: redes-ciencias-unam.gitlab.io
+repo_url: https://gitlab.com/Redes-Ciencias-UNAM/redes-ciencias-unam.gitlab.io
+edit_uri: -/tree/master/docs
+
+site_name: Redes de Computadoras
+site_description: Facultad de Ciencias - UNAM
 site_url: https://Redes-Ciencias-UNAM.gitlab.io
 site_dir: public
 docs_dir: docs
-# theme: mkdocs
+
+extra_css:
+- css/extra.css
+
+# extra_javascript:
+# - js/extra.js
+
+# https://www.mkdocs.org/user-guide/choosing-your-theme/
 theme:
-  name: readthedocs
+  name: mkdocs
+  # name: readthedocs
   locale: es
+  navigation_depth: 4
+  collapse_navigation: true
+  titles_only: true
   analytics:
     gtag: G-CYE5VJNLW4
+
+markdown_extensions:
+- toc:
+    permalink: "#"
+    separator: "-"
+
+plugins:
+  - exclude:
+      glob:
+        - ".*.sw?"
