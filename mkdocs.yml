@@ -13,8 +13,9 @@ docs_dir: docs
 extra_css:
 - css/extra.css
 
-# extra_javascript:
-# - js/extra.js
+extra_javascript:
+- js/extra.js
+- js/browser-update.js
 
 # https://www.mkdocs.org/user-guide/choosing-your-theme/
 theme:
