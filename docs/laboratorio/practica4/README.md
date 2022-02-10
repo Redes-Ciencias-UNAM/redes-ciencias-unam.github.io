@@ -4,9 +4,6 @@ title: Implementación de sitios web sobre HTTPS
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
-<div class="title-image">
-  <img src="../UNAM-FC.png" alt="UNAM-FC">
-</div>
 
 # Implementación de sitios web sobre HTTPS
 

@@ -5,9 +5,6 @@ authors:
 - Paulo Santiago de Jesús Contreras Flores
 - Andrés Leonardo Hernández Bermúdez
 ---
-<div class="title-image">
-  <img src="../UNAM-FC.png" alt="UNAM-FC">
-</div>
 
 # Registro de un dominio DNS
 

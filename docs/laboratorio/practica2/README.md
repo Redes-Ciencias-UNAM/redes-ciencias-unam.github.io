@@ -4,9 +4,6 @@ title: Configuración de servicios DHCP, NAT y DNS con Virtualbox
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
-<div class="title-image">
-  <img src="../UNAM-FC.png" alt="UNAM-FC">
-</div>
 
 # Configuración de servicios *DHCP*, *NAT* y *DNS* con Virtualbox
 

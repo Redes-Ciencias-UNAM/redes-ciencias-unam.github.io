@@ -4,9 +4,6 @@ title: Recursos gratuitos para el desarrollo de proyectos estudiantiles
 authors:
 - Paulo Santiago de Jesús Contreras Flores
 ---
-<div class="title-image">
-  <img src="../UNAM-FC.png" alt="UNAM-FC">
-</div>
 
 # Recursos gratuitos para el desarrollo de proyectos estudiantiles 
 
