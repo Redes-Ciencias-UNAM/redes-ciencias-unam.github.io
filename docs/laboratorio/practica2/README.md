@@ -1,8 +1,14 @@
-![UNAM-FC](../UNAM-FC.png)
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Configuración de servicios DHCP, NAT y DNS con Virtualbox
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+<div class="title-image">
+  <img src="../UNAM-FC.png" alt="UNAM-FC">
+</div>
 
-# Redes de Computadoras
-
-## Configuración de servicios *DHCP*, *NAT* y *DNS* con Virtualbox
+# Configuración de servicios *DHCP*, *NAT* y *DNS* con Virtualbox
 
 Se presentan los pasos para elaborar la configuración de un *NAT*, *DHCP* y *DNS local* utilizando VirtualBox con base en la topología de red que se muestra a continuación:
 
@@ -17,21 +23,21 @@ La configuración de VirtualBox está explicada en la primer parte del video "Co
 - [Protocolo DHCP 📼](https://www.youtube.com/watch?v=6l4WQJfD7o0)
 - [Protocolo DNS 📼](https://www.youtube.com/watch?v=r4PntflJs9E)
 
-### Fecha de entrega
+## Fecha de entrega
 
 - **Domingo 18 de junio de 2021 a las 23:59**.
 - La fecha de entrega se extiende unos días si decides hacer la [actividad extra](#actividad-extra)
 
-### Objetivos
+## Objetivos
 
 * El alumno aplicará los conceptos teóricos de un NAT y DHCP en una topología de red básica
 * El alumno configurará un NAT por medio de maquinas virtuales
 * El alumno configurará un DHCP con maquinas virtuales
 * El alumno montará un servidor *DNS* local
 
-### Creación del *NAT* con `iptables`
+## Creación del *NAT* con `iptables`
 
-#### Configuración en VirtualBox
+### Configuración en VirtualBox
 
 Deshabilitar el servicio de DHCP en la interfaz host only.
 
@@ -42,7 +48,7 @@ Deshabilitar el servicio de DHCP en la interfaz host only.
 
 ![Deshabilitar el servicio de DHCP en la red host-only de VirtualBox](images/vbox-hostonly-dhcp.png "Deshabilitar el servicio de DHCP en la red host-only de VirtualBox")
 
-#### En la máquina Debian 10
+### En la máquina Debian 10
 
 0. Instalar las utilerias de red
 
@@ -102,9 +108,9 @@ net.ipv4.ip_forward = 1
 
 **Anexa el archivo `/etc/iptables/rules.v4` a tu reporte de la práctica**.
 
-### Configuración del *DHCP*
+## Configuración del *DHCP*
 
-#### En la maquina Debian 10
+### En la maquina Debian 10
 
 1. Instalar el programa para configurar DHCP.
 
@@ -148,16 +154,16 @@ INTERFACESv4="eth0"
 # systemctl status isc-dhcp-server
 ```
 
-#### **Actividad**
+### **Actividad**
 
 * Reservar una dirección estatica con el DHCP para la máquina CentOS 7.
 
 * Anexa en el cuestionario como es que se reserva la dirección IP para un cliente en la configuración del DHCP.
 
 
-### Configuración del _forwarder_ de *DNS*
+## Configuración del _forwarder_ de *DNS*
 
-#### En la máquina Debian 10
+### En la máquina Debian 10
 
 1. Instalar el programa `dnsmasq`.
 
@@ -203,7 +209,7 @@ nameserver	9.9.9.9
 # service isc-dhcp-server restart
 ```
 
-#### En la máquina Debian 10
+### En la máquina Debian 10
 
 5. Una vez verifico el correcto funcionamiento del *DNS* local modificar el archivo `/etc/resolv.conf`
 
@@ -214,7 +220,7 @@ nameserver  127.0.0.1
 
 **Anexa el archivo `/etc/resolv.conf` a tu reporte de la práctica**.
 
-#### En la máquina CentOS 7
+### En la máquina CentOS 7
 
 6. Reiniciar la interface de red para obtener los nuevos parámetros de red.
    **Nota**: Otra opción es reiniciar la máquina virtual para obtener los nuevos parámetros de red.
@@ -273,7 +279,7 @@ $ ping -c 4 example.com.
 $ links -dump http://example.com/
 ```
 
-### Cuestionario
+## Cuestionario
 
 1. Explica que significa la salida de los siguientes comandos:
 
@@ -319,7 +325,7 @@ $ links -dump http://example.com/
 
 12. Analiza la nota [*DHCP snooping: más seguridad para tu red*](https://www.ionos.mx/digitalguide/servidores/seguridad/dhcp-snooping/) y escribe un comentario al respecto.
 
-### Notas adicionales
+## Notas adicionales
 
 - Redacten un reporte por equipo, en el que consignes los pasos que consideres necesarios para explicar cómo realizaron la práctica.
   Incluyan capturas de pantalla que justifiquen su trabajo.
@@ -334,16 +340,16 @@ $ links -dump http://example.com/
 
 --------------------------------------------------------------------------------
 
-### Actividad Extra
+## Actividad Extra
 
 Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se extiende hasta el **miércoles 21 de junio de 2021 a las 23:59**.
 
-#### En la máquina Debian 10
+### En la máquina Debian 10
 
 - Modifica la interface *NAT* por una *bridge* y explica que diferencia hace este cambio en la topología.
   **Nota**: Puede que necesites especificar si la interfaz bridge es con tu interfaz física cableada o inalámbrica.
 
-#### En la máquina CentOS
+### En la máquina CentOS
 
 - Captura el tráfico *DNS* y *DHCP* en el cliente CentOS.
   No todo el tráfico se captura, explica por qué.
@@ -360,7 +366,7 @@ Esta actividad es opcional. Si deciden hacer esta parte, la fecha de entrega se 
 # tcpdump -veni eth0 -o captura-dns-cliente.pcap 'port 53'
 ```
 
-#### En VirtualBox
+### En VirtualBox
 
 - Agrega otra máquina virtual para que sea otro cliente en la red _host-only_
 - Se recomienda una distribución ligera como Alpine Linux utilizando la [imágen ISO LiveCD][alpine-linux-iso].

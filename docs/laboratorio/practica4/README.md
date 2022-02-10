@@ -1,17 +1,16 @@
-![UNAM-FC](../UNAM-FC.png)
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Implementación de sitios web sobre HTTPS
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+<div class="title-image">
+  <img src="../UNAM-FC.png" alt="UNAM-FC">
+</div>
 
-# Redes de Computadoras
+# Implementación de sitios web sobre HTTPS
 
-## Implementación de sitios web sobre HTTPS
-
-<details open>
-  <summary>Expandir / Colapsar</summary>
-
-[[_TOC_]]
-
-</details>
-
-### Videos de la parte teórica y de implementación
+## Videos de la parte teórica y de implementación
 
 Se pide estudiar los siguientes videos sobre los temas que trata la práctica, para su mejor comprensión y aprendizaje.
 
@@ -35,13 +34,13 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 
   - [Trámite de un certificado SSL con Let's Encrypt utilizando certbot 📼](https://youtu.be/kpiChLT5JPs&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=8)
 
-### Fecha de entrega
+## Fecha de entrega
 
 - [Lunes 9 de agosto de 2021 a las 23:59 hrs][countdown].
 
 [countdown]: https://www.timeanddate.com/countdown/wfh?iso=20210809T235959&p0=155&msg=Entrega+pr%C3%A1ctica+4+-+Redes+Ciencias+UNAM+2021-2&font=cursive&csz=1
 
-### Objetivos
+## Objetivos
 
 - Crear una máquina virtual en la infraestructura de Amazon Web Services
 - Asignar una dirección IP estática a la máquina virtual
@@ -50,14 +49,11 @@ Se pide estudiar los siguientes videos sobre los temas que trata la práctica, p
 - Configurar un par de VirtualHosts para HTTP y otro par de VirtualHosts para HTTPS
 - Generar un certificado SSL con Let's Encrypt utilizando el cliente `certbot`
 
-### Desarrollo
+## Desarrollo
 
-#### Creación de la máquina virtual en AWS
+### Creación de la máquina virtual en AWS
 
-<details open>
-  <summary>Expandir / Colapsar</summary>
-
-##### Generar una llave SSH
+#### Generar una llave SSH
 
 - Crear una llave SSH para autenticarse en la instancia EC2
 
@@ -78,13 +74,7 @@ usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
 
 - Mostrar el contenido de la llave **pública**
 
-<blockquote>
-
-| Nota |
-|:-----|
-| El contenido de la llave es una cadena muy larga que viene en una sola línea |
-
-</blockquote>
+> El contenido de la llave es una cadena muy larga que viene en una sola línea
 
 ```
 usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub
@@ -95,7 +85,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAAD...lf4PBkDgfkC49vJKFQ== Equipo-AAAA-BBBB-CCCC-DDDD
 
 - Entrar a la consola de EC2 y dar clic en `keypairs`
 
-  - https://console.aws.amazon.com/ec2
+  - <https://console.aws.amazon.com/ec2>
 
 ![Consola EC2](img/002-EC2-keypair-console.png)
 
@@ -113,12 +103,11 @@ En la ventana para importar una llave de SSH
 
 ![Consola EC2](img/004-EC2-keypair-import-contents.png)
 
-
-##### Creación de la instancia EC2
+#### Creación de la instancia EC2
 
 - Navegar a la consola de AWS EC2 y dar clic en el botón `Launch Instance`
 
-  - https://console.aws.amazon.com/ec2
+  - <https://console.aws.amazon.com/ec2>
 
 ![Consola EC2](img/007-EC2-instance-create.png)
 
@@ -127,13 +116,7 @@ En la ventana para importar una llave de SSH
   - [`ami-087b6081d18c91a97`][ami-debian-10-buster-arm64] para instancias `t4g` de arquitectura `ARM64`
   - [`ami-05ad4ed7f9c48178b`][ami-debian-10-buster-amd64] para instancias `t3a`, `t3` y `t2` de arquitectura `amd64` (`x86_64`)
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Algunas cuentas de AWS únicamente pueden lanzar instancias `t2.micro`
-
-</blockquote>
+> Algunas cuentas de AWS únicamente pueden lanzar instancias `t2.micro`
 
 ![Consola EC2](img/008-EC2-instance-start.png)
 
@@ -143,7 +126,7 @@ En la ventana para importar una llave de SSH
 
 - Revisar que se liste la información del AMI de Debian 10 `buster` para arquitectura ARM o amd64 (x86_64) y dar clic en el botón **azul** `Select`
 
-##### ID de imagenes AMI
+#### ID de imagenes AMI
 <a id="ami" name="ami"></a>
 
 | Región    | Arquitectura   | Instancias         | ID imágen AMI                                         | Nombre de la imágen AMI        |
@@ -167,14 +150,8 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| En caso de error seleccionar con la instancia `t4g.micro` (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa de uso gratuita**][aws-free-tier] de AWS. |
-| Algunas cuentas únicamente pueden lanzar instancias `t2.micro`, si este es el caso verifica que tengas el AMI para arquitectura amd64 (x86_64) |
-
-</blockquote>
+> En caso de error seleccionar con la instancia `t4g.micro` (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa de uso gratuita**][aws-free-tier] de AWS.
+> Algunas cuentas únicamente pueden lanzar instancias `t2.micro`, si este es el caso verifica que tengas el AMI para arquitectura amd64 (x86_64)
 
 [aws-free-tier]: https://aws.amazon.com/free/
 
@@ -192,13 +169,7 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| No se utilizan _tags_ en esta actividad |
-
-</blockquote>
+> No se utilizan _tags_ en esta actividad
 
 ![Consola EC2](img/014-EC2-instance-tags.png)
 
@@ -226,12 +197,7 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 | `ICMPv4` | **ICMP IPv4** | Anywhere IPv4 (`0.0.0.0/0`)     |
 | `ICMPv6` | **ICMP IPv6** | Anywhere IPv6 (`::/0`)          |
 
->>>
-
 <a id="icmp" name="icmp"></a>
-
-<details open>
-  <summary>Expandir / Colapsar</summary>
 
 - Agrega las reglas para el tráfico ICMP de entrada para IPv4 e IPv6
 
@@ -243,13 +209,9 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
   - Agrega las reglas de entrada para el protocolo ICMP sobre IPv4 e IPv6 y da clic en el botón `Save rules`
 
-![Consola EC2](026-EC2-security-group-edit.png)
+![Consola EC2](img/026-EC2-security-group-edit.png)
 
   - Estos cambios se verán reflejados de manera inmediata en tu instancia EC2
-
-</details>
-
->>>
 
 - Dar clic en el boton **azul** `Review and Launch`
 
@@ -279,13 +241,13 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - Anotar el identificador de la instancia EC2 en el reporte
 
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html>
 
+--------------------------------------------------------------------------------
 
-
-##### Asignación de IP estática a la instancia EC2
+#### Asignación de IP estática a la instancia EC2
 
 - Entrar a la consola de EC2 y dar clic en `Elastic IPs`
 
@@ -317,28 +279,22 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - Anotar la dirección IP elástica asociada a la instancia EC2 en el reporte
 
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html
-- https://aws.amazon.com/premiumsupport/knowledge-center/ec2-associate-static-public-ip/
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html>
+- <https://aws.amazon.com/premiumsupport/knowledge-center/ec2-associate-static-public-ip/>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating>
 
 --------------------------------------------------------------------------------
 
-##### Asignación de nombre DNS a la instancia EC2
+#### Asignación de nombre DNS a la instancia EC2
 <a id="dns" name="dns"></a>
 
 - Obtén la dirección de la IP elástica que asociaste a la instancia EC2 en la sección anterior
 
 - Crear los registros DNS de acuerdo a la siguiente tabla:
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1] |
-
-</blockquote>
+> Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1]
 
 [practica-1]: /public/laboratorio/practica1#obtener-un-dominio-en-tech-domains
 
@@ -350,25 +306,13 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
-<blockquote>
-
-| Nota |
-|:-----|
-| - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS |
-| - Reemplazar `50.19.212.156` con la dirección de la IP elástica |
-| - Reemplazar `example.com` con el nombre de dominio |
-
-</blockquote>
+> - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS
+> - Reemplazar `50.19.212.156` con la dirección de la IP elástica
+> - Reemplazar `example.com` con el nombre de dominio
 
 - Revisa que existan los registros DNS utilizando el comando `dig`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta |
-
-</blockquote>
+> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
 
 ```
 usuario@laptop:~$ dig +noall +comments +answer example.com.
@@ -435,7 +379,7 @@ example.com.		299	IN	A	50.19.212.156
 
 --------------------------------------------------------------------------------
 
-##### Acceso inicial por SSH a la instancia EC2
+#### Acceso inicial por SSH a la instancia EC2
 
 ```
 usuario@laptop:~$ ssh -i ~/.ssh/equipo_redes_rsa admin@50.19.212.156
@@ -485,18 +429,14 @@ usuario@laptop:~$ ssh example.com
 admin@ip-172-31-85-20:~$
 ```
 
-##### Autenticación SSH en la instancia EC2
+--------------------------------------------------------------------------------
+
+#### Autenticación SSH en la instancia EC2
 <a id="ssh-key" name="ssh-key"></a>
 
 Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso |
-
-</blockquote>
+> Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso
 
 - Copia la llave a la máquina virtual
 
@@ -551,17 +491,12 @@ root@example:~# rm -v /tmp/profesores_redes_rsa.pub
 removed '/tmp/redes_rsa.pub'
 ```
 
-</details>
-
 --------------------------------------------------------------------------------
 
-#### Configuración inicial de la instancia EC2
+### Configuración inicial de la instancia EC2
 <a id="config" name="config"></a>
 
-<details open>
-  <summary>Expandir / Colapsar</summary>
-
-##### Utilerias de red
+#### Utilerias de red
 
 - Instala las utilerías del sistema en la máquina virtual
 
@@ -575,7 +510,7 @@ root@example:~# apt -q update
 root@example:~# apt install net-tools wget curl
 ```
 
-##### hostname
+#### hostname
 
 - Configura el nombre de host de la máquina virtual
 
@@ -608,7 +543,7 @@ ff02::2		ip6-allrouters
 - Reemplazar `50.19.212.156` con la dirección IP de la IP elástica
 - Reemplazar `example.com` con el nombre de dominio
 
-##### locale
+#### locale
 
 - Configura de manera apropiada los mensajes de localización en la máquina virtual
 
@@ -623,21 +558,15 @@ root@example:~# dpkg-reconfigure -p low locales
   - `en_US.UTF-8`
   - `es_MX.UTF-8`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones |
-| - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones |
-| - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas |
-
-</blockquote>
+> - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
+> - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
+> - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas
 
 - Aparece el cuadro de diálogo `Default locale for the system environment`:
 
   - Seleccionar `en_US.UTF-8` en la lista
 
-##### Zona horaria
+#### Zona horaria
 
 - Establecer la zona horaria para la máquina virtual
 
@@ -660,7 +589,7 @@ root@example:~# date
 Tue 03 Aug 2021 02:03:04 AM CDT
 ```
 
-##### Reiniciar la máquina virtual
+#### Reiniciar la máquina virtual
 
 Reinicia la máquina virtual después de aplicar los cambios.
 
@@ -668,14 +597,9 @@ Reinicia la máquina virtual después de aplicar los cambios.
 admin@example:~$ sudo systemctl reboot
 ```
 
-</details>
-
 --------------------------------------------------------------------------------
 
-#### Instalación del servidor Apache HTTPD
-
-<details open>
-  <summary>Expandir / Colapsar</summary>
+### Instalación del servidor Apache HTTPD
 
 ```
 root@example:~# apt install apache2
@@ -683,13 +607,7 @@ root@example:~# apt install apache2
 
 Revisa que Apache escuche en el puerto `80`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S` |
-
-</blockquote>
+> Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S`
 
 ```
 root@example:~# netstat -ntulp | grep apache2
@@ -720,18 +638,12 @@ root@example:~# systemctl reload apache2
 ```
 -->
 
-##### Página para el VirtualHost predeterminado
+#### Página para el VirtualHost predeterminado
 
 - Crea la página de inicio del VirtualHost `_default_` para HTTP y HTTPS con el siguiente contenido en el archivo `/var/www/html/index.html`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| - Reemplazar `Equipo-AAAA-BBBB-CCCC-DDDD` con el identificador de tu equipo |
-| - Reemplazar `example.com` con el nombre de dominio |
-
-</blockquote>
+> - Reemplazar `Equipo-AAAA-BBBB-CCCC-DDDD` con el identificador de tu equipo
+> - Reemplazar `example.com` con el nombre de dominio
 
 ```html
 <!DOCTYPE HTML>
@@ -753,7 +665,7 @@ root@example:~# systemctl reload apache2
 </html>
 ```
 
-##### Configuración del módulo de SSL
+#### Configuración del módulo de SSL
 
 - Habilita el módulo de SSL y VirtualHost para HTTPS y reinicia el servicio de Apache HTTPD
 
@@ -801,11 +713,11 @@ root@example:~# systemctl reload apache2
 ```
 
 <!--
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html
-- https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-ami.html
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2.html>
+- <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-ami.html>
 -->
 
-##### Configuración de seguridad para Apache HTTPD
+#### Configuración de seguridad para Apache HTTPD
 
 - Edita el archivo de configuración para configurar las directivas básicas de seguridad
 
@@ -848,7 +760,7 @@ root@example:/etc/apache2# apachectl -S
 
 --------------------------------------------------------------------------------
 
-##### Tramite de certificado SSL con Let's Encrypt
+#### Tramite de certificado SSL con Let's Encrypt
 
 - Genera un certificado _wildcard_ SSL con `certbot` que cumpla con las siguientes características
 
@@ -923,27 +835,16 @@ root@example:~# egrep -i '^\s*SSLCertificate(Key)?File' /etc/apache2/sites-enabl
 /etc/apache2/sites-enabled/default-ssl.conf:SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 ```
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Lo invitamos a leer el man:
-| - `certbot --help`
-| - `certbot --help all`
-| - https://certbot.eff.org/docs/using.html#manual
-
-</blockquote>
-
-</details>
+> Lo invitamos a leer el man:
+> - `certbot --help`
+> - `certbot --help all`
+> - <https://certbot.eff.org/docs/using.html#manual>
 
 --------------------------------------------------------------------------------
 
-#### Configuración de VirtualHosts para HTTP y HTTPS
+### Configuración de VirtualHosts para HTTP y HTTPS
 
-<details open>
-  <summary>Expandir / Colapsar</summary>
-
-##### VirtualHosts para documentación
+#### VirtualHosts para documentación
 
 - Revisa que existan los siguientes registros utilizando el comando `dig`
 
@@ -971,13 +872,7 @@ lrwxrwxrwx 1 root root   32 Jun 12 00:16 MAINTAINERS.gz -> ../linux-doc-4.19/MAI
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración |
-
-</blockquote>
+> Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/docs_access.log` y `/var/log/apache2/docs_error.log`
 
@@ -1026,7 +921,7 @@ root@example:~# systemctl reload apache2
   - `https://docs.example.com/`
   - `https://manual.example.com/`
 
-##### VirtualHost para contenido del _repositorio de tareas_
+#### VirtualHost para contenido del _repositorio de tareas_
 
 - Ubica la rama donde estas entregando tus tareas en el repositorio
 
@@ -1039,13 +934,7 @@ root@example:~# systemctl reload apache2
 
 - Crea un VirtualHost que responda a `sitio.example.com` y `estatico.example.com` y que sirva el contenido desde la carpeta `/srv/repositorio/public`
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración |
-
-</blockquote>
+> Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/sitio_access.log` y `/var/log/apache2/sitio_error.log`
 
@@ -1095,13 +984,7 @@ admin@example:/srv/repositorio$ git checkout RAMA
 admin@example:/srv/repositorio$ mkdocs build --strict --verbose 2>&1 | egrep -v '^DEBUG'
 ```
 
-<blockquote>
-
-| Nota |
-|:-----|
-| Revisa si hay alguna advertencia y corrige los errores |
-
-</blockquote>
+> Revisa si hay alguna advertencia y corrige los errores
 
 - Lista el contenido del directorio `/srv/repositorio/public` y revisa que exista el archivo `index.html`
 
@@ -1159,7 +1042,7 @@ root@example:~# systemctl reload apache2
   - `https://sitio.example.com/`
   - `https://estatico.example.com/`
 
-##### Revisión de la redirección de HTTP a HTTPS
+#### Revisión de la redirección de HTTP a HTTPS
 
 Revisa que `curl` te redirija desde el sitio de HTTP a su versión con HTTPS
 
@@ -1205,33 +1088,24 @@ Repite este paso para todos los dominios configurados en tus VirtualHosts
 - `http://sitio.example.com/`
 - `http://estatico.example.com/`
 
-##### Validación de VirtualHosts
+#### Validación de VirtualHosts
 
 Visita los dominios con un navegador web para comprobar que el `VirtualHost` esté configurado correctamente
 
-| Dominio                         | Sitio                                      | Ejemplo                             |
-|--------------------------------:|:-------------------------------------------|------------------------------------:|
-|        `https://50.19.212.156/` | Página genérica                            |          https://redes.tonejito.cf/ |
-|          `https://example.com/` | Página genérica                            |          https://redes.tonejito.cf/ |
-|     `https://docs.example.com/` | Documentación del _kernel_ Linux           |     https://docs.redes.tonejito.cf/ |
-|   `https://manual.example.com/` | Documentación del _kernel_ Linux           |   https://manual.redes.tonejito.cf/ |
-|    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ |    https://sitio.redes.tonejito.cf/ |
-| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | https://estatico.redes.tonejito.cf/ |
+| Dominio                         | Sitio                                      | Ejemplo                               |
+|--------------------------------:|:-------------------------------------------|--------------------------------------:|
+|        `https://50.19.212.156/` | Página genérica                            |          <https://redes.tonejito.cf/> |
+|          `https://example.com/` | Página genérica                            |          <https://redes.tonejito.cf/> |
+|     `https://docs.example.com/` | Documentación del _kernel_ Linux           |     <https://docs.redes.tonejito.cf/> |
+|   `https://manual.example.com/` | Documentación del _kernel_ Linux           |   <https://manual.redes.tonejito.cf/> |
+|    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ |    <https://sitio.redes.tonejito.cf/> |
+| `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | <https://estatico.redes.tonejito.cf/> |
 
-
-<blockquote>
-
-| Nota |
-|:-----|
-| Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché. |
-
-</blockquote>
-
-</details>
+> Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
 --------------------------------------------------------------------------------
 
-### Entregables
+## Entregables
 
 Sube al directorio `files` de tu reporte los siguientes archivos:
 
@@ -1263,42 +1137,33 @@ root@example:~# tar -cvvf www.tar -C /var/www .
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
->>>
-
-Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`](files/consulta-dns.sh)
-
+> Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`](files/consulta-dns.sh)
+<blockquote>
 ```
 usuario@laptop:~$ chmod +x consulta-dns.sh
 usuario@laptop:~$ ./consulta-dns.sh example.com 2>&1 | tee registros-dns.txt
 ```
-
->>>
+</blockquote>
 
 - Archivo con el diagnóstico de consultas HTTP y HTTPS a la dirección IP y nombres DNS de los VirtualHosts
 
->>>
-
-- Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`](files/consulta-http.sh)
-
+> Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`](files/consulta-http.sh)
+<blockquote>
 ```
 usuario@laptop:~$ chmod +x consulta-http.sh
 usuario@laptop:~$ ./consulta-http.sh example.com 2>&1 | tee diagnostico-http.txt
 ```
-
->>>
+</blockquote>
 
 - Archivo con el diagnóstico de certificados SSL que regresa cada VirtualHost configurado
 
->>>
-
-- Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`](files/consulta-ssl.sh)
-
+> Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`](files/consulta-ssl.sh)
+<blockquote>
 ```
 usuario@laptop:~$ chmod +x consulta-ssl.sh
 usuario@laptop:~$ ./consulta-ssl.sh example.com 2>&1 | tee diagnostico-ssl.txt
 ```
-
->>>
+</blockquote>
 
 <!--
 - Copia de seguridad de las bitácoras de Apache HTTPD
@@ -1318,10 +1183,10 @@ root@example:~# tar -cvvf letsencrypt.tar /etc/letsencrypt /var/lib/letsencrypt 
 
 --------------------------------------------------------------------------------
 
-### Cuestionario
+## Cuestionario
 
 <!--
-#### Práctica
+### Práctica
 -->
 
 - ¿Para qué sirvió la configuración inicial de la máquina virtual?, ¿qué ventajas proporciona respecto a una máquina virtual que no tenga esta configuración?
@@ -1343,10 +1208,10 @@ root@example:~# tar -cvvf letsencrypt.tar /etc/letsencrypt /var/lib/letsencrypt 
 -->
 
 <!--
-#### AWS
+### AWS
 -->
 
--  De acuerdo a la siguiente información proporcionada por AWS https://aws.amazon.com/es/ec2/instance-types/
+-  De acuerdo a la siguiente información proporcionada por AWS <https://aws.amazon.com/es/ec2/instance-types/>
 
     - ¿Qué ventajas tiene elegir el tipo de instancia `t3g.micro` o `t4g.micro` sobre otras?
 
@@ -1368,7 +1233,7 @@ root@example:~# tar -cvvf letsencrypt.tar /etc/letsencrypt /var/lib/letsencrypt 
     - [Seguridad en AWS - AWS Public Sector Summit Mexico City 2020 📼](https://youtu.be/d3jnbtaLb24&list=PL2yQDdvlhXf_h40vMoMoh2SBa05geKLDq&index=10&t=1635)
 -->
 
-### Notas adicionales
+## Notas adicionales
 
 -   Redacte un reporte por equipo, en el que consigne los pasos que considere necesarios para explicar cómo realizó la práctica, incluya capturas de pantalla que justifiquen su trabajo
 
@@ -1376,8 +1241,8 @@ root@example:~# tar -cvvf letsencrypt.tar /etc/letsencrypt /var/lib/letsencrypt 
 
 -   Puede agregar posibles errores, complicaciones, opiniones, críticas de la práctica o del laboratorio, o cualquier comentario relativo a la misma
 
--   Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso
-    <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>.
+-   Entregue su reporte de acuerdo a la forma de entrega de tareas y prácticas definida al inicio del curso.
+    - <https://redes-ciencias-unam.gitlab.io/2021-2/tareas-redes/workflow/>.
 
 <!--
 

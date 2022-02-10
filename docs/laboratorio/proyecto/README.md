@@ -1,6 +1,13 @@
-![UNAM-FC](../UNAM-FC.png)
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Proyecto final
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+<div class="title-image">
+  <img src="../UNAM-FC.png" alt="UNAM-FC">
+</div>
 
-# Redes de Computadoras
 # Proyecto final
 
 Este trabajo corresponde al último proyecto que deben entregar para realizar la evaluación del curso de Redes de Computadoras
@@ -14,15 +21,6 @@ No se permite tener proyectos repetidos, revisar los requerimientos de la aplica
 ## Evaluación
 
 La evaluación de este proyecto se pondera con el valor de **dos prácticas** y se promedia con la calificación de las demás prácticas para obtener la calificación final del semestre
-
-## Tabla de contenido
-
-<details open>
-  <summary>Expandir / Colapsar</summary>
-
-[[_TOC_]]
-
-</details>
 
 ## Fecha de entrega
 
@@ -204,7 +202,7 @@ La evaluación de este proyecto se pondera con el valor de **dos prácticas** y 
 
 --------------------------------------------------------------------------------
 
-# Monitoreo del estado de la infraestructura
+## Monitoreo del estado de la infraestructura
 
 ![Nagios](https://nagios.redes.tonejito.cf/map.png)
 
