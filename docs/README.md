@@ -1,6 +1,15 @@
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Inicio
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+
 #	Redes de Computadoras
 
-Facultad de Ciencias, UNAM
+<div class="title-image">
+  <img src="img/UNAM-FC.png" alt="UNAM-FC">
+</div>
 
 Ciencias de la Computación - Semestre 2022-2
 
