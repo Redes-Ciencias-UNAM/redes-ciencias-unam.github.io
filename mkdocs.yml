@@ -5,6 +5,7 @@ edit_uri: -/tree/master/docs
 
 site_name: Redes de Computadoras
 site_description: Facultad de Ciencias - UNAM
+site_author: Andrés Hernández
 site_url: https://Redes-Ciencias-UNAM.gitlab.io
 site_dir: public
 docs_dir: docs
@@ -23,6 +24,7 @@ theme:
   navigation_depth: 4
   collapse_navigation: true
   titles_only: true
+  use_directory_urls: true
   analytics:
     gtag: G-CYE5VJNLW4
 
@@ -30,8 +32,13 @@ markdown_extensions:
 - toc:
     permalink: "#"
     separator: "-"
+- admonition
+- attr_list
+- def_list
 
 plugins:
   - exclude:
       glob:
         - ".*.sw?"
+
+copyright: = ^ . ^ =
