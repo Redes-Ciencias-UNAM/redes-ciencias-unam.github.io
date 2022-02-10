@@ -62,7 +62,7 @@ $ curl -vk#0X HEAD 'https://www.unam.mx/' 2>&1 | tee https.log
 > User-Agent: curl/7.38.0
 > Host: www.unam.mx
 > Accept: */*
-> 
+>
 < HTTP/1.1 200 OK
 < Date: Tue, 13 Mar 2018 07:16:34 GMT
 * Server Apache is not blacklisted
@@ -78,7 +78,7 @@ $ curl -vk#0X HEAD 'https://www.unam.mx/' 2>&1 | tee https.log
 < Vary: Cookie,Accept-Encoding
 < Connection: close
 < Content-Type: text/html; charset=utf-8
-< 
+<
 * SSLv3, TLS alert, Client hello (1):
 * Closing connection 0
 * SSLv3, TLS alert, Client hello (1):
@@ -138,7 +138,7 @@ SSL-Session:
     Protocol  : TLSv1.2
     Cipher    : ECDHE-RSA-AES256-GCM-SHA384
     Session-ID: 3D99465F7B59B5D3325560EFACF6AAC0A91AC470445EF363F35F250E36BA67F6
-    Session-ID-ctx: 
+    Session-ID-ctx:
     Master-Key: AE96B9AFCB4E6FDB6F2EE5063CC517FDDD938986196440CFF513F26E8C5AE1BA8682F0B467B3F0468BCBD5B09D995271
     Key-Arg   : None
     PSK identity: None
@@ -230,7 +230,7 @@ $ cat certificate-01.pem certificate-02.pem ... > chain.pem
 Utilizar `openssl verify` para verificar la validez y autenticidad del certificado del servidor
 
 ```
-$ openssl verify -verbose -x509_strict -CApath /etc/ssl/certs/ -trusted chain.pem www_unam_mx.pem 
+$ openssl verify -verbose -x509_strict -CApath /etc/ssl/certs/ -trusted chain.pem www_unam_mx.pem
 www_unam_mx.pem: OK
 ```
 

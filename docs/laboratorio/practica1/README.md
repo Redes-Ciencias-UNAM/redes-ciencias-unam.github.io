@@ -440,7 +440,7 @@ mi-dominio.tech.	86400	IN	NS	ns4.he.net.
 
 4.  Analice la nota *Cómo evitar que Internet se caiga*, que puede leer en este enlace, y emita un comentario al respecto.
     - <https://latam.kaspersky.com/blog/attack-on-dyn-explained/7901/>
-    
+
 
 <!--
 Consulta de WHOIS punto 8

@@ -41,7 +41,8 @@ Abrir una nueva ventana de terminal y hacer una captura de tráfico con `tcpdump
 
 Dejar abierta esta ventana y esperar a completar el siguiente paso
 
-> Ajustar el filtro para que capture únicamente los paquetes del equipo al que se haga la petición HTTP
+!!! note
+- Ajustar el filtro para que capture únicamente los paquetes del equipo al que se haga la petición HTTP
 
 #### B. Utilizando `wireshark`
 
@@ -99,13 +100,15 @@ $ wireshark &
 
 En el panel **izquierdo** seleccionar la interfaz para realizar la captura.
 
-> **Protip**: Si no se sabe en que interfaz se debe capturar, seleccionar `any` y explicar por que se utilizó así.
+!!! note
+- Si no se sabe en que interfaz se debe capturar, seleccionar `any` y explicar por que se utilizó así.
 
 Dar clic en el botón **Capture options** para introducir el filtro de captura (_capture filter_)
 
 + `host www.unam.mx`
 
-> Ajustar el filtro para que capture únicamente los paquetes del equipo al que se haga la petición HTTP
+!!! note
+- Ajustar el filtro para que capture únicamente los paquetes del equipo al que se haga la petición HTTP
 
 Dar clic en el botón **Start** para comenzar la captura.
 
@@ -126,7 +129,7 @@ $ curl -v# 'http://www.unam.mx/' -o www_unam_mx.http.html 2>&1 | tr -d '\r' | te
 > User-Agent: curl/7.38.0
 > Host: www.unam.mx
 > Accept: */*
-> 
+>
 < HTTP/1.1 301 Moved Permanently
 < Date: Fri, 13 Apr 2018 06:32:18 GMT
 * Server Apache is not blacklisted
@@ -136,7 +139,7 @@ $ curl -v# 'http://www.unam.mx/' -o www_unam_mx.http.html 2>&1 | tr -d '\r' | te
 < Expires: Fri, 27 Apr 2018 06:32:18 GMT
 < Content-Length: 228
 < Content-Type: text/html; charset=iso-8859-1
-< 
+<
 { [data not shown]
 ########################## 100.0%* Connection #0 to host www.unam.mx left intact
 
@@ -157,7 +160,6 @@ Salir de `tcpdump` presionando `^C` (Control + C)
 11 packets received by filter
 0 packets dropped by kernel
 ```
-
 
 #### B. Utilizando `wireshark`
 
@@ -211,8 +213,8 @@ Ver la [sección de TCP][seccion-tcp] o tomar los archivos mencionados arriba co
 
 Documentar los pasos realizados, así como los problemas encontrados y como se solucionaron en el archivo `tarea-tcp.md`
 
-> Si utilizaste `wireshark` para hacer la captura, debes subir las pantallas que muestren el procedimiento que seguiste
-
+!!! note
+- Si utilizaste `wireshark` para hacer la captura, debes subir las pantallas que muestren el procedimiento que seguiste
 
 #### Enviar al repositorio
 

@@ -1,11 +1,11 @@
 ---
 # https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
-title: Recursos gratuitos para el desarrollo de proyectos estudiantiles 
+title: Recursos gratuitos para el desarrollo de proyectos estudiantiles
 authors:
 - Paulo Santiago de Jesús Contreras Flores
 ---
 
-# Recursos gratuitos para el desarrollo de proyectos estudiantiles 
+# Recursos gratuitos para el desarrollo de proyectos estudiantiles
 
 --------------------------------------------------------------------------------
 
@@ -24,7 +24,7 @@ En las propias palabras de GitHub sobre este programa:
 Seguir las siguientes instrucciones para acceder a los beneficios.
 
 1.  Acceder al sitio <https://education.github.com> y dar clic en el botón *GitHub Student Developer Pack*, para acceder a los beneficios del programa.
-    
+
 ![Github Student Developer Pack](images/a_01_2.png)
 
 2.  En la siguiente pantalla se pueden revisar todos los servicios y herramientas que ofrece el programa. Para continuar con el registro, dar clic en el botón *Get your pack*.
@@ -32,7 +32,7 @@ Seguir las siguientes instrucciones para acceder a los beneficios.
 ![Beneficios del programa](images/a_02_2.png)
 
 3.  A continuación se muestran los beneficios del programa tanto para estudiantes como para profesores. Dar clic en el botón *Get student benefits*.
-    
+
 ![Beneficios para el estudiante y el profesor](images/a_03_2.png)
 
 4.  Para el siguiente paso es necesario ingresar usando una cuenta de GitHub, si ya se tiene una bastará con ingresar los datos de acceso que se solicitan; en caso de que no se tenga una cuenta, entonces dar clic en el enlace de *Create an account*, y completar con los datos que se soliciten.

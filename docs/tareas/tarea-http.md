@@ -39,7 +39,7 @@ $ git pull
 $ git push
 ```
 
-### 2. Hacer una petición al servidor 
+### 2. Hacer una petición al servidor
 
 Utilizar el programa con `curl` para hacer una petición al servidor:
 

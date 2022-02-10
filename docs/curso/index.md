@@ -157,9 +157,8 @@ La calificación final se calculará en base a los siguientes porcentajes:
 | Proyecto final	| 10%	|
 | Tareas		| 10%	|
 
->>>
-Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la calificación final
->>>
+!!! note
+    Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la calificación final
 
 ##	Observaciones adicionales
 

@@ -71,7 +71,8 @@ usuario@laptop:~$ ls -la ~/.ssh/equipo_redes_rsa*
 
 - Mostrar el contenido de la llave **pública**
 
-> El contenido de la llave es una cadena muy larga que viene en una sola línea
+!!! note
+    El contenido de la llave es una cadena muy larga que viene en una sola línea
 
 ```
 usuario@laptop:~$ cat ~/.ssh/equipo_redes_rsa.pub
@@ -113,7 +114,8 @@ En la ventana para importar una llave de SSH
   - [`ami-087b6081d18c91a97`][ami-debian-10-buster-arm64] para instancias `t4g` de arquitectura `ARM64`
   - [`ami-05ad4ed7f9c48178b`][ami-debian-10-buster-amd64] para instancias `t3a`, `t3` y `t2` de arquitectura `amd64` (`x86_64`)
 
-> Algunas cuentas de AWS únicamente pueden lanzar instancias `t2.micro`
+!!! note
+    Algunas cuentas de AWS únicamente pueden lanzar instancias `t2.micro`
 
 ![Consola EC2](img/008-EC2-instance-start.png)
 
@@ -147,8 +149,9 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - Seleccionar el tipo de instancia `t4g.nano` (2 vCPU, 512 MB de RAM). Dar clic en el botón **gris** `Next: Configure instance details`
 
-> En caso de error seleccionar con la instancia `t4g.micro` (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa de uso gratuita**][aws-free-tier] de AWS.
-> Algunas cuentas únicamente pueden lanzar instancias `t2.micro`, si este es el caso verifica que tengas el AMI para arquitectura amd64 (x86_64)
+!!! note
+    - En caso de error seleccionar con la instancia `t4g.micro` (2 vCPU, 1 GB de RAM) que viene incluida en la [**capa de uso gratuita**][aws-free-tier] de AWS.
+    - Algunas cuentas únicamente pueden lanzar instancias `t2.micro`, si este es el caso verifica que tengas el AMI para arquitectura amd64 (x86_64)
 
 [aws-free-tier]: https://aws.amazon.com/free/
 
@@ -166,7 +169,8 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - En el paso `Add tags`, simplemente dar clic en el botón **gris** `Next: Configure security group`
 
-> No se utilizan _tags_ en esta actividad
+!!! note
+    - No se utilizan _tags_ en esta actividad
 
 ![Consola EC2](img/014-EC2-instance-tags.png)
 
@@ -291,7 +295,8 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 
 - Crear los registros DNS de acuerdo a la siguiente tabla:
 
-> Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1]
+!!! note
+    - Utiliza el mismo nombre de dominio que tramitaste en la [práctica 1][practica-1]
 
 [practica-1]: /public/laboratorio/practica1#obtener-un-dominio-en-tech-domains
 
@@ -303,13 +308,15 @@ https://wiki.debian.org/Cloud/AmazonEC2Image/Buster#Buster
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
-> - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS
-> - Reemplazar `50.19.212.156` con la dirección de la IP elástica
-> - Reemplazar `example.com` con el nombre de dominio
+!!! note
+    - No utilizar acentos ni caracteres como `ñ` o `ü` en los nombres DNS
+    - Reemplazar `50.19.212.156` con la dirección de la IP elástica
+    - Reemplazar `example.com` con el nombre de dominio
 
 - Revisa que existan los registros DNS utilizando el comando `dig`
 
-> El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
+!!! note
+    - El parámetro `A` indica el tipo de registro que se quiere obtener en la respuesta
 
 ```
 usuario@laptop:~$ dig +noall +comments +answer example.com.
@@ -433,7 +440,8 @@ admin@ip-172-31-85-20:~$
 
 Agregar la [llave SSH de los profesores](files/profesores_redes_rsa.pub), la cual ayudará a calificar la práctica
 
-> Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso
+!!! note
+    - Puedes pedir asistencia de los profesores cuando vayas a realizar este paso para evitar problemas de acceso
 
 - Copia la llave a la máquina virtual
 
@@ -555,9 +563,10 @@ root@example:~# dpkg-reconfigure -p low locales
   - `en_US.UTF-8`
   - `es_MX.UTF-8`
 
-> - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
-> - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
-> - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas
+!!! note
+    - Puedes utilizar las flechas de teclado y/o la tecla `<Tab>` para navegar entre las opciones
+    - La barra espaciadora enciende `[*]` o apaga `[ ]` las opciones
+    - No usar `Ctrl + C` ni `Ctrl + Z` porque se interrumpe el proceso de configuración y puede causar problemas
 
 - Aparece el cuadro de diálogo `Default locale for the system environment`:
 
@@ -604,7 +613,8 @@ root@example:~# apt install apache2
 
 Revisa que Apache escuche en el puerto `80`
 
-> Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S`
+!!! note
+    - Puede que aparezca `127.0.0.1` en lugar de `example.com`  en la salida de `apachectl -S`
 
 ```
 root@example:~# netstat -ntulp | grep apache2
@@ -639,8 +649,9 @@ root@example:~# systemctl reload apache2
 
 - Crea la página de inicio del VirtualHost `_default_` para HTTP y HTTPS con el siguiente contenido en el archivo `/var/www/html/index.html`
 
-> - Reemplazar `Equipo-AAAA-BBBB-CCCC-DDDD` con el identificador de tu equipo
-> - Reemplazar `example.com` con el nombre de dominio
+!!! note
+    - Reemplazar `Equipo-AAAA-BBBB-CCCC-DDDD` con el identificador de tu equipo
+    - Reemplazar `example.com` con el nombre de dominio
 
 ```html
 <!DOCTYPE HTML>
@@ -832,10 +843,11 @@ root@example:~# egrep -i '^\s*SSLCertificate(Key)?File' /etc/apache2/sites-enabl
 /etc/apache2/sites-enabled/default-ssl.conf:SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
 ```
 
-> Lo invitamos a leer el man:
-> - `certbot --help`
-> - `certbot --help all`
-> - <https://certbot.eff.org/docs/using.html#manual>
+!!! note
+    Lo invitamos a leer el man:
+    - `certbot --help`
+    - `certbot --help all`
+    - <https://certbot.eff.org/docs/using.html#manual>
 
 --------------------------------------------------------------------------------
 
@@ -869,7 +881,8 @@ lrwxrwxrwx 1 root root   32 Jun 12 00:16 MAINTAINERS.gz -> ../linux-doc-4.19/MAI
 
 - Crea un VirtualHost que responda a `docs.example.com` y `manual.example.com` y que sirva el contenido desde la carpeta `/usr/share/doc/linux-doc/html`
 
-> Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+!!! note
+    - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/docs_access.log` y `/var/log/apache2/docs_error.log`
 
@@ -931,7 +944,8 @@ root@example:~# systemctl reload apache2
 
 - Crea un VirtualHost que responda a `sitio.example.com` y `estatico.example.com` y que sirva el contenido desde la carpeta `/srv/repositorio/public`
 
-> Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
+!!! note
+    - Puedes poner el VirtualHost de HTTP y HTTPS en el mismo archivo para facilitar la configuración
 
   - Estos VirtualHosts deben escribir sus bitácoras en la ruta `/var/log/apache2/sitio_access.log` y `/var/log/apache2/sitio_error.log`
 
@@ -981,7 +995,8 @@ admin@example:/srv/repositorio$ git checkout RAMA
 admin@example:/srv/repositorio$ mkdocs build --strict --verbose 2>&1 | egrep -v '^DEBUG'
 ```
 
-> Revisa si hay alguna advertencia y corrige los errores
+!!! note
+    - Revisa si hay alguna advertencia y corrige los errores
 
 - Lista el contenido del directorio `/srv/repositorio/public` y revisa que exista el archivo `index.html`
 
@@ -1098,7 +1113,8 @@ Visita los dominios con un navegador web para comprobar que el `VirtualHost` est
 |    `https://sitio.example.com/` | Sitio estático del _repositorio de tareas_ |    <https://sitio.redes.tonejito.cf/> |
 | `https://estatico.example.com/` | Sitio estático del _repositorio de tareas_ | <https://estatico.redes.tonejito.cf/> |
 
-> Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
+!!! note
+    - Se recomienda utilizar una ventana de incógnito en el navegador para evitar problemas de caché.
 
 --------------------------------------------------------------------------------
 
@@ -1134,33 +1150,38 @@ root@example:~# tar -cvvf www.tar -C /var/www .
 |    `sitio.example.com.` | `CNAME` |       `example.com.` |
 | `estatico.example.com.` | `CNAME` | `sitio.example.com.` |
 
-> Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`](files/consulta-dns.sh)
-<blockquote>
+!!! note
+    - Puedes generar este archivo ejecutando [el script de shell `files/consulta-dns.sh`](files/consulta-dns.sh)
+
+<div class="admonition note">
 ```
 usuario@laptop:~$ chmod +x consulta-dns.sh
 usuario@laptop:~$ ./consulta-dns.sh example.com 2>&1 | tee registros-dns.txt
 ```
-</blockquote>
-
+</div>
 - Archivo con el diagnóstico de consultas HTTP y HTTPS a la dirección IP y nombres DNS de los VirtualHosts
 
-> Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`](files/consulta-http.sh)
-<blockquote>
+!!! note
+    - Puedes generar este archivo ejecutando [el script de shell `files/consulta-http.sh`](files/consulta-http.sh)
+
+<div class="admonition note">
 ```
 usuario@laptop:~$ chmod +x consulta-http.sh
 usuario@laptop:~$ ./consulta-http.sh example.com 2>&1 | tee diagnostico-http.txt
 ```
-</blockquote>
+</div>
 
 - Archivo con el diagnóstico de certificados SSL que regresa cada VirtualHost configurado
 
-> Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`](files/consulta-ssl.sh)
-<blockquote>
+!!! note
+    - Puedes generar este archivo ejecutando [el script de shell `files/consulta-ssl.sh`](files/consulta-ssl.sh)
+
+<div class="admonition note">
 ```
 usuario@laptop:~$ chmod +x consulta-ssl.sh
 usuario@laptop:~$ ./consulta-ssl.sh example.com 2>&1 | tee diagnostico-ssl.txt
 ```
-</blockquote>
+</div>
 
 <!--
 - Copia de seguridad de las bitácoras de Apache HTTPD
