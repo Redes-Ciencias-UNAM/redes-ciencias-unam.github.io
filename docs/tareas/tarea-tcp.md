@@ -1,3 +1,10 @@
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Tarea TCP
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+
 # Tarea TCP
 
 ## Instrucciones

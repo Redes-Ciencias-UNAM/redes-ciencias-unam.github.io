@@ -1,3 +1,10 @@
+---
+# https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+title: Tarea DNS y WHOIS
+authors:
+- Andrés Leonardo Hernández Bermúdez
+---
+
 #	Tarea DNS y WHOIS
 
 ##	Instrucciones
