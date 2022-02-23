@@ -50,6 +50,15 @@ blockquote
   margin: 10px;
 }
 
+details > summary {
+  padding: 1em;
+  width: 99%;
+  background-color: lightgoldenrodyellow;
+  border: 1px dotted silver;
+  box-shadow: 1px 1px 2px #bbbbbb;
+  cursor: pointer;
+}
+
 .yes
 {
   font-size: 1.2em;
@@ -69,4 +78,10 @@ blockquote
   max-width: 75%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.affix
+{
+  overflow-y: scroll;
+  max-height: 85vh;
 }
