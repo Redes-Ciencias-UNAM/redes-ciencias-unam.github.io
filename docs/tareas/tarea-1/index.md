@@ -1,6 +1,6 @@
 ---
 # https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
-title: Laboratorio virtual de redes
+title: Tarea 1 - Laboratorio virtual de redes
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---

@@ -11,6 +11,10 @@ authors:
 
 ## Configuración en VirtualBox
 
+|      |
+|:----:|
+| ![](img/centos-8/virtualbox/centos-008-virtualbox-vm-settings.png) |
+
 ### Quitar imagen ISO de instalación
 
 <!--
@@ -41,11 +45,13 @@ authors:
 
 |      |
 |:----:|
-| ![](img/centos-8/virtualbox/centos-008-virtualbox-vm-settings.png) |
+| ![](img/centos-8/virtualbox/centos-009-virtualbox-vm-settings-general-advanced-clipboard.png) |
+
+### Configuración de aceleración 3D
 
 |      |
 |:----:|
-| ![](img/centos-8/virtualbox/centos-009-virtualbox-vm-settings-general-advanced-clipboard.png) |
+| ![](img/centos-8/virtualbox/centos-010-enable-3d-acceleration.png) |
 
 ### Creación de _snapshot_
 

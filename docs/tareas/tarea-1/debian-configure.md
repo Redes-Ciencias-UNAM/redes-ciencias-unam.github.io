@@ -11,6 +11,10 @@ authors:
 
 ## Configuración de VirtualBox
 
+|      |
+|:----:|
+| ![](img/debian-11/virtualbox/debian-008-virtualbox-vm-settings.png) |
+
 ### Quitar imagen ISO de instalación
 
 |      |
@@ -46,6 +50,12 @@ authors:
 |      |
 |:----:|
 | ![](img/debian-11/virtualbox/debian-009-virtualbox-vm-settings-general-advanced-clipboard.png) |
+
+### Configuración de aceleración 3D
+
+|      |
+|:----:|
+| ![](img/debian-11/virtualbox/debian-010-enable-3d-acceleration.png) |
 
 ### Creación de _snapshot_
 
