@@ -83,7 +83,7 @@ authors:
 [flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
 [repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
 
-[video-instalacion-packet-tracer]: https://www.youtube.com/watch?v=TDqqwliOBnA&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=20
+[video-instalacion-packet-tracer]: https://www.youtube.com/watch?v=TQYe7Rp13xw
+[video-packet-tracer]: https://www.youtube.com/watch?v=yfEIis_3MZk
 
 [packet-tracer-install]: ./install
