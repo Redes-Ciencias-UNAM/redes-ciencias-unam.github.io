@@ -15,9 +15,8 @@ authors:
 
 ## Elementos de apoyo
 
+- [Video de la instalación de Packet Tracer en Ubuntu 📼][video-instalacion-packet-tracer]
 - [Video de la creación de una red en Packet Tracer 📼][video-packet-tracer]
-
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
 
 ## Restricciones
 
@@ -84,5 +83,7 @@ authors:
 [flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
 [repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
 
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
+[video-instalacion-packet-tracer]: https://www.youtube.com/watch?v=TDqqwliOBnA&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
+[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=20
+
 [packet-tracer-install]: ./install
