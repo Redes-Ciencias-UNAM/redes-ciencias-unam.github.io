@@ -22,14 +22,14 @@ authors:
 
 - Esta tarea debe ser entregada de manera **individual**
 
-- La fecha límite de entrega es el **lunes 07 de marzo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **viernes 11 de marzo de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada de manera **individual** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Crear una rama llamada `tarea-2` para entregar la práctica
     - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
 
 ## Procedimiento
 
-- Crear una cuenta en NetAcad.com o SkillsForAll.com
+- Crear una cuenta en **Cisco Network Academy** o **Skills for All**
     - <https://www.netacad.com/>
     - <https://skillsforall.com/>
 
@@ -40,7 +40,8 @@ authors:
     - Las instrucciones para esta tarea [están documentadas en una página separada][packet-tracer-install].
 
 - Crea una topología de red simple para una red casera
-    - Elabora un plano de cómo es la distribución aproximada de las habitaciones
+    - Elabora un "plano" de cómo es la distribución aproximada de las habitaciones
+    - No es necesario que pongas fotos de tu casa
 
 - Explica la topología en el archivo `README.md`
     - Agrega las imágenes que sean necesarias
@@ -56,19 +57,25 @@ authors:
     - Explicación de la topología de red utilizada.
     
         - Simular la salida a Internet utilizando un modem conectado a `Cloud-PT`
-        - Utilizar los equipos de red de tipo "Packet Tracer" (`Bridge-PT`, `Switch-PT`, `Router-PT`, `AccessPoint-PT`, etc.)
+        - Utilizar los equipos de red de tipo "Packet Tracer"
+            - `Bridge-PT`, `Switch-PT`, `Router-PT`, `AccessPoint-PT`, etc.
         - Utilizar PC, laptops, TV, SmartPhone, Tablet e impresoras como clientes
             - Dar de alta por lo menos 4 clientes
             - Utilizar conexiones Ethernet para conectar los clientes al switch
+            - Utilizar un AP y conectar los clientes inalámbricos a el
             - Asignar direcciones IP estáticas del segmento `192.168.X.0/24`
 
     - Listar las imágenes con su respectiva descripción
 
 - Carpeta `img`
 
+    - Imagen donde se muestre que completaste el curso de **Getting Started with Cisco Packet Tracer** en **Skills for All**
+
     - Ventana "acerca de" Packet Tracer ejecutándose en la **máquina física**
     
-    - Imagen de la topología de red implementada
+    - Imagen del plano de la distribución física de la red casera
+
+    - Imagen de la topología de red implementada en Packet Tracer
     
     - Imagen de la configuración de red para todos los equipos
     
@@ -78,12 +85,18 @@ authors:
 
     - Archivo de la actividad en formato `PKT` (Packet Tracer)
 
+## Extra
+
+- Incluir un equipo servidor en tu topología de red y activar el servicio de DHCP
+    - Listar en el `README.md` los pasos que tuviste que seguir para realizar esta configuración
+    - Incluir imagenes donde se muestre el proceso de configuración
+
 --------------------------------------------------------------------------------
 
 [flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
 [repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
 
-[video-instalacion-packet-tracer]: https://www.youtube.com/watch?v=TQYe7Rp13xw
-[video-packet-tracer]: https://www.youtube.com/watch?v=yfEIis_3MZk
+[video-instalacion-packet-tracer]: https://www.youtube.com/watch?v=TQYe7Rp13xw&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
+[video-packet-tracer]: https://www.youtube.com/watch?v=yfEIis_3MZk&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=20
 
 [packet-tracer-install]: ./install
