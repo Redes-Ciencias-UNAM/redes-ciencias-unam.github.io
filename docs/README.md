@@ -146,7 +146,7 @@ Ciencias de la Computación - Semestre 2022-2
 
 [pagina-curso]: https://Redes-Ciencias-UNAM.gitlab.io/
 [grupo-gitlab]: https://gitlab.com/Redes-Ciencias-UNAM/
-[lista]: https://tinyurl.com/ListaRedes-2022-2
+[lista]: https://tinyurl.com/Lista-Redes-2022-2
 [pizarron]: https://tinyurl.com/PizarronRedes-2022-2
 [telegram]: https://t.me/redes_ciencias_unam
 
