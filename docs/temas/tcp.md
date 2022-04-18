@@ -8,9 +8,11 @@
 
 <img alt="Captura de tráfico - diagrama" src="/files/captura.png" />
 
+<!--
 ## Tarea
 
 + [Tarea TCP](../tareas/tarea-tcp.md "Tarea sobre el protoclo TCP")
+-->
 
 ## Referencias
 
