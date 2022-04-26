@@ -6,16 +6,20 @@
   background-image: linear-gradient(forestgreen, green);
 }
 
-a:link {
+a:link
+{
   color: green;
 }
-a:visited {
+a:visited
+{
   color: darkgreen;
 }
-a:hover {
+a:hover
+{
   color: limegreen;
 }
-a:active {
+a:active
+{
   color: darkolivegreen;
 }
 
@@ -50,13 +54,29 @@ blockquote
   margin: 10px;
 }
 
-details > summary {
-  padding: 1em;
-  width: 99%;
-  background-color: lightgoldenrodyellow;
-  border: 1px dotted silver;
+details
+{
+  border: 1px dotted OliveDrab;
   box-shadow: 1px 1px 2px #bbbbbb;
-  cursor: pointer;
+  padding: 1em;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: left;
+
+  color: DarkOliveGreen;
+  background-color: #bbccaa;
+  border-color: Olive;
+}
+
+details > summary
+{
+  padding: 0.5em;
+  width: 99%;
+  color: DarkOliveGreen;
+  font-weight: bold;
+  background-color: #bbccaa;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 .yes
