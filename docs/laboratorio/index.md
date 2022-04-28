@@ -15,8 +15,10 @@ title: Laboratorio
 | Práctica 5 : [Configuración de algoritmos de ruteo](practica-5)                    | Packet Tracer | 2022-05-23
 | Práctica 6 : [Configuración de servicios de red en GNU/Linux](practica-6)          | VirtualBox    | 2022-05-31
 
+<!--
 ## Proyecto
 
 | Título                                                                 | Ambiente      | Entrega    |
 |:-----------------------------------------------------------------------|:-------------:|:----------:|
 | Proyecto : [Configuración de servicios de red en Internet](practica-7) | Nube pública  | 2022-06-08
+-->
