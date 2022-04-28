@@ -1,4 +1,4 @@
-`# Ruteo con OSPF
+# Ruteo con BGP
 
 ## Topología de red
 
@@ -115,7 +115,6 @@ Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
 
 ### Configuración para `Router-3`
 
---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 ## Diagnóstico de BGP en los ruteadores

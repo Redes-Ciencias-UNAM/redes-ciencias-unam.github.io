@@ -1,4 +1,4 @@
-# Ruteo estático
+# Topología para ruteo
 
 ## Topología de red
 
