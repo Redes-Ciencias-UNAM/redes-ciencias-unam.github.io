@@ -27,7 +27,7 @@ Esta practica guiada esta basada en los videos de la clase que se muestran a con
 
 ## Restricciones
 
-- La fecha límite de entrega es el **viernes 6 de mayo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **domingo 8 de mayo de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
 - Crear una nueva rama llamada `practica-3`
 - Utilizar la carpeta `docs/practicas/practica-3/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
