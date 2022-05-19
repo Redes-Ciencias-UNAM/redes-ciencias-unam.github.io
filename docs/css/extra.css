@@ -6,6 +6,18 @@
   background-image: linear-gradient(forestgreen, green);
 }
 
+p
+{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+pre
+{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 a:link
 {
   color: green;
