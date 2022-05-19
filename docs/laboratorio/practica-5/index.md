@@ -99,6 +99,12 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 - Cada red tiene su propio nombre de dominio (<span style="font-weight: bold; color: blue;">azul</span>)
 - El servidor DNS tiene un registro A para cada ruteador, servidor expuesto a través del NAT "estático" y un registro A para el mismo servidor DNS
 
+<a id="registros-dns" name="registros-dns"></a>
+
+| Registros en el servidor DNS |
+|:----------------------------:|
+| ![](img/dns-server.png)
+
 --------------------------------------------------------------------------------
 
 ## Entregables
@@ -118,7 +124,6 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
     - Imagen de la topología de red implementada
     - Captura de pantalla de los registros del servidor **DNS**
     - Demás imágenes que se consideren necesarias para el reporte
-    
 
 - Carpeta `files`
     - Archivo de la actividad en formato `PKT` (Packet Tracer)
