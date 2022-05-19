@@ -16,7 +16,7 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 
 - [Video de la creación de una red en Packet Tracer 📼][video-packet-tracer]
 - [Configuración de ruteo RIPv2 en Packet Tracer 📝][ruteo-rip]
-- Configuración de NAT en Packet Tracer
+- [Configuración de NAT en Packet Tracer 📝][packet-tracer-nat]
 
 ## Restricciones
 
@@ -39,7 +39,7 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 <a id="diagrama" name="diagrama"></a>
 
 | Diagrama de red en Packet Tracer |
-|:-----------------------------:|
+|:--------------------------------:|
 | ![](img/diagrama_red.png)
 | Redes: <span style="font-weight: bold; color: red;">WAN: rojo</span> , <span style="font-weight: bold; color: black;">LAN: negro</span> , <span style="font-weight: bold; color: orange;">DMZ: naranja</span>
 | Redes <span style="font-weight: bold; color: red;">WAN</span>: <u>Segmento de red elegido</u> (`A.B.X.Y`) de [**TEST-NET**][ipv4-reserved-addresses] subdividido para 4 subredes
@@ -72,7 +72,6 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 - Configura el servicio de "NAT `overload`" en el ruteador para las redes **LAN** para permitir que la IP de la PC (`192.168.X.Y`) se traduzca a la IP del router **WAN** (`A.B.X.1`) cuando salga a otras redes
     - La red **LAN** se considera que está en la región **INTERNA** del NAT
     - Los equipos en la red **LAN** no son directamente accesibles desde ninguna de las redes **WAN** porque están "atrás del NAT"
-
 - Configura los switches de las redes **LAN**
     - Dirección IP de administración (estática) en la interfaz de red `vlan 1`
     - Establece el _gateway_ con la dirección IP del ruteador para ese segmento de red
@@ -88,7 +87,6 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
     - La red **DMZ** se considera que está en la región **INTERNA** del NAT
     - Los servidores de la DMZ tienen el servicio de HTTP. Poner una página `index.html` que diga a cual servidor se conectó
     - Cualquier equipo podrá acceder a la dirección `http://A.B.X.N+1/` para ver el sitio web, o bien utilizar el nombre de dominio asignado en el servidor DNS
-
 - Configura los switches de las redes **DMZ**
     - Dirección IP de administración (estática) en la interfaz de red `vlan 1`
     - Establece el _gateway_ con la dirección IP del ruteador para ese segmento de red
@@ -98,12 +96,8 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 ### Servidor <span style="font-weight: bold; color: olive;">DNS</span>
 
 - Todos los equipos tienen configurado el servidor DNS
-
 - Cada red tiene su propio nombre de dominio (<span style="font-weight: bold; color: blue;">azul</span>)
-
 - El servidor DNS tiene un registro A para cada ruteador, servidor expuesto a través del NAT "estático" y un registro A para el mismo servidor DNS
-
-
 
 --------------------------------------------------------------------------------
 
@@ -162,5 +156,6 @@ Elaboren un video donde expliquen qué edificio se eligió, la topología de red
 [practica-4]: ../practica-4/
 
 [ruteo-rip]: ../../temas/routing-rip
+[packet-tracer-nat]: ../../temas/packet-tracer/nat.md
 
 [ipv4-reserved-addresses]: https://en.wikipedia.org/wiki/Reserved_IP_addresses
