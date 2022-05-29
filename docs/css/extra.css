@@ -6,6 +6,11 @@
   background-image: linear-gradient(forestgreen, green);
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+{
+  margin: 0.5em auto;
+}
+
 p
 {
   padding-top: 0.5em;
@@ -18,21 +23,28 @@ pre
   margin-bottom: 0.5em;
 }
 
+/* a */
+
 a:link
 {
   color: green;
 }
+
 a:visited
 {
   color: darkgreen;
 }
+
 a:hover
 {
   color: limegreen;
+  text-decoration: underline;
 }
+
 a:active
 {
   color: darkolivegreen;
+  text-decoration: underline;
 }
 
 .table
@@ -89,6 +101,80 @@ details > summary
   background-color: #bbccaa;
   border: 1px solid transparent;
   border-radius: 4px;
+}
+
+.admonition {
+  padding: 0.5em;
+  margin: 1em auto;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: left;
+}
+
+/* div.note */
+
+div.note a:link
+{
+  color: blue;
+}
+
+div.note a:visited
+{
+  color: navy;
+}
+
+div.note a:hover
+{
+  color: skyblue;
+}
+
+div.note a:active
+{
+  color: cornflowerblue;
+}
+
+/* div.warning */
+
+div.warning a:link
+{
+  color: darkgoldenrod;
+}
+
+div.warning a:visited
+{
+  color: darkkhaki;
+}
+
+div.warning a:hover
+{
+  color: gold;
+}
+
+div.warning a:active
+{
+  color: coral;
+}
+
+/* div.danger */
+
+div.danger a:link
+{
+  color: red;
+}
+
+div.danger a:visited
+{
+  color: darkred;
+}
+
+div.danger a:hover
+{
+  color: crimson;
+}
+
+div.danger a:active
+{
+  color: tomato;
 }
 
 .yes
