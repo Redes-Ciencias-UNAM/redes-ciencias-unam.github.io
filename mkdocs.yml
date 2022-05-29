@@ -36,6 +36,8 @@ markdown_extensions:
 - admonition
 - attr_list
 - def_list
+- extra
+- pymdownx.details
 
 plugins:
   - exclude:

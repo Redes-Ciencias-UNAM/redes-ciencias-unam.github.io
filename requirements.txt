@@ -10,3 +10,4 @@ mkdocs[i18n]
 
 # Plugins
 mkdocs-exclude>=1.0.2
+pymdown-extensions>=9.4
