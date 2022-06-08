@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  namespace: default
+  annotations:
+    ingress.kubernetes.io/rewrite-target: CHANGE_ME
+    nginx.ingress.kubernetes.io/rewrite-target: CHANGE_ME
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  # Esta regla no tiene "host" porque es el "catch-all"
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: CHANGE_ME
+            port:
+              number: 80
+  - host: kernel.example.com
+    http:
+      paths:
+      - path: CHANGE_ME
+        pathType: Prefix
+        backend:
+          service:
+            name: CHANGE_ME
+            port:
+              number: 80
+  - host: CHANGE_ME
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: tareas-redes
+            port:
+              number: CHANGE_ME
+status:
+  loadBalancer: {}

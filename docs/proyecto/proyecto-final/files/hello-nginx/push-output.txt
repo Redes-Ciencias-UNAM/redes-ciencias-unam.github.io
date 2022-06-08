@@ -1,0 +1,19 @@
+Using default tag: latest
+The push refers to repository [docker.io/tonejito/hello-nginx]
+5d99e697e6af: Preparing
+b2f92749e4f0: Preparing
+22a76d6a1c54: Preparing
+7838c423d5c4: Preparing
+35c35f582cf6: Preparing
+20298a860c00: Preparing
+dd565ff850e7: Preparing
+20298a860c00: Waiting
+dd565ff850e7: Waiting
+35c35f582cf6: Mounted from tonejito/nginx
+7838c423d5c4: Mounted from tonejito/nginx
+22a76d6a1c54: Mounted from tonejito/nginx
+b2f92749e4f0: Mounted from tonejito/nginx
+20298a860c00: Mounted from tonejito/nginx
+5d99e697e6af: Pushed
+dd565ff850e7: Mounted from tonejito/nginx
+latest: digest: sha256:c2b2d38357ab60d65c906c6ed74d6284945f8b7e1cd565661df19f3aec8fbc51 size: 1775

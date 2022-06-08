@@ -1,0 +1,61 @@
+usuario@laptop ~ % docker build --progress plain -t hello-nginx ./ 2>&1 | tee build-output.txt
+#1 [internal] load build definition from Dockerfile
+#1 sha256:c573ba4f31b0fb6612b60619491f1cd1b131414d67424788c14875fdaa28dc81
+#1 transferring dockerfile: 364B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:07e6d3fe21299f944c787d82ea5c23f8920937736791df9b43de391bbf867be8
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 ...
+
+#4 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#4 sha256:96927ecb7e219aebb89bb3233bb968b8045acc84ca99ec62c8cf370404ee1ae2
+#4 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 DONE 0.9s
+
+#5 docker-image://docker.io/docker/dockerfile:1.4@sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2
+#5 sha256:48d7bedcd6989e0e739e40f4c7bee7b4d35455e6f79f13e426f01884e4c7df52
+#5 CACHED
+
+#7 [internal] load .dockerignore
+#7 sha256:cd29b0497f0d3dd6ecfdd3d4bf21072d520c6c9e27435902ddc4b079d1d67b96
+#7 DONE 0.0s
+
+#6 [internal] load build definition from Dockerfile
+#6 sha256:4e659af3cd3e27d91e73c143a117981c06ee7868a67d6e65b925b8fe79c09d5c
+#6 DONE 0.0s
+
+#9 [auth] library/nginx:pull token for registry-1.docker.io
+#9 sha256:20e03370ba743136f002076a83b122324dad129c763457067a746cdd706e1732
+#9 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/nginx:1.22-alpine
+#8 sha256:f3189753caf50f16b9274090f9ddd4597043f9734fdb3e63e5f11001d789698a
+#8 DONE 0.5s
+
+#10 [1/2] FROM docker.io/library/nginx:1.22-alpine@sha256:f335d7436887b39393409261603fb248e0c385ec18997d866dd44f7e9b621096
+#10 sha256:350d40d43e140c2b1236d28107e11d77abf28e5ec8aac4039de514d22ca1837f
+#10 CACHED
+
+#11 [internal] preparing inline document
+#11 sha256:9be737d907e6d11598564adb22fc476e992737036d1c79e817ba0d0343ceb662
+#11 DONE 0.0s
+
+#12 [2/2] COPY	<<EOF /usr/share/nginx/html/index.html
+#12 sha256:70efcdd7c6a40b08f7e4fc865ff652045c816a235c70678d799b6b66454828cc
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers 0.0s done
+#13 writing image sha256:1dd38b96864fcdd5172e1121c6e4fe55223b28439e585c355dea297ad7d97eee done
+#13 naming to docker.io/tonejito/hello-nginx done
+#13 DONE 0.0s

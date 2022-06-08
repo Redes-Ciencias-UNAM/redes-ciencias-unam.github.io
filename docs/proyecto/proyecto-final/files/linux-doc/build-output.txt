@@ -1,0 +1,141 @@
+usuario@laptop ~ % docker build --progress plain -t linux-doc ./ 2>&1 | tee build-output.txt
+#1 [internal] load build definition from Dockerfile
+#1 sha256:b1d864b01e3042e80f243dbd96a022f77bd8bc86900c58e6d7328df89ef0169f
+#1 transferring dockerfile: 806B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:f7d5d8b7b3f0257132deb758235880f66518ffc06bb58a4c1d8c3e358a68e860
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 ...
+
+#4 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#4 sha256:7577c8a52b789a9e379e2169fa61dfdf3759fef60f265d27240f86354a1a77eb
+#4 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 DONE 1.5s
+
+#5 docker-image://docker.io/docker/dockerfile:1.4@sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2
+#5 sha256:48d7bedcd6989e0e739e40f4c7bee7b4d35455e6f79f13e426f01884e4c7df52
+#5 resolve docker.io/docker/dockerfile:1.4@sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2 done
+#5 sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2 2.00kB / 2.00kB done
+#5 sha256:e5075ee34d3ba6561ec00802a2b59a34582147f92b5c2078c4d96fedca773391 528B / 528B done
+#5 sha256:dfa55ed301d975cc74bc6a87d28e8644c599284cc1c26e11138cf9336c3a76a3 2.37kB / 2.37kB done
+#5 sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 0B / 9.20MB 0.1s
+#5 sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 3.15MB / 9.20MB 0.2s
+#5 sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 8.39MB / 9.20MB 0.3s
+#5 sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 9.20MB / 9.20MB 0.3s done
+#5 extracting sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 0.1s
+#5 extracting sha256:b45628a8396c4779e3387f2ac54465105820e4821309a2638a007c557894a840 0.2s done
+#5 DONE 0.6s
+
+#7 [internal] load .dockerignore
+#7 sha256:f5561bb238dc50f4ecb9bc9ce0b40d6f984be6e24cfe106a98f365c3c27e6706
+#7 DONE 0.0s
+
+#6 [internal] load build definition from Dockerfile
+#6 sha256:3553a7c3cf7ea953b55dda94a3c1502fabe420b32b414d1224d0d88b4a0f3172
+#6 DONE 0.0s
+
+#9 [internal] load metadata for docker.io/library/debian:11
+#9 sha256:45af198b24d87ad670b9805683dd050d47bb2630973f76156f2739d3f9b72fe9
+#9 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/nginx:1.22-alpine
+#8 sha256:f3189753caf50f16b9274090f9ddd4597043f9734fdb3e63e5f11001d789698a
+#8 ...
+
+#10 [auth] library/nginx:pull token for registry-1.docker.io
+#10 sha256:b1d7e04ba601945571ab634448ac859ec14c11bbb738d11b1275d4abb0b0857b
+#10 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/nginx:1.22-alpine
+#8 sha256:f3189753caf50f16b9274090f9ddd4597043f9734fdb3e63e5f11001d789698a
+#8 DONE 1.0s
+
+#12 [debian 1/3] FROM docker.io/library/debian:11
+#12 sha256:26f70016b88888b0b6d16a72a70cc503ea8246edffb45f8449e6cbb453aac995
+#12 DONE 0.0s
+
+#16 [internal] preparing inline document
+#16 sha256:70464cb802239c7a0a97d89d0c483af3eb654e8c2b3e94a6af6110f5004bcc8a
+#16 DONE 0.0s
+
+#13 [debian 2/3] COPY <<EOF  /etc/apt/apt.conf.d/99-local
+#13 sha256:99873c8ed38148568f14f388e3f271078a133361bed3bc69894716c25f8cace3
+#13 DONE 0.0s
+
+#11 [base 1/2] FROM docker.io/library/nginx:1.22-alpine@sha256:f335d7436887b39393409261603fb248e0c385ec18997d866dd44f7e9b621096
+#11 sha256:350d40d43e140c2b1236d28107e11d77abf28e5ec8aac4039de514d22ca1837f
+#11 resolve docker.io/library/nginx:1.22-alpine@sha256:f335d7436887b39393409261603fb248e0c385ec18997d866dd44f7e9b621096 done
+#11 sha256:f335d7436887b39393409261603fb248e0c385ec18997d866dd44f7e9b621096 1.65kB / 1.65kB done
+#11 sha256:f954f5d033be19f9cf95cf3811ba7193d2069d7522263ffe9268e32b093c0e77 1.57kB / 1.57kB done
+#11 sha256:6f08591b28af7b89d1c41d8752c3db401bfc343f8d67db33e459b296a1b194f0 0B / 7.25MB 0.1s
+#11 sha256:538c1c0868e9f7107db9158586e7c4628644f1a29d4f31e56c979ae26e3dbb0a 0B / 892B 0.1s
+#11 sha256:9c7cb2355812edb2803e546f8474c8d62c0469850bf2cdcc86439f9ef6ec6008 8.76kB / 8.76kB done
+#11 sha256:db529e11ed4a1700b1d1acd4f789c07b764edf03283be052a7052a036362c1c1 0B / 601B 0.1s
+#11 sha256:538c1c0868e9f7107db9158586e7c4628644f1a29d4f31e56c979ae26e3dbb0a 892B / 892B 0.2s done
+#11 sha256:db529e11ed4a1700b1d1acd4f789c07b764edf03283be052a7052a036362c1c1 601B / 601B 0.2s done
+#11 sha256:8d3b0ed538228e1493a65235059da757477f4650245109a80a6a1e5d03490ad2 0B / 667B 0.3s
+#11 sha256:99eb1bbfd865b1cc1a5686ef40e59cafa0f0acf5a16c8c54faace8a26886932d 0B / 1.39kB 0.3s
+#11 sha256:6f08591b28af7b89d1c41d8752c3db401bfc343f8d67db33e459b296a1b194f0 4.19MB / 7.25MB 0.4s
+#11 sha256:8d3b0ed538228e1493a65235059da757477f4650245109a80a6a1e5d03490ad2 667B / 667B 0.4s done
+#11 sha256:6f08591b28af7b89d1c41d8752c3db401bfc343f8d67db33e459b296a1b194f0 7.25MB / 7.25MB 0.5s done
+#11 sha256:99eb1bbfd865b1cc1a5686ef40e59cafa0f0acf5a16c8c54faace8a26886932d 1.39kB / 1.39kB 0.5s done
+#11 extracting sha256:6f08591b28af7b89d1c41d8752c3db401bfc343f8d67db33e459b296a1b194f0
+#11 extracting sha256:6f08591b28af7b89d1c41d8752c3db401bfc343f8d67db33e459b296a1b194f0 0.5s done
+#11 extracting sha256:db529e11ed4a1700b1d1acd4f789c07b764edf03283be052a7052a036362c1c1 done
+#11 extracting sha256:538c1c0868e9f7107db9158586e7c4628644f1a29d4f31e56c979ae26e3dbb0a
+#11 extracting sha256:538c1c0868e9f7107db9158586e7c4628644f1a29d4f31e56c979ae26e3dbb0a done
+#11 extracting sha256:8d3b0ed538228e1493a65235059da757477f4650245109a80a6a1e5d03490ad2 done
+#11 extracting sha256:99eb1bbfd865b1cc1a5686ef40e59cafa0f0acf5a16c8c54faace8a26886932d
+#11 extracting sha256:99eb1bbfd865b1cc1a5686ef40e59cafa0f0acf5a16c8c54faace8a26886932d done
+#11 DONE 1.3s
+
+#14 [debian 3/3] RUN    APT update &&   apt install linux-doc
+#14 sha256:61092daca36cae32776180083963f04c205e2d9a886f198b541978016bb1f50e
+#14 0.213 
+#14 0.213 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#14 0.213 
+#14 2.688 All packages are up to date.
+#14 2.697 
+#14 2.697 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#14 2.697 
+#14 3.309 The following additional packages will be installed:
+#14 3.309   linux-doc-5.10
+#14 3.322 The following NEW packages will be installed:
+#14 3.323   linux-doc linux-doc-5.10
+#14 4.767 debconf: delaying package configuration, since apt-utils is not installed
+#14 4.787 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+#14 4.787 Need to get 30.2 MB of archives.
+#14 4.787 After this operation, 167 MB of additional disk space will be used.
+#14 4.840 Selecting previously unselected package linux-doc-5.10.
+(Reading database ... 6654 files and directories currently installed.)
+#14 4.870 Preparing to unpack .../linux-doc-5.10_5.10.113-1_all.deb ...
+#14 4.872 Unpacking linux-doc-5.10 (5.10.113-1) ...
+#14 7.857 Selecting previously unselected package linux-doc.
+#14 7.863 Preparing to unpack .../linux-doc_5.10.113-1_all.deb ...
+#14 7.872 Unpacking linux-doc (5.10.113-1) ...
+#14 7.892 Setting up linux-doc-5.10 (5.10.113-1) ...
+#14 7.899 Setting up linux-doc (5.10.113-1) ...
+#14 DONE 8.2s
+
+#15 [base 2/2] COPY     --FROM=DEBIAN /usr/share/doc/linux-doc/html /usr/share/nginx/html
+#15 sha256:3df5e994f7cfd08c415843d546d348c89edd2ebafcee1e003fdef2c7c9c909bb
+#15 DONE 0.8s
+
+#17 exporting to image
+#17 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#17 exporting layers
+#17 exporting layers 0.8s done
+#17 writing image sha256:3a9bca24dad3e743fb7f423614ad89f570abd28791bac1a4b442f312d46249b9 done
+#17 naming to docker.io/library/linux-doc done
+#17 DONE 0.8s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them

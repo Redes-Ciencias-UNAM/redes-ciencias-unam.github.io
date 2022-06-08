@@ -15,4 +15,3 @@ title: Laboratorio
 | Práctica 5 : [Configuración de algoritmos de ruteo](practica-5)                    | Packet Tracer  | 2022-05-25
 | Práctica 6 : [Creación de recursos en Azure](practica-6)                           | _Nube pública_ | 2022-05-30
 | Práctica 7 : [Implementación de sitios web sobre HTTPS](practica-7)                | _Nube pública_ | 2022-06-05
-| Práctica 8 : [Implementación de servicios de red en **Kubernetes**](practica-8)    | _Nube pública_ | 2022-06-10

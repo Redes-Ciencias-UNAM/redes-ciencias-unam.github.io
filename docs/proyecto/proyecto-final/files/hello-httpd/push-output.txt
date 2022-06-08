@@ -1,0 +1,11 @@
+usuario@laptop ~ % docker push tonejito/hello-httpd
+Using default tag: latest
+The push refers to repository [docker.io/tonejito/hello-httpd]
+a3769b02d595: Pushed 
+07949d9c2947: Mounted from library/httpd 
+c535a66cd4ad: Mounted from library/httpd 
+42ff191df45d: Mounted from library/httpd 
+542a715c4001: Mounted from library/httpd 
+f625193b46f3: Mounted from library/httpd 
+dd565ff850e7: Mounted from tonejito/hello-nginx 
+latest: digest: sha256:b0f6b7f9b9058c1ae71b2dfdc29453f7eb9ea304cf1b4462a5f8387fb5115020 size: 1779

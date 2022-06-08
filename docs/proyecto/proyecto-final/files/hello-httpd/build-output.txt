@@ -1,0 +1,71 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:0efbefdb4fcfdfee498d3ffb6ca6df8e91f4fce279eda5411215740fcb1f1e18
+#1 transferring dockerfile: 2B done
+#1 DONE 0.0s
+failed to solve with frontend dockerfile.v0: failed to read dockerfile: open /var/lib/docker/tmp/buildkit-mount114276386/Dockerfile: no such file or directory
+#1 [internal] load build definition from Dockerfile
+#1 sha256:b4ffdff77e2d5f89ccee9ebc39f35da3dc9ebedb0abc288cd524932e57c35400
+#1 transferring dockerfile: 376B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:5a9525b1fe2f9e3a3190b5bcabf381c8ac092d983c2af93a4c16c89c9a7b4ea3
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 ...
+
+#4 [auth] docker/dockerfile:pull token for registry-1.docker.io
+#4 sha256:d8f34935455e82021d6e44f1911855a84625eef34bd1afd796e24e75c6a07d57
+#4 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 DONE 0.9s
+
+#5 docker-image://docker.io/docker/dockerfile:1.4@sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2
+#5 sha256:48d7bedcd6989e0e739e40f4c7bee7b4d35455e6f79f13e426f01884e4c7df52
+#5 CACHED
+
+#7 [internal] load build definition from Dockerfile
+#7 sha256:4c9347c4b58062e5f0aa23e78dc38c52868b2cc9d7ef4c5735c8207a87ddb666
+#7 DONE 0.0s
+
+#6 [internal] load .dockerignore
+#6 sha256:1910090fcf3ab5d0db72e0e752e0b477e6dec20c2763c4193c35a71859a2af4e
+#6 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/httpd:2.4-alpine
+#8 sha256:469e47bc39075d0d0f3432307c08e5ad9e035e3de528049d6e080be790d57065
+#8 ...
+
+#9 [auth] library/httpd:pull token for registry-1.docker.io
+#9 sha256:0cbe3c4c0bbf58a0a21ebeb1f548ef09fc3ea94fbb28d73aeb628c40d976fbe7
+#9 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/httpd:2.4-alpine
+#8 sha256:469e47bc39075d0d0f3432307c08e5ad9e035e3de528049d6e080be790d57065
+#8 DONE 0.8s
+
+#11 [internal] preparing inline document
+#11 sha256:740ba916b5a6e272ddc071c2bd3c6fab8cc12fcdcaaa02317139a0ae28f62747
+#11 CACHED
+
+#10 [1/2] FROM docker.io/library/httpd:2.4-alpine@sha256:8f3c85b49832beb21081f8b06230d99a7f8967393dc00f4971238f5cd5a3f5a5
+#10 sha256:916904b1c75c5b9cf27b7e8d7f6fee24b25a41b569b03e8acb3fc9f61e735351
+#10 DONE 0.0s
+
+#12 [2/2] COPY	<<EOF /usr/local/apache2/htdocs/index.html
+#12 sha256:69d8934db9df63aa65c28363beec245594bd964ebf100372296f992b85268a7e
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers done
+#13 writing image sha256:eb9c1c640780f75fd9f79d6a0955bf4c1819611341e78496252677e6bf4134cf done
+#13 naming to docker.io/tonejito/hello-httpd done
+#13 DONE 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them

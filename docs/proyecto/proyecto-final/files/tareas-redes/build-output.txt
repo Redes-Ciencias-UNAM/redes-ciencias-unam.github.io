@@ -1,0 +1,210 @@
+usuario@laptop ~ % docker build --progress plain -t tareas-redes ./ 2>&1 | tee build-output.txt
+#1 [internal] load build definition from Dockerfile
+#1 sha256:4d1993412f9d0e782c245adecfdda1e3ef93eba2ca182dca0027095a7869f348
+#1 transferring dockerfile: 1.12kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:a6f627ee708d26bbdee852a1e820c872a98c55c860f1ec7e40c43faf17c87316
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 resolve image config for docker.io/docker/dockerfile:1.4
+#3 sha256:9ea865748483b1f4f52c8c6ec970fc4927717bff340cfc4c224a179f2ef026ca
+#3 DONE 0.4s
+
+#4 docker-image://docker.io/docker/dockerfile:1.4@sha256:443aab4ca21183e069e7d8b2dc68006594f40bddf1b15bbd83f5137bd93e80e2
+#4 sha256:48d7bedcd6989e0e739e40f4c7bee7b4d35455e6f79f13e426f01884e4c7df52
+#4 CACHED
+
+#5 [internal] load .dockerignore
+#5 sha256:81f0e35c4001598ced458ff48fe8995a558e2911054dd4a940652e6b9ddfca4b
+#5 DONE 0.0s
+
+#6 [internal] load build definition from Dockerfile
+#6 sha256:cb99d9725aab9f0baac18bfd37502e70422a59257cbc897a63b508865ccdb636
+#6 DONE 0.0s
+
+#8 [internal] load metadata for docker.io/library/python:3.10-alpine
+#8 sha256:8457b4f7d6fdd648c92c7d9909dc1f803fd23555641675baea40837c6d20227a
+#8 DONE 0.0s
+
+#7 [internal] load metadata for docker.io/library/nginx:1.22-alpine
+#7 sha256:f3189753caf50f16b9274090f9ddd4597043f9734fdb3e63e5f11001d789698a
+#7 DONE 0.3s
+
+#9 [base 1/2] FROM docker.io/library/nginx:1.22-alpine@sha256:f335d7436887b39393409261603fb248e0c385ec18997d866dd44f7e9b621096
+#9 sha256:350d40d43e140c2b1236d28107e11d77abf28e5ec8aac4039de514d22ca1837f
+#9 CACHED
+
+#10 [python 1/3] FROM docker.io/library/python:3.10-alpine
+#10 sha256:9810074edddc1b8619d59defa67051db207f60491cea449e48f567a9f639aade
+#10 DONE 0.0s
+
+#11 [python 2/3] WORKDIR	/SRV
+#11 sha256:19889eef9259074c3a4f3d0eee2d976a50bb06818bc8e3c013a9e29fa808a4a1
+#11 DONE 0.0s
+
+#12 [python 3/3] RUN	WGET -c -q -O tareas-redes.tar.gz https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/archive/entregas/tareas-redes-entregas.tar.gz && 	ls -l tareas-redes.tar.gz && 	tar -xvzf tareas-redes.tar.gz --strip 1 && 	rm -v tareas-redes.tar.gz && 	pip3 config --global set global.progress_bar off && 	pip3 install --upgrade pip && 	pip3 install --requirement requirements.txt && 	which mkdocs && 	mkdocs build --strict && 	ls -la .
+#12 sha256:71d873ba304ad5ec652bad14c471079f900ae20b5af628fd4b45c40c2ea2eadb
+#12 0.725 -rw-r--r--    1 root     root       4282974 Jun  4 05:57 tareas-redes.tar.gz
+#12 0.727 tareas-redes-entregas/
+#12 0.757 tareas-redes-entregas/.gitignore
+#12 0.757 tareas-redes-entregas/.gitlab-ci.yml
+#12 0.757 tareas-redes-entregas/Makefile
+#12 0.757 tareas-redes-entregas/README.md
+#12 0.757 tareas-redes-entregas/docs/
+#12 0.757 tareas-redes-entregas/docs/README.md
+#12 0.757 tareas-redes-entregas/docs/css/
+#12 0.757 tareas-redes-entregas/docs/css/extra.css
+#12 0.757 tareas-redes-entregas/docs/workflow/
+#12 0.757 tareas-redes-entregas/docs/workflow/README.md
+#12 0.757 tareas-redes-entregas/docs/workflow/debug.md
+#12 0.757 tareas-redes-entregas/docs/workflow/img/
+#12 0.757 tareas-redes-entregas/docs/workflow/img/.gitkeep
+#12 0.757 tareas-redes-entregas/docs/workflow/img/000-workflow.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/001-Main_repo.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/002-Sign_in.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/003-Fork_repo.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/004-Fork_repo-settings.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/005-Fork_successful-sidebar.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/006-Fork_members-menu.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/007-Fork_grant-permissions.png
+#12 0.757 tareas-redes-entregas/docs/workflow/img/008-Fork_successful-clone_URL.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/009-Fork-MR_branches.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/009-Fork-MR_change-branches.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/009-Fork-MR_data.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/009-Fork-MR_select-branch.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/010-Main_MR_created.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/011-Main_MR_review.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/012-Main_MR_merged.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-001-CI-CD_pipelines.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-002-pipeline_list.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-003-pipeline_failed.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-004-job_failed.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-005-pipeline_passed.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/debug-006-job_passed.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/update-001-edit-merge-request.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/update-002-change-branch.png
+#12 0.812 tareas-redes-entregas/docs/workflow/img/update-003-changes-saved.png
+#12 0.817 tareas-redes-entregas/docs/workflow/img/update-004-merge-conflicts.png
+#12 0.817 tareas-redes-entregas/docs/workflow/img/update-005-view-merge-conflicts.png
+#12 0.817 tareas-redes-entregas/docs/workflow/update.md
+#12 0.817 tareas-redes-entregas/mkdocs.yml
+#12 0.817 tareas-redes-entregas/requirements.txt
+#12 0.818 removed 'tareas-redes.tar.gz'
+#12 2.509 Writing to /etc/pip.conf
+#12 3.242 Requirement already satisfied: pip in /usr/local/lib/python3.10/site-packages (22.0.4)
+#12 3.468 Collecting pip
+#12 3.636   Downloading pip-22.1.2-py3-none-any.whl (2.1 MB)
+#12 3.874 Installing collected packages: pip
+#12 3.874   Attempting uninstall: pip
+#12 3.875     Found existing installation: pip 22.0.4
+#12 3.975     Uninstalling pip-22.0.4:
+#12 4.123       Successfully uninstalled pip-22.0.4
+#12 5.449 Successfully installed pip-22.1.2
+#12 5.449 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 6.166 Collecting mkdocs>=1.1.2
+#12 6.354   Downloading mkdocs-1.3.0-py3-none-any.whl (3.7 MB)
+#12 6.730 Collecting mkdocs-exclude>=1.0.2
+#12 6.775   Downloading mkdocs-exclude-1.0.2.tar.gz (6.8 kB)
+#12 6.786   Preparing metadata (setup.py): started
+#12 7.127   Preparing metadata (setup.py): finished with status 'done'
+#12 7.227 Collecting mkdocs-pymdownx-material-extras
+#12 7.382   Downloading mkdocs_pymdownx_material_extras-2.0.3-py3-none-any.whl (26 kB)
+#12 7.454 Collecting Jinja2>=2.10.2
+#12 7.502   Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+#12 7.594 Collecting PyYAML>=3.10
+#12 7.654   Downloading PyYAML-6.0.tar.gz (124 kB)
+#12 7.892   Installing build dependencies: started
+#12 12.08   Installing build dependencies: finished with status 'done'
+#12 12.09   Getting requirements to build wheel: started
+#12 13.74   Getting requirements to build wheel: finished with status 'done'
+#12 13.75   Preparing metadata (pyproject.toml): started
+#12 14.72   Preparing metadata (pyproject.toml): finished with status 'done'
+#12 14.79 Collecting Markdown>=3.2.1
+#12 14.83   Downloading Markdown-3.3.7-py3-none-any.whl (97 kB)
+#12 14.92 Collecting importlib-metadata>=4.3
+#12 14.96   Downloading importlib_metadata-4.11.4-py3-none-any.whl (18 kB)
+#12 15.02 Collecting click>=3.3
+#12 15.07   Downloading click-8.1.3-py3-none-any.whl (96 kB)
+#12 15.13 Collecting pyyaml-env-tag>=0.1
+#12 15.18   Downloading pyyaml_env_tag-0.1-py3-none-any.whl (3.9 kB)
+#12 15.24 Collecting packaging>=20.5
+#12 15.28   Downloading packaging-21.3-py3-none-any.whl (40 kB)
+#12 15.37 Collecting watchdog>=2.0
+#12 15.41   Downloading watchdog-2.1.8.tar.gz (114 kB)
+#12 15.46   Preparing metadata (setup.py): started
+#12 15.62   Preparing metadata (setup.py): finished with status 'done'
+#12 15.67 Collecting mergedeep>=1.3.4
+#12 15.71   Downloading mergedeep-1.3.4-py3-none-any.whl (6.4 kB)
+#12 15.77 Collecting ghp-import>=1.0
+#12 15.81   Downloading ghp_import-2.1.0-py3-none-any.whl (11 kB)
+#12 15.87 Collecting babel>=2.9.0
+#12 15.92   Downloading Babel-2.10.1-py3-none-any.whl (9.5 MB)
+#12 16.29 Collecting mkdocs-material>=5.0.2
+#12 16.34   Downloading mkdocs_material-8.3.0-py2.py3-none-any.whl (5.2 MB)
+#12 16.63 Collecting pytz>=2015.7
+#12 16.68   Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+#12 16.75 Collecting python-dateutil>=2.8.1
+#12 16.81   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#12 16.89 Collecting zipp>=0.5
+#12 16.93   Downloading zipp-3.8.0-py3-none-any.whl (5.4 kB)
+#12 17.02 Collecting MarkupSafe>=2.0
+#12 17.06   Downloading MarkupSafe-2.1.1-cp310-cp310-musllinux_1_1_aarch64.whl (30 kB)
+#12 17.14 Collecting pygments>=2.12
+#12 17.19   Downloading Pygments-2.12.0-py3-none-any.whl (1.1 MB)
+#12 17.35 Collecting mkdocs-material-extensions>=1.0.3
+#12 17.39   Downloading mkdocs_material_extensions-1.0.3-py3-none-any.whl (8.1 kB)
+#12 17.46 Collecting pymdown-extensions>=9.4
+#12 17.51   Downloading pymdown_extensions-9.4-py3-none-any.whl (216 kB)
+#12 17.67 Collecting pyparsing!=3.0.5,>=2.0.2
+#12 17.71   Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+#12 17.80 Collecting six>=1.5
+#12 17.85   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#12 17.87 Building wheels for collected packages: mkdocs-exclude, PyYAML, watchdog
+#12 17.87   Building wheel for mkdocs-exclude (setup.py): started
+#12 18.10   Building wheel for mkdocs-exclude (setup.py): finished with status 'done'
+#12 18.10   Created wheel for mkdocs-exclude: filename=mkdocs_exclude-1.0.2-py3-none-any.whl size=7373 sha256=f90cc001641a0ef6f5a76534f77589d3d896133f9b6958dcb607afff0683b4c5
+#12 18.10   Stored in directory: /root/.cache/pip/wheels/a9/a8/25/e56283e1d26d26930164bb5448d0b7d290237480bbb47baec5
+#12 18.10   Building wheel for PyYAML (pyproject.toml): started
+#12 19.26   Building wheel for PyYAML (pyproject.toml): finished with status 'done'
+#12 19.26   Created wheel for PyYAML: filename=PyYAML-6.0-cp310-cp310-linux_aarch64.whl size=45335 sha256=ff039aedbcc6bbab1741d95a65e3cd6fbca8140edb81bf8a77bad1684990cf58
+#12 19.26   Stored in directory: /root/.cache/pip/wheels/1d/f3/b4/4aea0992adbed14b36ce9c3857d3707c762a4374479230685d
+#12 19.26   Building wheel for watchdog (setup.py): started
+#12 19.48   Building wheel for watchdog (setup.py): finished with status 'done'
+#12 19.48   Created wheel for watchdog: filename=watchdog-2.1.8-py3-none-any.whl size=77540 sha256=871e53ccf2e7c9c45bdd9d36cb257526d10639c58fb7cb97d37a6063f91aeb4e
+#12 19.48   Stored in directory: /root/.cache/pip/wheels/8c/92/91/45a19a60a7a7c0808a6d6d31c5d49ea95b7cc6bc264652c116
+#12 19.48 Successfully built mkdocs-exclude PyYAML watchdog
+#12 19.64 Installing collected packages: pytz, zipp, watchdog, six, PyYAML, pyparsing, pygments, mkdocs-material-extensions, mergedeep, MarkupSafe, Markdown, click, babel, pyyaml-env-tag, python-dateutil, pymdown-extensions, packaging, Jinja2, importlib-metadata, ghp-import, mkdocs, mkdocs-material, mkdocs-exclude, mkdocs-pymdownx-material-extras
+#12 23.17 Successfully installed Jinja2-3.1.2 Markdown-3.3.7 MarkupSafe-2.1.1 PyYAML-6.0 babel-2.10.1 click-8.1.3 ghp-import-2.1.0 importlib-metadata-4.11.4 mergedeep-1.3.4 mkdocs-1.3.0 mkdocs-exclude-1.0.2 mkdocs-material-8.3.0 mkdocs-material-extensions-1.0.3 mkdocs-pymdownx-material-extras-2.0.3 packaging-21.3 pygments-2.12.0 pymdown-extensions-9.4 pyparsing-3.0.9 python-dateutil-2.8.2 pytz-2022.1 pyyaml-env-tag-0.1 six-1.16.0 watchdog-2.1.8 zipp-3.8.0
+#12 23.17 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 23.29 /usr/local/bin/mkdocs
+#12 23.43 INFO     -  Cleaning site directory
+#12 23.43 INFO     -  Building documentation to directory: /srv/public
+#12 23.52 INFO     -  Documentation built in 0.09 seconds
+#12 23.54 total 36
+#12 23.54 drwxr-xr-x    1 root     root          4096 Jun  4 05:57 .
+#12 23.54 drwxr-xr-x    1 root     root          4096 Jun  4 05:57 ..
+#12 23.54 -rw-rw-r--    1 root     root           760 Feb 17 07:19 .gitignore
+#12 23.54 -rw-rw-r--    1 root     root           962 Feb 17 07:19 .gitlab-ci.yml
+#12 23.54 -rw-rw-r--    1 root     root           263 Feb 17 07:19 Makefile
+#12 23.54 lrwxrwxrwx    1 root     root            14 Jun  4 05:57 README.md -> docs/README.md
+#12 23.54 drwxrwxr-x    4 root     root          4096 Jun  4 05:57 docs
+#12 23.54 -rw-rw-r--    1 root     root           954 Feb 17 07:19 mkdocs.yml
+#12 23.54 drwxr-xr-x    7 root     root          4096 Jun  4 05:57 public
+#12 23.54 -rw-rw-r--    1 root     root           340 Feb 17 07:19 requirements.txt
+#12 DONE 23.8s
+
+#13 [base 2/2] COPY	--FROM=PYTHON /srv/public /usr/share/nginx/html
+#13 sha256:b8c5c65415952df2e2fde725f359ed486b5d50c393a63525fed1a5672337462f
+#13 DONE 0.1s
+
+#14 exporting to image
+#14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#14 exporting layers 0.0s done
+#14 writing image sha256:9afa7096c084976b56ec23812fa1c9cba58880b8266c025c4c323737de7a9aff done
+#14 naming to docker.io/library/tareas-redes done
+#14 DONE 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
