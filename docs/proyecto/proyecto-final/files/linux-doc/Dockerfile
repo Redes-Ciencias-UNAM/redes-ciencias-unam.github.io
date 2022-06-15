@@ -6,6 +6,16 @@ FROM	docker.io/library/debian:11 AS debian
 
 ENV	DEBIAN_FRONTEND=noninteractive
 
+# Elige alguna de las dos opciones
+#
+# Opción A:
+#   Copiar un archivo existente en el directorio a una ruta en el contenedor
+#   Esta opción es compatible con **cualquier versión** de Docker
+# COPY	apt-conf-99-local.conf  /etc/apt/apt.conf.d/99-local
+
+# Opción B:
+#   Utilizar la nueva sintaxis _HereDoc_ para especificar el contenido del archivo en el Dockerfile
+#   Esta opción es compatible con **versiones recientes** de Docker
 COPY	<<EOF  /etc/apt/apt.conf.d/99-local
 quiet "2";
 APT::Get::Assume-Yes "1";

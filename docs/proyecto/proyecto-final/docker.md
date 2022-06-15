@@ -253,6 +253,10 @@ Esta es la sintaxis de un `Dockerfile` que utiliza [**BuildKit**][docker-buildki
 
 Cada acción se explica en un comentario
 
+!!! warning
+    - Asegúrate de especificar la primer línea `# syntax=docker/dockerfile:1.4` (con el símbolo `#`) para utilizar las características avanzadas de BuildKit
+    - En caso de que tu versión de Docker no soporte BuildKit, utiliza la otra opción en el `Dockerfile`
+
 ```
 # syntax=docker/dockerfile:1.4
 # La primer línea permite utilizar características avanzadas de BuildKit
