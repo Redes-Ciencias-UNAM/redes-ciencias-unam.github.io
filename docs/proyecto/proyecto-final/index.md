@@ -141,10 +141,21 @@ authors:
         - Archivos `Dockerfile` para los contenedores `linux-doc` y `tareas-redes`
         - Incluir en un archivo `tar.gz` el contenido del directorio `/var/www/html` de la máquina virual de Azure
         - Archivo `cert.txt` que es la representación en texto del certificado SSL emitido por Let's Encrypt
-        - Incluye la salida del comando `kubectl get all --all-namespaces` en un archivo separado llamado `recursos-kubernetes.log`
-        - Exporta los siguientes recursos utilizando `kubectl`
+
+    - **Recursos de _Kubernetes_**
+        - Exporta los recursos del cluster de _Kubernetes_ utilizando `kubectl`
+        - Quita los campos innecesarios utilizando el siguiente comando
+            - `kubectl neat < archivo.yaml > archivo.neat.yaml`
+            - Anexa el archivo original (`archivo.yaml`) y el archivo sin campos extra (`archivo.neat.yaml`) a tu reporte
+            - Repite para todos los recursos de Kubernetes solicitados
+        - Explica cuales campos no necesarios se quitan en los recursos de tipo `deployment`, `configmap`, `secret` e `ingress`
+            - Puedes utilizar el comando `diff -u archivo.yaml archivo.neat.yaml` para ver las diferencias
 
 ```
+usuario@laptop ~ % kubectl get all --all-namespaces > recursos-kubernetes.log
+
+usuario@laptop ~ % kubectl get all --all-namespaces -o yaml > recursos-kubernetes.yaml
+
 usuario@laptop ~ % kubectl get nodes -o yaml
 
 usuario@laptop ~ % kubectl get configmap index-equipo-aaaa-bbbb-cccc-dddd -n default -o yaml

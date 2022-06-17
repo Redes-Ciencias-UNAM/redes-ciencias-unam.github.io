@@ -20,6 +20,8 @@ Este directorio se utiliza para la validación que hace Let's Encrypt de tu cert
 root@example:~# echo "Move along" > /var/www/html/.well-known/acme-challenge/index.html
 ```
 
+### Edita el recurso `deployment` del _host_ _default_
+
 Agrega las líneas correspondientes a `volumeMounts` y `volumes` en las secciones adecuadas
 
 - Reemplaza `index-equipo-aaaa-bbbb-cccc-dddd` con el nombre de tu equipo (**en minúsculas**)
@@ -29,10 +31,17 @@ Agrega las líneas correspondientes a `volumeMounts` y `volumes` en las seccione
     - Verifica que la identación de las líneas sea correcta y que insertes las secciones en el lugar adecuado
     - YAML es un lenguaje que maneja la identación utlizando **DOS ESPACIOS**
 
+```
+usuario@laptop ~ % kubectl edit deployment root-nginx
+	...
+```
+
 ```yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
+  name: root-nginx
+  namespace: default
 ...
 spec:
 ...
@@ -61,7 +70,7 @@ spec:
 ...
 ```
 
-Revisa que haya un nuevo _pod_ perteneciente al _deployment_ `root-nginx` y que su estado sea `Running`
+Cierra el editor de texto, espera unos segundos y revisa que haya un nuevo _pod_ perteneciente al _deployment_ `root-nginx` y que su estado sea `Running`
 
 ```
 usuario@laptop ~ % kubectl get pods -l app=root-nginx
@@ -166,7 +175,9 @@ drwx------@ 145 tonejito  staff  4640 Jun  8 02:39 ..
 -rw-------    1 tonejito  staff  1708 Jun  8 02:39 privkey.pem
 ```
 
-Crea un recurso de tipo `secret` que contenga los siguientes campos:
+### Agrega el certificado SSL y la llave privada en un recurso `secret tls`
+
+Crea un recurso de tipo `secret tls` que contenga los siguientes campos:
 
 - **Certificado SSL**: Utiliza el archivo `fullchain.pem` que contiene el certificado del servidor y los certificados de las CA intermedias
 - **Llave privada**: Utiliza el archivo `privkey.pem`
@@ -203,7 +214,7 @@ tls.key:  1708 bytes
 
 ## Agrega el soporte TLS al recurso `ingress`
 
-Edita el archivo donde se define el recurso de tipo `ingress`my agrega la sección de configuración donde se especifican los siguientes campos:
+Edita el archivo [`recurso-ingress.yaml`][recurso-ingress-yaml] donde se define el recurso de tipo `ingress` y agrega la sección de configuración donde se especifican los siguientes campos:
 
 - Nombre del recurso de tipo `secret` que contiene el certificado y la llave privada
 - Nombres DNS de las rutas en las que se va a configurar el soporte de TLS
@@ -214,8 +225,12 @@ Edita el archivo donde se define el recurso de tipo `ingress`my agrega la secci�
     - YAML es un lenguaje que maneja la identación utlizando **DOS ESPACIOS**
 
 ```yaml
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
+metadata:
+  name: ingress-nginx
+  namespace: default
 ...
 spec:  # Agrega la sección "tls" después de "spec"
   tls:
@@ -227,6 +242,13 @@ spec:  # Agrega la sección "tls" después de "spec"
   ingressClassName: nginx
   rules:
 ...
+```
+
+Aplica los cambios al recurso `ingress` utilizando el archivo YAML que editaste
+
+```
+usuario@laptop ~ % kubectl apply -f recurso-ingress.yaml
+ingress.networking.k8s.io/ingress-nginx configured
 ```
 
 ## Cambia el certificado SSL en el _ingress controller_
@@ -247,8 +269,12 @@ Agrega una línea al final de los argumentos del proceso `nginx-ingress-controll
     - YAML es un lenguaje que maneja la identación utlizando **DOS ESPACIOS**
 
 ```yaml
+---
 apiVersion: apps/v1
 kind: Deployment
+metadata:
+  name: ingress-nginx-controller
+  namespace: ingress-nginx
 ...
 spec:
 ...
@@ -269,6 +295,8 @@ spec:
         # Utiliza el certificado SSL importado de Let's Encrypt
         - --default-ssl-certificate=default/nginx-ingress-tls
 ```
+
+Cierra el editor de texto y espera unos segundos antes de continuar con el paso siguiente
 
 ## Reinicia el controlador de _ingress_ en el cluster
 
@@ -700,3 +728,4 @@ root@example:~# reboot
 
 [deployments-mounts]: ../k8s-deployments/#asigna-el-volumen-de-la-pagina-de-indice-al-deployment-del-servidor-web
 [practica-7-letsencrypt]: ../../../laboratorio/practica-7/ssl-lets-encrypt/#tramita-el-certificado-ssl-con-lets-encrypt
+[recurso-ingress-yaml]: files/kubernetes/recurso-ingress.yaml

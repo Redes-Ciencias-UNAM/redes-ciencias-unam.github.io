@@ -40,9 +40,9 @@ tareas-redes   ClusterIP   10.43.180.100   <none>        80/TCP    20s
 
 ## Crea las rutas para dirigir tráfico a los servicios
 
-Utiliza el archivo [`recurso-ingress.yaml`](files/kubernetes/recurso-ingress.yaml) para crear un recurso de tipo `ingress` que utiliza rutas para exponer los servicios internos del cluster y que estos reciban tráfico
+Utiliza el archivo [`recurso-ingress.yaml`][recurso-ingress-yaml] para crear un recurso de tipo `ingress` que utiliza rutas para exponer los servicios internos del cluster y que estos reciban tráfico
 
-Edita el archivo `recurso-ingress.yaml`
+Edita el archivo [`recurso-ingress.yaml`][recurso-ingress-yaml]
 
 - Establece las anotaciones `rewrite-target` con el valor `/` que significa la raíz del sitio web
 - Establece la ruta para el host _catch-all_ y apúntala al servicio `root-nginx` en el puerto `80`
@@ -211,3 +211,4 @@ Visita la misma URL con un navegador web y asegúrate de que se muestre el sitio
 [siguiente]: ../k8s-ingress-nginx-tls
 
 [kubernetes-ingress]: https://kubernetes.io/docs/concepts/services-networking/ingress/
+[recurso-ingress-yaml]: files/kubernetes/recurso-ingress.yaml
