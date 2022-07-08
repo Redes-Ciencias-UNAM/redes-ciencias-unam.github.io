@@ -1,0 +1,105 @@
+# Ensure GitLab Pages is enabled
+# Create a '.nojekyll' file in the root of the repository
+
+name: build
+
+permissions:
+  id-token: write
+  contents: read
+  pages: write
+  deployments: write
+
+on:
+  push:
+    branches:
+    - "main"
+    - "master"
+  # pull_request:
+  #   branches:
+  #   - "main"
+  #   - "master"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TERM: linux
+      DEBIAN_PRIORITY: critical
+      DEBIAN_FRONTEND: noninteractive
+      DEBCONF_NOWARNINGS: "yes"
+      DEBCONF_TERSE: "yes"
+      DEBCONF_NONINTERACTIVE_SEEN: "true"
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4.0.0
+        with:
+          python-version: "3.10"
+
+      - name: Prepare APT/PIP configuration
+        run: |
+          sudo truncate --size=0 /etc/apt/apt.conf.d/99-local
+          echo 'quiet "2";'                   | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'APT::Get::Assume-Yes "1";'    | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'APT::Install-Recommends "0";' | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'APT::Install-Suggests "0";'   | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'APT::Color "0";'              | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'Dpkg::Progress "0";'          | sudo tee -a /etc/apt/apt.conf.d/99-local
+          echo 'Dpkg::Progress-Fancy "0";'    | sudo tee -a /etc/apt/apt.conf.d/99-local
+          sudo pip config --global set global.quiet 1
+          sudo pip config --global set global.progress_bar off
+
+      - name: Debian APT
+        run: |
+          sudo apt-get -q=2 update
+          sudo apt-get -q=2 install make git
+
+      - name: Python PIP
+        run: |
+          pip install --user --upgrade pip
+          pip install --user pre-commit
+          pip install --user --requirement requirements.txt
+
+      - name: Build the site
+        run: make build
+
+      # Inside the ZIP file there needs to be *only one file* named 'artifact.tar'
+      - name: Archive artifact
+        shell: bash
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory public \
+            --exclude=.git \
+            -cvf ${{ runner.temp }}/artifact.tar \
+            .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          if-no-files-found: error
+          retention-days: 0
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    
+      # Deploy the contents of 'artifact.tar' to GitHub pages
+      - name: Deploy GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v1.0.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
