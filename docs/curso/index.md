@@ -83,12 +83,12 @@ Regularidad en la revisión del material proporcionado para la modalidad en lín
 
 Se aplicarán 3 exámenes, de acuerdo al avance que se tenga en el curso:
 
-| Examen	| Fecha			|
-|:-------------:|:---------------------:|
-| Parcial 1	|  9 de marzo de 2022	|
-| Parcial 2	|  6 de abril de 2022	|
-| Parcial 3	| 11 de mayo de  2022	|
-| Parcial 4	|  8 de junio de 2022	|
+| Examen	| Fecha
+|:-------------:|:-------------------------:|
+| Parcial 1	|  5 de septiembre de 2022
+| Parcial 2	|  3 de    octubre de 2022
+| Parcial 3	| 31 de    octubre de 2022
+| Parcial 4	| 28 de  noviembre de 2022
 
 ####	Requisitos para presentar examen
 
@@ -152,10 +152,10 @@ La calificación final se calculará en base a los siguientes porcentajes:
 
 | Elemento		|Valor	|
 |----------------------:|:------|
-| Examenes		| 30%	|
-| Prácticas		| 50%	|
-| Proyecto final	| 10%	|
-| Tareas		| 10%	|
+| Prácticas		| 50%
+| Examenes		| 30%
+| Proyecto final	| 10%
+| Tareas		| 10%
 
 !!! note
     Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la calificación final
