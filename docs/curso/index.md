@@ -6,6 +6,7 @@ Semestre 2022-2
 
 - **José Luis Torres Rodríguez**
 - Andrés Leonardo Hernández Bermúdez
+- Dante Erik Santiago Rodríguez Pérez
 
 ##	Requisitos
 
