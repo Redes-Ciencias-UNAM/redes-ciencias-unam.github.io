@@ -22,15 +22,14 @@ authors:
 
 - Esta tarea debe ser entregada de manera **individual**
 
-- La fecha límite de entrega es el **viernes 11 de marzo de 2022** a las 23:59 horas
-- Esta actividad debe ser entregada de manera **individual** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Crear una rama llamada `tarea-2` para entregar la práctica
-    - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
+- La fecha límite de entrega es el **miércoles 24 de agosto de 2022** a las 23:59 horas
+
+!!! warning
+    - Se entregará la evidencia de esta actividad junto con la [tarea-3](../tarea-3/) en una fecha posterior
 
 ## Procedimiento
 
-- Crear una cuenta en **Cisco Network Academy** o **Skills for All**
-    - <https://www.netacad.com/>
+- Crear una cuenta en el sitio **Skills for All**
     - <https://skillsforall.com/>
 
 - Termina el curso **Getting Started with Cisco Packet Tracer**
@@ -41,7 +40,7 @@ authors:
 
 - Crea una topología de red simple para una red casera
     - Elabora un "plano" de cómo es la distribución aproximada de las habitaciones
-    - No es necesario que pongas fotos de tu casa
+    - No es necesario que pongas fotos de tu casa, únicamente que delimites los espacios
 
 - Explica la topología en el archivo `README.md`
     - Agrega las imágenes que sean necesarias
@@ -51,6 +50,9 @@ authors:
 - Anexa el archivo PKT resultante en la carpeta `files`
 
 ## Entregables
+
+!!! warning
+    - Se entregará la evidencia de esta actividad junto con la [tarea-3](../tarea-3/) en una fecha posterior
 
 - Archivo `README.md`
 
