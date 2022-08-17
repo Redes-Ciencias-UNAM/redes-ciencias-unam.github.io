@@ -4,9 +4,10 @@ title: Tareas
 
 # Tareas
 
-| Título                                                  | Ambiente      | Entrega    |
-|:--------------------------------------------------------|:-------------:|:----------:|
-| Tarea 0 : [Flujo de trabajo en GitLab](tarea-0)         | GitLab        | 2022-02-21
-| Tarea 1 : [Laboratorio virtual de redes](tarea-1)       | VirtualBox    | 2022-02-28
-| Tarea 2 : [Instalación de Cisco Packet Tracer](tarea-2) | Packet Tracer | 2022-03-11
-| Tarea 3 : [Captura de tráfico de red](tarea-3)          | WireShark     | 2022-05-02
+| Título                                                     | Ambiente      | Entrega
+|:-----------------------------------------------------------|:-------------:|:----------:|
+| **Tarea 1**: [Curso de nivelación de GNU/Linux](tarea-1)   | GNU/Linux     | 2022-08-24
+| **Tarea 2**: [Instalación de Cisco Packet Tracer](tarea-2) | Packet Tracer | 2022-08-24
+| **Tarea 3**: [Flujo de trabajo en GitLab](tarea-0)         | GitLab        | _pendiente_
+| **Tarea 4**: [Laboratorio virtual de redes](tarea-1)       | VirtualBox    | _pendiente_
+| **Tarea 5**: [Captura de tráfico de red](tarea-3)          | WireShark     | _pendiente_
