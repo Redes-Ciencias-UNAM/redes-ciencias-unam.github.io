@@ -60,7 +60,7 @@ authors:
     
         - Simular la salida a Internet utilizando un modem conectado a `Cloud-PT`
         - Utilizar los equipos de red de tipo "Packet Tracer"
-            - `Bridge-PT`, `Switch-PT`, `Router-PT`, `AccessPoint-PT`, etc.
+            - `Switch-PT`, `Router-PT`, `AccessPoint-PT`, etc.
         - Utilizar PC, laptops, TV, SmartPhone, Tablet e impresoras como clientes
             - Dar de alta por lo menos 4 clientes
             - Utilizar conexiones Ethernet para conectar los clientes al switch
