@@ -30,7 +30,7 @@ authors:
 
 - Esta tarea debe ser entregada de manera **individual**
 
-- La fecha límite de entrega es el **lunes 28 de febrero de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **miércoles 07 de septiembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada de manera **individual** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
 
