@@ -11,7 +11,7 @@ authors:
   <img src="img/UNAM-FC.png" alt="UNAM-FC">
 </div>
 
-Ciencias de la Computación - Semestre 2022-2
+Ciencias de la Computación - Semestre 2023-1
 
 ##	Presentación del curso
 
@@ -56,8 +56,8 @@ Ciencias de la Computación - Semestre 2022-2
 
 ###	Temas
 
-- [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes "Las tareas se entregan a traves de merge-request")
-- [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2022-2 "Accesible con cuenta @ciencias")
+- [Repositorio para la entrega de tareas y prácticas](https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes "Las tareas se entregan a traves de merge-request")
+- [Carpeta de fotos del pizarrón](http://tinyurl.com/PizarronRedes-2023-1 "Accesible con cuenta @ciencias")
 - [Guía rápida de `git`](temas/git.md "9418/tcp")
 
 ####	0 - Modelos de referencia
@@ -105,9 +105,9 @@ Ciencias de la Computación - Semestre 2022-2
 ###	Ligas de interés
 
 - <http://Redes-Ciencias-UNAM.gitlab.io/>
-- <https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes>
-- <http://tinyurl.com/ListaRedes-2022-2>
-- <http://tinyurl.com/PizarronRedes-2022-2>
+- <https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes>
+- <http://tinyurl.com/ListaRedes-2023-1>
+- <http://tinyurl.com/PizarronRedes-2023-1>
 - <http://www.fciencias.unam.mx/asignaturas/714.pdf>
 - <http://www.fciencias.unam.mx/licenciatura/asignaturas/218/714>
 - <http://www.fciencias.unam.mx/licenciatura/asignaturas/1556/714>
@@ -118,7 +118,7 @@ Ciencias de la Computación - Semestre 2022-2
 
 ##	Ligas de interés
 
-- [Fechas oficiales][fechas-oficiales] del semestre 2022-2 aprobadas por el Consejo Técnico de la FC
+- [Fechas oficiales][fechas-oficiales] del semestre 2023-1 aprobadas por el Consejo Técnico de la FC
 - [Calendario escolar][calendario-unam] en la [página de la DGAE][pagina-dgae]
 - [Temario][temario] en la página de la Facultad de Ciencias
 - [Detalles del curso][detalles] en la página de la Facultad de Ciencias
@@ -128,30 +128,31 @@ Ciencias de la Computación - Semestre 2022-2
 
 --------------------------------------------------------------------------------
 
-[fechas-oficiales]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosct/2022-0001
-[calendario-unam]: https://www.dgae.unam.mx/assets/images/semestral2022.jpg
+[fechas-oficiales]: https://www.fciencias.unam.mx/estudiar-en-ciencias/calendario/estudiantes
+[calendario-unam]: https://www.dgae.unam.mx/assets/images/semestral2023.jpg
 [pagina-dgae]: https://www.dgae.unam.mx/calendarios_escolares.html
 [temario]: http://www.fciencias.unam.mx/asignaturas/714.pdf
 [detalles]: https://www.fciencias.unam.mx/docencia/horarios/detalles/332404
-[horarios-plan-1994]: https://www.fciencias.unam.mx/docencia/horarios/20222/218/714
-[horarios-plan-2013]: https://www.fciencias.unam.mx/docencia/horarios/20222/1556/714
-[presentacion]: https://www.fciencias.unam.mx/docencia/horarios/presentacion/332404
+[horarios-plan-1994]: https://www.fciencias.unam.mx/docencia/horarios/20231/218/714
+[horarios-plan-2013]: https://www.fciencias.unam.mx/docencia/horarios/20231/1556/714
+[presentacion]: https://www.fciencias.unam.mx/docencia/horarios/presentacion/336833
 
 [youtube]: https://tinyurl.com/Redes-Ciencias-UNAM-YouTube
-[youtube-lista-semestre]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d
+[youtube-lista-semestre]: https://tinyurl.com/Redes-Ciencias-UNAM-YT-2023-1
 [youtube-lista-complementarios]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QLYF_TQ1ryoRtl-bYFHbGn
+
 [google-meet]: https://meet.google.com/hrd-hczh-bzo
 [jitsi]: https://meet.jit.si/redes-fciencias
 [zoom]: https://cuaieed-unam.zoom.us/j/87534368361
 
 [pagina-curso]: https://Redes-Ciencias-UNAM.gitlab.io/
 [grupo-gitlab]: https://gitlab.com/Redes-Ciencias-UNAM/
-[lista]: https://tinyurl.com/Lista-Redes-2022-2
-[pizarron]: https://tinyurl.com/PizarronRedes-2022-2
+[lista]: https://tinyurl.com/Lista-Redes-2023-1
+[pizarron]: https://tinyurl.com/PizarronRedes-2023-1
 [telegram]: https://t.me/redes_ciencias_unam
 
-[pagina-tareas]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes
-[repositorio-tareas-practicas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes
-[repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[pagina-tareas]: https://Redes-Ciencias-UNAM.gitlab.io/2023-1/tareas-redes
+[repositorio-tareas-practicas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes
+[repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes/workflow/
+[flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2023-1/tareas-redes/workflow/
