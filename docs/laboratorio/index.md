@@ -8,7 +8,7 @@ title: Laboratorio
 
 | Título                                                                                  | Ambiente       | Entrega
 |:----------------------------------------------------------------------------------------|:--------------:|:----------:|
-| **Práctica  1**: [Configuración de _switches_ administrables](practica-1)               | Packet Tracer  | _pendiente_
+| **Práctica  1**: [Configuración de _switches_ administrables](practica-1)               | Packet Tracer  | 2022-09-12
 | **Práctica  2**: [Configuración de VLAN en _switches_ administrables](practica-2)       | Packet Tracer  | _pendiente_
 | **Práctica  3**: [Configuración de _routers_](practica-3)                               | Packet Tracer  | _pendiente_
 | **Práctica  4**: [Configuración de algoritmos de ruteo](practica-4)                     | Packet Tracer  | _pendiente_
