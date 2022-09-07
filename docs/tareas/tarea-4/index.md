@@ -30,10 +30,9 @@ authors:
 
 - Esta tarea debe ser entregada de manera **individual**
 
-- La fecha límite de entrega es el **miércoles 07 de septiembre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **jueves 08 de septiembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada de manera **individual** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
-
 
 
 ## Entregables
@@ -122,9 +121,9 @@ $ whereis wireshark tcpdump nmap ...
     - Hay una serie de pantallas sobre la [instalación de Debian 11][debian-install]
 
 - Instalar otra máquina virtual donde se administren los paquetes con `yum` o `dnf`
-    - [CentOS Stream 8][centos]
-    - [Rocky Linux 8][rocky]
-    - [Alma Linux 8][alma]
+    - [CentOS Stream 8 o 9][centos]
+    - [Rocky Linux 8 o 9][rocky]
+    - [Alma Linux 8 o 9][alma]
     - Hay una serie de pantallas sobre la [instalación de CentOS 8][centos-install]
 
 - Se recomienda que las máquinas virtuales tengan los siguientes recursos:
@@ -172,13 +171,14 @@ Cada una de las máquinas virtuales deben tener dos interfaces de red
 
 [nixcraft-virt]: https://www.cyberciti.biz/faq/linux-xen-vmware-kvm-intel-vt-amd-v-support/
 
-[video-debian-install]: https://www.youtube.com/watch?v=OSlESCNSr5U
-[video-debian-guest-additions]: https://www.youtube.com/watch?v=AQXuv80cct4
-[video-centos-install]: https://www.youtube.com/watch?v=H-TLEAGyFIQ
-[video-centos-guest-additions]: https://www.youtube.com/watch?v=JrGOMFaRr1Y
+[video-debian-install]: https://www.youtube.com/watch?v=IKig3W6b3kg
+[video-debian-guest-additions]: https://www.youtube.com/watch?v=yptpnm5XXYE
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[video-centos-install]: https://www.youtube.com/watch?v=uQT7MHJTbfA
+[video-centos-guest-additions]: https://www.youtube.com/watch?v=EPScixuHzm4
+
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
 [debian-install]: ./debian-install
 [centos-install]: ./centos-install
