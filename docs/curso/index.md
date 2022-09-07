@@ -58,7 +58,7 @@ Semestre 2022-2
 
 ###	Sesión de dudas
 
-- Lunes de 17:30 a 19:00 horas [a través de Google Meet][google-meet]
+- Lunes de 17:30 a 19:00 horas [a través de videoconferencia][zoom]
 - Para resolver las dudas existentes sobre los temas y materiales entregados a lo largo de la semana
 
 ### Laboratorio
@@ -235,35 +235,46 @@ La calificación final se calculará en base a los siguientes porcentajes:
 
 --------------------------------------------------------------------------------
 
-[fechas-oficiales]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosct/2022-0001
-[calendario-unam]: https://www.dgae.unam.mx/assets/images/semestral2022.jpg
+##	Ligas de interés
+
+- [Fechas oficiales][fechas-oficiales] del semestre 2023-1 aprobadas por el Consejo Técnico de la FC
+- [Calendario escolar][calendario-unam] en la [página de la DGAE][pagina-dgae]
+- [Temario][temario] en la página de la Facultad de Ciencias
+- [Detalles del curso][detalles] en la página de la Facultad de Ciencias
+- [Presentación][presentacion] en la página de la Facultad de Ciencias
+- Horarios en la página de la Facultad de Ciencias: [plan 1994][horarios-plan-1994], [plan 2013][horarios-plan-2013]
+- [Lista del grupo][lista]
+
+--------------------------------------------------------------------------------
+
+[fechas-oficiales]: https://www.fciencias.unam.mx/estudiar-en-ciencias/calendario/estudiantes
+[calendario-unam]: https://www.dgae.unam.mx/assets/images/semestral2023.jpg
 [pagina-dgae]: https://www.dgae.unam.mx/calendarios_escolares.html
 [temario]: http://www.fciencias.unam.mx/asignaturas/714.pdf
 [detalles]: https://www.fciencias.unam.mx/docencia/horarios/detalles/332404
-[horarios-plan-1994]: https://www.fciencias.unam.mx/docencia/horarios/20222/218/714
-[horarios-plan-2013]: https://www.fciencias.unam.mx/docencia/horarios/20222/1556/714
-[presentacion]: https://www.fciencias.unam.mx/docencia/horarios/presentacion/332404
+[horarios-plan-1994]: https://www.fciencias.unam.mx/docencia/horarios/20231/218/714
+[horarios-plan-2013]: https://www.fciencias.unam.mx/docencia/horarios/20231/1556/714
+[presentacion]: https://www.fciencias.unam.mx/docencia/horarios/presentacion/336833
 
 [youtube]: https://tinyurl.com/Redes-Ciencias-UNAM-YouTube
-[youtube-lista-semestre]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d
+[youtube-lista-semestre]: https://tinyurl.com/Redes-Ciencias-UNAM-YT-2023-1
 [youtube-lista-complementarios]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QLYF_TQ1ryoRtl-bYFHbGn
+
 [google-meet]: https://meet.google.com/hrd-hczh-bzo
 [jitsi]: https://meet.jit.si/redes-fciencias
 [zoom]: https://cuaieed-unam.zoom.us/j/87534368361
 
 [pagina-curso]: https://Redes-Ciencias-UNAM.gitlab.io/
 [grupo-gitlab]: https://gitlab.com/Redes-Ciencias-UNAM/
-[lista]: https://tinyurl.com/ListaRedes-2022-2
-[pizarron]: https://tinyurl.com/PizarronRedes-2022-2
+[lista]: https://tinyurl.com/Lista-Redes-2023-1
+[pizarron]: https://tinyurl.com/PizarronRedes-2023-1
 [telegram]: https://t.me/redes_ciencias_unam
 
-[pagina-tareas]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes
-[repositorio-tareas-practicas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes
-[repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[pagina-tareas]: https://Redes-Ciencias-UNAM.gitlab.io/2023-1/tareas-redes
+[repositorio-tareas-practicas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes
+[repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2022-2/tareas-redes/workflow/
-
---------
+[flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2023-1/tareas-redes/workflow/
 
 [kurose-bidiunam-busqueda]: http://pbidi.unam.mx:8080/login?url=http://search.ebscohost.com/login.aspx?direct=true&bquery=(TI+Computer+networking+%3a+a+top-down+approach)+AND+(AU+Kurose%2c+James+F.)&cli0=FT1&clv0=Y&lang=es&type=1&site=eds-live "Biblioteca Digital, UNAM"
 [kurose-librunam-catalogo]: http://librunam.dgbiblio.unam.mx:8991/F/PBPPUGKMY7X4SDXMKFD7I6QS8FI62XUMS8UMJNA5IR27JYGYR5-63897?func=short-refine-exec&set_number=035774&request_op=AND&request=Kurose%2C+James+F.&find_code=WAT&x=73&y=17&filter_code_1=WLN&filter_request_1=&filter_code_2=WYR&filter_request_2=&filter_code_3=WYR&filter_request_3= "Catálogo LIBRUNAM"
