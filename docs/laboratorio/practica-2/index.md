@@ -19,7 +19,7 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **viernes 22 de abril de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **lunes 19 de septiembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Utilizar el escenario de Packet Tracer creado para la [práctica 1](../practica-1)
     - Utilizar la carpeta `docs/practicas/practica-2/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
@@ -95,10 +95,10 @@ Elaboren un video donde expliquen qué edificio se eligió, la topología de red
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-vlan-802.1q]: https://www.youtube.com/watch?v=WspQ7R6Xk1M&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=36
-[video-configuracion-vlan]: https://www.youtube.com/watch?v=1dqTDqt92pY&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=37
+[video-vlan-802.1q]: https://www.youtube.com/watch?v=WspQ7R6Xk1M
+[video-configuracion-vlan]: https://www.youtube.com/watch?v=1dqTDqt92pY
