@@ -27,9 +27,9 @@ Te invitamos a leer la documentación:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **lunes 2 de mayo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **lunes 10 de octubre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/tareas/tarea-3/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/tareas/tarea-5/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
     - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
 
@@ -364,10 +364,10 @@ $ curl -vk# https://1.1.1.1/
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
 [chocolatey]: https://chocolatey.org/install
 [wireshark]: https://www.wireshark.org/
