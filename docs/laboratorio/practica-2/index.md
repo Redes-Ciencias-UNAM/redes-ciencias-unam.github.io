@@ -19,7 +19,7 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **lunes 19 de septiembre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **miércoles 21 de septiembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Utilizar el escenario de Packet Tracer creado para la [práctica 1](../practica-1)
     - Utilizar la carpeta `docs/practicas/practica-2/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
