@@ -11,7 +11,7 @@ title: Laboratorio
 | **Práctica  1**: [Configuración de _switches_ administrables](practica-1)               | Packet Tracer  | 2022-09-12
 | **Práctica  2**: [Configuración de VLAN en _switches_ administrables](practica-2)       | Packet Tracer  | 2022-09-21 *
 | **Práctica  3**: [Configuración de _routers_](practica-3)                               | Packet Tracer  | 2022-09-28
-| **Práctica  4**: [Configuración de algoritmos de ruteo](practica-4)                     | Packet Tracer  | _pendiente_
+| **Práctica  4**: [Configuración de algoritmos de ruteo](practica-4)                     | Packet Tracer  | 2022-10-07
 | **Práctica  5**: [Configuración de servicios DHCP, NAT y DNS en GNU/Linux](practica-5)  | VirtualBox     | _pendiente_
 | **Práctica  6**: [Implementación de un servidor de archivo con NFS y Samba](practica-6) | VirtualBox     | _pendiente_
 | **Práctica  7**: [Configuración de un _firewall_ de red con pfSense](practica-7)        | VirtualBox     | _pendiente_

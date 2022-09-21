@@ -1,10 +1,10 @@
 ---
-title: Práctica 5 - Configuración de algoritmos de ruteo
+title: Práctica 4 - Configuración de algoritmos de ruteo
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 5: Configuración de algoritmos de ruteo
+# Práctica 4: Configuración de algoritmos de ruteo
 
 --------------------------------------------------------------------------------
 
@@ -20,23 +20,22 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 
 ## Restricciones
 
-- La fecha límite de entrega es el **miércoles 25 de mayo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **viernes 07 de octubre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-5/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-4/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-5` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-4` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 --------------------------------------------------------------------------------
 
 ## Procedimiento
 
-- Copia el escenario que se entregó en la [práctica 4][practica-4] a la carpeta `files` de la práctica 5 y modificalo
+- Copia el escenario que se entregó en la [práctica 3][practica-3] a la carpeta `files` de la práctica anterior y modificalo
     - Conecta <u>todos los ruteadores</u> a un _router_ central en la red <span style="font-weight: bold; color: red;">WAN: rojo</span>
     - Conecta un <span style="font-weight: bold; color: olive;">servidor DNS</span> al _router_ central
     - Agrega la red <span style="font-weight: bold; color: orange;">DMZ: naranja</span>
 
-<!-- -->
-<a id="diagrama" name="diagrama"></a>
+### Diagrama de red
 
 | Diagrama de red en Packet Tracer |
 |:--------------------------------:|
@@ -68,7 +67,7 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 
 - Utiliza interfaces **FastEthernet** para las redes **LAN** (<span style="font-weight: bold; color: black;">negro</span>)
 - Conecta un switch y una laptop en la red **LAN**, utiliza el direccionamiento `192.168.X.0/24`
-- Habilita el servicio de DHCP en el ruteador para las redes **LAN**
+- Habilita el servicio de DHCP en el ruteador para cada una de las redes **LAN**
 - Configura el servicio de "NAT `overload`" en el ruteador para las redes **LAN** para permitir que la IP de la PC (`192.168.X.Y`) se traduzca a la IP del router **WAN** (`A.B.X.1`) cuando salga a otras redes
     - La red **LAN** se considera que está en la región **INTERNA** del NAT
     - Los equipos en la red **LAN** no son directamente accesibles desde ninguna de las redes **WAN** porque están "atrás del NAT"
@@ -110,7 +109,17 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 ## Entregables
 
 - Archivo `README.md`
-    - Tabla donde se listen los equipos, nombre de host, dirección IP de administración y la conexión con otros switches y ruteadores
+    - Tablas donde se listen los equipos, nombre de host, dirección IP de administración y la conexión con otros switches y ruteadores
+        - Considera utilizar los siguientes comandos y pegar la salida en lugar de hacer las tablas a mano
+        - `show cdp neighbors`
+        - `show ip arp`
+        - `show ip interface brief`
+        - `show ip route`
+        - `show ip route summary`
+        - `show ip dhcp`
+        - `show ip nat statistics`
+        - `show ip nat translations`
+        - `show ip rip database`
     - Listar las imágenes con su respectiva descripción
     - Crear ligas hacia los archivos en la carpeta `files` cuando sean mencionados
     - Salida de las pruebas de conectividad entre los equipos **en texto**
@@ -147,18 +156,18 @@ Elaboren un video donde expliquen qué edificio se eligió, la topología de red
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
+[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k
 [packet-tracer-install]: ./install
 
 [practicas-cisco]: https://tinyurl.com/Redes-FC-UNAM-Practicas-Cisco
 [instaladores-packet-tracer]: https://tinyurl.com/Redes-FC-UNAM-Cisco-PT
 
-[practica-4]: ../practica-4/
+[practica-3]: ../practica-3/
 
 [ruteo-rip]: ../../temas/routing-rip
 [packet-tracer-nat]: ../../temas/packet-tracer/nat.md
