@@ -1,10 +1,10 @@
 ---
-title: Práctica 4 - Configuración de routers
+title: Práctica 3 - Configuración de routers
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 4: Configuración de _routers_
+# Práctica 3: Configuración de _routers_
 
 --------------------------------------------------------------------------------
 
@@ -23,33 +23,38 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 
 ## Restricciones
 
-- La fecha límite de entrega es el **lunes 16 de mayo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **miércoles 28 de septiembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-4/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-3/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-4` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-3` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 ## Procedimiento
 
 - Crea un escenario donde se conecten varias redes de distintas dependencias de la UNAM
-- Conecta 3 o más routers para simular varias dependencias universitarias
-- Utiliza una topología para conectar las distintas redes y justifica por qué la implementaste
+- Conecta 4 routers para simular varias dependencias universitarias
+- Establece una topología (punto a punto, anillo, malla, etc.) para conectar las distintas redes y justifica por qué la implementaste
+
 - **Establece rutas estáticas entre los ruteadores de cada red**
 - Utiliza interfaces **GigabitEthernet** para las redes **WAN** (<span style="color: red; font-weight: bold;">rojo</span>)
 - Utiliza interfaces **FastEthernet** para las redes **LAN** (<span style="color: black; font-weight: bold;">negro</span>)
 
 - Configura una contraseña para entrar al modo privilegiado `exec`
 - Configura la administración por SSH en cada switch
-- Deshabilita telnet y la consola web
+- Deshabilita `telnet` y la consola web
 
-- Utiliza los segmentos de red [**TEST-NET**][ipv4-reserved-addresses] para las redes **WAN**: `192.0.2.0/24`, `198.51.100.0/24` o `203.0.113.0/24`
-    - Utiliza conexiones punto a punto con máscara de red `/30` o `/31` entre los ruteadores
+- Elige algún segmento de red [**TEST-NET**][ipv4-reserved-addresses] (`192.0.2.0/24`, `198.51.100.0/24` o `203.0.113.0/24`) para las redes **WAN** y subdividelo de tal manera que puedas hacer conexiones punto a punto con máscara de red `/30` o `/31` entre los ruteadores
+    - Puedes utilizar [el comando `ipcalc`][man-ipcalc] para calcular las subredes
+        - Dirección de la red
+        - Máscara de subred
+        - Rango de hosts
 
 - Configura direcciones IP estáticas para la red **LAN**
 
 - Configura **rutas estáticas** para interconectar las redes **WAN**
 
 - Conecta un switch y una laptop en la red **LAN**, utiliza el direccionamiento `192.168.X.0/24`
+    - Donde `X` varía entre cada una de las redes **LAN** de cada dependencia universitaria
 
 - Configura los switches de la red **LAN**
     - Interfaces de red
@@ -59,8 +64,7 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
     - Utiliza la vLAN predeterminada (vLAN 1) para conectar a todos los equipos de las redes **LAN** y **WAN**
 -->
 
-<!-- -->
-<a id="diagrama" name="diagrama"></a>
+### Diagrama de red
 
 | Diagrama de red en Packet Tracer |
 |:-----------------------------:|
@@ -73,10 +77,24 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 !!! note
     No se contempla el uso de vLAN `802.1q` ni vLAN anidadas `802.1ad` (_Q-in-Q_) por lo que no se deben de configurar puertos troncales (trunk)
 
+### Pruebas de conectividad
+
+Contemplar las siguientes consideraciones para las pruebas de conectividad:
+
+- Todos los clientes de todas las redes **LAN** pueden comunicarse entre sí
+- Todos los clientes pueden alcanzar a todos los ruteadores
+
 ## Entregables
 
 - Archivo `README.md`
     - Tabla donde se listen los equipos, nombre de host, dirección IP de administración y la conexión con otros switches y ruteadores
+        - Considera utilizar los siguientes comandos y pegar la salida en lugar de hacer las tablas a mano
+        - `show cdp neighbors`
+        - `show ip arp`
+        - `show ip interface brief`
+        - `show ip route`
+        - `show ip route summary`
+        - `show ip dhcp` (si se elabora la sección extra)
     - Listar las imágenes con su respectiva descripción
     - Crear ligas hacia los archivos en la carpeta `files` cuando sean mencionados
     - Salida de las pruebas de conectividad entre los equipos **en texto**
@@ -93,12 +111,17 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
         - Hacer que la configuración sea persistente con el comando
             - `copy  running-config  startup-config`
         - Guardar la salida del comando `show startup-config` a un archivo de texto (ej. `Router-1.txt` o `Switch-LAN-1.txt`)
-        - Repetir para cada equipo de red
+        - Repetir para cada equipo de red (switches y ruteadores)
 
 ## Extra
 
-- Habilita el servicio de DHCP en el ruteador para la red **LAN**
+- Habilita el servicio de DHCP en el ruteador para la red **LAN** de tal manera que los clientes obtengan su dirección IP utilizando este mecanismo
+    - Recuerda que los switches tienen **direccionamiento estático**
+    - El servicio de DHCP debe proporcionar a los clientes la dirección IP del ruteador de la red **LAN** como _gateway_ para establecer la ruta predeterminada
+
+<!--
 - Configura el servicio de NAT en el ruteador para la red **LAN**
+-->
 
 - Elabora un video donde expliquen qué edificio se eligió, la topología de red utilizada y las pruebas de conectividad.
 
@@ -111,12 +134,12 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=19
+[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k
 [packet-tracer-install]: ./install
 
 [practicas-cisco]: https://tinyurl.com/Redes-FC-UNAM-Practicas-Cisco
@@ -125,3 +148,5 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 [ruteo-estatico]: ../../temas/routing-static
 
 [ipv4-reserved-addresses]: https://en.wikipedia.org/wiki/Reserved_IP_addresses
+
+[man-ipcalc]: https://linux.die.net/man/1/ipcalc
