@@ -15,6 +15,7 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 ## Elementos de apoyo
 
 - [Video de la creación de una red en Packet Tracer 📼][video-packet-tracer]
+- [Cálculo de subredes con `ipcalc`][video-ipcalc]
 - [Configuración de ruteo estático 📝][ruteo-estatico]
 - [Prácticas de Packet Tracer 📖][practicas-cisco]
     - **Lab 4-5**: _Performing Initial Router Startup_ (_p19_)
@@ -139,8 +140,9 @@ Contemplar las siguientes consideraciones para las pruebas de conectividad:
 
 [lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k
 [packet-tracer-install]: ./install
+[video-packet-tracer]: https://www.youtube.com/watch?v=zixHIQvI79k
+[video-ipcalc]: https://www.youtube.com/watch?v=7mGfU_ZxCcM
 
 [practicas-cisco]: https://tinyurl.com/Redes-FC-UNAM-Practicas-Cisco
 [instaladores-packet-tracer]: https://tinyurl.com/Redes-FC-UNAM-Cisco-PT
