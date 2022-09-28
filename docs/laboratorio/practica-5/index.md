@@ -1,10 +1,10 @@
 ---
-title: Práctica 3 - Configuración de servicios DHCP, NAT y DNS
+title: Práctica 5 - Configuración de servicios DHCP, NAT y DNS
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 3: Configuración de servicios DHCP, NAT y DNS
+# Práctica 5: Configuración de servicios DHCP, NAT y DNS
 
 --------------------------------------------------------------------------------
 
@@ -27,10 +27,10 @@ Esta practica guiada esta basada en los videos de la clase que se muestran a con
 
 ## Restricciones
 
-- La fecha límite de entrega es el **domingo 8 de mayo de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **lunes 17 de octubre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-- Crear una nueva rama llamada `practica-3`
-- Utilizar la carpeta `docs/practicas/practica-3/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+- Crear una nueva rama llamada `practica-5`
+- Utilizar la carpeta `docs/practicas/practica-5/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
     - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
 - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
 
@@ -147,10 +147,10 @@ $ ping6 -c 6 example.com.
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
 [video-protocolo-arp]: https://www.youtube.com/watch?v=bqNLVQDqmLk&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=38
 [video-protocolo-dhcp]: https://www.youtube.com/watch?v=6l4WQJfD7o0&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=39
