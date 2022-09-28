@@ -41,28 +41,28 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 - Utiliza interfaces **FastEthernet** para las redes **LAN** (<span style="color: black; font-weight: bold;">negro</span>)
 
 - Configura una contraseña para entrar al modo privilegiado `exec`
-- Configura la administración por SSH en cada switch
+- Configura la administración por SSH en cada router
 - Deshabilita `telnet` y la consola web
 
-- Elige algún segmento de red [**TEST-NET**][ipv4-reserved-addresses] (`192.0.2.0/24`, `198.51.100.0/24` o `203.0.113.0/24`) para las redes **WAN** y subdividelo de tal manera que puedas hacer conexiones punto a punto con máscara de red `/30` o `/31` entre los ruteadores
+- Elige algún segmento de red [**TEST-NET**][ipv4-reserved-addresses] (`192.0.2.0/24`, `198.51.100.0/24` o `203.0.113.0/24`) para las redes **WAN** (<span style="color: red; font-weight: bold;">rojo</span>) y subdividelo de tal manera que puedas hacer conexiones punto a punto con máscara de red `/30` o `/31` entre los ruteadores
     - Puedes utilizar [el comando `ipcalc`][man-ipcalc] para calcular las subredes
         - Dirección de la red
         - Máscara de subred
         - Rango de hosts
 
-- Configura direcciones IP estáticas para la red **LAN**
+- Configura direcciones IP estáticas para la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>)
 
-- Configura **rutas estáticas** para interconectar las redes **WAN**
+- Configura **rutas estáticas** para interconectar las redes **WAN** (<span style="color: red; font-weight: bold;">rojo</span>)
 
-- Conecta un switch y una laptop en la red **LAN**, utiliza el direccionamiento `192.168.X.0/24`
-    - Donde `X` varía entre cada una de las redes **LAN** de cada dependencia universitaria
+- Conecta un switch y una laptop en la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>), utiliza el direccionamiento `192.168.X.0/24`
+    - Donde `X` varía entre cada una de las redes **LAN** (<span style="color: black; font-weight: bold;">negro</span>) de cada dependencia universitaria
 
-- Configura los switches de la red **LAN**
+- Configura los switches de la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>)
     - Interfaces de red
     - Dirección IP de administración (estática)
     - Establece el gateway con la dirección IP del ruteador para ese segmento de red
 <!--
-    - Utiliza la vLAN predeterminada (vLAN 1) para conectar a todos los equipos de las redes **LAN** y **WAN**
+    - Utiliza la vLAN predeterminada (vLAN 1) para conectar a todos los equipos de las redes **LAN** (<span style="color: black; font-weight: bold;">negro</span>) y **WAN** (<span style="color: red; font-weight: bold;">rojo</span>)
 -->
 
 ### Diagrama de red
@@ -82,8 +82,8 @@ El alumno creará un escenario de red y configurará rutas estáticas para simul
 
 Contemplar las siguientes consideraciones para las pruebas de conectividad:
 
-- Todos los clientes de todas las redes **LAN** pueden comunicarse entre sí
-- Todos los clientes pueden alcanzar a todos los ruteadores
+- Todos los clientes de todas las redes **LAN** (<span style="color: black; font-weight: bold;">negro</span>) pueden comunicarse entre sí
+- Todos los clientes pueden alcanzar a todos los ruteadores y switches sin importar la red donde se encuentren
 
 ## Entregables
 
@@ -100,7 +100,7 @@ Contemplar las siguientes consideraciones para las pruebas de conectividad:
     - Crear ligas hacia los archivos en la carpeta `files` cuando sean mencionados
     - Salida de las pruebas de conectividad entre los equipos **en texto**
     - Explicación de la topología de red utilizada.
-        - La simulación de la red **LAN** es una versión simplificada de la red interna de una dependencia universitaria para fines ilustrativos
+        - La simulación de la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>) es una versión simplificada de la red interna de una dependencia universitaria para fines ilustrativos
 
 - Carpeta `img`
     - Imagen de la topología de red implementada
@@ -116,12 +116,12 @@ Contemplar las siguientes consideraciones para las pruebas de conectividad:
 
 ## Extra
 
-- Habilita el servicio de DHCP en el ruteador para la red **LAN** de tal manera que los clientes obtengan su dirección IP utilizando este mecanismo
+- Habilita el servicio de DHCP en el ruteador para la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>) de tal manera que los clientes obtengan su dirección IP utilizando este mecanismo
     - Recuerda que los switches tienen **direccionamiento estático**
-    - El servicio de DHCP debe proporcionar a los clientes la dirección IP del ruteador de la red **LAN** como _gateway_ para establecer la ruta predeterminada
+    - El servicio de DHCP debe proporcionar a los clientes la dirección IP del ruteador de la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>) como _gateway_ para establecer la ruta predeterminada
 
 <!--
-- Configura el servicio de NAT en el ruteador para la red **LAN**
+- Configura el servicio de NAT en el ruteador para la red **LAN** (<span style="color: black; font-weight: bold;">negro</span>)
 -->
 
 - Elabora un video donde expliquen qué edificio se eligió, la topología de red utilizada y las pruebas de conectividad.
