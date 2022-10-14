@@ -27,14 +27,16 @@ Ciencias de la Computación - Semestre 2023-1
 - [Repositorio para la entrega de tareas y prácticas][repositorio-tareas-practicas]
     - Las tareas y prácticas se entregan a traves de [_merge request_][repositorio-tareas-practicas-merge-requests]
 
-<!--
+
 --------------------------------------------------------------------------------
 
 ## Tareas y Prácticas
 
-- [Lista de tareas](./tareas)
-- [Lista de prácticas de laboratorio](./laboratorio)
--->
+- [Lista de tareas](./tareas/)
+- [Lista de prácticas de laboratorio](./laboratorio/)
+
+!!! warning
+    Se ajustó el periodo de elaboración de las actividades y las fechas de entrega para compensar los días en los que la Facultad de Ciencias estuvo en paro activo.
 
 --------------------------------------------------------------------------------
 
@@ -156,3 +158,8 @@ Ciencias de la Computación - Semestre 2023-1
 [repositorio-tareas-practicas-merge-requests]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
 [flujo-de-trabajo]: https://Redes-Ciencias-UNAM.gitlab.io/2023-1/tareas-redes/workflow/
+
+[comunicado-fc-2022-0055]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosfc/2022-0055
+[comunicado-fc-2022-0058]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosfc/2022-0058
+[comunicado-fc-2022-0061]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosfc/2022-0061
+[comunicado-fc-2022-0062]: https://www.fciencias.unam.mx/institucion/acerca-de/comunicados/comunicadosfc/2022-0062

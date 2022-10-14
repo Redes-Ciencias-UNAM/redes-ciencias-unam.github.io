@@ -27,11 +27,14 @@ Te invitamos a leer la documentación:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **lunes 10 de octubre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **lunes 17 de octubre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Utilizar la carpeta `docs/tareas/tarea-5/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
     - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
+
+!!! warning
+    Se ajustó el periodo de elaboración de esta actividad y la fecha de entrega para compensar los días en los que la Facultad de Ciencias estuvo en paro activo.
 
 ## Entregables
 

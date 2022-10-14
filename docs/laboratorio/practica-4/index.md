@@ -20,11 +20,14 @@ El alumno configurará una infraestructura de red que que conecta varias redes m
 
 ## Restricciones
 
-- La fecha límite de entrega es el **viernes 07 de octubre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **jueves 20 de octubre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
     - Utilizar la carpeta `docs/practicas/practica-4/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
     - Hacer un _merge request_ a la rama `practica-4` del [repositorio de tareas][repo-tareas] para entregar la actividad
+
+!!! warning
+    Se ajustó el periodo de elaboración de esta actividad y la fecha de entrega para compensar los días en los que la Facultad de Ciencias estuvo en paro activo.
 
 --------------------------------------------------------------------------------
 
