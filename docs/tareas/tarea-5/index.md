@@ -42,7 +42,7 @@ Te invitamos a leer la documentación:
     - Explicación de los comandos utilizados
     - Explicación de los filtros de captura utilizados
     - Filtro de captura para la capa de aplicación
-    - Resultados de las pruebas de conectividad
+    - Resultados de las pruebas de conectividad **en TEXTO**
 
 - Carpeta `files`
     - Archivos de las capturas de tráfico de cada capa del modelo OSI en formato PCAP
@@ -279,17 +279,17 @@ nmap -v -sP 192.168.X.0/24
 - Realiza conexiones HTTP y HTTPS
 
 ```
-% curl -vk#L http://1.1.1.1/ > /dev/null
+% curl -vk#L 'http://1.1.1.1/' > /dev/null
 
-% curl -vk#L http://[2606:4700:4700::1111]/ > /dev/null
+% curl -vk#L 'http://[2606:4700:4700::1111]/' > /dev/null
 
-% curl -4vk# http://example.com/
+% curl -4vk# 'http://example.com/'  > /dev/null
 
-% curl -6vk# http://example.com/
+% curl -6vk# 'http://example.com/'  > /dev/null
 
-% curl -4vk# https://example.com/
+% curl -4vk# 'https://example.com/' > /dev/null
 
-% curl -6vk# https://example.com/
+% curl -6vk# 'https://example.com/' > /dev/null
 ```
 
 --------------------------------------------------------------------------------
