@@ -182,6 +182,8 @@ alpine:~# reboot
 
 Continúa con la [captura de tráfico de red][captura-de-trafico]
 
+[alpine-linux-iso]: https://dl-cdn.alpinelinux.org/alpine/v3.16/releases/x86_64/alpine-virt-3.16.2-x86_64.iso
+
 [captura-de-trafico]: index.md#captura-de-trafico
 
 [alpine-requirements]: https://wiki.alpinelinux.org/wiki/Requirements

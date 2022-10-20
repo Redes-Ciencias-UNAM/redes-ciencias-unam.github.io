@@ -1,10 +1,10 @@
 ---
-title: Práctica 5 - Configuración de servicios DHCP, NAT y DNS
+title: Práctica 5 - Configuración de servicios DHCP, NAT y DNS en GNU/Linux
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 5: Configuración de servicios DHCP, NAT y DNS
+# Práctica 5: Configuración de servicios DHCP, NAT y DNS en GNU/Linux
 
 --------------------------------------------------------------------------------
 
@@ -25,14 +25,19 @@ Esta practica guiada esta basada en los videos de la clase que se muestran a con
 - [Configuración de iptables en GNU/Linux 📼][video-iptables]
 - [Configuración de NAT, DHCP y Forwarder de DNS en GNU/Linux 📼][video-nat-dhcp-dns]
 
+- [Imagen ISO de Alpine Linux 💽][alpine-linux-iso]
+
 ## Restricciones
 
-- La fecha límite de entrega es el **lunes 17 de octubre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **viernes 28 de octubre de 2022** a las 23:59 horas `*`
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
 - Crear una nueva rama llamada `practica-5`
 - Utilizar la carpeta `docs/practicas/practica-5/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
     - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
 - Crear un _merge request_ en el [repositorio de tareas][repo-tareas] para entregar la actividad
+
+!!! note
+    `*`: Se ajustó la fecha de entrega para dar espacio al segundo examen parcial.
 
 ## Entregables
 
@@ -89,6 +94,9 @@ Se presentan los pasos para elaborar la configuración de un NAT, _forwarder_ de
 | Diagrama de red en VirtualBox |
 |:-----------------------------:|
 | ![](img/diagrama_red.png)
+
+!!! warning
+    Crear un _snapshot_ de la máquina virtual **Debian** <u>antes</u> de realizar la configuración de los servicios de red.
 
 El procedimiento se lista las siguientes páginas:
 
@@ -152,18 +160,18 @@ $ ping6 -c 6 example.com.
 
 [lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-protocolo-arp]: https://www.youtube.com/watch?v=bqNLVQDqmLk&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=38
-[video-protocolo-dhcp]: https://www.youtube.com/watch?v=6l4WQJfD7o0&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=39
-[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=40
+[video-protocolo-arp]: https://www.youtube.com/watch?v=bqNLVQDqmLk
+[video-protocolo-dhcp]: https://www.youtube.com/watch?v=6l4WQJfD7o0
+[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E
 
-[video-ip-manual]: https://www.youtube.com/watch?v=H74s4_oJNYY&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=41
-[video-ip-persistente]: https://www.youtube.com/watch?v=UErZ4i9XmLM&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=42
-[video-iptables]: https://www.youtube.com/watch?v=6lYnadL60Cs&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=43
-[video-nat-dhcp-dns]: https://www.youtube.com/watch?v=BzL3MQkHjwg&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=44
+[video-ip-manual]: https://www.youtube.com/watch?v=H74s4_oJNYY
+[video-ip-persistente]: https://www.youtube.com/watch?v=UErZ4i9XmLM
+[video-iptables]: https://www.youtube.com/watch?v=6lYnadL60Cs
+[video-nat-dhcp-dns]: https://www.youtube.com/watch?v=BzL3MQkHjwg
 
 [cisco-modeling-labs]: https://developer.cisco.com/docs/modeling-labs/
 
-[alpine-linux-iso]: https://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-virt-3.15.4-x86_64.iso
+[alpine-linux-iso]: https://dl-cdn.alpinelinux.org/alpine/v3.16/releases/x86_64/alpine-virt-3.16.2-x86_64.iso
 
 [tinycore-linux-iso]: http://tinycorelinux.net/13.x/x86/release/Core-13.0.iso
 [tinycore-linux-x64-iso]: http://tinycorelinux.net/13.x/x86_64/release/CorePure64-13.0.iso
