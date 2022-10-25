@@ -1,10 +1,10 @@
 ---
-title: Práctica 7 - Implementación de sitios web sobre HTTPS
+title: Práctica 10 - Implementación de sitios web sobre HTTPS
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 7: Implementación de sitios web sobre HTTPS
+# Práctica 10: Implementación de sitios web sobre HTTPS
 
 --------------------------------------------------------------------------------
 
@@ -41,11 +41,11 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **viernes 10 de junio de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **jueves 01 de diciembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-7/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-10/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-7` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-10` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 !!! danger
     - **Esta actividad depende de los recursos implementados en la [práctica 6](../practica-6)**
@@ -167,21 +167,21 @@ authors:
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
 [playlist-https]: https://www.youtube.com/playlist?list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB
-[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=40
-[video-configuracion-ssh]: https://youtu.be/Hnu7BHBDcoM&t=1390&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB
-[video-configuracion-apache-debian]: https://youtu.be/XbQ_dBuERdM&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=2
-[video-directivas-apache]: https://youtu.be/3JkQs3KcjxQ&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=3
-[video-virtualhosts-apache-etc-hosts]: https://youtu.be/ZnqSNXIr-h4&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=4
-[video-virtualhosts-apache-registros-dns]: https://youtu.be/JYo5rc4mhf0&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=5
-[video-certificados-ssl-x509]: https://youtu.be/rXqkJi_FTuQ&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=6
-[video-certificados-ssl-virtualhost-https-apache]: https://youtu.be/66dOHHD6L5I&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=7
-[video-letsencrypt-certbot]: https://youtu.be/kpiChLT5JPs&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=8
+[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E
+[video-configuracion-ssh]: https://youtu.be/Hnu7BHBDcoM&t=1390
+[video-configuracion-apache-debian]: https://youtu.be/XbQ_dBuERdM
+[video-directivas-apache]: https://youtu.be/3JkQs3KcjxQ
+[video-virtualhosts-apache-etc-hosts]: https://youtu.be/ZnqSNXIr-h4
+[video-virtualhosts-apache-registros-dns]: https://youtu.be/JYo5rc4mhf0
+[video-certificados-ssl-x509]: https://youtu.be/rXqkJi_FTuQ
+[video-certificados-ssl-virtualhost-https-apache]: https://youtu.be/66dOHHD6L5I
+[video-letsencrypt-certbot]: https://youtu.be/kpiChLT5JPs
 
 [apache-docs]: https://httpd.apache.org/docs/2.4/
 [apache-docs-config-sections]: https://httpd.apache.org/docs/2.4/sections.html
