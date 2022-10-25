@@ -1,10 +1,10 @@
 ---
-title: Práctica 6 - Creación de recursos en Azure
+title: Práctica 9 - Creación de recursos en Azure
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 6: Creación de recursos en Azure
+# Práctica 9: Creación de recursos en Azure
 
 --------------------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ authors:
 ## Elementos de apoyo
 
 - [Protocolo DNS 📼][video-protocolo-dns]
-- [Configuración de OpenSSH y autenticación con llaves 📼](https://youtu.be/Hnu7BHBDcoM&t=1390&list=PLN1TFzSBXi3QGCMqARFoO1ePBX1P38erB&index=1)
+- [Configuración de OpenSSH y autenticación con llaves 📼][video-configuracion-ssh]
 - [How does Microsoft Azure work? 📼][youtube-how-does-azure-work]
 - [Virtual machines selector tool][azure-vm-selector]
 - [Linux virtual machines in Azure 📝][azure-linux-vm-overview]
@@ -27,11 +27,11 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **viernes 10 de junio de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **jueves 24 de noviembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-6/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-9/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-6` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-9` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 !!! danger
     - **Las siguientes actividades dependen de los recursos que se implementan en esta práctica**
@@ -110,12 +110,13 @@ authors:
 
 --------------------------------------------------------------------------------
 
-[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2022-2/tareas-redes/workflow/
-[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2022-2/tareas-redes/-/merge_requests
+[flujo-de-trabajo]: https://redes-ciencias-unam.gitlab.io/2023-1/tareas-redes/workflow/
+[repo-tareas]: https://gitlab.com/Redes-Ciencias-UNAM/2023-1/tareas-redes/-/merge_requests
 
-[lista-redes]: https://tinyurl.com/Lista-Redes-2022-2
+[lista-redes]: https://tinyurl.com/Lista-Redes-2023-1
 
-[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E&list=PLN1TFzSBXi3QWbHwBEV3p4LxV5KceXu8d&index=40
+[video-protocolo-dns]: https://www.youtube.com/watch?v=r4PntflJs9E
+[video-configuracion-ssh]: https://youtu.be/Hnu7BHBDcoM&t=1390
 
 [welcome-to-azure]: https://azure.microsoft.com/en-us/get-started/welcome-to-azure/
 [azure-faq-free-services]: https://azure.microsoft.com/en-us/free/free-account-faq/#free-services
