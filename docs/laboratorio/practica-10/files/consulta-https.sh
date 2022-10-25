@@ -1,0 +1,1 @@
+../../../bin/consulta-https.sh
