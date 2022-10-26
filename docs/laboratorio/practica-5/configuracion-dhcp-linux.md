@@ -29,7 +29,7 @@ Modifica las siguientes líneas en el archivo `/etc/dhcp/dhcpd.conf` para config
 # https://linux.die.net/man/5/dhcpd.conf
 # https://linux.die.net/man/5/dhcp-options
 
-option  domain-name  "ciencias.local"
+option  domain-name  "ciencias.local";
 option  domain-name-servers  192.168.56.254;
 
 # No se dará servicio en la red externa (NAT de VirtualBox)

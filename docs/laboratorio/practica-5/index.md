@@ -16,6 +16,8 @@ El alumno realizará la configuración de una máquina virtual GNU/Linux con los
 
 Esta practica guiada esta basada en los videos de la clase que se muestran a continuación:
 
+- [Cómo compactar y exportar una máquina virtual de VirtualBox 📝][virtualbox-compact-export-vm]
+
 - [Protocolo ARP 📼][video-protocolo-arp]
 - [Protocolo DHCP 📼][video-protocolo-dhcp]
 - [Protocolo DNS 📼][video-protocolo-dns]
@@ -95,8 +97,10 @@ Se presentan los pasos para elaborar la configuración de un NAT, _forwarder_ de
 |:-----------------------------:|
 | ![](img/diagrama_red.png)
 
+<a id="snapshot" name="snapshot"></a>
+
 !!! warning
-    Crear un _snapshot_ de la máquina virtual **Debian** <u>antes</u> de realizar la configuración de los servicios de red.
+    [Crea un _snapshot_ de la máquina virtual **Debian**][snapshot-virtualbox] <u>antes</u> de realizar la configuración de los servicios de red.
 
 El procedimiento se lista las siguientes páginas:
 
@@ -175,3 +179,6 @@ $ ping6 -c 6 example.com.
 
 [tinycore-linux-iso]: http://tinycorelinux.net/13.x/x86/release/Core-13.0.iso
 [tinycore-linux-x64-iso]: http://tinycorelinux.net/13.x/x86_64/release/CorePure64-13.0.iso
+
+[snapshot-virtualbox]: https://www.virtualbox.org/manual/UserManual.html#snapshots
+[virtualbox-compact-export-vm]: ../../temas/virtualbox-compact-export-vm/
