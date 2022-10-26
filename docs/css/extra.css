@@ -203,3 +203,49 @@ div.danger a:active
   overflow-y: scroll;
   max-height: 85vh;
 }
+
+.text-border
+{
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.red
+{
+  color: red;
+}
+
+.green
+{
+  color: green;
+}
+
+.blue
+{
+  color: blue;
+}
+
+.orange
+{
+  color: darkorange;
+}
+
+.gold
+{
+  color: gold;
+  font-weight: bold;
+}
+
+.monospace
+{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bold
+{
+  font-weight: bold !important;
+}
+
+.italic
+{
+  font-style: italic !important;
+}
