@@ -13,7 +13,7 @@ title: Laboratorio
 | **Práctica  3**: [Configuración de _routers_](practica-3)                               | Packet Tracer  | 2022-09-28
 | **Práctica  4**: [Configuración de algoritmos de ruteo](practica-4)                     | Packet Tracer  | 2022-10-20 `²`
 | **Práctica  5**: [Configuración de servicios DHCP, NAT y DNS en GNU/Linux](practica-5)  | VirtualBox     | 2022-10-28 `³`
-| **Práctica  6**: [Implementación de un servidor de archivo con NFS y Samba](practica-6) | VirtualBox     | <span class="orange italic">2022-11-04</span> `⁴`
+| **Práctica  6**: [Implementación de un servidor de archivo con NFS y Samba](practica-6) | VirtualBox     | 2022-11-04 `⁴`
 | **Práctica  7**: [Configuración de un _firewall_ de red con pfSense](practica-7)        | VirtualBox     | <span class="orange italic">2022-11-10</span> `⁰`
 | **Práctica  8**: [Registro de dominio DNS y uso de _hosting_ web](practica-8)           | _Nube pública_ | <span class="orange italic">2022-11-17</span> `⁰`
 | **Práctica  9**: [Creación de recursos en Azure](practica-9)                            | _Nube pública_ | <span class="orange italic">2022-11-24</span> `⁰`
