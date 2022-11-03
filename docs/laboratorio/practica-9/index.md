@@ -1,10 +1,10 @@
 ---
-title: Práctica 10 - Implementación de sitios web sobre HTTPS
+title: Práctica 9 - Implementación de sitios web sobre HTTPS
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 10: Implementación de sitios web sobre HTTPS
+# Práctica 9: Implementación de sitios web sobre HTTPS
 
 --------------------------------------------------------------------------------
 
@@ -41,14 +41,14 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **jueves 01 de diciembre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **viernes 25 de noviembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-10/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-9/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-10` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-9` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 !!! danger
-    - **Esta actividad depende de los recursos implementados en la [práctica 6](../practica-6)**
+    - **Esta actividad depende de los recursos implementados en la [práctica 8](../practica-8)**
     - Se recomienda que se realice esta actividad [siguiendo la calendarización](../) con el objeto de dejar suficiente tiempo para la elaboración de las siguientes actividades
 
 --------------------------------------------------------------------------------
