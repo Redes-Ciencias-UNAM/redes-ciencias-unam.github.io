@@ -1,10 +1,10 @@
 ---
-title: Práctica 9 - Creación de recursos en Azure
+title: Práctica 8 - Creación de recursos en Azure
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Práctica 9: Creación de recursos en Azure
+# Práctica 8: Creación de recursos en Azure
 
 --------------------------------------------------------------------------------
 
@@ -27,11 +27,11 @@ authors:
 
 ## Restricciones
 
-- La fecha límite de entrega es el **jueves 24 de noviembre de 2022** a las 23:59 horas
+- La fecha límite de entrega es el **viernes 18 de noviembre de 2022** a las 23:59 horas
 - Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/practicas/practica-9/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Utilizar la carpeta `docs/practicas/practica-8/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
         - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `practica-9` del [repositorio de tareas][repo-tareas] para entregar la actividad
+    - Hacer un _merge request_ a la rama `practica-8` del [repositorio de tareas][repo-tareas] para entregar la actividad
 
 !!! danger
     - **Las siguientes actividades dependen de los recursos que se implementan en esta práctica**
