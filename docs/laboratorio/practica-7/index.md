@@ -82,7 +82,7 @@ El alumno realizará la instalación y configuración de una máquina virtual pf
 
 --------------------------------------------------------------------------------
 
-## Introducción 
+## Introducción
 
 PfSense versión Community Edition es una plataforma de la compañía Netgate, desarrollada en el sistema FreeBSD UNIX con licencia de código libre, que proporciona servicios como firewall, router, red privada virtual (VPN por sus siglas en inglés),sistema de prevención/detección de Intrusos (IPS/IDS). DNS entre otros.
 
@@ -95,6 +95,8 @@ Se presentan los pasos para elaborar la configuración de un NAT, forwarder de D
 |:----:|
 | ![Topología](img/01.png)
 <!--  -->
+
+<a id="diagrama" name="diagrama"> </a>
 
 | Diagrama de interfaces de red en VirtualBox
 |:----:|
@@ -185,7 +187,7 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 14. Repetir pasos del 2 al 13 para las interfaces LAN.
 15. Establecer en la interfaz LAN el servidor DHCP y un rango de 10 IPs
 16. Repetir pasos del 2 al 13 para las interfaces OPT1 (DMZ).
-17. Cambiar nombre a la interfaz OPT1 
+17. Cambiar nombre a la interfaz OPT1
 
 | Consola pfSense
 |:----:|
@@ -244,7 +246,7 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 |:----:|
 | ![](img/23.png)
 
-#### Configuración de las reglas para la DMZ 
+#### Configuración de las reglas para la DMZ
 
 20. Generar regla de bloqueo de tráfico de la DMZ a la LAN, en la interfaz DMZ.
     - Firewall->Rules->DMZ.
@@ -358,12 +360,12 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 28. Llenar los siguientes parámetros:
     - MAC Address
     - IP Address
-    - Hostname 
+    - Hostname
     - Descripción: un nombre descriptivo
     - Seleccionar la casilla _Create an ARP Table Static_ para enlazar la IP y MAC.
     - Al finalizar hacer clic en el botón _save_, posteriormente aplicar cambios con el botón _apply Changes_.
 
-|DHCP Static Mapping parámetros 
+|DHCP Static Mapping parámetros
 |:----:|
 | ![](img/37.png)
 
@@ -378,6 +380,65 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 |Validar dirección IP en virtual.
 |:----:|
 | ![](img/39.png)
+
+--------------------------------------------------------------------------------
+
+### Servidor CentOS
+
+- Configurar una **dirección IP estática** en la <span class="orange">interfaz _host-only_</span> que está en la <span class="orange">red **DMZ**</span> (ver [diagrama de red](#diagrama))
+
+- Instalar los paquetes `httpd` y `mod_ssl`
+
+```
+[root@centos ~]# dnf -y install httpd mod_ssl
+
+	...
+```
+
+- Reiniciar el servicio `httpd`
+
+```
+[root@centos ~]# systemctl restart httpd
+```
+
+- Revisar que mod_ssl esté instalado y configurado
+
+```
+[root@centos ~]# cat /etc/httpd/conf.modules.d/00-ssl.conf
+LoadModule ssl_module modules/mod_ssl.so
+
+[root@centos ~]# grep '^SSLCertificate*' /etc/httpd/conf.d/ssl.conf
+SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+
+[root@centos ~]# ls -la /etc/pki/tls/certs/localhost.crt /etc/pki/tls/private/localhost.key
+-rw-r--r--. 1 root root 3871 Nov  1 12:13 /etc/pki/tls/certs/localhost.crt
+-rw-------. 1 root root 1704 Nov  1 12:13 /etc/pki/tls/private/localhost.key
+
+[root@centos ~]# apachectl -M | grep ssl
+ ssl_module (shared)
+```
+
+!!! note
+    - En esta práctica no importa que el certificado sea [_auto-firmado_][wikipedia-self-signed-certificate]
+
+- Verificar que los puertos estén abiertos
+
+```
+[root@centos ~]# netstat -ntulp | egrep '^Proto|httpd'
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp6       0      0 :::80                   :::*                    LISTEN      3310/httpd
+tcp6       0      0 :::443                  :::*                    LISTEN      3310/httpd
+```
+
+- Habilitar el servicio
+
+```
+[root@centos ~]# systemctl enable --now httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+```
+
+- Edita los archivos HTML que necesites en el directorio `/var/www/html`, estos serán visibles en la URL `http://IP-CENTOS/ARCHIVO.html`
 
 --------------------------------------------------------------------------------
 
@@ -400,7 +461,7 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 ```
 
 - Agregar el servicio de VPN:
-    
+
     - Conectar un cliente desde la red WAN a la VPN de tal manera que pueda acceder a los dispositivos de la red LAN por SSH, HTTP y HTTPS.
 
 --------------------------------------------------------------------------------
@@ -435,3 +496,5 @@ Para la red WAN, crear una NatNetwork, donde se debe conectar la interfaz em0 de
 [pfsense-docs-backup]: https://docs.netgate.com/pfsense/en/latest/backup/index.html
 
 [virtualbox-compact-export-vm]: ../../temas/virtualbox-compact-export-vm/
+
+[wikipedia-self-signed-certificate]: https://en.wikipedia.org/wiki/Self-signed_certificate
