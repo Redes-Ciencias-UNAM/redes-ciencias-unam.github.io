@@ -4,9 +4,9 @@ title: Proyectos
 
 # Proyectos
 
-!!! note
-    - **La evaluación de este proyecto final corresponderá al último examen parcial del curso**
+| Título                                                                                    | Ambiente       | Entrega
+|:------------------------------------------------------------------------------------------|:--------------:|:----------:|
+| **Proyecto 1**: [Implementación de sitios web en **Kubernetes**](proyecto-kubernetes) `¹` | _Nube pública_ | 2022-12-05
 
-| Título                                                                      | Ambiente       | Entrega
-|:----------------------------------------------------------------------------|:--------------:|:----------:|
-| Proyecto : [Implementación de sitios web en **Kubernetes**](proyecto-final) | _Nube pública_ | 2022-06-19
+!!! danger
+    - `¹`: La evaluación de este proyecto final corresponderá al **tercer examen parcial** del curso
