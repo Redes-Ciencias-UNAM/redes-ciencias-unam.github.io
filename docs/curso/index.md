@@ -147,6 +147,7 @@ Se aplicarán 3 exámenes, de acuerdo al avance que se tenga en el curso:
 - De ninguna manera se dará un trato ni una calificación especial a ningún estudiante, por el hecho de trabajar, tener un promedio alto en su historial académico, contar con algún tipo de beca o tener materias encimadas
 - Tampoco se tomarán en cuenta recomendaciones de ninguna persona para asignar la calificación final
 
+<!--
 ##	Evaluación
 
 La calificación final se calculará en base a los siguientes porcentajes:
@@ -160,6 +161,7 @@ La calificación final se calculará en base a los siguientes porcentajes:
 
 !!! note
     Las participaciones que aporten ideas a la clase pueden ayudar a incrementar la calificación final
+-->
 
 ##	Observaciones adicionales
 
