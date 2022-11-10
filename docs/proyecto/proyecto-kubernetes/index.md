@@ -1,10 +1,10 @@
 ---
-title: Proyecto final - Implementación de sitios web en Kubernetes
+title: Proyecto 2 - Implementación de sitios web en Kubernetes
 authors:
 - Andrés Leonardo Hernández Bermúdez
 ---
 
-# Proyecto final: Implementación de sitios web en **Kubernetes**
+# Proyecto 2: Implementación de sitios web en **Kubernetes**
 
 --------------------------------------------------------------------------------
 
