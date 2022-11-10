@@ -2,7 +2,7 @@
 
 Redes de Computadoras, Facultad de Ciencias, UNAM
 
-Semestre 2022-2
+Semestre 2023-1
 
 - **José Luis Torres Rodríguez**
 - Andrés Leonardo Hernández Bermúdez
