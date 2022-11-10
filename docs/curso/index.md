@@ -225,16 +225,6 @@ La calificación final se calculará en base a los siguientes porcentajes:
     - [Biblioteca Digital, UNAM][tanenbaum-bidiunam-busqueda]
     - [Catálogo LIBRUNAM][tanenbaum-librunam-catalogo]
 
-##	Ligas de interés
-
-- [Fechas oficiales][fechas-oficiales] del semestre 2022-2 aprobadas por el Consejo Técnico de la FC
-- [Calendario escolar][calendario-unam] en la [página de la DGAE][pagina-dgae]
-- [Temario][temario] en la página de la Facultad de Ciencias
-- [Detalles del curso][detalles] en la página de la Facultad de Ciencias
-- [Presentación][presentacion] en la página de la Facultad de Ciencias
-- Horarios en la página de la Facultad de Ciencias: [plan 1994][horarios-plan-1994], [plan 2013][horarios-plan-2013]
-- [Lista del grupo][lista]
-
 --------------------------------------------------------------------------------
 
 ##	Ligas de interés
