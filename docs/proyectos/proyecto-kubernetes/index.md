@@ -18,8 +18,6 @@ authors:
 
 ## Elementos de apoyo
 
-##### Material Escrito
-
 - [Kube by Example - Container Fundamentals - Introduction to Containers 📝][kbe-containers-intro]
     - _Introduction_, _Overview_, _Images_, _Registries_, _Hosts_ y _Orchestration_
 <!--
@@ -39,8 +37,6 @@ authors:
     - _Rolling Updates_, _Liveness Probes_ y _Readiness Probes_
     - _Taints_, _Affinity_, _Jobs_, _StatefulSets_ y _DaemonSets_
 -->
-
-##### Videos
 
 - [Lista de reproducción de **Docker** 📹][youtube-playlist-docker]
 - [Lista de reproducción de **Kubernetes** 📹][youtube-playlist-kubernetes]
@@ -74,16 +70,20 @@ authors:
 
 ## Restricciones
 
-- **La evaluación de este proyecto final corresponderá al último examen parcial del curso**
-- La fecha límite de entrega es el **domingo 19 de junio de 2022** a las 23:59 horas
-- Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
-    - Utilizar la carpeta `docs/proyectos/proyecto-final/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
-        - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
-    - Hacer un _merge request_ a la rama `proyecto-final` del [repositorio de tareas][repo-tareas] para entregar la actividad
-
 !!! danger
-    - **Esta actividad depende de los recursos implementados en la [práctica 6](../../laboratorio/practica-6) y [práctica 7](../../laboratorio/practica-7)**
+    - La evaluación de este proyecto final corresponderá al **cuarto examen parcial** del curso
+
+!!! warning
+    - **Esta actividad depende de los recursos implementados en la [práctica 8](../../laboratorio/practica-8) y [práctica 9](../../laboratorio/practica-9)**
     - Se recomienda que se realicen las actividades previas [siguiendo la calendarización](../../laboratorio) con el objeto de dejar suficiente tiempo para la elaboración de este proyecto
+
+- La fecha límite de entrega es el **jueves 15 de diciembre de 2022** a las 23:59 horas
+- Esta actividad debe ser entregada **en equipo** de acuerdo al [flujo de trabajo para la entrega de tareas y prácticas][flujo-de-trabajo]
+    - Utilizar la carpeta `docs/proyectos/proyecto-kubernetes/Equipo-ABCD-EFGH-IJKL-MNOP` para entregar la práctica
+    - Donde `Equipo-ABCD-EFGH-IJKL-MNOP` representa el nombre del equipo que debió anotarse previamente en la [lista del grupo][lista-redes]
+    - Hacer un _merge request_ a la rama `proyecto-kubernetes` del [repositorio de tareas][repo-tareas] para entregar la actividad
+
+
 
 --------------------------------------------------------------------------------
 
