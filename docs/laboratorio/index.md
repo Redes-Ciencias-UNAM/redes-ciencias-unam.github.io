@@ -18,9 +18,20 @@ title: Laboratorio
 | **Práctica 8**: [Registro de dominio DNS y creación de recursos en la nube](practica-8) | _Nube pública_ | 2022-11-18
 | **Práctica 9**: [Implementación de sitios web sobre HTTPS](practica-9)                  | _Nube pública_ | 2022-11-25
 
-!!! note
+!!! warning
     - `⁰`: Fecha propuesta
     - `¹`: Se ajustó la fecha de entrega debido al sismo del día 19 de septiembre de 2022
     - `²`: Se ajustó el periodo de elaboración de las actividades y las fechas de entrega para compensar los días en los que la Facultad de Ciencias estuvo en paro activo.
     - `³`: Se ajustó la fecha de entrega para dar espacio al segundo examen parcial.
     - `⁴`: Se ajustó la fecha de entrega para tomar en cuenta los días de asueto
+
+--------------------------------------------------------------------------------
+
+|                 ⇦           |        ⇧      |                  ⇨            |
+|:----------------------------|:-------------:|------------------------------:|
+| [Tareas][tareas]            | [Arriba](../) | [Proyectos][proyectos]        |
+
+[arriba]: ../
+[tareas]: ../tareas/
+[laboratorio]: ../laboratorio/
+[proyectos]: ../proyecto/
